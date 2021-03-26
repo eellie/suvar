@@ -272,7 +272,10 @@
 		font-size: 33px
 	.block-info-grid
 		grid-gap: 20px
+	.block-info-grid-wrapper
 		margin-bottom: 50px
+	.block-info.big
+		margin-bottom: 20px
 	.block-info-chess-item-text
 		.h2
 			margin-bottom: 20px
@@ -721,6 +724,8 @@
 		margin-bottom: 40px
 	.block-info-grid
 		grid-gap: 10px
+	.block-info.big
+		margin-bottom: 10px
 	.block-info-chess-item
 		flex-direction: column-reverse !important
 	.block-info-chess-item-img
@@ -871,6 +876,8 @@
 		span
 			sub
 				margin-left: 5px
+	.popup-block--callback
+		width: 500px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1524,16 +1531,29 @@
 			flex-shrink: 0
 			height: 18px
 	.block-info
-		width: 80%
-		flex-shrink: 0
-		min-height: 0 !important
-		&.big
+		&:last-child
+			margin-right: 0
+		&:not(.big)
+			width: 80%
+			flex-shrink: 0
+			min-height: 0 !important
+			height: 154px
+			padding: 12px 16px
 			.block-info-text
+				padding: 0
+		.h3
+			font-size: 20px
+		&.big
+			height: 450px
+			padding: 22px 28px
+			.block-info-text
+				padding: 0
 				.h3
-					font-size: 18px
+					font-size: 26px
 					margin-bottom: 30px
 				p
-					font-size: 12px
+					font-size: 14px
+					margin: 0
 	.block-info-chess-item-text p.big-text
 		font-size: 16px
 	.block-info-chess-item
@@ -1767,8 +1787,132 @@
 	.main-window-global-info-title
 		h1, .h1
 			margin-right: 5px
+			font-weight: normal
+			font-size: 26px
 		.stick
 			transform: translateY(-13px)
+			height: 19px
+			line-height: 17px
+			background-color: transparent
+			border: 1px solid #fff
+			color: #fff
+			padding: 0 7px
+			font-size: 9px
+			&.black
+				background-color: $text
+				color: #fff
+				border-color: $text
+	.main-window-global-info-title
+		margin-bottom: 8px
+	.main-window-global-info-address
+		margin-top: 0
+		font-size: 12px
+	.main-window-global-info-list
+		.project-descr-right
+			margin-right: 30px
+			margin-bottom: 0
+	.main-window-global-info-list .project-price-val
+		font-size: 12px
+		font-weight: normal
+	.main-window--rescom .main-window-slider-block
+		margin-top: 35px
+	.main-window-slider-item .h2
+		font-size: 12px
+		font-weight: normal
+		max-width: 270px
+		margin-bottom: 12px
+	.main-window--rescom .main-window-slider-btns .btn
+		margin-right: 8px
+	.main-footer-btn .btn
+		height: 50px
+		line-height: 47px
+		font-size: 14px
+	.main-window-footer-type-2
+		padding: 24px 0
+	.main-window-global-info-title .stick
+		transform: translateY(-5px)
+	.block-info-big-img-with-text-row
+		grid-template-columns: 1fr
+	.global-info-blocks
+		.btn
+			width: 100%
+			height: 50px
+			line-height: 50px
+			font-size: 12px
+			display: block
+			margin-top: 35px
+	.block-info-chess-item-img
+		margin-bottom: 22px
+	.block-info-chess-item-text .h2
+		font-size: 21px
+		margin-bottom: 18px
+	.block-info-chess-item-text p.big-text
+		font-size: 14px
+		margin-bottom: 13px
+	.block-info-chess-item-text p
+		font-size: 12px
+		margin-bottom: 13px
+	.block-info-chess-item-text ul
+		margin: 24px 0
+	.block-info-big-banner
+		min-height: 450px
+	.block-info-big-banner-text
+		min-height: 450px
+		display: flex
+		flex-direction: column
+		font-size: 14px
+		.h1
+			flex-grow: 1
+			font-size: 26px
+			max-width: 203px
+			line-height: 1.2
+		p
+			font-size: 14px
+	.block-info-icontext
+		margin-left: 0
+		.rescom-advantages-icon
+			margin-right: 35px
+			margin-top: -11px
+	.block-info-leftright-text-col
+		margin-bottom: 34px
+	.block-info-title
+		margin-bottom: 18px
+		.h2
+			font-size: 21px
+	.block-info-leftright-text-col
+		margin-bottom: 15px
+	.block-info-img-with-list
+		min-height: 219px
+		margin-right: 8px
+		width: 92.5%
+	.block-info-img-with-list-text
+		padding: 17px
+	.block-info-img-with-list-text
+		li
+			font-size: 14px
+			margin-bottom: 17px
+	.popup-block--callback .popup-close
+		top: 10px
+		right: 10px
+		background-color: transparent
+		&:after
+			font-size: 20px
+	.small-stocks-slider
+		.slider-prev,
+		.slider-next
+			top: 50%
+	.small-stocks-slider
+		.slick-slide
+			> div
+				height: 100%
+				.small-stocks-item
+					height: 100%
+	.s-res-complex-descr
+		padding-bottom: 0
+	.res-complex-descr-text .about-in-nmbrs-item
+		margin-bottom: 20px
+	::-webkit-scrollbar
+		display: none
 
 
 /*==========  Mobile First  ==========*/

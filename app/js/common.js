@@ -1234,6 +1234,7 @@ $(function() {
   	$(window).trigger('resize');
   	if ( $('.main-footer-nav').length > 0 ) {adaptiveHeader()};
   	cloneValueForSliders();
+  	layoutImages.slick('resize');
   })
   .on('resize', function() {
   	projectHelpInfoPosition();

@@ -2272,6 +2272,9 @@ section
 	margin-top: 17px
 	font-size: rem(12px)
 	color: $gray
+	span, a
+		color: $gray !important
+		text-decoration: none !important
 
 .filter-range-select
 	position: absolute
@@ -3943,11 +3946,13 @@ form
 			font-size: rem(9px)
 			margin-left: rem(6px)
 
+.block-info-grid-wrapper
+	margin-bottom: rem(100px)
+
 .block-info-grid
 	display: grid
 	grid-gap: 33px 30px
 	grid-template-columns: repeat(3, 1fr)
-	margin-bottom: rem(100px)
 	.block-info-title
 		grid-column: span 3
 
@@ -3967,6 +3972,7 @@ form
 	&.big
 		grid-column: span 3
 		min-height: rem(614px)
+		margin-bottom: rem(33px)
 		.block-info-text
 			.h3
 				margin-top: 0
@@ -4157,7 +4163,7 @@ form
 	margin-left: rem(75px)
 	.rescom-advantages-icon
 		margin-right: rem(60px)
-		margin-top: rem(-18px)
+		margin-top: rem(-5px)
 	p
 		max-width: rem(321px)
 
@@ -4958,6 +4964,7 @@ form
 	width: rem(750px)
 	background-color: #F2F2F2
 	border-radius: 10px
+	max-width: calc(100% - 20px)
 	.popup-header
 		position: relative
 		margin: 0
