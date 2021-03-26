@@ -4954,4 +4954,38 @@ form
 	grid-template-columns: repeat(2, 1fr)
 	grid-gap: rem(30px)
 
+.popup-block--callback
+	width: rem(750px)
+	background-color: #F2F2F2
+	border-radius: 10px
+	.popup-header
+		position: relative
+		margin: 0
+		padding: 0
+	.popup-close
+		width: rem(48px)
+		height: rem(48px)
+		background-color: #fff
+		border-radius: 50px
+		color: $text
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: scale(1) !important
+		position: absolute
+		top: rem(-25px)
+		right: rem(-24px)
+		+tr
+		z-index: 2
+		&:hover
+			transform: rotate(90deg) !important
+		&:after
+			font-size: rem(16px)
+			line-height: 1
+	.contacts-form-block
+		margin: 0
+		background-color: transparent
+	.contacts-form-left
+		min-width: 64%
+
 @import "media" // Always at the end

@@ -301,7 +301,10 @@
 						</ul>
 					</div>
 					<div class="main-footer-btn">
-						<a href="#" class="btn btn-white-border">Запись на экскурсию</a>
+						<a href="#"
+							class="btn btn-white-border open-callback-popup"
+							data-callback-img="img/contacts-img-3.png"
+							data-selected-option="Запись на экскурсию">Запись на экскурсию</a>
 					</div>
 				</div>
 
@@ -928,7 +931,10 @@
 									<div class="block-info-type-3-text">
 										<div class="mute-text">Готовый дизайн</div>
 										<p>При покупке 2-ух комнатной квартиры дизайн проект в подарок.<br><span class="red">#</span>Cуварстроитдляжизни</p>
-										<a href="#" class="btn">Получить предложение</a>
+										<a href="#"
+											class="btn open-callback-popup"
+											data-callback-img="img/contacts-img-3.png"
+											data-selected-option="Получить предложение">Получить предложение</a>
 									</div>
 								</div>
 
@@ -942,7 +948,10 @@
 									<div class="block-info-type-3-text">
 										<div class="mute-text">ВЗГЛЯНИТЕ ПО-НОВОМУ</div>
 										<p>Чтобы Вам было удобнее представить свое будущее жилье, в жилом комплексе бизнес-класса «Столичный» обустроен собственный шоу-рум с оригинальными решениями и материалами <br><span class="red">#</span>Cуварстроитдляжизни</p>
-										<a href="#" class="btn">Записаться на экскурсию</a>
+										<a href="#"
+											class="btn open-callback-popup"
+											data-callback-img="img/contacts-img-3.png"
+											data-selected-option="Запись на экскурсию">Записаться на экскурсию</a>
 									</div>
 								</div>
 
@@ -2858,6 +2867,66 @@
 					<div class="popup-content">
 						<div class="popup-map">
 							<div id="map-contacts-popup-frame"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="popup-wrapper" id="callback-popup">
+			<div class="popup-flex">
+				<div class="popup-block popup-block--callback">
+					<div class="popup-header">
+						<div class="popup-close"></div>
+					</div>
+					<div class="popup-content">
+						<div class="callback-popup">
+							<div class="contacts-form-block">
+								<div class="contacts-form-left">
+									<div class="h2 callback-title">Напишите нам</div>
+									<form class="contacts-form">
+										<div class="contacts-form-success">
+											<div class="success-icon"></div>
+											<div class="h2">Спасибо<br>за обращение!</div>
+											<p>Ваш запрос уже обрабатывается! Наши специалисты свяжутся с вами в течение 20 минут</p>
+										</div>
+										<div class="row">
+											<div class="col-sm-8">
+												<div class="form-group white">
+													<select class="select-style callback-options">
+														<option value="Запись на экскурсию">Запись на экскурсию</option>
+														<option value="Консультация по телефону">Консультация по телефону</option>
+														<option value="Запись в офисы продаж">Запись в офисы продаж</option>
+														<option value="Консультация ипотечного брокера">Консультация ипотечного брокера</option>
+														<option value="Забронировать квартиру">Забронировать квартиру</option>
+														<option value="Экскурсии по жилым комплексам">Экскурсии по жилым комплексам</option>
+														<option value="Получить предложение">Получить предложение</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group white">
+													<input type="text" class="form-control" placeholder="Имя">
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="form-group white">
+													<input type="text" class="form-control phone-mask" placeholder="Телефон">
+												</div>
+											</div>
+											<div class="col-sm-8">
+												<div class="form-footer-row">
+													<p>Нажимая “Отправить”, вы соглашаетесь с политикой конфиденциальности</p>
+													<button type="submit" class="btn">Отправить запрос</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="contacts-form-right">
+									<img src="img/contacts-img-2.png" class="callback-popup-img" loading="lazy" alt="">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1188,6 +1188,21 @@ $(function() {
 		}
 	});
 
+	$('.open-callback-popup').on('click', function(e) {
+		e.preventDefault();
+		let ths = $(this),
+				imgSrc = ths.data('callback-img'),
+				selectedOption = ths.data('selected-option'),
+				modalID = '#callback-popup';
+		if ( imgSrc != undefined && imgSrc.trim().length != 0 ) {
+			$(modalID).find('.callback-popup-img').attr('src', imgSrc)
+		}
+		if ( selectedOption != undefined && selectedOption.trim().length != 0 ) {
+			$(modalID).find('.callback-options').val(selectedOption).trigger('change')
+		}
+		openPopup(modalID);
+	});
+
   $(window)
   .on('scroll', function() {
   	if ( pageLoad ) {
