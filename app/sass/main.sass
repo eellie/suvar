@@ -342,6 +342,10 @@ section
 		&:after
 			background-color: rgba(0, 0, 0, 0.85)
 
+.main-window--rescom
+	.main-window-slider-item .h2
+		margin-bottom: rem(25px)
+
 .finance-partner-stick
 	position: absolute
 	left: -#{rem(6px)}
@@ -2030,15 +2034,21 @@ section
 		height: 100% !important
 	.slick-track
 		height: 100%
+	.slick-slide
+		display: inline-flex !important
+		> div
+			height: auto
+			flex-grow: 1
+			display: flex
 
 .layout-info
 	font-weight: normal
-	height: 100%
 	+tr
 	transform: translateX(-#{rem(30px)})
 	display: flex !important
 	align-items: flex-start
 	flex-direction: column
+	flex-grow: 1
 	.h3
 		margin-bottom: rem(10px)
 	ul
@@ -3904,7 +3914,7 @@ form
 	align-items: flex-start
 	flex-direction: column
 	position: sticky
-	top: rem(30px)
+	top: rem(134px)
 	padding-left: rem(28px)
 	&.fixed
 		position: fixed
@@ -3955,6 +3965,8 @@ form
 	grid-template-columns: repeat(3, 1fr)
 	.block-info-title
 		grid-column: span 3
+	&.type-2
+		margin-bottom: rem(100px)
 
 .block-info
 	width: 100%
@@ -4146,7 +4158,7 @@ form
 		line-height: 1.45
 
 .block-info-leftright-text
-	margin-bottom: rem(100px)
+	margin-bottom: rem(47px)
 	display: grid
 	grid-template-columns: 1fr 1fr
 	grid-gap: rem(30px)
@@ -4157,6 +4169,7 @@ form
 		max-width: rem(553px)
 	.block-info-title
 		grid-column: span 2
+		margin: 0 !important
 
 .block-info-icontext
 	display: flex
