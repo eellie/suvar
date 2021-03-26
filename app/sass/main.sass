@@ -1,0 +1,4952 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/mixins"
+
+::placeholder
+	color: #9595A1
+	+tr
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*:focus
+	&::placeholder
+		opacity: 0
+		transform: translateY(-5px)
+
+html, body
+	font-size: .8333vw
+	// font-size: 1.07143vw
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.375
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	font-weight: 500
+	&.no-scroll
+		overflow: hidden
+		touch-action: none
+
+b, strong
+	font-weight: bold
+
+h1, .h1
+	font-weight: 500
+	font-size: rem(80px)
+	line-height: 1.175
+
+h2, .h2
+	font-weight: normal
+	font-size: rem(40px)
+	line-height: 1.175
+
+h3, .h3
+	font-size: rem(32px)
+	font-weight: normal
+	line-height: 1.1875
+	font-weight: 500
+
+h4, .h4
+	font-size: rem(24px)
+	font-weight: 500
+	line-height: 1.2
+
+h5, .h5
+	font-weight: 500
+	font-size: rem(20px)
+	line-height: 1.2
+
+*
+	outline: none !important
+
+section
+	position: relative
+	overflow: hidden
+
+.btn
+	display: inline-block
+	cursor: pointer
+	position: relative
+	text-align: center
+	outline: none !important
+	border: none
+	box-shadow: none
+	appearance: none
+	padding: 0 rem(23px)
+	height: rem(56px)
+	line-height: rem(56px)
+	color: #fff
+	+tr
+	border-radius: rem(7px)
+	background-color: $accent
+	text-decoration: none !important
+	font-weight: 500
+	white-space: nowrap
+	&:hover
+		color: #fff
+		background-color: var(--global-hover-color)
+	&.btn-icon
+		display: inline-flex
+		align-items: center
+		span
+			margin-right: rem(12px)
+			font-size: rem(16px)
+			&.icon-plus
+				font-size: rem(11px)
+	&.btn-white-border
+		background-color: transparent !important
+		border: 1px solid #fff
+		line-height: rem(54px)
+		position: relative
+		z-index: 1
+		overflow: hidden
+		&:hover
+			border-color: $accent
+			&:after
+				transform: scaleX(1)
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $accent
+			z-index: -1
+			transform: scaleX(0)
+			+tr
+			transform-origin: center left
+	&.btn-gray
+		background-color: #F2F2F2
+		color: $text
+		&:hover
+			background-color: #dcdcdc
+	&.btn-block
+		display: block
+		width: 100%
+	&.btn-border
+		background-color: transparent
+		border: 1px solid #9595A1
+		line-height: rem(54px)
+		color: $text
+		overflow: hidden
+		position: relative
+		z-index: 1
+		&:hover
+			border-color: $accent
+			color: #fff
+			&:after
+				transform: scaleX(1)
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $accent
+			z-index: -1
+			transform: scaleX(0)
+			+tr
+			transform-origin: center left
+	.loader
+		width: rem(30px)
+		height: rem(30px)
+		top: 50%
+		left: 50%
+		margin-top: -#{rem(15px)}
+		margin-left: -#{rem(15px)}
+	&.btn-loading
+		color: transparent !important
+		.loader-ellipsis
+			visibility: visible
+			opacity: 1
+
+.container
+	padding: 0 rem(40px)
+	width: rem(1920px)
+	max-width: 100%
+	margin-left: auto
+	margin-right: auto
+
+.header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 5
+	padding: rem(38px) 0
+	&.dark
+		.menu-link
+			color: $text !important
+		.burger-icon
+			span
+				&:after,
+				&:before
+					background-color: $text
+		.header-phone
+			.phone-link
+				color: $text
+				&:hover
+					color: $accent
+			p
+				color: rgba($text, .5)
+
+.header-row
+	display: flex
+	align-items: center
+
+.header-logo
+	padding-right: rem(30px)
+	width: 25%
+	flex-shrink: 0
+
+.logo
+	display: block
+	img
+		display: block
+		width: rem(198px)
+
+.header-mob-logo
+	display: none
+
+.header-mob-close
+	display: none
+
+.header-mob-phone
+	display: none
+
+.header-phone
+	flex-grow: 1
+	padding-right: rem(30px)
+	a
+		display: inline-block
+		color: #fff
+		+tr
+		font-weight: 500
+		font-size: rem(20px)
+		text-decoration: none !important
+		margin-bottom: 5px
+		&:hover
+			color: $accent
+	p
+		margin: 0
+		color: rgba(#fff, .5)
+		font-weight: normal
+
+.header-mob-soc
+	display: none
+
+.main-menu
+	margin-left: auto
+	display: flex
+	align-items: center
+	margin-right: rem(91px)
+	position: relative
+
+.menu-link
+	+tr
+	color: #fff !important
+	text-decoration: none !important
+	margin-right: rem(22px)
+	font-weight: 500
+	position: relative
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: $accent
+		span
+			transform: translateY(-15px)
+			opacity: 0
+		&:after
+			transform: translateY(0)
+			opacity: 1
+	span
+		display: inline-block
+		+tr
+	&:after
+		content: attr(data-hover-text)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transform: translateY(15px)
+		+tr
+
+.header-burger
+	display: flex
+	position: fixed
+	z-index: 10
+	right: rem(40px)
+	top: rem(60px)
+
+.burger-icon
+	display: inline-block
+	width: rem(48px)
+	height: rem(10px)
+	position: relative
+	flex-shrink: 0
+	&.dark
+		span
+			&:after,
+			&:before
+				background-color: #000
+	span
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: #fff
+			+tr
+		&:after
+			top: 0
+		&:before
+			bottom: 0
+	&:hover
+		span
+			&:after
+				transform: translateX(2px)
+			&:before
+				transform: translateX(-2px)
+
+.main-window
+	height: 100vh
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+	padding-top: rem(203px)
+	min-height: rem(600px)
+	display: flex
+	flex-direction: column
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.5)
+		transition: all .4s ease
+	&.overlay-darkness
+		&:after
+			background-color: rgba(0, 0, 0, 0.85)
+
+.finance-partner-stick
+	position: absolute
+	left: -#{rem(6px)}
+	top: rem(203px)
+	z-index: 4
+	img
+		// width: rem(205px)
+		height: rem(55px)
+		+tr
+		position: relative
+		z-index: 1
+		&:hover
+			transform: translateX(#{rem(10px)})
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: rem(50px)
+		background-color: #fff
+		z-index: 0
+		height: 100%
+
+.soc-nav
+	position: absolute
+	left: rem(39px)
+	top: 0
+	bottom: 0
+	z-index: 3
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.soc-nav-link
+	font-size: rem(20px)
+	width: rem(20px)
+	height: rem(20px)
+	line-height: rem(20px)
+	color: #fff
+	+tr
+	text-decoration: none !important
+	margin-bottom: rem(30px)
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color: $accent
+
+.main-window-row
+	display: flex
+	position: relative
+	z-index: 1
+	height: 100%
+
+.main-window-projects
+	margin-left: 25%
+	flex-grow: 1
+	padding-right: rem(40px)
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	margin-bottom: rem(10px)
+
+.main-window-projects-nav
+	ul
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -#{rem(16px)}
+		+ls
+		line-height: 1.1875
+		padding: 0
+		max-width: rem(440px)
+		li
+			width: 50%
+			padding: 0 rem(16px)
+			margin-bottom: rem(13px)
+	a
+		display: inline-block
+		position: relative
+		font-weight: 500
+		color: #fff
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $accent
+			color: rgba(#fff, .75)
+			&:after
+				transform: scaleX(.7)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #fff
+			transform-origin: left center
+			+tr
+
+.main-window-slider-block
+	max-width: rem(595px)
+	position: relative
+	.slick-slide
+		transform: translateX(30px)
+		transition: all .4s ease !important
+		&.slick-current
+			transform: translateX(0)
+	.slider-prev
+		top: 0
+		left: -105px
+		color: #fff
+	.slider-next
+		top: 0
+		left: -70px
+		color: #fff
+		&:after
+			border-color: rgba(#fff, .3)
+		svg
+			circle
+				stroke: #fff
+
+.main-window-slider-item
+	color: #fff
+	padding-bottom: rem(30px)
+	.h2
+		margin-bottom: rem(50px)
+
+.main-window-slider-btns
+	display: flex
+	align-items: center
+	.btn
+		margin-right: rem(30px)
+
+.link-angle
+	display: inline-flex
+	align-items: center
+	text-decoration: none !important
+	+tr
+	font-weight: 500
+	text-decoration: none !important
+	color: $text !important
+	&:hover
+		span
+			transform: translateX(#{rem(5px)})
+	span
+		font-size: rem(11px)
+		margin-left: rem(6px)
+		margin-top: rem(1px)
+		+tr
+	&.white
+		color: #fff !important
+
+.slider-prev
+	width: 25px
+	height: 39px
+	line-height: 39px
+	font-size: 12px
+	color: $text
+	text-align: center
+	position: absolute
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+
+.slider-next
+	position: absolute
+	width: 39px
+	height: 39px
+	line-height: 39px
+	text-align: center
+	color: $text
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 12px
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		border: 1px solid #B0B0B4
+		z-index: 0
+	span
+		transform: translate(1px, 0)
+	&.ring-animate
+		svg
+			circle
+				animation-name: ringload
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		transform: rotate(-90deg)
+		circle
+			stroke-dasharray: 119.38 119.38
+			stroke-dashoffset: 119.38
+			animation-timing-function: linear
+
+@keyframes ringload
+	0%
+		stroke-dashoffset: 119.38
+	100%
+		stroke-dashoffset: 0
+
+.main-banner-video
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+	overflow: hidden
+
+.main-banner-video-item
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	display: none
+	transform: translateX(100%)
+	transition: transform .8s ease-out
+	overflow: hidden
+	z-index: 1
+	background-size: 0
+	.fade-out
+		z-index: 0
+	&.active
+		transform: translateX(0)
+		video
+			transform: translateX(0)
+	&.current-slide
+		z-index: 2
+	video
+		height: 100%
+		width: 100vw
+		object-fit: cover
+		transform: translateX(-50%)
+		transition: all .8s ease-out
+		display: block
+
+.main-window-content
+	flex-grow: 1
+	max-height: 100%
+	// overflow: hidden
+	display: flex
+
+.main-window-footer
+	position: relative
+	z-index: 2
+	color: #fff
+	border-top: 1px solid rgba(#fff, .15)
+	padding: rem(35px) 0 rem(42px)
+	.filter-item
+		margin-bottom: 0
+
+.filter-item
+	margin-right: rem(20px)
+	margin-bottom: rem(45px)
+
+.filter-title
+	margin-bottom: rem(15px)
+	font-weight: 500
+
+.filter-checkbox
+	display: flex
+
+.filter-checkbox-label
+	display: inline-block
+	position: relative
+	margin: 0
+	&:last-child
+		span
+			border-right: none !important
+			border-top-right-radius: rem(7px)
+			border-bottom-right-radius: rem(7px)
+	&:first-child
+		span
+			border-top-left-radius: rem(7px)
+			border-bottom-left-radius: rem(7px)
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			background-color: $text
+			border-right-color: rgba(#fff, .3)
+			color: #fff
+	span
+		display: block
+		height: rem(56px)
+		line-height: rem(56px)
+		text-align: center
+		font-weight: 500
+		padding: 0 rem(17px)
+		+tr
+		min-width: rem(56px)
+		background-color: #F2F2F2
+		border-right: 1px solid rgba(#9595A1, .3)
+		color: $text
+		cursor: pointer
+
+.filter-range
+	position: relative
+
+.filter-range-inputs
+	display: flex
+	align-items: center
+
+.filter-range-input-group
+	position: relative
+	width: 50%
+	&:first-child
+		border-right: 1px solid rgba(#9595A2, .3)
+		.filter-range-input
+			border-radius: rem(7px) 0 0 rem(7px)
+	&:last-child
+		.filter-range-input
+			border-radius: 0 rem(7px) rem(7px) 0
+	span
+		position: absolute
+		left: rem(16px)
+		z-index: 1
+		width: rem(20px)
+		top: rem(18px)
+		font-weight: 500
+		color: rgba($text, .4)
+
+.filter-range-input
+	min-width: 0
+	width: 100%
+	padding: 0 rem(10px) 0 rem(41px)
+	font-weight: 500
+	border: none
+	box-shadow: none
+	background-color: #F2F2F2
+	height: rem(56px)
+
+.filter-range-slider
+	position: absolute
+	bottom: -1.5px
+	left: 0
+	width: 100%
+	height: 3px
+	background-color: transparent
+	border: none
+	border-radius: 0
+	box-shadow: none
+
+.noUi-horizontal .noUi-handle
+	width: rem(21px)
+	height: rem(21px)
+	border-radius: 50%
+	background-color: $accent
+	border: none
+	cursor: pointer
+	box-shadow: 0px 0px 8px $accent
+	top: -#{rem(9px)}
+	right: -#{rem(10px)}
+	*,
+	&:after,
+	&:before
+		display: none !important
+
+.noUi-connect
+	background-color: $accent
+
+.select2-container--default .select2-selection--single
+	background-color: #F2F2F2
+	border: none
+	border-radius: rem(7px) !important
+	height: rem(56px)
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	color: $text
+	line-height: rem(56px)
+	padding: 0 rem(44px) 0 rem(20px)
+	font-weight: 500
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: rem(54px)
+	display: flex
+	align-items: center
+	justify-content: center
+	right: rem(19px)
+	b
+		display: none
+	&:after
+		content: '\e911'
+		font-family: icon
+		color: $text
+		font-size: rem(12px)
+		+tr
+		display: inline-block
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow:after	
+	transform: rotate(180deg)
+
+.select2-dropdown
+	border-radius: rem(7px) !important
+	border: none
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+	overflow: hidden
+	font-size: rem(16px)
+	transform: translateY(#{rem(8px)})
+
+.select2-container--open .select2-dropdown--above
+	transform: translateY(#{rem(-8px)})
+
+.select2-container--default .select2-results>.select2-results__options
+	padding: rem(17px) rem(25px)
+	max-height: rem(224px)
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+	color: $accent
+
+.select2-results__option
+	padding: 0
+	background-color: transparent !important
+	margin-bottom: rem(12px)
+	&:last-child
+		margin-bottom: 0
+
+.select2-container--default .select2-results__option--selected
+	color: $accent !important
+
+.filter-more-item
+	margin-left: rem(25px)
+
+.filter-more-btn
+	display: inline-flex
+	align-items: center
+	height: rem(56px)
+	padding: 0 rem(10px) 0 rem(19px)
+	border: 1px solid rgba(#fff, .3)
+	color: #fff
+	text-decoration: none !important
+	max-width: rem(127px)
+	width: 100%
+	+tr
+	border-radius: rem(7px)
+	font-size: rem(13px)
+	span
+		font-size: rem(18px)
+		margin-right: rem(14px)
+	&:hover
+		border-color: #fff
+		background-color: #fff
+		color: $text
+
+.main-window-footer-row
+	display: flex
+	align-items: flex-end
+	.filter-title
+		font-size: rem(13px)
+		margin-bottom: rem(14px)
+	.filter-checkbox-label
+		span
+			background-color: rgba(255, 255, 255, 0.16)
+			color: #fff
+			border-right: 1px solid rgba(#fff, .3)
+		input
+			&:checked
+				& + span
+					background-color: #fff
+					border-color: rgba(#9595A2, .3)
+					color: $text
+	.filter-range-input
+		background-color: rgba(255, 255, 255, 0.16)
+		color: #fff
+	.filter-range-input-group
+		span
+			color: rgba(#fff, .4)
+		&:first-child
+			border-right-color: rgba(#fff, .3)
+	.select2-container--default .select2-selection--single
+		background-color: rgba(255, 255, 255, 0.16)
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		color: #fff
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	.select2-container--default .select2-selection--single .select2-selection__arrow:after
+		color: #fff
+	.filter-select
+		min-width: rem(270px)
+		width: rem(270px)
+
+.main-window-projects-list
+	margin-top: rem(15px)
+	flex-grow: 1
+	overflow: hidden
+	max-width: rem(415px)
+	position: relative
+
+.main-window-projects-item
+	transition: all .4s ease
+	opacity: 0
+	transform: translateY(#{rem(25px)})
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	overflow: hidden
+	&.active
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+
+.main-window-projects-img
+	margin-bottom: rem(24px)
+	width: rem(400px)
+	img
+		display: block
+		width: 100%
+		border-radius: rem(7px)
+
+.main-window-projects-text
+	.h5
+		margin-bottom: rem(8px)
+		color: #fff
+	p
+		color: rgba(#fff, .7)
+		margin: 0
+
+.s-stocks
+	padding: rem(70px) 0
+	background-color: #F2F2F2
+	&.no-bg
+		background-color: transparent
+
+.stocks-left
+	display: flex
+	flex-direction: column
+	position: relative
+	z-index: 1
+	height: 100%
+
+.stocks-title
+	margin-bottom: rem(40px)
+	flex-grow: 1
+	max-width: 299px
+	p
+		font-size: rem(20px)
+		margin: rem(25px) 0 0
+
+.stocks-nav
+	display: flex
+	align-items: center
+	margin-top: auto
+	.slider-nav-arrow
+		position: relative
+		top: auto !important
+		left: auto !important
+		bottom: auto !important
+		right: auto !important
+	.slider-prev
+		margin-right: rem(12px)
+	svg
+		display: none !important
+
+.slick-track
+	display: flex
+	.slick-slide
+		flex-shrink: 0
+		height: auto
+		> div
+			height: 100%
+
+.news-slider
+	.slick-list
+		overflow: visible
+		margin-left: -#{rem(15px)}
+		margin-right: -#{rem(15px)}
+	.slick-slide
+		opacity: 0
+		transition: all .5s ease
+		padding: 0 rem(15px)
+		&.slick-active
+			opacity: 1
+			& + .slick-slide
+				opacity: 1
+		&.prev-slide
+			transform: translateX(100%)
+
+.news-item
+	display: flex !important
+	flex-direction: column
+	height: 100%
+	position: relative
+	z-index: 1
+	overflow: hidden
+	border-radius: rem(6px)
+	min-height: rem(190px)
+	align-items: flex-start
+	padding: rem(32px) rem(32px) rem(23px)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .3)
+		opacity: 1
+	.h5
+		position: relative
+		z-index: 2
+		color: #fff
+	&:hover
+		.news-img
+			img
+				transform: scale(1.05)
+	&.no-img
+		background-color: #fff
+		&:after
+			display: none
+		&:hover
+			.h5
+				color: $accent
+		.h5
+			color: $text
+			margin-bottom: auto
+			+tr
+
+.news-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+
+.news-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+
+.stick
+	height: rem(30px)
+	position: relative
+	z-index: 2
+	margin-bottom: auto
+	border-radius: rem(4px)
+	background-color: #fff
+	padding: 0 rem(9px)
+	white-space: nowrap
+	font-size: rem(13px)
+	font-weight: 500
+	line-height: rem(30px)
+	color: $text
+	display: inline-flex
+	align-items: center
+	flex-shrink: 0
+	&.black
+		background-color: #171723
+		color: #fff
+	&.red
+		background-color: #D90002
+		color: #fff
+	&.border
+		background-color: transparent
+		border: 1px solid #fff
+		color: #fff
+		line-height: rem(28px)
+	&.accent
+		background-color: $accent
+		color: #fff
+	span
+		font-size: rem(16.5px)
+		color: #9595A1
+		margin-left: rem(7px)
+
+.news-date
+	color: #9595A2
+
+.s-about
+	padding: rem(85px) 0 rem(72px)
+
+.about-title
+	font-size: rem(32px)
+	font-weight: normal
+	> span
+		font-weight: bold
+		display: block
+	.color
+		color: $accent
+	a
+		display: inline-block
+		span
+			display: inline-block
+			color: $accent
+			font-size: rem(18px)
+			display: inline-block
+			transform: rotate(-45deg)
+			+tr
+		&:hover
+			span
+				transform: rotate(-405deg)
+
+.video-block
+	position: relative
+	padding-bottom: 56.25%
+	border-radius: rem(6px)
+	overflow: hidden
+	&:hover
+		.video-poster
+			img
+				transform: scale(1.1)
+
+.video-poster
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(6px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .28)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(6px)
+		+tr
+
+.video-play
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	height: rem(69px)
+	width: rem(69px)
+	background-color: #fff
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	z-index: 1
+	+tr
+	&:after
+		content: '\e906'
+		font-family: icon
+		font-size: rem(27px)
+		color: $accent
+		display: inline-block
+		transform: translateX(3px)
+	span
+		position: absolute
+		color: #fff
+		top: 100%
+		margin-top: rem(15px)
+		left: 50%
+		transform: translateX(-50%)
+		min-width: rem(240px)
+		text-align: center
+
+.about-blockquote
+	margin-left: rem(38px)
+
+.blockquote-content
+	margin-bottom: rem(30px)
+	font-size: rem(24px)
+	font-weight: normal
+
+.blockquote-author
+	display: flex
+	align-items: center
+
+.blockquote-author-img
+	position: relative
+	margin-right: rem(25px)
+	img
+		width: rem(139px)
+		height: rem(139px)
+	&:after
+		content: '\e908'
+		position: absolute
+		top: 0
+		left: 0
+		width: rem(44px)
+		height: rem(44px)
+		border-radius: 50%
+		background-color: $text
+		color: #fff
+		font-family: icon
+		font-size: rem(13px)
+		line-height: rem(44px)
+		text-align: center
+
+.blockquote-author-text
+	.h5
+		margin-bottom: rem(4px)
+	p
+		color: #9595A1
+		font-weight: normal
+		margin: 0
+
+.about-in-nmbrs
+	display: flex
+	margin-left: calc(25% + 5px)
+	margin-top: rem(77px)
+
+.about-in-nmbrs-item
+	margin-right: rem(85px)
+	font-weight: normal
+	max-width: rem(124px)
+	img
+		width: rem(124px)
+	span
+		font-weight: 500
+		display: block
+		margin-bottom: rem(3px)
+		font-size: rem(38px)
+		letter-spacing: -.03rem
+		line-height: 1
+		padding-top: rem(16px)
+		white-space: nowrap
+		sub
+			bottom: 0
+			margin-left: rem(15px)
+			font-size: 50%
+
+.about-in-nmbrs-link
+	margin-top: rem(38px)
+	margin-left: auto
+
+.popup-wrapper
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	&.opened
+		.popup-flex
+			background-color: rgba(#171723, .8)
+		.popup-block
+			transform: none
+			opacity: 1
+
+.popup-flex
+	display: flex
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#171723, 0)
+	transition: background-color .4s ease
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+
+.popup-close
+	width: 21px
+	height: 21px
+	margin-left: auto
+	text-align: center
+	color: #fff
+	cursor: pointer
+	margin-bottom: 34px
+	+tr
+	&:hover
+		transform: scale(1.2)
+	&:after
+		content: '\e918'
+		font-family: icon
+		font-size: 21px
+		font-weight: normal
+		line-height: 21px
+
+.popup-block
+	margin: auto
+	width: 625px
+	max-width: 100%
+	transition: all .4s ease
+	transform: translateY(-50px)
+	opacity: 0
+
+#video-popup
+	.popup-block
+		width: calc(80vw)
+
+.video-popup-block
+	position: relative
+	padding-bottom: 56.25%
+	border-radius: 10px
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 10px
+
+.s-text-slider
+	margin: rem(60px) 0
+	position: relative
+	height: rem(80px)
+	overflow: hidden
+	display: flex
+	align-items: center
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+
+.text-slider-wrapper
+	transition: transform 2.5s ease
+
+.text-slider
+	display: flex
+	align-items: center
+
+.text-slider-item
+	white-space: nowrap
+	line-height: 1
+	font-size: rem(80px)
+	font-weight: normal
+	display: inline-flex !important
+	align-items: center
+	text-transform: uppercase
+	&:after
+		content: ''
+		display: block
+		height: 1px
+		background-color: $text
+		width: rem(243px)
+		flex-shrink: 0
+		margin: 0 rem(45px)
+		transform: translateY(#{rem(7px)})
+
+.text-slider
+	.slick-list
+		overflow: visible
+
+.s-city-map
+	margin-bottom: rem(75px)
+	overflow: visible
+
+.city-map-wrapper
+	position: relative
+
+.city-map-img
+	position: relative
+	border-radius: rem(6px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .3)
+		border-radius: rem(6px)
+	img
+		width: 100%
+		display: block
+		border-radius: rem(6px)
+
+.city-map-title
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 1
+	color: #fff
+	.row
+		align-items: flex-end
+	.section-nmb
+		padding-left: rem(57px)
+		padding: rem(45px)
+	.map-title
+		padding-bottom: rem(45px)
+
+.section-nmb
+	font-size: rem(80px)
+	line-height: 1
+	font-weight: 300
+	transition: opacity .4s ease
+	&.fade-out
+		opacity: 0
+	&.big
+		font-size: rem(190px)
+		line-height: 0.75
+
+.map-title
+	font-size: rem(52px)
+
+.city-map-dots-item
+	position: absolute
+	z-index: 2
+	&:hover
+		.city-map-dots-icon
+			color: rgba(#fff, 0)
+			span
+				transform: rotate(-45deg)
+		.city-map-dots-content
+			opacity: 1
+			visibility: visible
+			transform: none
+
+.city-map-dots-icon
+	display: flex
+	align-items: center
+	color: #fff
+	transition: color .3s ease
+	cursor: pointer
+	span
+		width: 50px
+		height: 50px
+		background-color: #fff
+		position: relative
+		z-index: 3
+		flex-shrink: 0
+		border-radius: 50%
+		margin-right: (17px)
+		+tr
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background-color: $text
+		&:after
+			width: 2px
+			height: 22px
+		&:before
+			height: 2px
+			width: 22px
+
+.city-map-dots-content
+	position: absolute
+	top: -20px
+	left: -20px
+	width: 300px
+	background-color: #fff
+	visibility: hidden
+	transition: all .3s ease
+	opacity: 0
+	transform-origin: top left
+	transform: scale(0.75)
+	border-radius: 7px
+	overflow: hidden
+	padding: 0 20px 20px
+	box-shadow: 0 0 21px 0 rgba(#000, .15)
+	img
+		width: calc(100% + 40px)
+		margin-bottom: 20px
+		margin-left: -20px
+		border-radius: 7px 7px 0 0
+	.h5
+		margin-bottom: 13px
+		font-size: 14px
+	p
+		margin-bottom: 8px
+		font-size: 12px
+		font-weight: normal
+	.link-angle
+		margin-top: 15px
+		font-size: 14px
+
+.city-map-dots-item-small
+	padding-left: rem(39px)
+	position: relative
+	color: #fff
+	&:after
+		content: ''
+		width: rem(22px)
+		height: rem(22px)
+		border-radius: 50%
+		background-color: #fff
+		flex-shrink: 0
+		position: absolute
+		top: 0
+		left: 0
+
+.city-map-open-full
+	position: absolute
+	z-index: 4
+	top: rem(40px)
+	right: rem(40px)
+
+.s-projects
+	overflow: visible
+	padding-bottom: rem(48px)
+
+.projects-nav-wrapper
+	position: absolute
+	top: 0
+	left: rem(40px)
+	height: 100%
+	z-index: 5
+	width: 24%
+	padding-bottom: rem(83px)
+
+.location-nav
+	padding-left: rem(68px)
+	position: sticky
+	top: rem(30px)
+	.white
+		color: #fff !important
+		a
+			color: #fff !important
+	.h6
+		text-transform: uppercase
+		font-size: rem(10px)
+		color: #9595A2
+		margin-bottom: rem(18px)
+		margin-top: rem(30px)
+		+tr
+		&:first-child
+			margin-top: 0
+	&.fixed
+		position: fixed
+		z-index: 10
+	&.light
+		.location-nav-link
+			a
+				color: #fff
+		.h6
+			color: #fff
+
+.location-nav-link
+	margin-bottom: rem(6px)
+	a
+		display: inline-block
+		+tr
+		color: $text
+		position: relative
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			left: -#{rem(17px)}
+			border-radius: 50%
+			width: rem(7px)
+			height: rem(7px)
+			background-color: $accent
+			top: rem(7px)
+			+tr
+			transform: translate3d(#{rem(17px)}, 0, 0)
+			opacity: 0
+			+tr
+		&:hover,
+		&.active
+			color: $accent
+			&:after
+				opacity: 1
+				transform: none
+
+.projects-header
+	margin-bottom: rem(75px)
+	display: flex
+
+.projects-header-left
+	width: 70%
+	flex-shrink: 0
+	padding-right: 20px
+	.h3
+		max-width: rem(702px)
+
+.projects-header-right
+	width: 30%
+	flex-shrink: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(35px)
+		font-size: rem(20px)
+		li
+			margin-bottom: rem(15px)
+			span
+				font-weight: bold
+			&:last-child
+				margin-bottom: 0
+
+.projects-header-right-btns
+	display: flex
+	.btn
+		margin-right: rem(20px)
+		&:last-child
+			margin-right: 0
+
+.project
+	margin-bottom: rem(35px)
+	&:hover
+		.project-header
+			img
+				transform: scale(1.1)
+
+.project-header
+	position: relative
+	margin-bottom: rem(12px)
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	overflow: hidden
+	padding: rem(20px) rem(24px)
+	height: rem(360px)
+	border-radius: rem(7px)
+	color: #fff
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(7px)
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)
+		z-index: 1
+	img
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(7px)
+		+tr
+		z-index: 0
+	.stick
+		position: absolute
+		top: rem(24px)
+		left: rem(24px)
+		z-index: 2
+
+.project-map-link
+	position: absolute
+	top: rem(24px)
+	right: rem(24px)
+	white-space: nowrap
+	height: rem(30px)
+	z-index: 2
+	+tr
+	display: inline-flex
+	align-items: center
+	padding: 0 rem(10px) 0 rem(12px)
+	font-size: rem(13px)
+	color: #fff !important
+	text-decoration: none !important
+	border: 1px solid #fff
+	border-radius: rem(7px)
+	overflow: hidden
+	span
+		font-size: rem(16px)
+		margin-right: rem(6px)
+	&:hover
+		border-color: $accent
+		&:after
+			transform: scaleX(1)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $accent
+		z-index: -1
+		transform: scaleX(0)
+		+tr
+		transform-origin: center left
+
+.project-title
+	max-width: rem(400px)
+	position: relative
+	z-index: 2
+	.h3
+		margin-bottom: rem(10px)
+	p
+		margin: 0
+
+.project-descr
+	display: flex
+	margin-bottom: rem(19px)
+
+.project-descr-left
+	padding-right: rem(20px)
+	flex-grow: 1
+	p
+		color: #9595A2
+		font-weight: normal
+		margin-bottom: rem(10px)
+
+.project-distance
+	display: flex
+	color: $gray
+	font-size: rem(12px)
+	span
+		font-size: rem(16px)
+		margin-right: rem(6px)
+
+.project-descr-right
+	text-align: right
+
+.project-price
+	display: inline-flex
+	align-items: center
+	margin-bottom: rem(5px)
+
+.project-price-val
+	font-size: rem(20px)
+	white-space: nowrap
+
+.project-price-info
+	position: relative
+
+.project-price-info-icon
+	cursor: pointer
+	color: $gray
+	margin-left: rem(10px)
+	display: flex
+	margin-top: -1px
+	&:hover
+		& ~ .project-price-info-dropdown
+			opacity: 1
+			visibility: visible
+
+.project-price-info-dropdown
+	position: absolute
+	min-width: rem(327px)
+	bottom: rem(27px)
+	left: -#{rem(8px)}
+	z-index: 5
+	background-color: #fff
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+	border-radius: rem(7px)
+	padding: rem(23px) rem(18px) rem(18px) rem(20px)
+	text-align: left
+	transition: all .4s ease
+	visibility: hidden
+	opacity: 0
+	color: $text
+	&.right-position
+		left: auto
+		right: -#{rem(8px)}
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: flex
+			justify-content: space-between
+			margin-bottom: rem(10px)
+			&:last-child
+				margin-bottom: 0
+			span
+				&:first-child
+					margin-right: rem(15px)
+				&:last-child
+					font-weight: 600
+
+.project-size
+	color: $gray
+	font-weight: normal
+	white-space: nowrap
+
+.project-labels
+	display: flex
+	flex-wrap: wrap
+
+.label
+	margin: 0 rem(10px) rem(10px) 0
+	white-space: nowrap
+	height: rem(30px)
+	line-height: rem(30px)
+	padding: 0 rem(9px)
+	border-radius: rem(4px)
+	background-color: #F2F2F2
+	color: $gray
+	font-weight: normal
+	font-size: rem(14px)
+	&.red
+		background-color: #FDE3E3 !important
+		color: #D90002
+
+.project--big
+	display: flex
+	margin-top: rem(48px)
+	.project-header
+		width: 56%
+		flex-shrink: 0
+		height: auto
+		padding: 0
+		margin: 0
+		img
+			position: static
+	.project-body
+		flex-shrink: 0
+		width: 44%
+		padding-left: rem(49px)
+		display: flex
+		flex-direction: column
+	.project-title
+		margin-bottom: rem(25px)
+		.h3
+			margin-bottom: rem(25px)
+	.project-descr-left
+		padding-right: 0
+		flex-grow: 0
+		margin-bottom: rem(35px)
+	.project-labels
+		margin-bottom: rem(20px)
+		margin-top: 0
+	.project-descr-right
+		margin-top: auto
+		text-align: left
+
+.bg-gray
+	padding-top: rem(54px)
+	background-color: #F2F2F2
+	.label
+		background-color: #fff
+
+.bg-linear-gray
+	background: linear-gradient(180deg, #FFFFFF 64.15%, #F2F2F2 118.43%)
+	padding-top: rem(54px)
+
+.s-layouts
+	padding: rem(80px) 0 rem(53px)
+
+.layouts-header
+	position: relative
+	margin-bottom: rem(60px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 3px
+		background-color: #F2F2F2
+		width: 100%
+	.h2
+		padding-bottom: rem(34px)
+
+.layouts-filter
+	.h2
+		margin-bottom: rem(43px)
+
+.layouts-filter-nav
+	display: flex
+
+.layouts-filter-nav-link
+	color: $text
+	+tr
+	text-decoration: none !important
+	display: inline-block
+	position: relative
+	padding-bottom: 26px
+	z-index: 1
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 3px
+		background-color: $accent
+		width: 100%
+		transform: scaleX(0)
+		+tr
+	&:hover
+		color: $accent
+	&.active
+		color: $accent
+		&:after
+			transform: scaleX(1)
+	span
+		top: -.5em
+		text-transform: uppercase
+		color: $accent
+		position: relative
+		font-size: 75%
+		line-height: 0
+		vertical-align: baseline
+		margin-left: rem(3px)
+
+.select-layout-wrapper
+	text-align: center
+
+.select-layout-grid
+	display: inline-grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(50px) rem(17px)
+	margin-left: auto
+	margin-right: auto
+	text-align: left
+	position: relative
+	grid-auto-rows: 1fr
+
+.select-layout-border
+	position: absolute
+	top: 0
+	left: 0
+	border-radius: rem(7px)
+	border: 1px solid $accent
+	z-index: 1
+	width: rem(80px)
+	height: rem(80px)
+	transition: transform .4s ease
+
+.select-layout-item
+	text-align: center
+	cursor: pointer
+	&.active
+		.select-layout-item-img
+			&:after
+				opacity: 1
+				transform: scale(1)
+	&:hover
+		.select-layout-item-img
+			img
+				transform: scale(1.1)
+
+.select-layout-item-img
+	display: flex
+	width: rem(80px)
+	height: rem(80px)
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: rem(14px)
+	border-radius: rem(7px)
+	position: relative
+	flex-shrink: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		flex-shrink: 0
+		max-width: 80%
+		max-height: 80%
+		+tr
+
+.select-layout-item-title
+	font-size: rem(12px)
+
+.select-layout-more
+	grid-column: span 2
+
+.select-layout-more-link
+	display: block
+	+tr
+	text-decoration: none !important
+	color: $text
+	text-align: center
+	font-size: rem(12px)
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	height: 100%
+	border: 1px solid $gray
+	border-radius: rem(7px)
+	span
+		display: block
+		font-size: rem(32px)
+		line-height: 1
+		margin-top: rem(5px)
+	&:hover
+		border-color: $accent
+		color: $accent
+
+.layout-info-wrapper
+	display: flex
+
+.layout-image
+	width: 55%
+	flex-shrink: 0
+	background-color: #f6f6f6
+	border-radius: rem(7px)
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: rem(15px) 0
+	.slick-current
+		img
+			transform: none
+	img
+		max-width: 95%
+		object-fit: contain
+		flex-shrink: 0
+		display: inline-block
+		max-height: rem(530px)
+		+tr
+		transform: translateX(-#{rem(30px)})
+	.slick-slide
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: rem(587px)
+		> div
+			display: flex
+			align-items: center
+			justify-content: center
+
+
+.layout-info-block
+	padding-left: rem(40px)
+	width: 45%
+	flex-shrink: 0
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+.layout-breadcrumbs
+	margin-bottom: rem(25px)
+	font-weight: normal
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		font-size: rem(14px)
+	li
+		margin-right: rem(46px)
+		margin-bottom: rem(5px)
+		position: relative
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+		&:after
+			content: '\e915'
+			font-family: icon
+			position: absolute
+			left: 100%
+			margin-left: rem(15px)
+			font-size: rem(13px)
+			color: $gray
+			top: rem(1px)
+	a
+		color: $gray
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.layout-info-slider
+	flex-grow: 1
+	max-width: 404px
+	.slick-current
+		.layout-info
+			transform: translateX(0)
+	.slick-list
+		overflow: visible !important
+		height: 100% !important
+	.slick-track
+		height: 100%
+
+.layout-info
+	font-weight: normal
+	height: 100%
+	+tr
+	transform: translateX(-#{rem(30px)})
+	display: flex !important
+	align-items: flex-start
+	flex-direction: column
+	.h3
+		margin-bottom: rem(10px)
+	ul
+		list-style-type: none
+		margin: 0 0 rem(40px)
+		padding: 0
+		li
+			position: relative
+			padding-left: rem(12px)
+			margin-bottom: rem(8px)
+			&:last-child
+				margin-bottom: 0
+			&:after
+				content: ''
+				position: absolute
+				top: rem(9px)
+				left: 0
+				width: rem(4px)
+				height: rem(4px)
+				background-color: $accent
+				border-radius: 50%
+	.btn
+		width: 100%
+		margin-bottom: rem(20px)
+
+.layout-price
+	font-size: rem(20px)
+	color: $accent
+	margin-bottom: rem(36px)
+	font-weight: 500
+
+.layout-btns
+	margin-top: auto
+	max-width: rem(403px)
+
+.layout-btn-main
+	margin-bottom: rem(12px)
+	.btn-gray
+		display: none
+
+.layout-btn-items-mob
+	display: none
+
+.layout-btn-items
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+
+.layout-btn-items-left
+	.btn
+		margin-bottom: rem(12px)
+		&:last-child
+			margin-bottom: 0
+
+.layout-btn-items-right
+	padding-bottom: rem(17px)
+	padding-right: rem(18px)
+
+.s-advantages
+	padding: rem(11px) 0 rem(80px)
+	[class*=col-]
+		display: flex
+		flex-direction: column
+
+.advantages-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(29px)
+	// grid-auto-rows: 1fr
+	margin-right: rem(30px)
+	flex-grow: 1
+
+.advantages-item
+	overflow: hidden
+	position: relative
+	&.type-2
+		min-height: rem(500px)
+		.advantages-img
+			height: 100%
+			img
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+		&:hover
+			.advantages-body
+				transform: translateY(-20px) !important
+				p
+					transform: translateY(0)
+			.advantages-img
+				&:after
+					opacity: 0
+				&:before
+					opacity: 1
+		.advantages-body
+			position: absolute
+			z-index: 2
+			color: #fff
+			bottom: 0
+			left: rem(33px)
+			right: rem(33px)
+			transition: transform .4s ease
+			margin-top: 0
+			max-width: rem(547px)
+			.h4
+				font-size: rem(32px)
+				margin-bottom: rem(27px)
+			p
+				transform: translateY(30px)
+				+tr
+	&.wide
+		grid-column: span 2
+
+.advantages-img
+	position: relative
+	overflow: hidden
+	border-radius: rem(7px)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%)
+		+tr
+		border-radius: rem(7px)
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		+tr
+		background-color: rgba(#000, .5)
+		opacity: 0
+		border-radius: rem(7px)
+	img
+		width: 100%
+		border-radius: rem(7px)
+		height: rem(264px)
+		object-fit: cover
+	.stick
+		position: absolute
+		top: rem(30px)
+		left: rem(32px)
+
+.advantages-body
+	margin-top: rem(27px)
+	font-weight: normal
+	.h4
+		margin-bottom: rem(19px)
+	p
+		&:last-child
+			margin-bottom: 0
+
+.check-more-btn
+	text-align: right
+	margin-top: rem(43px)
+	margin-right: rem(30px)
+
+.video-item
+	margin-bottom: rem(34px)
+	.video-block
+		min-height: rem(264px)
+	.stick
+		position: absolute
+		top: rem(30px)
+		left: rem(32px)
+
+.video-content
+	margin-top: rem(25px)
+
+.video-list
+	flex-grow: 1
+
+.s-our-services
+	padding: rem(45px) 0
+	background-color: #F2F2F2
+
+.calculator
+	border-radius: rem(7px)
+	background-color: #fff
+	padding: rem(50px) rem(53px) rem(45px)
+	.form-control
+		font-size: rem(24px)
+
+.section-title
+	margin-bottom: rem(40px)
+	.h2
+		margin: 0
+	p
+		margin: rem(13px) 0 0
+		font-size: rem(21px)
+		color: $gray
+
+.calculator-header
+	display: flex
+	margin-bottom: rem(50px)
+	.section-title
+		margin: 0 rem(20px) 0 0
+		flex-grow: 1
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+	color: #9595A2
+
+.form-control
+	border: none
+	outline: none !important
+	background-color: #F2F2F2
+	border-radius: rem(7px)
+	height: rem(60px)
+	padding: 0 rem(24px)
+	width: 100%
+	font-weight: 500
+
+.filter-range-solo
+	position: relative
+	.filter-range-slider
+		left: rem(8px)
+		width: auto
+		right: rem(8px)
+
+.filter-minmax
+	display: flex
+	justify-content: space-between
+	white-space: nowrap
+	margin-top: 17px
+	font-size: rem(12px)
+	color: $gray
+
+.filter-range-select
+	position: absolute
+	top: rem(7px)
+	right: rem(7px)
+	.select2-container--default .select2-selection--single
+		background-color: #fff
+		height: rem(46px)
+		font-size: rem(14px)
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		line-height: rem(46px)
+		padding: 0 rem(36px) 0 rem(13px)
+	.select2-container--default .select2-selection--single .select2-selection__arrow
+		height: rem(46px)
+		right: rem(10px)
+
+.calculator-form
+	.row
+		margin: 0 -10px
+		[class*=col-]
+			padding-left: 10px
+			padding-right: 10px
+	.filter-item
+		margin-right: 0
+
+.calculator-results
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	.btn
+		margin-right: rem(24px)
+		&:last-child
+			margin-right: 0
+
+.calcultator-total
+	font-weight: normal
+	margin-right: rem(49px)
+	position: relative
+
+.calcultator-total-price
+	display: block
+	font-weight: 600
+	line-height: 1
+	letter-spacing: -0.03em
+	font-size: rem(40px)
+	margin-top: rem(10px)
+	position: relative
+	+tr
+	color: $text
+	.loader
+		bottom: 0
+		top: 50%
+		margin-top: -#{rem(25px)}
+	&.loading
+		color: rgba($text, 0)
+		.loader
+			opacity: 1
+			visibility: visible
+
+.loader
+	position: absolute
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	top: 0
+	left: 0
+	background-color: #f2f2f2
+	z-index: 1
+	animation-name: rotate
+	animation-duration: 1.5s
+	animation-timing-function: ease-in-out
+	animation-iteration-count: infinite
+	opacity: 0
+	visibility: hidden
+	+tr
+	&:after
+		content: ''
+		position: absolute
+		height: rem(8px)
+		width: rem(8px)
+		top: rem(6px)
+		border-radius: 50%
+		background-color: $accent
+		left: 50%
+		margin-left: -#{rem(4px)}
+
+@keyframes rotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+
+.our-services
+	margin-top: rem(58px)
+
+.our-services-grid
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-auto-rows: 1fr
+	grid-gap: 1px
+
+.our-services-item
+	background-color: #fff
+	transition: all .4s ease
+	padding: rem(32px)
+	display: flex
+	overflow: hidden
+	position: relative
+	&:nth-child(1)
+		border-radius: rem(7px) 0 0 0
+	&:nth-child(4)
+		border-radius: 0 rem(7px) rem(7px) 0
+	&:nth-child(5)
+		border-radius: 0 0 0 rem(7px)
+	&:nth-child(7)
+		border-radius: 0 0 rem(7px) 0
+	&:hover
+		background-color: $accent
+		color: #fff
+		.our-services-item-icon
+			svg
+				[fill]
+					fill: white
+				[stroke]
+					stroke: white
+			&:after
+				transform: scale(3.64634)
+				background-color: rgba(#fff, .2)
+		&:after
+			opacity: 1
+			transform: translateX(0)
+	&:after
+		content: '\e915'
+		font-family: icon
+		font-size: 18px
+		transition: all .4s ease
+		position: absolute
+		bottom: rem(27px)
+		right: rem(30px)
+		z-index: 2
+		line-height: 1
+		color: #fff
+		opacity: 0
+		transform: translateX(20px)
+
+.our-services-item-left
+	flex-grow: 1
+	padding-right: rem(25px)
+	position: relative
+	z-index: 1
+	.h4
+		margin-bottom: rem(19px)
+
+.our-services-item-icon
+	width: rem(83px)
+	height: rem(83px)
+	flex-shrink: 0
+	position: relative
+	svg
+		max-width: 100%
+		max-height: 100%
+		position: relative
+		z-index: 1
+		*
+			transition: all .4s ease
+		.replace-stroke
+			stroke: $accent
+		.replace-fill
+			fill: $accent
+	img
+		position: relative
+		z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		height: rem(82px)
+		width: rem(82px)
+		z-index: 0
+		border-radius: 50%
+		background-color: #f2f2f2
+		top: rem(7px)
+		left: rem(7px)
+		transition: all .4s ease
+
+
+.our-services-item-left
+	position: relative
+	z-index: 0
+
+.our-services-item-link
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.s-contacts
+	padding-bottom: rem(50px)
+	overflow: visible
+
+.contacts-form-block
+	border-radius: rem(10px)
+	background-color: #f2f2f2
+	display: flex
+	margin-right: rem(38px)
+
+.contacts-form-left
+	flex-grow: 1
+	padding: rem(36px) 0 rem(57px) rem(49px)
+	position: relative
+	z-index: 1
+	// .h2
+	// 	margin-bottom: rem(65px)
+
+.form-group
+	margin-bottom: rem(22px)
+	&.white
+		.form-control
+			background-color: #fff
+		.select2-container--default .select2-selection--single
+			background-color: #fff
+
+form
+	.row
+		margin: 0 -#{rem(8px)}
+		[class*=col-]
+			padding: 0 rem(8px)
+
+.form-footer-row
+	margin-top: 6px
+	display: flex
+	align-items: center
+	p
+		flex-grow: 1
+		margin: 0 rem(30px) 0 0
+		font-size: rem(12px)
+		color: $gray
+		max-width: 220px
+	.btn
+		margin-left: auto
+	a
+		position: relative
+		color: inherit
+		+tr
+		text-decoration: underline
+		&:hover
+			color: $accent
+
+.contacts-form
+	margin-top: rem(65px)
+	.select2-container--default
+		font-size: rem(18px)
+
+.contacts-form-left
+	position: relative
+
+.contacts-form-success
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+	background-color: #F2F2F2
+	padding: rem(68px) rem(74px)
+	opacity: 0
+	visibility: hidden
+	border-radius: rem(10px)
+	+tr
+	.h2
+		margin-bottom: rem(40px)
+	p
+		margin: 0
+		font-size: rem(14px)
+		max-width: rem(300px)
+	&.visible
+		opacity: 1
+		visibility: visible
+
+.success-icon
+	width: rem(45px)
+	height: rem(45px)
+	margin-bottom: rem(25px)
+	background-color: $accent
+	background-image: url(../img/icons/checkmark.svg)
+	background-size: 25px
+	background-repeat: no-repeat
+	background-position: center
+	border-radius: 50%
+
+
+.contacts-form-right
+	display: flex
+	align-items: flex-end
+	justify-content: flex-end
+	margin-top: rem(-15px)
+	img
+		width: rem(289px)
+		position: relative
+		z-index: 0
+		&.type-2
+			transform: scale(1.6) translateX(#{rem(20px)})
+			transform-origin: right bottom
+		&.type-3
+			margin-right: rem(-25px)
+
+.contacts-list
+	padding-top: rem(45px)
+	.h2
+		margin-bottom: rem(30px)
+
+.contacts-links
+	margin-bottom: rem(44px)
+
+.contacts-phone
+	a
+		font-size: rem(32px)
+		color: $text
+		font-weight: 500
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.contacts-mail
+	a
+		font-weight: normal
+		color: $accent
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $text
+
+.contacts-nav
+	display: inline-block
+
+.contacts-nav-link
+	margin-bottom: 2px
+	+tr
+	display: flex
+	align-items: center
+	padding: 0 rem(18px) 0 rem(13px)
+	white-space: nowrap
+	color: $gray !important
+	text-decoration: none !important
+	font-weight: normal
+	height: rem(48px)
+	border-radius: rem(10px)
+	&:hover
+		background-color: #F2F2F2
+		span
+			color: #4592EB
+	span
+		color: $text
+		font-size: rem(26px)
+		text-align: center
+		margin-right: rem(17px)
+		+tr
+
+#contacts-map
+	height: rem(211px)
+	border-radius: rem(10px)
+	overflow: hidden
+	[class*='-ground-pane']
+		filter: grayscale(1)
+
+.contacts-map-wrapper
+	margin-bottom: rem(37px)
+	position: relative
+
+.open-full-contacts-map
+	position: absolute
+	z-index: 1
+	width: rem(39px)
+	height: rem(39px)
+	border-radius: rem(6px)
+	background-image: url(../img/icons/full-size.svg)
+	background-size: rem(29px)
+	background-repeat: no-repeat
+	background-position: center
+	bottom: rem(12px)
+	right: rem(12px)
+	background-color: #fff
+
+.contacts-map-objects-list-item
+	display: flex
+	margin-bottom: rem(15px)
+	line-height: 1.1
+	span
+		width: 50%
+		flex-shrink: 0
+		&:first-child
+			padding-right: rem(10px)
+		&:last-child
+			font-size: rem(12px)
+			color: $gray
+
+.contacts-map-objects-all
+	a
+		color: $accent
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $gray
+		&:before
+			content: attr(data-text)
+		&.active
+			&:before
+				content: attr(data-close-text)
+
+.footer
+	padding: rem(55px) 0 rem(45px)
+	border-top: 1px solid #f2f2f2
+
+.footer-nav
+	.h6
+		font-size: rem(11px)
+		color: #5D5D65
+		text-transform: uppercase
+		font-weight: normal
+		margin-bottom: rem(35px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		margin-bottom: rem(11px)
+		font-weight: normal
+		&:last-child
+			margin-bottom: 0
+	a
+		color: $text
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.footer-copyright
+	p
+		color: rgba($text, .2)
+		margin-bottom: rem(25px)
+		font-size: rem(12px)
+
+.footer-copyright-row
+	display: flex
+
+.footer-copyright-left
+	flex-grow: 1
+	padding-right: rem(20px)
+
+.copyright
+	font-size: rem(14px)
+	margin-bottom: rem(9px)
+	a
+		color: $text
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $accent
+
+.footer-dev
+	margin-top: 31px
+	a
+		display: flex
+		align-items: center
+		white-space: nowrap
+		font-size: rem(12px)
+		color: #D1D1D3 !important
+		text-decoration: none !important
+		img
+			width: rem(85px)
+			margin-left: rem(12px)
+			flex-shrink: 0
+
+.footer-apps
+	display: flex
+	a
+		margin-right: rem(9px)
+		img
+			width: rem(122px)
+
+.popup-full-window
+	.popup-block
+		background-color: #fff
+		width: 100%
+		border-radius: 0
+		min-height: 100%
+		padding: rem(53px) 0 rem(85px)
+		display: flex
+		flex-direction: column
+	.popup-close
+		position: absolute
+		color: $text
+		top: rem(52px)
+		right: rem(59px)
+	.popup-content
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+.full-filters-block
+	display: flex
+	flex-direction: column
+	height: 100%
+	flex-grow: 1
+	.section-title
+		padding-right: rem(60px)
+	.filter-checkbox-label
+		flex-grow: 1
+	.filter-item
+		margin-right: 0
+	.container
+		height: 100%
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+.filter-checkboxes
+	margin-top: 25px
+	display: flex
+	flex-wrap: wrap
+	.checkbox
+		margin-right: rem(37px)
+		&:last-child
+			margin-right: 0
+
+.checkbox
+	label
+		display: inline-block
+		margin: 0
+		position: relative
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: $text
+
+			&:before
+				opacity: 1
+				transform: none
+	span
+		color: #9595A1
+		display: block
+		position: relative
+		padding-left: rem(36px)
+		+tr
+		&:after
+			content: ''
+			position: absolute
+			width: rem(24px)
+			height: rem(24px)
+			border-radius: 0
+			left: 0
+			top: -#{rem(2px)}
+			border: 1px solid #9595A1
+			border-radius: rem(7px)
+			cursor: pointer
+			+tr
+		&:before
+			content: ''
+			position: absolute
+			width: rem(12px)
+			height: rem(12px)
+			border-radius: rem(4px)
+			background-color: $accent
+			top: rem(4px)
+			left: rem(6px)
+			+tr
+			transform: scale(0)
+
+.full-filter-footer
+	display: flex
+	margin-top: rem(38px)
+	flex-grow: 1
+
+.full-filter-left
+	flex-grow: 1
+	padding-right: rem(30px)
+
+.mortgage-block
+	display: inline-block
+	position: relative
+	z-index: 1
+	padding: rem(21px) rem(30px)
+	&:after
+		content: ''
+		position: absolute
+		+tr
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		border-radius: rem(10px)
+		background-color: #f2f2f2
+		z-index: -1
+
+.mortgage-switch
+	.switch-checkbox-label
+		margin-top: rem(2px)
+
+.switch-checkbox
+	display: flex
+	align-items: center
+
+.switch-checkbox-title
+	font-size: rem(32px)
+	line-height: 1
+	margin-right: rem(15px)
+
+.switch-checkbox-label
+	display: inline-block
+	position: relative
+	margin: 0
+	input
+		position: absolute
+		opacity: 0
+		z-index: -1
+		visibility: hidden
+		&:checked + span
+			background-color: #219653
+			&:after
+				transform: translateX(#{rem(21px)})
+	span
+		display: block
+		width: rem(48px)
+		height: rem(27px)
+		border-radius: rem(14px)
+		+tr
+		cursor: pointer
+		background-color: #9595A2
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: rem(21px)
+			height: rem(21px)
+			border-radius: 50%
+			background-color: #fff
+			top: rem(3px)
+			left: rem(3px)
+			+tr
+
+.mortgage-form
+	display: none
+	.row
+		padding-top: rem(29px)
+	.form-control
+		background-color: #fff
+	.filter-item
+		margin-bottom: rem(10px)
+
+.filter-range-solo-input.with-label
+	position: relative
+	.form-control
+		padding-left: rem(41px)
+	span
+		position: absolute
+		left: rem(16px)
+		z-index: 1
+		width: rem(20px)
+		top: rem(18px)
+		font-weight: 500
+		color: rgba($text, .4)
+
+.full-filter-right
+	margin-top: auto
+
+.full-filter-btns
+	display: flex
+	align-items: center
+
+.clear-filter
+	color: $text
+	text-decoration: none !important
+	+tr
+	display: inline-block
+	margin-right: rem(32px)
+	white-space: nowrap
+	&:hover
+		color: $accent
+
+#map-popup,
+#contacts-map-popup
+	.popup-block
+		width: 1597px
+		max-width: calc(100vw - 80px)
+
+.popup-map
+	position: relative
+	padding-bottom: 46%
+	border-radius: rem(10px)
+	overflow: hidden
+	> div
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		overflow: hidden
+
+.popup-header
+	display: flex
+	align-items: center
+	margin-bottom: rem(30px)
+	.popup-close
+		margin-bottom: 0
+
+.popup-title
+	margin-right: 20px
+	color: #fff
+	.h3
+		font-weight: normal
+
+.project-mark
+	display: inline-block
+	background-color: #fff
+	height: rem(31px)
+	margin-left: rem(34px)
+	white-space: nowrap
+	border-radius: 0 2px 2px 0
+	line-height: rem(31px)
+	font-size: rem(16px)
+	font-family: $default-font
+	padding-left: rem(28px)
+	padding-right: rem(8px)
+	z-index: -1
+	position: relative
+	cursor: pointer
+	box-shadow: 0px 0px 10px 0px rgba(90, 90, 90, 0.05)
+	margin-top: rem(10px)
+	a
+		color: #2E2E43 !important
+		text-decoration: none !important
+
+.main-window-search
+	display: none
+
+.projects-header-right-icon
+	display: none
+
+.blockquote-author-text-mob
+	display: none
+
+.our-services-link
+	text-align: right
+	display: none
+
+.s-projects-wrapper
+	position: relative
+	overflow: visible !important
+
+.layouts-body-tab
+	display: none
+	&.visible
+		display: block
+
+.select-with-checkboxes
+	.select2-results__option
+		position: relative
+		padding-left: rem(28px)
+		&:after
+			content: ''
+			position: absolute
+			width: rem(18px)
+			height: rem(18px)
+			border-radius: rem(4px)
+			border: 1px solid #9595A2
+			left: 0
+			top: rem(1px)
+			+tr
+		&:before
+			content: ''
+			position: absolute
+			width: rem(18px)
+			height: rem(18px)
+			border-radius: rem(4px)
+			left: 0
+			top: rem(1px)
+			background-image: url(../img/icons/checkmark-red.svg)
+			background-repeat: no-repeat
+			background-position: center
+			opacity: 0
+			+tr
+			transform: scale(0)
+			background-size: rem(12px)
+		&.select2-results__option--selected
+			&:after
+				border-color: $accent
+			&:before
+				opacity: 1
+				transform: scale(1)
+
+.select2-container--default .select2-search--inline .select2-search__field
+	resize: none
+	appearance: none
+
+.select2-container--default
+	.select2-selection--multiple
+		border: none !important
+		border-radius: rem(7px) !important
+		background-color: #F2F2F2
+		padding-bottom: 0
+		height: rem(56px)
+		padding: rem(12px) rem(44px) rem(12px) rem(20px)
+		cursor: pointer !important
+		display: flex
+		align-items: center
+		position: relative
+		&:after
+			content: '\e911'
+			font-family: icon
+			color: $text
+			font-size: rem(12px)
+			+tr
+			display: inline-block
+			position: absolute
+			top: rem(20px)
+			right: rem(20px)
+			+tr
+	&.select2-container--open
+		.select2-selection--multiple
+			&:after
+				transform: rotate(180deg)
+
+.select2-container .select2-selection--multiple .select2-selection__rendered
+	margin-bottom: 0
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	display: inline !important
+	background-color: transparent !important
+	border: none !important
+	padding: 0 !important
+	margin: 0 !important
+	&:last-child:after
+		content: ''
+	&:after
+		content: ', '
+	button
+		display: none !important
+	span
+		background-color: transparent !important
+		border: none !important
+		border-radius: 0 !important
+		padding: 0 !important
+
+.select2-container .select2-search--inline .select2-search__field
+	padding-top: rem(21px)
+	font-weight: 500
+
+.select2-results__options
+  -webkit-overflow-scrolling: touch
+
+.main-window-global-info
+	flex-grow: 1
+	color: #fff
+	padding-right: rem(170px)
+	padding-left: rem(20px)
+
+.main-window-global-info-title
+	margin-bottom: rem(20px)
+	h1, .h1
+		margin: 0 rem(15px) 0 0
+		line-height: 1.06
+		display: inline
+	.stick
+		transform: translateY(#{rem(-36px)})
+
+.main-window-global-info-address
+	font-weight: normal
+	margin-top: rem(5px)
+	font-size: rem(20px)
+
+.main-window-global-info-list
+	display: flex
+	margin-top: rem(41px)
+	.project-descr-right
+		text-align: left
+		margin-right: rem(39px)
+	.project-price-val
+		font-size: rem(32px)
+	.project-price-info-icon
+		color: rgba(#fff, .6)
+	.project-size
+		color: #fff
+	.project-price
+		margin-bottom: 0
+
+.main-footer-nav
+	flex-grow: 1
+	margin-top: auto
+	margin-bottom: auto
+	white-space: nowrap
+	> ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		> li
+			margin-right: 25px
+	a
+		color: #fff
+		text-decoration: none !important
+		transition: color .3s ease
+		font-size: 16px
+		&:hover,
+		&.active
+			color: rgba(#fff, .6)
+
+.has-child
+	position: relative
+	&.active
+		span
+			&:after
+				transform: rotate(180deg)
+		ul
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+	span
+		color: #fff
+		display: inline-flex
+		align-items: center
+		cursor: pointer
+		font-size: 16px
+		&:after
+			content: '\e911'
+			font-family: icon
+			font-size: 10px
+			margin-left: 6px
+			+tr
+			transform: translateY(1px)
+	ul
+		position: absolute
+		bottom: calc(100% + 15px)
+		right: 0
+		border-radius: 7px !important
+		border: none
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+		overflow: hidden
+		font-size: 16px
+		transform: translateY(8px)
+		z-index: 5
+		background-color: #fff
+		list-style-type: none
+		margin: 0
+		padding: 0
+		white-space: nowrap
+		padding: 21px 23px
+		// +tr
+		opacity: 0
+		transform: translateY(5px)
+		visibility: hidden
+		min-width: 251px
+		&.down-view
+			bottom: auto
+			top: calc(100% + 15px)
+		li
+			margin-bottom: 9px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: #000
+			&:hover
+				color: $accent
+
+.main-footer-btn
+	.btn
+		display: block
+
+.main-window-footer-type-2
+	padding: rem(24px) 0
+
+.s-small-stocks
+	background-color: #F2F2F2
+	padding: rem(30px) 0
+	overflow: hidden
+
+.small-stocks-row
+	display: flex
+	align-items: center
+
+.small-stocks-main-title
+	font-size: rem(25px)
+	font-weight: normal
+
+.small-stocks-slider
+	position: relative
+	.slick-list
+		overflow: visible
+	.slider-next
+		right: calc(100% + 42px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		&.animate-ring
+			svg
+				circle
+					animation-name: ringload
+		svg
+			circle
+				animation-duration: var(--stocks-duration)
+				stroke-dasharray: 119.38 119.38
+				stroke-dashoffset: 119.38
+				animation-timing-function: linear
+	.slider-prev
+		position: absolute
+		right: calc(100% + 95px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+	.slick-slide
+		transition: all 0 ease !important
+	.fade-up
+		.small-stocks-item
+			transform: translateY(-40px)
+	.slick-current
+		.small-stocks-item
+			transform: translateY(0)
+			opacity: 1
+
+
+.small-stocks-item
+	transform: translateY(40px)
+	opacity: 0
+	transition: all .7s ease
+	display: flex !important
+	align-items: center
+	position: relative
+	&-link
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+
+.small-stocks-img
+	margin-right: rem(23px)
+	img
+		max-width: rem(45px)
+		max-height: rem(45px)
+		object-fit: contain
+
+.small-stocks-title
+	font-size: rem(24px)
+	font-weight: 400
+
+.small-stocks-slider
+	.small-stocks-title
+		color: $accent
+
+.s-res-complex-descr
+	padding: rem(87px) 0 rem(60px)
+
+.res-complex-logo
+	img
+		width: 100%
+		max-width: rem(317px)
+
+.res-complex-descr-videos
+	margin-bottom: rem(74px)
+	.video-block
+		margin-bottom: 0
+
+.res-complex-descr-text
+	font-weight: normal
+	max-width: 579px
+	p
+		font-size: 20px
+		&:last-child
+			margin-bottom: 0
+		&.big-text
+			font-size: 26px
+			margin-bottom: 25px
+	.about-in-nmbrs
+		display: flex
+		flex-wrap: wrap
+		margin: 0 rem(-18px) rem(50px) !important
+	.about-in-nmbrs-item
+		margin-right: 0
+		padding: 0 rem(18px)
+		width: 33.33333%
+		flex-shrink: 0
+		margin-bottom: rem(50px)
+		max-width: none
+		span
+			font-size: rem(62px)
+
+.select-layout-filter
+	margin-bottom: rem(52px)
+	.filter-checkbox
+		justify-content: center
+	.filter-checkbox-label
+		&.big
+			span
+				padding: 0 rem(29px)
+
+.s-apartment-types
+	padding: rem(63px) 0 rem(45px)
+
+.with-view-types
+	img
+		display: none
+
+.layout-image-item-view
+	display: flex
+	align-items: center
+	top: rem(24px)
+	left: rem(30px)
+	position: absolute
+	z-index: 1
+	a
+		color: $text
+		+tr
+		text-decoration: none !important
+		white-space: nowrap
+		height: rem(32px)
+		line-height: rem(32px)
+		border-radius: rem(7px)
+		padding: 0 rem(11px)
+		&:hover
+			color: $accent
+		&.active
+			color: $accent
+			background-color: #fff
+
+.layout-info-list
+	margin-bottom: rem(25px)
+	margin-right: rem(58px)
+	max-width: 360px
+	width: 100%
+
+.layout-info-list-item
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: rem(20px)
+	span
+		&:last-child
+			font-weight: bold
+			text-align: right
+
+.layout-big-price
+	font-weight: bold
+	font-size: rem(32px)
+	margin-bottom: rem(30px)
+	white-space: nowrap
+
+.s-master-plan
+	position: relative
+	padding-top: 52px
+
+.master-plan-img
+	position: relative
+	img
+		width: 100%
+		display: block
+	.btn
+		position: absolute
+		top: rem(40px)
+		right: rem(40px)
+		z-index: 1
+
+.master-plan-header
+	margin-bottom: 34px
+	.h2
+		font-weight: normal
+		margin: 0
+
+.cardinal-points
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	right: rem(62px)
+	bottom: rem(62px)
+	img
+		width: 77px
+		flex-shrink: 0
+
+.s-photos
+	position: relative
+	.section-title
+		position: absolute
+		z-index: 1
+		left: 0
+		top: rem(55px)
+		width: 100%
+		color: #fff
+
+.photos-gallery
+	width: 100%
+	height: 56.25vw
+	object-fit: cover
+	.slick-dots
+		align-items: center
+		position: absolute
+		bottom: 10px
+		left: 0
+		width: 100%
+		list-style-type: none
+		padding: 0
+		margin: 0
+		justify-content: center
+		display: none !important
+		li
+			button
+				font-size: 0
+				width: 4px
+				height: 4px
+				flex-shrink: 0
+				padding: 0
+				border: none
+				outline: none !important
+				background-color: #ccc
+				margin: 0 3px
+				border-radius: 50%
+				+tr
+			&.slick-active
+				button
+					background-color: #000
+
+.photos-gallery-thumbs-wrapper
+	position: absolute
+	bottom: rem(55px)
+	z-index: 2
+
+.photos-gallery-thumbs
+	margin-left: calc(25% + #{rem(30px)})
+	position: relative
+	.slick-list
+		overflow: visible
+	img
+		height: rem(82px)
+		width: rem(82px) !important
+		border-radius: rem(7px)
+		object-fit: cover
+		+tr
+		opacity: 0
+		cursor: pointer
+	.slick-slide
+		position: relative
+		padding: 0 rem(7px)
+		&:after
+			content: '\e91d'
+			font-size: rem(38px)
+			font-family: icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			+tr
+			opacity: 0
+			color: #fff
+			width: rem(82px)
+			height: rem(82px)
+			border-radius: rem(7px)
+			background-color: rgba(0, 0, 0, 0.4)
+			z-index: 1
+			text-align: center
+			line-height: rem(82px)
+			cursor: pointer
+		&.slick-current
+			&:after
+				opacity: 1
+			img
+				opacity: 1
+			& ~ .slick-slide
+				img
+					opacity: 1
+	.slider-next
+		right: calc(100% + 42px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 2
+		color: #fff
+		// &.animate-ring
+		// 	svg
+		// 		circle
+		// 			animation-name: ringload
+		// svg
+		// 	circle
+		// 		animation-duration: var(--stocks-duration)
+		// 		stroke-dasharray: 119.38 119.38
+		// 		stroke-dashoffset: 119.38
+		// 		animation-timing-function: linear
+		svg
+			circle
+				fill: rgba(#fff, .3)
+	.slider-prev
+		position: absolute
+		right: calc(100% + 95px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 2
+		color: #fff
+
+.live-in-rescom-img
+	position: relative
+	padding-bottom: 100%
+	margin-bottom: rem(27px)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+		border-radius: rem(10px)
+
+.slider-live-in-rescom
+	.slick-list
+		margin: 0 -#{rem(15px)}
+		overflow: visible
+	.slick-slide
+		padding: 0 rem(15px)
+		opacity: 0
+		transition: all .5s ease
+		&.slick-active
+			opacity: 1
+			& + .slick-slide
+				opacity: 1
+		&.prev-slide
+			transform: translateX(100%)
+
+.loader-ellipsis
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	align-items: center
+	justify-content: center
+	+tr
+	visibility: hidden
+	opacity: 0
+	span
+		position: relative
+		width: 6px
+		height: 6px
+		display: block
+		border-radius: 50%
+		flex-shrink: 0
+		animation: blinking 1.2s linear 0s infinite
+		animation-delay: .2s
+		background-color: rgba(#fff, .2)
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			animation: blinking 1.2s linear 0s infinite
+			background-color: rgba(#fff, .2)
+		&:before
+			left: -10px
+			animation-delay: 0s
+		&:after
+			right: -10px
+			animation-delay: .4s
+
+@keyframes blinking
+	0%
+		background-color: rgba(#fff, .2)
+	50%
+		background-color: rgba(#fff, 1)
+	100%
+		background-color: rgba(#fff, .2)
+
+.videos-slider-item-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+
+.videos-item-big
+	grid-column: 2 span
+	grid-row: 3 span
+	min-height: 100%
+	.video-block
+		min-height: 100%
+		.video-play
+			white-space: nowrap
+
+.videos-item
+	position: relative
+	border-radius: rem(7px)
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding: rem(30px) rem(30px) rem(25px)
+	height: 100%
+	min-height: rem(157px)
+	&:hover
+		.videos-item-bg
+			img
+				transform: scale(1.05)
+	&:after
+		content: ''
+		border-radius: rem(7px)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .5)
+		z-index: 1
+	.stick
+		position: relative
+		z-index: 2
+		margin-bottom: auto
+
+.videos-item-bg
+	img
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		border-radius: rem(7px)
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+
+.videos-item-text
+	position: relative
+	z-index: 2
+	margin-top: 20px
+	color: #fff
+
+.videos-slider
+	.slick-slide
+		padding: 0 rem(15px)
+	.slick-list
+		margin: 0 -#{rem(15px)}
+
+.contacts-form-descr
+	margin-bottom: rem(39px)
+	font-size: rem(18px)
+	margin-top: rem(15px)
+	margin-bottom: rem(-30px)
+	img
+		max-width: rem(28px)
+		max-height: rem(28px)
+		object-fit: contain
+		margin-left: rem(4px)
+
+.videos-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+
+.s-rescom-advantages
+	padding: rem(82px) 0 rem(77px)
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $accent
+		opacity: .05
+		z-index: -1
+
+.rescom-advantages-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(55px) rem(85px)
+
+.rescom-advantages-icon
+	display: inline-block
+	position: relative
+	width: rem(65px)
+	height: rem(65px)
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: rem(23px)
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	bottom: rem(-20px)
+	// 	right: rem(-30px)
+	// 	background-color: var(--advantage-icon-bg-color)
+	// 	width: rem(77px)
+	// 	height: rem(77px)
+	// 	border-radius: 50% rem(15px) 50% rem(15px)
+	// 	+tr
+	svg
+		max-width: rem(65px)
+		max-height: rem(65px)
+		flex-shrink: 0
+		position: relative
+		z-index: 1
+		.replace-stroke
+			stroke: $accent
+		.replace-fill
+			fill: $accent
+	// &.square
+	// 	&:after
+	// 		width: (50px)
+	// 		height: rem(57px)
+	// 		border-radius: rem(5px)
+	// 		bottom: rem(-10px)
+	// 		right: rem(-10px)
+	// &.triangle
+	// 	&:after
+	// 		width: rem(62px)
+	// 		height: rem(104px)
+	// 		background-color: transparent !important
+	// 		border-width: rem(52px) rem(31px) rem(52px) rem(31px)
+	// 		border-style: solid
+	// 		border-color: transparent
+	// 		border-bottom-color: var(--advantage-icon-bg-color)
+	// 		border-radius: 0 !important
+	// 		bottom: rem(10px)
+	// 		right: rem(-10px)
+	// &.circle
+	// 	&:after
+	// 		width: rem(52px)
+	// 		height: rem(52px)
+	// 		border-radius: 50% !important
+	// 		bottom: rem(10px)
+	// 		right: rem(-10px)
+
+.rescom-advantages-icon-bg
+	position: absolute
+	bottom: rem(-20px)
+	right: rem(-40px)
+	width: rem(77px)
+	height: rem(77px)
+	img
+		max-width: 100%
+		max-height: 100%
+		object-fit: contain
+
+.rescom-advantages-title
+	font-size: rem(26px)
+	font-weight: normal
+	line-height: 1.461
+	max-width: rem(350px)
+
+.s-position
+	padding: rem(70px) 0 rem(88px)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top 0 right 0
+	.section-title
+		.h2
+			margin-bottom: rem(40px)
+
+.position-info
+	margin-bottom: rem(120px)
+
+.position-info-content
+	max-width: rem(746px)
+	p
+		margin-bottom: rem(32px)
+		font-size: rem(26px)
+		line-height: 1.461
+		font-weight: normal
+		a
+			color: $accent !important
+			text-decoration: none !important
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 100%
+				height: 1px
+				background-color: $accent
+				+tr
+			&:hover
+				&:after
+					width: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		font-size: rem(20px)
+		li
+			font-weight: normal
+			margin-bottom: rem(15px)
+			&:last-child
+				margin-bottom: 0
+			span
+				font-weight: 600
+
+.slick-track
+	margin-left: 0
+	margin-right: 0
+
+.position-slider
+	.news-item
+		min-height: rem(254px)
+
+.s-global-info
+	padding-top: rem(110px)
+	overflow: visible
+	.text-slider-wrapper
+		margin-bottom: rem(78px)
+		overflow: hidden
+		width: 100vw
+
+.global-info-nav
+	display: flex
+	align-items: flex-start
+	flex-direction: column
+	position: sticky
+	top: rem(30px)
+	padding-left: rem(28px)
+	&.fixed
+		position: fixed
+		max-width: 20%
+
+.global-info-nav-link
+	+tr
+	font-size: 16px
+	color: #9595A1
+	text-decoration: none !important
+	margin: 0 0 rem(8px)
+	position: relative
+	display: inline-block
+	&:after
+		content: ''
+		position: absolute
+		left: -#{rem(17px)}
+		border-radius: 50%
+		width: 7px
+		height: 7px
+		background-color: $accent
+		top: 50%
+		+tr
+		transform: translate3d(#{rem(17px)}, 0, 0)
+		margin-top: -4px
+		opacity: 0
+		+tr
+	&:hover,
+	&.active
+		color: $accent
+		&:after
+			opacity: 1
+			transform: none
+	&.skip
+		margin-top: rem(37px)
+		display: flex
+		align-items: center
+		span
+			font-size: rem(9px)
+			margin-left: rem(6px)
+
+.block-info-grid
+	display: grid
+	grid-gap: 33px 30px
+	grid-template-columns: repeat(3, 1fr)
+	margin-bottom: rem(100px)
+	.block-info-title
+		grid-column: span 3
+
+.block-info
+	width: 100%
+	position: relative
+	min-height: rem(275px)
+	display: flex
+	flex-direction: column
+	.stick
+		margin-bottom: rem(20px)
+		margin-right: auto
+	&:hover
+		.block-info-img
+			img
+				transform: scale(1.05)
+	&.big
+		grid-column: span 3
+		min-height: rem(614px)
+		.block-info-text
+			.h3
+				margin-top: 0
+				margin-bottom: auto
+				font-size: rem(80px)
+				font-weight: normal
+				flex-grow: 1
+				line-height: 1
+			p
+				font-size: rem(26px)
+				line-height: 1.461
+				max-width: rem(821px)
+				font-weight: normal
+	&.medium
+		grid-column: span 2
+	&.type-2
+		min-height: rem(502px)
+		.block-info-text
+			.h3
+				font-size: rem(28px)
+				max-width: rem(493px)
+
+.block-info-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(59.86deg, rgba(0, 0, 0, 0.51) 40.04%, rgba(0, 0, 0, 0) 100.61%)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+		border-radius: rem(10px)
+
+.block-info-text
+	position: relative
+	display: flex
+	flex-direction: column
+	z-index: 2
+	color: #fff
+	padding: rem(32px) rem(34px)
+	justify-content: flex-end
+	flex-grow: 1
+	.h3
+		font-size: rem(32px)
+		max-width: rem(280px)
+		margin-top: auto
+
+.block-info-chess
+	margin-bottom: rem(6px)
+	&.reverse
+		.block-info-chess-item
+			flex-direction: row-reverse
+			.block-info-chess-item-text
+				padding: 0 rem(15px) 0 rem(59px)
+			&:nth-child(even)
+				flex-direction: row
+				.block-info-chess-item-text
+					padding: 0 rem(26px) 0 rem(15px)
+
+.block-info-chess-item
+	display: flex
+	margin: 0 rem(-15px) rem(94px)
+	&:nth-child(even)
+		flex-direction: row-reverse
+		.block-info-chess-item-text
+			padding: 0 rem(15px) 0 rem(59px)
+
+.block-info-chess-item-text
+	padding: 0 rem(26px) 0 rem(15px)
+	width: 50%
+	flex-shrink: 0
+	font-weight: normal
+	margin-top: auto
+	margin-bottom: auto
+	.h2
+		margin-bottom: rem(40px)
+	p
+		margin-bottom: rem(50px)
+		font-size: rem(20px)
+		&.big-text
+			font-size: rem(26px)
+			margin-bottom: rem(32px)
+	.btn
+		margin-top: rem(5px)
+	.red
+		color: $red
+	ul
+		list-style-type: none
+		padding: 0
+		margin: rem(42px) 0
+		font-size: rem(20px)
+		li
+			position: relative
+			margin-bottom: rem(18px)
+			padding-left: rem(16px)
+			&:after
+				content: ''
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				position: absolute
+				left: 0
+				top: rem(10px)
+				background-color: $accent
+
+.block-info-chess-item-img
+	flex-shrink: 0
+	width: 50%
+	padding: 0 rem(15px)
+	img
+		width: 100%
+		border-radius: 10px
+
+.block-info-big-banner
+	position: relative
+	margin-bottom: rem(50px)
+	&:hover
+		.block-info-big-banner-img
+			img
+				transform: scale(1.05)
+
+.block-info-big-banner-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(61.61deg, #000000 -49.72%, rgba(0, 0, 0, 0) 65.99%)
+
+.block-info-big-banner-text
+	position: relative
+	z-index: 1
+	color: #fff
+	padding: rem(70px) rem(74px) rem(62px)
+	> *
+		max-width: rem(559px)
+	.h1
+		font-weight: normal
+		margin-bottom: rem(38px)
+		line-height: .9
+	p
+		margin: 0
+		font-size: rem(26px)
+		font-weight: normal
+		line-height: 1.45
+
+.block-info-leftright-text
+	margin-bottom: rem(100px)
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: rem(30px)
+	font-size: rem(20px)
+	font-weight: normal
+	p
+		margin: 0
+		max-width: rem(553px)
+	.block-info-title
+		grid-column: span 2
+
+.block-info-icontext
+	display: flex
+	margin-left: rem(75px)
+	.rescom-advantages-icon
+		margin-right: rem(60px)
+		margin-top: rem(-18px)
+	p
+		max-width: rem(321px)
+
+.block-info-title
+	margin-bottom: rem(15px)
+	.h2
+		font-weight: normal
+		margin: 0
+	& + .block-info-grid.type-2
+		margin-top: rem(50px)
+	& + .block-info-img-with-list-grid
+		margin-top: rem(50px)
+
+
+.big-text
+	font-size: rem(26px)
+	.red
+		color: $red
+
+.block-info-img-with-list-grid
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: rem(30px)
+	grid-auto-rows: 1fr
+	margin-bottom: rem(100px)
+	// width: 100%
+	min-width: 0
+	.block-info-title
+		grid-column: span 2
+	&.no-auto-row
+		grid-auto-rows: auto
+	&.type-3
+		display: flex
+		grid-gap: 0
+		margin-left: rem(-15px)
+		margin-right: rem(-15px)
+		.block-info-type-3
+			width: 50%
+			padding: 0 rem(15px)
+
+.block-info-img-with-list
+	position: relative
+	z-index: 1
+	color: #fff
+	&:hover
+		.block-info-img-with-list-img
+			img
+				transform: scale(1.05)
+
+.block-info-img-with-list-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	z-index: -1
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+		border-radius: rem(10px)
+	&:after
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(47.36deg, rgba(0, 0, 0, 0.35) 85.4%, rgba(0, 0, 0, 0) 104.78%)
+
+.block-info-img-with-list-text
+	padding: rem(34px) rem(34px) rem(78px) rem(43px)
+	color: #fff
+	font-weight: normal
+	font-size: rem(20px)
+	line-height: 1.35
+	min-height: rem(321px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		max-width: rem(441px)
+	li
+		position: relative
+		margin-bottom: rem(10px)
+		padding-left: rem(17px)
+		&:after
+			content: ''
+			position: absolute
+			width: rem(6px)
+			height: rem(6px)
+			border-radius: 50%
+			background-color: #fff
+			left: 0
+			top: rem(11px)
+		&:last-child
+			margin-bottom: 0
+
+.block-info-type-3
+	flex-shrink: 0
+	min-width: 0
+	.h2
+		margin-bottom: rem(40px)
+
+.block-info-type-3-img
+	width: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	margin-bottom: rem(40px)
+	img
+		width: 100%
+	.slider-nav-arrow
+		position: absolute
+		bottom: rem(32px)
+		z-index: 1
+	.slider-next
+		right: 13px
+		span
+			color: #fff
+		svg
+			circle
+				stroke: #fff
+		&:after
+			border-color: #fff
+			background-color: rgba(#fff, .3)
+	.slider-prev
+		right: 62px
+		span
+			color: #fff
+
+.block-info-type-3-text
+	font-weight: normal
+	.mute-text
+		margin-bottom: rem(21px)
+		font-size: rem(20px)
+		color: #9595A1
+		text-transform: uppercase
+	p
+		margin-bottom: rem(18px)
+		font-size: rem(26px)
+		line-height: 1.451
+	.btn
+		margin-top: rem(12px)
+	.red
+		color: #D90002
+	> *:last-child
+		margin-bottom: 0 !important
+
+.block-info-big
+	margin-bottom: rem(93px)
+	.h2
+		margin-bottom: rem(43px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+		display: block
+		margin-bottom: rem(49px)
+
+.block-info-big-text
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: 30px
+	.block-info-type-3-text
+		p
+			max-width: rem(495px)
+
+.block-info-nmbrs
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+	margin-top: rem(27px)
+
+.block-info-nmbrs-item-qnt
+	font-size: rem(62px)
+	line-height: 1
+	font-weight: 500
+	margin-bottom: rem(5px)
+	&.accent
+		color: $accent
+
+.block-info-nmbrs-item-title
+	max-width: rem(160px)
+	.red
+		color: $red
+	.accent
+		color: $accent
+
+.block-info-text-imgleft
+	display: flex
+	align-items: center
+	margin: 0 rem(-15px) rem(100px)
+
+.block-info-text-imgleft-img
+	width: 50%
+	padding: 0 rem(15px)
+	flex-shrink: 0
+	img
+		width: 100%
+		border-radius: rem(10px)
+
+.block-info-text-imgleft-text
+	width: 50%
+	padding: 0 rem(15px) 0 rem(65px)
+	flex-shrink: 0
+	line-height: 1.451
+	font-weight: normal
+	.h2
+		margin-bottom: rem(42px)
+	.red
+		color: $red
+	p
+		max-width: rem(520px)
+		font-size: rem(26px)
+	.btn
+		margin-top: rem(30px)
+
+.block-info-card
+	border-radius: rem(10px)
+	background-color: #fff
+	overflow: hidden
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+
+.block-info-card-header
+	position: relative
+	display: flex
+	flex-direction: column
+	height: rem(353px)
+	z-index: 1
+	align-items: flex-start
+	padding: rem(28px) rem(36px) rem(32px)
+	color: #fff
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(15.64deg, rgba(0, 0, 0, 0.35) 1.21%, rgba(196, 196, 196, 0) 55.55%, rgba(0, 0, 0, 0) 55.55%)
+		z-index: -1
+	img
+		position: absolute
+		z-index: -2
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(10px) rem(10px) 0 0
+	.h3
+		max-width: rem(468px)
+
+.block-info-card-body
+	font-size: rem(20px)
+	font-weight: normal
+	padding: rem(40px) rem(81px) rem(64px) rem(37px)
+	> *:last-child
+		margin-bottom: 0
+
+.layout-investments
+	margin-top: auto
+	border-radius: rem(7px)
+	border: 1px solid #D6D6DA
+	padding: rem(22px) rem(25px) rem(25px)
+	width: calc(100% - 1px)
+	background-image: url(../img/diagram-bg.svg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: right 0 bottom 0
+	&.orange
+		background-image: url(../img/diagram-bg--orange.svg)
+	&.dark
+		background-image: url(../img/diagram-bg--dark.svg)
+	&.blue
+		background-image: url(../img/diagram-bg--blue.svg)
+	&.lightgreen
+		background-image: url(../img/diagram-bg--lightgreen.svg)
+	.h6
+		font-size: rem(18px)
+		margin-bottom: rem(17px)
+		font-weight: 500
+	p
+		font-size: rem(14px)
+		line-height: 1.3
+		max-width: rem(280px)
+
+.layout-investments-footer
+	display: flex
+	align-items: flex-end
+
+.layout-investments-price
+	display: flex
+	align-items: center
+	flex-grow: 1
+	padding-right: rem(20px)
+	white-space: nowrap
+
+.layout-investments-price-res
+	font-weight: 600
+	margin-right: rem(10px)
+	letter-spacing: -.02em
+	font-size: rem(24px)
+
+.layout-investments-price-percent
+	height: rem(25px)
+	line-height: rem(25px)
+	border-radius: rem(7px)
+	padding: 0 rem(6px)
+	font-size: rem(16px)
+	letter-spacing: -.02em
+	font-weight: bold
+	background-color: $accent
+	color: #fff
+
+.layout-investments-footer
+	padding-right: rem(45px)
+
+.layout-investments-link
+	position: absolute
+	z-index: 1
+	background-color: #fff
+	width: rem(35px)
+	height: rem(35px)
+	right: rem(20px)
+	bottom: rem(20px)
+	border-radius: 50%
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: $text
+	&:after
+		width: 2px
+		height: rem(16px)
+	&:before
+		height: 2px
+		width: rem(16px)
+
+.other-projects-item
+	position: relative
+	&:hover
+		.other-projects-item-img
+			img
+				transform: scale(1.05)
+
+.other-other-projects-item-link
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.other-projects-item-img
+	position: relative
+	padding-bottom: 63.66%
+	border-radius: rem(10px)
+	margin-bottom: rem(22px)
+	.other-projects-item-img-block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		object-fit: cover
+		border-radius: rem(10px)
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border-radius: rem(10px)
+			+tr
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 44.03%, rgba(0, 0, 0, 0.5) 100%)
+		border-radius: rem(10px)
+	.stick
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		top: rem(13px)
+		left: rem(16px)
+	.project-price
+		position: absolute
+		right: rem(20px)
+		bottom: rem(17px)
+		z-index: 1
+		margin: 0
+	.project-price-val
+		color: #fff
+	.project-price-info-icon
+		color: rgba(#fff, .5)
+
+.menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 500
+	// background: linear-gradient(94.28deg, rgba(255, 255, 255, 0.4) -592.16%, rgba(255, 255, 255, 0) 101.05%)
+	background-color: rgba(#000, .2)
+	backdrop-filter: blur(60px)
+	transition: all .5s ease
+	transform: translateY(-120%)
+	.container
+		position: relative
+	&.opened
+		transform: translateY(0)
+		.menu-list-big,
+		.menu-body-item-title,
+		.menu-list
+			transform: translateX(0)
+		.menu-body-item
+			&:after
+				transform: scaleY(1)
+
+.menu-header
+	position: fixed
+	top: rem(36px)
+	left: 0
+	width: 100%
+	z-index: 1
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+.close-menu-btn
+	font-size: rem(24px)
+	color: #fff !important
+	text-decoration: none !important
+	+tr
+	display: flex
+	span
+		display: flex
+	&:hover
+		transform: rotate(180deg)
+
+.menu-body
+	display: flex
+
+.menu-body-item
+	width: 25%
+	flex-shrink: 0
+	padding: rem(123px) rem(57px) rem(82px)
+	font-weight: normal
+	color: #fff
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 1px
+		height: 100%
+		background-color: rgba(255, 255, 255, 0.15)
+		transition: all .85s ease
+		transform-origin: left bottom
+		transform: scaleY(0)
+	&:nth-child(1)
+		padding-left: rem(64px)
+	&:nth-child(2)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .6s
+		&:after
+			transition-delay: .15s
+	&:nth-child(3)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .7s
+		&:after
+			transition-delay: .3s
+	&:nth-child(4)
+		border: none
+		padding-right: rem(64px)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .8s
+		&:after
+			transition-delay: .45s
+
+.menu-list-big
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	transform: translateX(-100%)
+	transition: all .85s ease
+	transition-delay: .40s
+	a
+		font-size: rem(28px)
+		color: #fff !important
+		text-decoration: none !important
+		margin-bottom: rem(23px)
+		+tr
+		&:hover
+			opacity: 0.7
+			transform: translateX(5px)
+		&:last-child
+			margin-bottom: 0
+
+.menu-body-item-title
+	font-size: rem(28px)
+	margin-bottom: rem(31px)
+	transition: all .85s ease
+	transform: translateX(-100%)
+
+.menu-list
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	transition: all .85s ease
+	transform: translateX(-100%)
+	&.hovered
+		a
+			opacity: 0.3
+	a
+		font-size: rem(20px)
+		color: #fff	!important
+		text-decoration: none !important
+		+tr
+		padding-bottom: rem(15px)
+		opacity: 0.7
+		&:last-child
+			padding-bottom: 0
+		&:hover
+			opacity: 1
+
+.menu-body-item-wrapper
+	overflow: hidden
+
+.page-content
+	padding-top: rem(209px)
+	font-weight: normal
+
+.page-title
+	h1, .h1
+		font-size: rem(64px)
+		font-weight: normal
+		line-height: 1.1
+
+.s-sales-offices
+	padding-bottom: rem(44px)
+
+.sales-offices-contacts
+	margin-bottom: rem(42px)
+
+.contacts-data
+	padding-top: rem(12px)
+	display: flex
+
+.contacts-data-left
+	flex-grow: 1
+	margin-right: rem(30px)
+
+.contacts-links
+	.contacts-phone
+		margin-bottom: rem(7px)
+
+.contacts-phone
+	margin-bottom: rem(24px)
+	p
+		margin: 0
+		font-size: rem(12px)
+		color: rgba($text, .5)
+
+.contacts-worktime
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(3px)
+		color: rgba($text, .9)
+	p
+		max-width: rem(251px)
+		color: rgba($text, .5)
+
+.contacts-data-right
+	white-space: nowrap
+	margin-right: rem(114px)
+	.h6
+		color: rgba($text, .5)
+		margin-bottom: rem(10px)
+
+.contacts-soc
+	display: flex
+	align-items: center
+	a
+		font-size: 20px
+		+tr
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		margin-right: rem(26px)
+		color: #9595A2
+		text-decoration: none !important
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $accent
+
+.sales-offices
+	display: flex
+
+.sales-offices-nav
+	width: 25%
+	padding-right: rem(15px)
+	max-height: 795px
+	overflow: hidden auto
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		border-radius: 3px
+		background-color: #eee
+	&::-webkit-scrollbar-thumb
+		background-color: #a9a9a9
+		border-radius: 3px
+
+.sales-offices-nav-item
+	cursor: pointer
+	padding: rem(16px) rem(28px)
+	border-radius: rem(7px)
+	+tr
+	&.active,
+	&:hover
+		background-color: #F3F3F3
+	.h6
+		margin-bottom: rem(9px)
+		font-size: rem(20px)
+		font-weight: 500
+		line-height: 1.1
+	p
+		line-height: 1.1
+		margin: 0
+		color: rgba($text, .5)
+
+.sales-offices-map-wrapper
+	margin-left: rem(15px)
+	height: rem(795px)
+	position: relative
+	flex-grow: 1
+	overflow: hidden
+
+.sales-offices-map
+	position: absolute
+	left: 0
+	width: 100%
+	height: 100%
+	top: 0
+	border-radius: rem(12px)
+	overflow: hidden
+
+.sales-offices-map-balloon
+	position: relative
+	z-index: 1
+	background-color: #fff
+	border-radius: rem(7px)
+	overflow: hidden
+	box-shadow: 1px 4px 19px rgba(0, 0, 0, 0.03)
+	margin: rem(55px) 0 rem(54px) rem(52px)
+	width: rem(401px)
+	max-height: calc(100% - #{rem(109px)})
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	transition: all .4s ease
+	opacity: 0
+	transform: translateX(-50px)
+	visibility: hidden
+	&.opened
+		opacity: 1
+		transform: translateX(0)
+		visibility: visible
+
+.sales-offices-map-balloon-close
+	position: absolute
+	top: 15px
+	right: 15px
+	color: #000
+	cursor: pointer
+	z-index: 1
+	font-size: 20px
+
+.sales-offices-map-balloon-body
+	display: flex
+	flex-grow: 1
+	flex-direction: column
+	overflow-y: auto
+
+.sales-offices-map-balloon-img
+	img
+		height: rem(280px)
+		width: 100%
+		object-fit: cover
+
+.sales-offices-map-balloon-content
+	flex-grow: 1
+	overflow: hidden auto
+	padding: rem(27px) rem(32px) rem(32px)
+	.h5
+		font-weight: 500
+		font-size: rem(24px)
+		margin-bottom: rem(13px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(20px)
+		font-weight: normal
+		li
+			margin-bottom: rem(8px)
+			display: flex
+			span
+				&:first-child
+					width: rem(106px)
+					padding-right: rem(10px)
+					color: rgba($text, .5)
+					white-space: nowrap
+					flex-shrink: 0
+				&:last-child
+					b
+						font-weight: 600
+					a
+						color: $text
+						+tr
+						text-decoration: none !important
+						&:hover
+							color: $accent
+	.btn
+		margin-top: rem(30px)
+
+.map-marker-logo
+	position: absolute
+	top: 16px
+	left: 14px
+	width: 60px
+	height: 60px
+	object-fit: contain
+
+.s-contacts-type-2
+	.contacts-form-block
+		margin-right: 0
+	.form-footer-row p
+		max-width: 330px
+	.contacts-list
+		padding-left: rem(100px)
+
+.hide-on-desktop
+	visibility: hidden
+	opacity: 0
+
+.global-info-blocks
+	overflow: hidden
+	max-width: calc(100% + 30px)
+	margin-left: -15px
+	margin-right: -15px
+	padding-left: 15px
+	padding-right: 15px
+
+.ul-2-col
+	column-count: 2
+	li
+		overflow: hidden
+		break-inside: avoid-column
+
+.block-info-big-img-with-text
+	margin-bottom: rem(100px)
+	.h2
+		margin-bottom: rem(50px)
+	img
+		width: 100%
+		display: block
+		border-radius: rem(10px)
+		margin-bottom: rem(29px)
+
+.block-info-big-img-with-text-row
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: rem(30px)
+
+@import "media" // Always at the end

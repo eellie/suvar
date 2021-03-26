@@ -1,0 +1,17 @@
+$default-font: "Core Sanc C", sans-serif
+$accent: var(--global-accent-color)
+$text: #171723
+$gray: #9595A2
+$root-font-size: 16px
+$red: #D90002
+
+@function rem($size)
+  @return $size / $root-font-size * 1rem
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 8
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
