@@ -1116,7 +1116,7 @@ $(function() {
 				section = $('.global-info-navigation-block'),
 				sectionOffset = section.length > 0 ? section.offset().top : 0;
 
-		if ( scrTop >= sectionOffset && scrTop < sectionOffset + section.outerHeight() - $('.global-info-nav').outerHeight() ) {
+		if ( scrTop >= sectionOffset && scrTop < sectionOffset + section.outerHeight() - $('.global-info-nav').outerHeight() - $('.main-window-footer-type-2').outerHeight() ) {
 			$('.global-info-nav').addClass('fixed')
 		}
 		else {
