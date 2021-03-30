@@ -4731,16 +4731,20 @@ form
 	font-weight: normal
 
 .page-title
+	margin-bottom: rem(100px)
 	h1, .h1
 		font-size: rem(64px)
 		font-weight: normal
 		line-height: 1.1
+		margin: 0
 
 .s-sales-offices
 	padding-bottom: rem(44px)
 
 .sales-offices-contacts
 	margin-bottom: rem(42px)
+	.page-title
+		margin-bottom: 0
 
 .contacts-data
 	padding-top: rem(12px)
@@ -5007,5 +5011,206 @@ form
 		background-color: transparent
 	.contacts-form-left
 		min-width: 64%
+
+.s-stocks-grid
+	overflow: visible
+
+.nav-links
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: sticky
+	top: rem(40px)
+
+.nav-link
+	+tr
+	font-size: 16px
+	color: #171723
+	text-decoration: none !important
+	margin: 0 0 rem(8px)
+	position: relative
+	display: inline-block
+	font-weight: 500
+	&:after
+		content: ''
+		position: absolute
+		left: -#{rem(17px)}
+		border-radius: 50%
+		width: 7px
+		height: 7px
+		background-color: $accent
+		top: 50%
+		+tr
+		transform: translate3d(#{rem(17px)}, 0, 0)
+		margin-top: -4px
+		opacity: 0
+		+tr
+	&:hover,
+	&.active
+		color: $accent
+		&:after
+			opacity: 1
+			transform: none
+
+.stocks-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+	margin-bottom: rem(30px)
+
+.stocks-item
+	border-radius: rem(10px)
+	overflow: hidden
+	position: relative
+	min-height: rem(288px)
+	&:hover
+		.stocks-item-img
+			img
+				transform: scale(1.05)
+	&.no-gradient
+		.stocks-item-img
+			&:after
+				display: none
+		.stocks-item-content
+			color: $text
+	&.dark
+		background-color: #171723
+
+.stocks-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.stocks-item-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	overflow: hidden
+	border-radius: rem(10px)
+	img
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		+tr
+		display: block
+		object-fit: cover
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		background: linear-gradient(301.11deg, rgba(0, 0, 0, 0.2) 36.01%, rgba(0, 0, 0, 0.5) 84.11%)
+
+
+.stocks-item-content
+	padding: rem(24px) rem(21px)
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: relative
+	z-index: 1
+	color: #fff
+	height: 100%
+	.stick
+		margin-bottom: rem(16px)
+	.h4
+		max-width: rem(347px)
+	.btn
+		margin-left: auto
+		margin-top: auto
+
+.mailing-block
+	grid-row: span 2
+
+.mailing-form
+	background-color: #171723
+	border-radius: rem(10px)
+	padding: rem(40px) rem(18px)
+	color: #fff
+	position: relative
+	height: 100%
+	.form-control
+		border-radius: rem(7px)
+		background-color: #fff
+	.form-footer-row
+		p
+			a
+				text-decoration: none !important
+
+.mailing-icon
+	display: inline-block
+	position: relative
+	margin-bottom: rem(59px)
+	width: rem(68px)
+	height: rem(68px)
+	flex-shrink: 0
+	img
+		max-width: 100%
+		position: relative
+		z-index: 1
+		display: block
+	&:after
+		content: ''
+		position: absolute
+		right: rem(-36px)
+		bottom: rem(-21px)
+		z-index: 0
+		width: rem(77px)
+		height: rem(77px)
+		border-radius: 50% rem(10px) 50% rem(10px)
+		background-color: #222231
+
+.mailing-title
+	font-size: rem(24px)
+	font-weight: 600
+	line-height: 1.33333
+	margin-bottom: rem(45px)
+
+.mailing-thanks
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	padding: rem(40px) rem(18px)
+	background-color: #171723
+	z-index: 2
+	transition: all .5s ease
+	opacity: 0
+	transform: scale(.95)
+	visibility: hidden
+	&.opened
+		visibility: visible
+		opacity: 1
+		transform: scale(1)
+	.mailing-icon
+		margin-bottom: rem(78px)
+	.mailing-title
+		margin-bottom: rem(24px)
+
+.mailing-descr
+	font-size: 18px
+	font-weight: normal
+	color: #9595A1
+	max-width: rem(290px)
+
+.more-btn
+	.btn
+		height: rem(70px)
+		line-height: rem(68px)
+		&:after
+			display: none
+		&:hover
+			color: $red
 
 @import "media" // Always at the end

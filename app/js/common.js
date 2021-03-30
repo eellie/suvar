@@ -1270,6 +1270,11 @@ $(function() {
 	// Инициализация слайдеров "Жизнь в ЖК" и "Другие проекты"
 	initLiveInRescom();
 
+	$('.mailing-form').on('submit', function(e) {
+		$('.mailing-thanks').addClass('opened');
+		e.preventDefault();
+	});
+
   $(window)
   .on('scroll', function() {
   	let top = $(window).scrollTop();
