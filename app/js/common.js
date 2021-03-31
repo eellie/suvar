@@ -1275,6 +1275,24 @@ $(function() {
 		e.preventDefault();
 	});
 
+	$('.js-stocks-filter').on('click', function(e) {
+		e.preventDefault();
+		let ths = $(this);
+		if ( !ths.hasClass('active') ) {
+			let filter = ths.data('filter'),
+					items = $(`.stocks-item[data-filter=${filter}]`);
+			$('.js-stocks-filter').removeClass('active');
+			ths.addClass('active');
+			if ( filter == 'all' ) {
+				$('.stocks-item').fadeIn(400)
+			}
+			else {
+				$('.stocks-item').hide();
+				items.fadeIn(400)
+			}
+		}
+	});
+
   $(window)
   .on('scroll', function() {
   	let top = $(window).scrollTop();
