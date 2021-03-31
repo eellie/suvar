@@ -406,6 +406,28 @@
 		flex-direction: row
 		margin-bottom: 30px
 		margin: 0 -20px 30px
+		padding: 0 20px
+		white-space: nowrap
+		overflow: auto hidden
+		&::-webkit-scrollbar
+			display: none
+		&:after
+			content: ''
+			width: 5px
+			height: 5px
+			flex-shrink: 0
+	.nav-link
+		height: 36px
+		line-height: 36px
+		padding: 0 8px
+		border-radius: 4px
+		background-color: #f4f4f4
+		margin: 0 10px 0 0
+		font-size: 12px
+		&:last-child
+			margin-right: 5px
+		&:after
+			display: none
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -619,6 +641,8 @@
 		padding-top: 120px
 	.sales-offices-contacts
 		margin-bottom: 30px
+	.stocks-grid
+		grid-gap: 10px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -887,6 +911,8 @@
 				margin-left: 5px
 	.popup-block--callback
 		width: 500px
+	.stocks-grid
+		grid-template-columns: repeat(2, 1fr)
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1945,6 +1971,16 @@
 		margin-top: 10px
 	.contacts-list
 		padding-top: 15px
+	.stocks-grid
+		grid-template-columns: 1fr
+	.nav-links
+		margin-left: -18px
+		margin-right: -18px
+		padding-left: 18px
+		padding-right: 18px
+		&:after
+			width: 13px
+			height: 13px
 
 /*==========  Mobile First  ==========*/
 
