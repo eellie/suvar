@@ -5219,4 +5219,467 @@ form
 		&:hover
 			color: $red
 
+.page-back-link
+	margin-bottom: rem(72px)
+
+.s-apartment-card
+	overflow: visible
+
+.apartment-card-row
+	display: flex
+
+.apartment-card-left
+	width: rem(246px)
+	flex-shrink: 0
+	margin-right: rem(74px)
+
+.apartment-section-block
+	margin-bottom: rem(45px)
+	.h4
+		font-weight: 500
+		font-size: rem(16px)
+		margin-bottom: rem(20px)
+
+.apartment-section
+	padding: rem(20px)
+	background-color: #fff
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	position: relative
+	transform-origin: top left
+	transition: transform .2s ease
+	&:hover
+		transform: scale(1.4)
+		z-index: 2
+	p
+		margin: 0
+		font-size: rem(10px)
+		color: #9595A2
+		letter-spacing: 0.08em
+		text-transform: uppercase
+
+.apartment-section-img
+	height: rem(157px)
+	margin-bottom: rem(20px)
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.apartment-section-title
+	margin-bottom: rem(15px)
+	font-size: rem(16px)
+	span
+		color: #9595A2
+
+.apartment-section-only-img
+	transform-origin: top left
+	transition: transform .2s ease
+	&:hover
+		transform: scale(1.4)
+		z-index: 2
+	img
+		width: 100%
+
+.apartment-card-floors
+	flex-shrink: 0
+	margin-right: rem(40px)
+
+.floors-header
+	display: flex
+	width: rem(83px)
+	margin-bottom: rem(5px)
+	span
+		width: 50%
+		flex-shrink: 0
+		white-space: nowrap
+		font-size: rem(14px)
+		color: #9595A1
+
+.floors
+	width: rem(83px)
+
+.floors-item
+	display: flex
+	align-items: center
+	position: relative
+	z-index: 1
+	&.disabled
+		span
+			color: rgba(23, 23, 35, 0.15) !important
+			&:first-child
+				color: rgba(23, 23, 35, 0.15) !important
+				cursor: default !important
+				&:after
+					display: none !important
+			&:last-child
+				color: rgba(23, 23, 35, 0.15) !important
+				cursor: default !important
+				&:after
+					display: none !important
+	span
+		width: 50%
+		flex-shrink: 0
+		white-space: nowrap
+		height: 33px
+		line-height: 33px
+		&:first-child
+			text-align: right
+			font-size: rem(18px)
+			font-weight: 500
+			padding-right: rem(10px)
+			cursor: pointer
+			&:hover
+				color: #fff
+				&:after
+					opacity: 1
+				& + span
+					color: #fff
+					&:after
+						opacity: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+		&:last-child
+			font-size: rem(16px)
+			color: rgba(23, 23, 35, 0.5)
+			position: relative
+			&:after
+				content: attr(data-hover-text)
+				position: absolute
+				left: rem(20px)
+				top: 0
+				height: 100%
+				color: #fff
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+				padding-right: rem(12px)
+
+.back-link
+	display: inline-flex
+	align-items: center
+	white-space: nowrap
+	font-size: rem(20px)
+	color: #9595A1
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $accent
+	span
+		font-size: rem(12px)
+		margin-right: rem(12px)
+
+.apartment-main
+	flex-grow: 1
+	border-radius: rem(7px)
+	background-color: #F7F7F7
+	display: flex
+
+.apartment-img-block
+	flex-grow: 1
+	position: relative
+
+.apartment-img-header
+	display: flex
+	align-items: center
+	position: absolute
+	top: rem(32px)
+	left: 0
+	width: 100%
+	padding: 0 rem(42px)
+	z-index: 1
+
+.apartment-img-types-links
+	display: flex
+	align-items: center
+	flex-grow: 1
+	margin-right: rem(20px)
+
+.apartment-img-types-link
+	height: rem(32px)
+	line-height: rem(32px)
+	padding: 0 rem(13px)
+	margin-right: rem(10px)
+	font-size: rem(16px)
+	color: #212133
+	font-weight: 500
+	text-decoration: none !important
+	+tr
+	border-radius: rem(7px)
+	&.active,
+	&:hover
+		background-color: #fff
+		color: $accent
+	&:last-child
+		margin-right: 0
+
+.liked-link
+	display: inline-block
+	width: rem(30px)
+	height: rem(27px)
+	position: relative
+	font-size: 29px
+	text-decoration: none !important
+	&.active
+		&:after
+			opacity: 0
+		&:before
+			opacity: 1
+			transform: scale(1)
+	&:after
+		content: '\e920'
+		font-family: icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: #171723
+		line-height: 1
+		+tr
+	&:before
+		content: '\e921'
+		font-family: icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: $accent
+		transform: scale(0)
+		opacity: 0
+		line-height: 1
+		+tr
+
+.apartment-img-list
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: rem(75px) 0
+	img
+		width: 100%
+		max-width: 870px
+		flex-shrink: 0
+		display: none
+
+.apartment-kompas
+	position: absolute
+	left: rem(42px)
+	bottom: rem(32px)
+	img
+		width: rem(100px)
+
+.apartment-content
+	width: rem(407px)
+	position: relative
+	z-index: 1
+
+.apartment-description
+	border-radius: rem(7px) rem(7px) 0 0
+	box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.1)
+	background-color: #fff
+	padding: rem(24px) rem(24px) rem(32px)
+
+.apartment-views
+	text-align: center
+	padding: rem(13px) rem(5px)
+	background-color: #F2F2F2
+	border-radius: rem(7px)
+	margin-bottom: rem(20px)
+	font-weight: 500
+	font-size: rem(14px)
+
+.apartment-description-list
+	margin: 0 rem(-24px) rem(30px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: flex
+		align-items: center
+		line-height: rem(29px)
+		padding: 0 rem(24px)
+		font-size: rem(16px)
+		&:nth-child(even)
+			background-color: #F5F5F5
+		span
+			&:first-child
+				font-weight: 500
+				padding-right: rem(15px)
+				flex-grow: 1
+
+.apartment-mortgage
+	display: flex
+	align-items: center
+	margin-bottom: rem(16px)
+
+.apartment-mortgage-title
+	flex-grow: 1
+	margin-right: rem(15px)
+	font-size: rem(18px)
+	font-weight: 500
+
+.apartment-mortgage-open-btn
+	padding-right: rem(22px)
+	position: relative
+	font-size: rem(18px)
+	font-weight: 500
+	color: $accent
+	letter-spacing: -.02em
+	white-space: nowrap
+	cursor: pointer
+	&:after
+		content: '\e911'
+		font-family: icon
+		position: absolute
+		top: rem(5px)
+		right: 0
+		font-size: rem(12px)
+		color: #9595A2
+		+tr
+	&.active
+		&:after
+			transform: rotate(180deg)
+
+.apartment-mortgage-form-block
+	display: none
+
+.apartment-mortgage-form
+	display: flex
+	justify-content: space-between
+	margin-bottom: rem(32px)
+
+.apartment-mortgage-col
+	width: calc(50% - #{rem(12px)})
+	.filter-title
+		font-size: rem(12px)
+		white-space: nowrap
+	.filter-item
+		margin: 0
+	.form-control
+		height: rem(44px)
+	.noUi-horizontal .noUi-handle
+		width: rem(18px)
+		height: rem(18px)
+
+.apartment-add-btn
+	background-color: #fff
+	white-space: nowrap
+	height: 56px
+	border: 1px solid #9595A1
+	display: flex
+	margin-bottom: rem(16px)
+	padding: 0 rem(23px)
+	justify-content: space-between
+	align-items: center
+	border-radius: rem(7px)
+	font-size: rem(16px)
+	font-weight: 500
+	color: #171723
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $accent
+		border-color: $accent
+
+.apartment-add-btn-name
+	flex-grow: 1
+	overflow: hidden
+	text-overflow: ellipsis
+
+.apartment-total
+	padding: rem(32px) rem(24px)
+	background-color: #171723
+	border-radius: 0 0 rem(7px) rem(7px)
+	color: #fff
+	margin-bottom: rem(24px)
+
+.apartment-total-item
+	display: flex
+	font-size: rem(18px)
+	margin-bottom: rem(7px)
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(20px)
+		&:last-child
+			font-weight: normal
+
+.apartment-total-price
+	margin-top: rem(32px)
+	margin-bottom: rem(23px)
+	display: flex
+	font-size: rem(18px)
+	align-items: center
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(15px)
+		&:last-child
+			white-space: nowrap
+			font-size: rem(26px)
+			font-weight: bold
+
+.apartment-links
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.apartment-link
+	display: flex
+	align-items: center
+	color: #171723 !important
+	font-size: rem(16px)
+	margin-bottom: rem(15px)
+	text-decoration: none !important
+	font-weight: 500
+	span
+		font-size: rem(25px)
+		margin-right: rem(10px)
+		color: #9595A1
+		+tr
+	&:hover,
+	&.active
+		span
+			color: $accent
+
+.apartment-link-item
+	position: relative
+
+.share-dropdown
+	position: absolute
+	white-space: nowrap
+	width: rem(270px)
+	border-radius: rem(7px)
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	z-index: 5
+	background-color: #fff
+	padding: rem(22px) rem(24px)
+	transform: translateY(-10px)
+	opacity: 0
+	visibility: hidden
+	transition: all .4s ease
+	&.opened
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+	.apartment-link
+		&:last-child
+			margin-bottom: 0
+		span
+			color: #171723
+		&:hover
+			span
+				color: #4592EB
+
 @import "media" // Always at the end

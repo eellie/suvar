@@ -1293,6 +1293,38 @@ $(function() {
 		}
 	});
 
+	$('.apartment-img-types-link').on('click', function(e) {
+		e.preventDefault();
+		let ths = $(this),
+				img = $(`.apartment-img-list img[data-img="${ths.data('img')}"]`);
+		if ( img.is(':hidden') ) {
+			$('.apartment-img-types-link').removeClass('active');
+			ths.addClass('active');
+			$('.apartment-img-list img').hide();
+			img.fadeIn(400)
+		}
+	});
+
+	$('.liked-link').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active')
+	});
+
+	$('.apartment-mortgage-open-btn').on('click', function() {
+		$(this).toggleClass('active');
+		$('.apartment-mortgage-form-block').slideToggle(400)
+	});
+
+	$('.share-link').on('click', function(e) {
+		e.preventDefault();
+		let ths = $(this);
+		ths.toggleClass('active');
+		ths.parent().find('.share-dropdown').toggleClass('opened')
+	});
+
+	$('.copy-link').on('click', function(e) {
+	});
+
   $(window)
   .on('scroll', function() {
   	let top = $(window).scrollTop();
