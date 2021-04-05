@@ -1226,6 +1226,11 @@ $(function() {
 		}
 	});
 
+	$('.main-footer-nav .scroll-to').on('click', function() {
+		$('.main-footer-nav .scroll-to').removeClass('active');
+		$(this).addClass('active')
+	});
+
 	$(document).on('click', '.open-callback-popup', function(e) {
 		e.preventDefault();
 		let ths = $(this),
@@ -1243,11 +1248,17 @@ $(function() {
 
 	let rescomMenu = $('.main-window-footer-type-2');
 
+	let rescomMenuHeight = rescomMenu.outerHeight();
+
 	function scrollRescomMenu(top) {
+
+		if ( !rescomMenu.hasClass('fixed') ) {
+			rescomMenuHeight = $('.main-window-footer-type-2').outerHeight();
+		}
 
 		if ( rescomMenu.length > 0 && $(window).width() >= 1200 ) {
 
-			if ( top >= $('.main-window').outerHeight() - rescomMenu.outerHeight() ) {
+			if ( top >= $('.main-window').outerHeight() - rescomMenuHeight ) {
 				rescomMenu.addClass('fixed')
 			}
 			else {

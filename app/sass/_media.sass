@@ -2038,6 +2038,7 @@
 +media-breakpoint-up(xl)
 	.main-window-footer-type-2
 		padding: rem(24px) 0
+		+tr
 		&.fixed
 			position: fixed
 			top: 0
@@ -2045,6 +2046,7 @@
 			width: 100%
 			z-index: 10
 			border-top: none
+			padding: 0
 			&:after
 				content: ''
 				position: absolute
@@ -2052,15 +2054,54 @@
 				left: 0
 				width: 100%
 				height: 100%
-				backdrop-filter: blur(4px)
-				background-color: rgba(#000, .35)
+				backdrop-filter: blur(34px)
+				background-color: rgba(255, 255, 255, 0.8)
 				transition: all .4s ease
 				z-index: -1
-			.has-child ul
-				top: calc(100% + 15px) !important
-				bottom: auto !important
+				border-bottom: 1px solid rgba(0, 0, 0, 0.09)
+			.has-child
+				ul
+					top: calc(100% + 15px) !important
+					bottom: auto !important
+				span
+					color: rgba(#171723, .6)
 			.main-window-footer
 				border-top: none
+			.main-footer-nav
+				> ul > li > a
+					color: rgba(#171723, .6)
+					height: 77px
+					line-height: 77px
+					position: relative
+					display: block
+					&:after
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						width: 100%
+						height: rem(5px)
+						background-color: #171723
+						+tr
+						transform: scaleX(0)
+					&:hover
+						color: #171723
+					&.active
+						color: #171723
+						&:after
+							transform: scale(1)
+				.has-child
+					a
+						&.active
+							color: $accent
+		.main-window-footer-row
+			align-items: center
+		.main-footer-btn
+			.btn
+				background-color: #D90002 !important
+				border-color: #D90002 !important
+				&:hover
+					border-color: $accent !important
 
 @media (min-width: 992px) and (max-width: 1199.98px)
 	.full-filters-row
