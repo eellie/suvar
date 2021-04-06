@@ -5231,6 +5231,7 @@ form
 
 .apartment-card-row
 	display: flex
+	align-items: flex-start
 
 .apartment-card-left
 	width: rem(246px)
@@ -5468,12 +5469,15 @@ form
 	display: flex
 	align-items: center
 	justify-content: center
-	padding: rem(75px) 0
+	padding: rem(75px) 0 rem(30px)
 	img
 		width: 100%
 		max-width: 870px
 		flex-shrink: 0
 		display: none
+		max-height: 700px
+		object-fit: contain
+		cursor: zoom-in
 
 .apartment-kompas
 	position: absolute
@@ -5486,6 +5490,7 @@ form
 	width: rem(407px)
 	position: relative
 	z-index: 1
+	padding-bottom: rem(10px)
 
 .apartment-description
 	border-radius: rem(7px) rem(7px) 0 0
@@ -5736,5 +5741,31 @@ form
 
 .apartment-liked
 	display: flex
+
+.copy-link
+	&.success
+		font-size: 0
+		&:after
+			content: attr(data-copied-txt)
+			font-size: rem(16px)
+
+#image-popup
+	.popup-block
+		width: 1597px
+	.popup-flex
+		padding-left: 18px
+		padding-right: 18px
+
+.popup-image
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: #F7F7F7
+	border-radius: rem(10px)
+	padding: rem(40px) 0
+	img
+		max-height: 80vh
+		width: 100%
+		object-fit: contain
 
 @import "media" // Always at the end

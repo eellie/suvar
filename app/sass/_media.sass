@@ -443,14 +443,6 @@
 	.apartment-section,
 	.apartment-section-only-img
 		transform: none !important
-	.apartment-main
-		display: block
-	.apartment-content
-		width: 100%
-	.apartment-links
-		padding: 15px
-	.s-apartment-card
-		padding-bottom: 30px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -666,6 +658,15 @@
 		margin-bottom: 30px
 	.stocks-grid
 		grid-gap: 10px
+	.apartment-main
+		display: block
+		width: 100%
+	.apartment-content
+		width: 100%
+	.apartment-links
+		padding: 15px
+	.s-apartment-card
+		padding-bottom: 30px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -2060,6 +2061,7 @@
 		width: auto
 		margin-left: -18px
 		margin-right: -18px
+		z-index: auto
 	.apartment-views
 		display: none
 	.apartment-description
@@ -2100,6 +2102,11 @@
 		height: 56px
 		padding: 0 18px
 		margin: 0
+		position: fixed
+		z-index: 15
+		bottom: 0
+		left: 0
+		width: 100%
 	.apartment-total-item
 		display: none
 	.apartment-total-btn
@@ -2185,6 +2192,13 @@
 		font-size: 7px
 	.stocks-nav .slider-prev
 		margin-right: 4px
+	.similar-layouts-title
+		a
+			font-size: 0
+			&:before
+				content: attr(data-mob-text)
+				font-size: 18px
+
 
 /*==========  Mobile First  ==========*/
 
