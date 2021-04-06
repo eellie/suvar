@@ -428,6 +428,29 @@
 			margin-right: 5px
 		&:after
 			display: none
+	.apartment-card-row
+		flex-direction: column-reverse
+	.apartment-card-floors
+		display: none
+	.apartment-card-left
+		display: flex
+		width: 100%
+		margin: 50px 0 0
+	.apartment-section-block
+		width: calc(33.33333% - 30px)
+		flex-shrink: 0
+		margin-right: 30px
+	.apartment-section,
+	.apartment-section-only-img
+		transform: none !important
+	.apartment-main
+		display: block
+	.apartment-content
+		width: 100%
+	.apartment-links
+		padding: 15px
+	.s-apartment-card
+		padding-bottom: 30px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -1990,6 +2013,178 @@
 		grid-column-end: auto
 		grid-row-start: auto
 		grid-row-end: auto
+	.back-mob-link
+		display: block
+	.apartment-card-title
+		.h1, h1
+			display: flex
+			align-items: flex-start
+			font-size: 26px
+	.page-back-link
+		display: none
+	.apartment-card-title
+		margin-top: -57px
+		margin-bottom: 16px
+	.apartment-main
+		background-color: transparent
+		border-radius: 0
+	.apartment-img-block
+		background-color: #f7f7f7
+		margin-left: -18px
+		margin-right: -18px
+	.apartment-img-header
+		padding-left: 8px
+		padding-right: 18px
+		top: 14px
+	.apartment-img-types-link
+		height: 32px
+		line-height: 32px
+		border-radius: 7px
+		padding: 0 10px
+		font-size: 12px
+		margin-right: 6px
+		white-space: nowrap
+	.liked-link
+		font-size: 22px
+	.apartment-img-list img
+		max-width: 221px
+		max-height: 221px
+		object-fit: contain
+	.apartment-kompas
+		img
+			width: 47px
+	.apartment-kompas
+		left: 8px
+		bottom: 14px
+	.apartment-content
+		width: auto
+		margin-left: -18px
+		margin-right: -18px
+	.apartment-views
+		display: none
+	.apartment-description
+		padding-top: 12px
+		border-radius: 0
+		padding-bottom: 8px
+	.apartment-description-list
+		margin-bottom: 20px
+		li
+			font-size: 14px
+			line-height: 29px
+	.apartment-mortgage-title
+		font-size: 16px
+	.apartment-mortgage-open-btn
+		font-size: 16px
+		&:after
+			top: 7px
+	.apartment-mortgage-col .filter-title
+		font-size: 12px
+		margin-bottom: 10px
+	.apartment-mortgage-col .form-control
+		height: 44px
+		overflow: 0 10px 0 20px
+		font-size: 14px
+	.apartment-mortgage-col .noUi-horizontal .noUi-handle
+		width: 16px
+		height: 16px
+	.apartment-add-btn
+		padding: 0 16px
+		font-size: 14px
+		margin-bottom: 16px
+	.apartment-total
+		background-color: #D90002
+		border-radius: 0
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		height: 56px
+		padding: 0 18px
+		margin: 0
+	.apartment-total-item
+		display: none
+	.apartment-total-btn
+		flex-grow: 1
+		margin: 0
+		.btn
+			padding: 0
+			padding: 0
+			background: transparent !important
+			font-size: 16px
+			width: 100%
+			text-align: left
+			height: 56px
+			line-height: 56px
+	.apartment-total-price
+		flex-direction: column
+		margin: 0
+		align-items: flex-start
+		white-space: nowrap
+		span
+			&:first-child
+				font-size: 0
+				color: rgba(#fff, .6)
+				&:before
+					content: attr(data-mob-text)
+					font-size: 10px
+			&:last-child
+				font-size: 16px
+	.apartment-links
+		position: absolute
+		bottom: 100%
+		right: 0
+		padding: 0 18px 14px 0
+		display: flex
+		flex-direction: column-reverse
+		.print
+			display: none
+	.apartment-link-item
+		margin-top: 16px
+		&	> .apartment-link
+			font-size: 0
+			margin: 0
+			span
+				font-size: 20px
+				margin: 0
+	.share-dropdown
+		left: auto
+		right: 0
+		margin-top: 10px
+	.apartment-card-left
+		margin: 0
+		flex-wrap: wrap
+		justify-content: space-between
+		flex-direction: row-reverse
+		padding-top: 32px
+	.apartment-section-block
+		margin: 0 0 30px
+		width: calc(50% - 10px)
+		&.on-the-floor
+			width: 100%
+			order: -1
+		.h4
+			margin-bottom: 14px
+			font-size: 16px
+	.apartment-section-title
+		margin: 0
+		font-size: 16px
+	.apartment-section p
+		display: none
+	.apartment-section
+		padding-bottom: 24px
+		padding-left: 20px
+		padding-right: 20px
+	.s-apartment-card
+		padding-bottom: 18px
+	.news-slider .slick-slide
+		opacity: 1
+	.h2, h2
+		font-size: 20px
+	.stocks-nav .slider-nav-arrow
+		width: 23px
+		height: 23px
+		font-size: 7px
+	.stocks-nav .slider-prev
+		margin-right: 4px
 
 /*==========  Mobile First  ==========*/
 
