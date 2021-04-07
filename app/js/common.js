@@ -1361,6 +1361,56 @@ $(function() {
 		}
 	});
 
+	$('.catalog-filter-checkbox-input').on('change', function() {
+		let check = $(this).is(':checked');
+		if ( check ) {
+			$('.catalog-filter-mortgage-body').slideDown(400)
+		}
+		else {
+			$('.catalog-filter-mortgage-body').slideUp(400)
+		}
+	});
+
+	$('.apartments-list-table tr').each(function() {
+		let ths = $(this),
+				href = ths.data('href');
+		if ( href != undefined ) {
+			ths.on('click', function() {
+				document.location = href
+			})
+		}
+	});
+
+	$('.catalog-grid-block').each(function() {
+		let ths = $(this),
+				title = ths.find('.catalog-grid-title'),
+				body = ths.find('.catalog-grid-block-body');
+		title.on('click', function() {
+			title.toggleClass('active');
+			body.slideToggle(400);
+		});
+	});
+
+	$('.catalog-section-cell').each(function() {
+		let ths    = $(this),
+				status = ths.data('status'),
+				src    = ths.data('src'),
+				title  = ths.data('title'),
+				price  = ths.data('price');
+		let domHTML = document.createElement('div');
+		domHTML.innerHTML = [
+			'<div class="catalog-section-cell-dropdown">',
+				'<div class="catalog-section-cell-dropdown-content">',
+					`<div class="in-sale-stick">${status}</div>`,
+					`<img src="${src}" alt="">`,
+					`<div class="h6">${title}</div>`,
+					`<div class="cell-price">${price}</div>`,
+				'</div>',
+			'</div>'
+		].join('');
+		tippy(ths[0], domHTML.innerHTML)
+	});
+
   $(window)
   .on('scroll', function() {
   	let top = $(window).scrollTop();
