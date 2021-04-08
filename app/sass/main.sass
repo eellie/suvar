@@ -5939,7 +5939,7 @@ form
 
 .apartments-list-table
 	width: 100%
-	margin-bottom: rem(16px)
+	margin-bottom: rem(32px)
 	thead
 		tr
 			th
@@ -5959,7 +5959,7 @@ form
 					width: 100%
 					background-color: #E5E5E5
 					height: 1px
-				&.apartments-list-house
+				&.apartments-list-house-header
 					text-align: left
 					padding-bottom: rem(16px)
 					vertical-align: top
@@ -6009,6 +6009,8 @@ form
 .apartments-list-total
 	text-align: right
 	white-space: nowrap
+	*:last-child
+		margin: 0
 
 .apartments-list-total-price
 	line-height: 1
@@ -6419,5 +6421,11 @@ form
 	display: inline-block
 	border-radius: 4px
 	margin-bottom: 20px
+
+.parking-list
+	padding-top: 0
+	.promo-block
+		&:first-child
+			margin-top: 0
 
 @import "media" // Always at the end

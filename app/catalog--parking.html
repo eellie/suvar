@@ -189,8 +189,8 @@
 
 		<div class="page-title">
 			<div class="container">
-				<h1>Подобрать квартиру мечты</h1>
-				<p>Найдено 1267 квартир</p>
+				<h1>Подобрать паркинг</h1>
+				<p>Найдено 256 мест</p>
 			</div>
 		</div>
 
@@ -203,23 +203,28 @@
 						
 						<div class="catalog-filter">
 							
-							<div class="catalog-filter-title">Выбрать квартиру</div>
+							<div class="catalog-filter-title">Выбрать паркинг</div>
+
+							<div class="catalog-filter-item">
+								<div class="apartment-section-block">
+									<div class="h4">На генплане</div>
+									<div class="apartment-section">
+										<div class="apartment-section-img">
+											<img src="img/section.png" alt="">
+										</div>
+										<div class="apartment-section-title">Дом <span>2.1</span></div>
+										<p>срок сдачи 30.11.21</p>
+									</div>
+								</div>
+							</div>
 
 							<div class="catalog-filter-item">
 								<div class="filter-item">
-									<div class="filter-title">Жилой комплекс</div>
+									<div class="filter-title">Уровень парковки</div>
 									<div class="filter-select">
 										<select class="select-style">
-											<option value="Все проекты">Все проекты</option>
-											<option value="Южный парк">Южный парк</option>
-											<option value="Столичный">Столичный</option>
-											<option value="Станция Спортивная">Станция Спортивная</option>
-											<option value="Залесный сити">Залесный сити</option>
-											<option value="Времена года">Времена года</option>
-											<option value="Манхэттен">Манхэттен</option>
-											<option value="Сказочный лес">Сказочный лес</option>
-											<option value="Август Астры лес">Август Астры лес</option>
-											<option value="Палитра">Палитра</option>
+											<option value="Надземная">Надземная</option>
+											<option value="Подземная">Подземная</option>
 										</select>
 									</div>
 								</div>
@@ -227,44 +232,12 @@
 
 							<div class="catalog-filter-item">
 								<div class="filter-item">
-									<div class="filter-title">Номер дома</div>
+									<div class="filter-title">Тип</div>
 									<div class="filter-select">
 										<select class="select-style">
-											<option value="Все дома">Все дома</option>
-											<option value="2.0">2.0</option>
-											<option value="2.1">2.1</option>
-											<option value="2.2">2.2</option>
-											<option value="2.3">2.3</option>
-											<option value="2.4">2.4</option>
+											<option value="Одинарное">Одинарное</option>
+											<option value="Одинарное">Одинарное</option>
 										</select>
-									</div>
-								</div>
-							</div>
-
-							<div class="catalog-filter-item">
-								<div class="filter-item">
-									<div class="filter-title">Количество комнат</div>
-									<div class="filter-checkbox">
-										<label class="filter-checkbox-label">
-											<input type="checkbox" name="appart-filter" checked>
-											<span>cтудия</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="checkbox" name="appart-filter">
-											<span>1</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="checkbox" name="appart-filter">
-											<span>2</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="checkbox" name="appart-filter">
-											<span>3</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="checkbox" name="appart-filter">
-											<span>4</span>
-										</label>
 									</div>
 								</div>
 							</div>
@@ -290,116 +263,19 @@
 
 							<div class="catalog-filter-item">
 								<div class="filter-item">
-									<div class="filter-title">Стоимость, млн ₽</div>
+									<div class="filter-title">Стоимость, ₽</div>
 									<div class="filter-range" data-for="#filter-range-4" id="filter-range-3">
 										<div class="filter-range-inputs">
 											<div class="filter-range-input-group">
 												<span>от</span>
-												<input type="text" class="filter-range-input decimal from" value="1.5" data-min="0">
+												<input type="text" class="filter-range-input decimal from" value="300000" data-min="0">
 											</div>
 											<div class="filter-range-input-group">
 												<span>до</span>
-												<input type="text" class="filter-range-input decimal to" value="17.5" data-max="22">
+												<input type="text" class="filter-range-input decimal to" value="1000000" data-max="1500000">
 											</div>
 										</div>
-										<div class="filter-range-slider" data-step="0.5"></div>
-									</div>
-								</div>
-							</div>
-
-							<div class="catalog-filter-item">
-								<div class="catalog-filter-mortgage">
-									<div class="catalog-filter-mortgage-switch">
-										<div class="switch-checkbox">
-											<div class="switch-checkbox-title">В ипотеку</div>
-											<label class="switch-checkbox-label">
-												<input type="checkbox" class="catalog-filter-checkbox-input">
-												<span></span>
-											</label>
-										</div>
-									</div>
-									<div class="catalog-filter-mortgage-body">
-										<div class="filter-item">
-											<div class="filter-title">Первоначальный взнос, ₽</div>
-											<div class="filter-range-solo">
-												<div class="filter-range-solo-input">
-													<input type="text" class="form-control decimal" value="300000">
-												</div>
-												<div class="filter-range-slider" data-min="0" data-max="450000" data-step="1"></div>
-											</div>
-										</div>
-										<div class="filter-item">
-											<div class="filter-title">Платеж по ипотеке, ₽</div>
-											<div class="filter-range-solo">
-												<div class="filter-range-solo-input with-label">
-													<input type="text" class="form-control decimal" value="40000">
-													<span>до</span>
-												</div>
-												<div class="filter-range-slider" data-min="0" data-max="60000" data-step="1"></div>
-											</div>
-										</div>
-										<div class="filter-item">
-											<div class="filter-title">Срок, лет</div>
-											<div class="filter-range-solo">
-												<div class="filter-range-solo-input">
-													<input type="text" class="form-control decimal" value="15">
-												</div>
-												<div class="filter-range-slider" data-min="0" data-max="40" data-step="1"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="catalog-filter-item">
-								<div class="filter-item">
-									<div class="filter-title">Сроки сдачи</div>
-									<div class="filter-select">
-										<select class="select-style">
-											<option value="Неважно">Неважно</option>
-											<option value="2020">2020</option>
-											<option value="2021">2021</option>
-											<option value="2022">2022</option>
-											<option value="2023">2023</option>
-										</select>
-									</div>
-								</div>
-							</div>
-
-							<div class="catalog-filter-item finishing-options">
-								<div class="filter-item">
-									<div class="filter-title">Варианты отделки</div>
-									<div class="filter-checkbox">
-										<label class="filter-checkbox-label">
-											<input type="radio" name="appart-option" checked>
-											<span>Не важно</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="radio" name="appart-option">
-											<span>С отделкой</span>
-										</label>
-										<label class="filter-checkbox-label">
-											<input type="radio" name="appart-option">
-											<span>Без отделки</span>
-										</label>
-									</div>
-								</div>
-							</div>
-
-							<div class="catalog-filter-item">
-								<div class="filter-item">
-									<div class="filter-title">Этаж</div>
-									<div class="filter-range">
-										<div class="filter-range-inputs">
-											<div class="filter-range-input-group">
-												<span>от</span>
-												<input type="text" class="filter-range-input decimal from" value="1">
-											</div>
-											<div class="filter-range-input-group">
-												<span>до</span>
-												<input type="text" class="filter-range-input decimal to" value="9">
-											</div>
-										</div>
+										<div class="filter-range-slider" data-step="1000"></div>
 									</div>
 								</div>
 							</div>
@@ -409,18 +285,19 @@
 					</div>
 
 					<div class="col-md-6">
-						
-						<div class="catalog-tabs">
-							<a href="#" class="catalog-tabs-link active"><span class="icon-list"></span>Список</a>
-							<a href="#" class="catalog-tabs-link"><span class="icon-plane"></span>Планировки</a>
-						</div>
 
-						<div class="catalog-list">
-							
-							<div class="catalog-info">
-								<div class="stick gray">Приволжский р-н, Детский проезд, 1</div>
-								<div class="stick gray">15 минут до центра <span class="icon-car"></span></div>
-								<div class="stick gray">256 квартир от 3,4 млн ₽</div>
+						<div class="parking-list catalog-list">
+
+							<div class="promo-block" style="background-image: url(img/promo-img-2.jpg)">
+								<a href="#" class="promo-link"></a>
+								<div class="promo-content">
+									<div class="promo-title">Станция Спортивная </div>
+									<div class="promo-sticks">
+										<div class="stick">Приволжский р-н, Детский проезд, 1</div>
+										<div class="stick">15 минут до центра <span class="icon-car"></span></div>
+										<div class="stick">256 машиномест от 300 000 ₽</div>
+									</div>
+								</div>
 							</div>
 
 							<div class="catalog-list-main">
@@ -433,17 +310,16 @@
 
 											<thead>
 												<tr>
-													<th class="apartments-list-house-header">
+													<th class="apartments-list-house-title">
 														<div class="apartments-list-house-title">
 															<div class="h6">Дом <span>2.1</span></div>
-															<p>(IV квартал 2021)</p>
+															<br>
 														</div>
 													</th>
-													<th>Комнат</th>
-													<th>Кв.№</th>
+													<th>Номер</th>
 													<th>Площадь</th>
-													<th>Этаж</th>
-													<th>Отделка</th>
+													<th>Тип</th>
+													<th>Уровень</th>
 													<th>Стоимость</th>
 												</tr>
 											</thead>
@@ -452,90 +328,170 @@
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
@@ -544,7 +500,7 @@
 										</table>
 
 										<div class="more-btn">
-											<a href="#" class="btn btn-border btn-block">Показать еще 251 квартиру в этом доме</a>
+											<a href="#" class="btn btn-border btn-block">Показать еще 25 предложений</a>
 										</div>
 
 									</div>
@@ -555,17 +511,16 @@
 
 											<thead>
 												<tr>
-													<th class="apartments-list-house-header">
+													<th class="apartments-list-house-title">
 														<div class="apartments-list-house-title">
 															<div class="h6">Дом <span>2.1</span></div>
-															<p>(IV квартал 2021)</p>
+															<br>
 														</div>
 													</th>
-													<th>Комнат</th>
-													<th>Кв.№</th>
+													<th>Номер</th>
 													<th>Площадь</th>
-													<th>Этаж</th>
-													<th>Отделка</th>
+													<th>Тип</th>
+													<th>Уровень</th>
 													<th>Стоимость</th>
 												</tr>
 											</thead>
@@ -574,90 +529,170 @@
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
 												<tr data-href="#">
 													<td class="apartments-list-house-plane-td">
 														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
+															<img src="img/icons/car.svg" alt="">
 														</div>
 													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
 													<td>
 														<div class="apartments-list-total">
 															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
+														</div>
+													</td>
+												</tr>
+												<tr data-href="#">
+													<td class="apartments-list-house-plane-td">
+														<div class="apartments-list-house-plane">
+															<img src="img/icons/car.svg" alt="">
+														</div>
+													</td>
+													<td>2457</td>
+													<td>15 м<sup>2</sup></td>
+													<td>Одинарное</td>
+													<td>Наземная</td>
+													<td>
+														<div class="apartments-list-total">
+															<div class="apartments-list-total-price">34 787 ₽/мес</div>
+															<div class="apartments-list-total-fullprice">300 000 ₽</div>
 														</div>
 													</td>
 												</tr>
@@ -666,263 +701,7 @@
 										</table>
 
 										<div class="more-btn">
-											<a href="#" class="btn btn-border btn-block">Показать еще 251 квартиру в этом доме</a>
-										</div>
-
-									</div>
-
-									<div class="promo-block" style="background-image: url(img/promo-img.jpg)">
-										<a href="#" class="promo-link"></a>
-										<div class="promo-content">
-											<div class="promo-title">Южный парк</div>
-											<div class="promo-sticks">
-												<div class="stick">Приволжский р-н, Детский проезд, 1</div>
-												<div class="stick">15 минут до центра <span class="icon-car"></span></div>
-												<div class="stick">256 квартир от 3,4 млн ₽</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="apartments-list-house">
-
-										<table class="apartments-list-table">
-
-											<thead>
-												<tr>
-													<th class="apartments-list-house-header">
-														<div class="apartments-list-house-title">
-															<div class="h6">Дом <span>2.1</span></div>
-															<p>(IV квартал 2021)</p>
-														</div>
-													</th>
-													<th>Комнат</th>
-													<th>Кв.№</th>
-													<th>Площадь</th>
-													<th>Этаж</th>
-													<th>Отделка</th>
-													<th>Стоимость</th>
-												</tr>
-											</thead>
-
-											<tbody>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-
-										</table>
-
-										<div class="more-btn">
-											<a href="#" class="btn btn-border btn-block">Показать еще 251 квартиру в этом доме</a>
-										</div>
-
-									</div>
-
-									<div class="apartments-list-house">
-
-										<table class="apartments-list-table">
-
-											<thead>
-												<tr>
-													<th class="apartments-list-house-header">
-														<div class="apartments-list-house-title">
-															<div class="h6">Дом <span>2.1</span></div>
-															<p>(IV квартал 2021)</p>
-														</div>
-													</th>
-													<th>Комнат</th>
-													<th>Кв.№</th>
-													<th>Площадь</th>
-													<th>Этаж</th>
-													<th>Отделка</th>
-													<th>Стоимость</th>
-												</tr>
-											</thead>
-
-											<tbody>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Предчистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-												<tr data-href="#">
-													<td class="apartments-list-house-plane-td">
-														<div class="apartments-list-house-plane">
-															<img src="img/icons/home-plane.svg" alt="">
-														</div>
-													</td>
-													<td>2</td>
-													<td>54</td>
-													<td>63 м<sup>2</sup></td>
-													<td>14 из 19</td>
-													<td>Чистовая</td>
-													<td>
-														<div class="apartments-list-total">
-															<div class="apartments-list-total-price">34 787 ₽/мес</div>
-															<div class="apartments-list-total-fullprice">3 404 620 ₽</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-
-										</table>
-
-										<div class="more-btn">
-											<a href="#" class="btn btn-border btn-block">Показать еще 251 квартиру в этом доме</a>
+											<a href="#" class="btn btn-border btn-block">Показать еще 25 предложений</a>
 										</div>
 
 									</div>
@@ -941,74 +720,6 @@
 		</section>
 
 	</div>
-
-	<section class="s-like-it s-similar-layouts">
-		<div class="container">
-			
-			<div class="position-slider-wrapper">
-				<div class="row">
-
-					<div class="col-lg-2">
-						<div class="stocks-left">
-							<div class="section-title">
-								<div class="h2">Вам может <br>понравится</div>
-							</div>
-							<div class="stocks-nav">
-								<div class="slider-nav-arrow slider-prev news-slider-arrow-prev">
-									<span class="icon-angle-left"></span>
-								</div>
-								<div class="slider-nav-arrow slider-next news-slider-arrow-next">
-									<span class="icon-angle-right"></span>
-									<svg class="progress-ring" width="39" height="39">
-										<circle class="progress-ring-circle" stroke-width="1" stroke="#171723" cx="19.5" cy="19.5" r="19" fill="transparent" />
-									</svg>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6">
-						<div class="position-slider news-slider">
-							<div class="similar-layouts-item">
-								<div class="similar-layouts-item-img">
-									<a href="#">
-										<img src="img/layouts/1.png" alt="">
-									</a>
-								</div>
-								<div class="similar-layouts-title"><a href="#" data-mob-text="1-комнатная, 46 м2">1-комнатная, 46 м2</a></div>
-							</div>
-							<div class="similar-layouts-item">
-								<div class="similar-layouts-item-img">
-									<a href="#">
-										<img src="img/layouts/2.png" alt="">
-									</a>
-								</div>
-								<div class="similar-layouts-title"><a href="#" data-mob-text="2-комнатная, 76 м2">2-комнатная, 76 м2</a></div>
-							</div>
-							<div class="similar-layouts-item">
-								<div class="similar-layouts-item-img">
-									<a href="#">
-										<img src="img/layouts/3.png" alt="">
-									</a>
-								</div>
-								<div class="similar-layouts-title"><a href="#" data-mob-text="2-комнатная, 76 м2">2-комнатная, 76 м2</a></div>
-							</div>
-							<div class="similar-layouts-item">
-								<div class="similar-layouts-item-img">
-									<a href="#">
-										<img src="img/layouts/1.png" alt="">
-									</a>
-								</div>
-								<div class="similar-layouts-title"><a href="#" data-mob-text="1-комнатная, 76 м2">1-комнатная, 76 м2</a></div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-
-		</div>
-	</section>
 
 	<section class="s-text-slider animate">
 		<div class="text-slider-wrapper">
