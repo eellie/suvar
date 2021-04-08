@@ -1397,18 +1397,19 @@ $(function() {
 				src    = ths.data('src'),
 				title  = ths.data('title'),
 				price  = ths.data('price');
-		let domHTML = document.createElement('div');
-		domHTML.innerHTML = [
-			'<div class="catalog-section-cell-dropdown">',
-				'<div class="catalog-section-cell-dropdown-content">',
-					`<div class="in-sale-stick">${status}</div>`,
-					`<img src="${src}" alt="">`,
-					`<div class="h6">${title}</div>`,
-					`<div class="cell-price">${price}</div>`,
-				'</div>',
-			'</div>'
-		].join('');
-		tippy(ths[0], domHTML.innerHTML)
+		tippy(ths[0], {
+			content: [
+				`<div class="catalog-section-cell-dropdown ${ ths.hasClass('disabled') ? 'disabled' : '' } ${ ths.hasClass('lock') ? 'lock' : '' }">`,
+					'<div class="catalog-section-cell-dropdown-content">',
+						status != undefined ? `<div class="in-sale-stick">${ status }</div>` : '',
+						src    != undefined ? `<div class="catalog-section-cell-img"><img src="${ src }" alt=""></div>` : '',
+						title  != undefined ?`<div class="h6">${ title }</div>` : '',
+						price  != undefined ?`<div class="cell-price">${ price }</div>` : '',
+					'</div>',
+				'</div>'
+			].join(''),
+			allowHTML: true
+		})
 	});
 
   $(window)
