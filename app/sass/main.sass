@@ -6464,4 +6464,135 @@ form
 		width: 100%
 		text-align: center
 
+.cookies-alert
+	right: rem(54px)
+	bottom: rem(30px)
+	padding: rem(20px)
+	border-radius: rem(10px)
+	background-color: #f2f2f2
+	width: rem(623px)
+	position: fixed
+	z-index: 10
+	transition: all .4s ease
+	opacity: 0
+	visibility: hidden
+	transform: translateX(30px)
+	&.opened
+		opacity: 1
+		visibility: visible
+		transform: translateX(0)
+
+.cookies-alert-row
+	display: flex
+	align-items: center
+
+.cookies-alert-close
+	position: absolute
+	width: rem(30px)
+	height: rem(30px)
+	border-radius: 50%
+	top: rem(-15px)
+	right: rem(-15px)
+	background-color: #fff
+	cursor: pointer
+	font-size: rem(10px)
+	display: flex
+	align-items: center
+	justify-content: center
+	span
+		display: flex
+
+.cookies-alert-left
+	padding-right: rem(20px)
+	flex-grow: 1
+	font-weight: normal
+	font-size: rem(16px)
+	line-height: 1.5
+	a
+		color: $red !important
+		text-decoration: none !important
+		+tr
+
+.cookies-alert-right
+	.btn
+		display: block
+		padding: 0 rem(43px)
+		height: rem(46px)
+		line-height: rem(46px)
+		font-size: rem(16px)
+
+.text-content
+	max-width: rem(921px)
+	font-size: rem(24px)
+	line-height: 1.5
+	h1
+		font-size: rem(64px)
+		margin-bottom: rem(30px)
+		line-height: 1.1875
+	h2
+		font-size: rem(32px)
+		font-weight: 500
+		margin-bottom: rem(30px)
+	h3
+		font-size: rem(26px)
+		font-weight: 500
+		margin-bottom: rem(30px)
+	p
+		margin-bottom: rem(40px)
+	ol
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(40px)
+		li
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			position: relative
+			padding-left: rem(75px)
+			span
+				position: absolute
+				left: 0
+				top: 0
+			h3
+				flex-grow: 1
+				&:first-child
+					margin-top: rem(30px)
+			ol, ul
+				&:last-child
+					margin-bottom: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(40px)
+		li
+			position: relative
+			padding-left: rem(22px)
+			&:after
+				content: ''
+				position: absolute
+				top: rem(14px)
+				width: rem(6px)
+				height: rem(6px)
+				border-radius: 50%
+				background-color: #171723
+				left: 0
+
+.text-content-date
+	display: flex
+	font-size: rem(20px)
+	color: #9595A2
+	margin-bottom: rem(74px)
+	span
+		&:first-child
+			flex-grow: 1
+			padding-right: rem(20px)
+
+.text-content-updated
+	margin-top: rem(74px)
+	font-size: rem(20px)
+	color: #9595A2
+
+.s-text-content
+	padding-bottom: rem(100px)
+
 @import "media" // Always at the end

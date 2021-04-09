@@ -464,6 +464,42 @@
 		display: block
 	[data-tippy-root]
 		pointer-events: auto !important
+	.text-content
+		max-width: none
+		font-size: 16px
+		h1
+			font-size: 44px
+			margin-bottom: 20px
+		h2
+			font-size: 24px
+			font-weight: 500
+			margin-bottom: 20px
+		h3
+			font-size: 21px
+			font-weight: 500
+			margin-bottom: 20px
+		p
+			margin-bottom: 15px
+		ol
+			margin: 0 0 20px
+			li
+				padding-left: 55px
+		ul
+			margin: 0 0 20px
+			li
+				padding-left: 15px
+				&:after
+					width: 4px
+					height: 4px
+					top: 10px
+	.text-content-date
+		font-size: 16px
+		margin-bottom: 30px
+	.text-content-updated
+		margin-top: 40px
+		font-size: 16px
+	.s-text-content
+		padding-bottom: 50px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -2453,6 +2489,39 @@
 		.more-btn
 			margin-left: 0
 			margin-right: 0
+	.cookies-alert
+		z-index: 20
+		bottom: 0
+		left: 0
+		width: 100%
+		right: auto
+		border-radius: 0
+	.cookies-alert-close
+		right: 0
+	.text-content
+		max-width: none
+		font-size: 14px
+		h1
+			font-size: 30px
+		h2
+			font-size: 18px
+		h3
+			font-size: 16px
+		ol
+			li
+				padding-left: 45px
+		ul
+			margin: 0 0 20px
+			li
+				padding-left: 10px
+				&:after
+					width: 4px
+					height: 4px
+					top: 8px
+	.text-content-date
+		font-size: 14px
+	.text-content-updated
+		font-size: 14px
 
 /*==========  Mobile First  ==========*/
 

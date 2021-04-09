@@ -1432,6 +1432,14 @@ $(function() {
 		}
 	});
 
+	$('.cookies-alert-close').on('click', function() {
+		$('.cookies-alert').removeClass('opened')
+	});
+
+	$('.cookies-alert-right .btn').on('click', function() {
+		$('.cookies-alert').removeClass('opened')
+	});
+
   $(window)
   .on('scroll', function() {
   	let top = $(window).scrollTop();
