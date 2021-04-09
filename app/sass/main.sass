@@ -5821,6 +5821,8 @@ form
 		width: rem(18px)
 		height: rem(18px)
 		top: rem(-7px)
+	.apartment-section-block
+		width: 100%
 
 .catalog-filter-mortgage
 	margin-bottom: rem(30px)
@@ -5916,9 +5918,6 @@ form
 		color: #171723
 		&:after
 			transform: scaleX(1)
-
-.catalog-list
-	padding-top: rem(105px)
 
 .catalog-info
 	display: flex
@@ -6278,7 +6277,6 @@ form
 	width: rem(30px)
 	height: rem(30px)
 	border: 1px solid #E2E2E2
-	overflow: hidden
 	position: relative
 	z-index: 1
 
@@ -6427,5 +6425,43 @@ form
 	.promo-block
 		&:first-child
 			margin-top: 0
+
+.catalog-filter-mob-close
+	display: none
+
+.catalog-filter-mob-open-filter
+	display: none
+	.btn
+		display: flex
+		align-items: center
+		justify-content: center
+		&:hover
+			span
+				color: #fff
+		span
+			margin-right: 8px
+			color: $red
+
+.apartments-list-table-mob-header
+	display: none
+
+.catalog-mob-tabs
+	display: none
+
+.cell-link
+	display: none
+	margin-top: 15px
+	a
+		display: inline-block
+		border: 1px solid $red
+		font-size: 12px
+		text-decoration: none !important
+		padding: 0 10px
+		border-radius: 4px
+		height: 38px
+		line-height: 36px
+		color: $red !important
+		width: 100%
+		text-align: center
 
 @import "media" // Always at the end

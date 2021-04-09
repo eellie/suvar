@@ -1345,22 +1345,6 @@ $(function() {
 		openPopup('#image-popup');
 	});
 
-	$(document).on('click', function(e) {
-		let tg = $(e.target);
-		if ( !tg.closest('.header-menu').length && !tg.closest('.header-burger').length ) {
-			$('.header-menu').removeClass('opened')
-		}
-		if ( !tg.closest('.has-child').length ) {
-			$('.has-child').removeClass('active') }
-		if ( !tg.closest('.menu').length && !tg.closest('.burger-icon').length ) {
-			$('.menu').removeClass('opened')
-		}
-		if ( !tg.closest('.share-dropdown').length && !tg.closest('.share-link').length ) {
-			$('.share-link').removeClass('active');
-			$('.share-dropdown').removeClass('opened');
-		}
-	});
-
 	$('.catalog-filter-checkbox-input').on('change', function() {
 		let check = $(this).is(':checked');
 		if ( check ) {
@@ -1392,24 +1376,60 @@ $(function() {
 	});
 
 	$('.catalog-section-cell').each(function() {
-		let ths    = $(this),
-				status = ths.data('status'),
-				src    = ths.data('src'),
-				title  = ths.data('title'),
-				price  = ths.data('price');
+		let ths    			= $(this),
+				status 			= ths.data('status'),
+				src    			= ths.data('src'),
+				title  			= ths.data('title'),
+				price  			= ths.data('price'),
+				link   			= ths.attr('href');
 		tippy(ths[0], {
 			content: [
 				`<div class="catalog-section-cell-dropdown ${ ths.hasClass('disabled') ? 'disabled' : '' } ${ ths.hasClass('lock') ? 'lock' : '' }">`,
 					'<div class="catalog-section-cell-dropdown-content">',
-						status != undefined ? `<div class="in-sale-stick">${ status }</div>` : '',
-						src    != undefined ? `<div class="catalog-section-cell-img"><img src="${ src }" alt=""></div>` : '',
-						title  != undefined ?`<div class="h6">${ title }</div>` : '',
-						price  != undefined ?`<div class="cell-price">${ price }</div>` : '',
+						status 			!= undefined ? `<div class="in-sale-stick">${ status }</div>` : '',
+						src    			!= undefined ? `<div class="catalog-section-cell-img"><img src="${ src }" alt=""></div>` : '',
+						title  			!= undefined ? `<div class="h6">${ title }</div>` : '',
+						price  			!= undefined ? `<div class="cell-price">${ price }</div>` : '',
+						$(window).width() < 1200 ? `<div class="cell-link"><a href="${link}">Перейти</a></div>` : '',
 					'</div>',
 				'</div>'
 			].join(''),
 			allowHTML: true
 		})
+	});
+
+	$('.catalog-section-cell').on('click', function(e) {
+		if ( $(window).width() < 1200 ) {
+			e.preventDefault();
+		}
+	});
+
+	$('.open-mob-filter').on('click', function(e) {
+		e.preventDefault();
+		$('.catalog-filter-mob-container').addClass('opened')
+	});
+
+	$('.catalog-filter-mob-close').on('click', function() {
+		$('.catalog-filter-mob-container').removeClass('opened')
+	});
+
+	$(document).on('click', function(e) {
+		let tg = $(e.target);
+		if ( !tg.closest('.header-menu').length && !tg.closest('.header-burger').length ) {
+			$('.header-menu').removeClass('opened')
+		}
+		if ( !tg.closest('.has-child').length ) {
+			$('.has-child').removeClass('active') }
+		if ( !tg.closest('.menu').length && !tg.closest('.burger-icon').length ) {
+			$('.menu').removeClass('opened')
+		}
+		if ( !tg.closest('.share-dropdown').length && !tg.closest('.share-link').length ) {
+			$('.share-link').removeClass('active');
+			$('.share-dropdown').removeClass('opened');
+		}
+		if ( !tg.closest('.catalog-filter-mob-container').length && !tg.closest('.open-mob-filter').length ) {
+			$('.catalog-filter-mob-container').removeClass('opened')
+		}
 	});
 
   $(window)

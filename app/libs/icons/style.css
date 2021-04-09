@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-funnel:before {
+  content: "\e924";
+}
 .icon-lock:before {
   content: "\e923";
 }
