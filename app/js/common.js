@@ -271,7 +271,7 @@ $(function() {
   $('.popup-close').on('click', closePopup);
 
   $('.popup-wrapper').on('click', function(e) {
-  	let clickTarget = tg;
+  	let clickTarget = $(e.target);
   	if ( clickTarget.hasClass('popup-flex') ) {
   		closePopup();
   	}
@@ -551,11 +551,14 @@ $(function() {
 						parseFloat(values[handle]) == parseInt(values[handle]) ? values[handle] = parseInt(values[handle]) : values[handle] = parseFloat(values[handle]);
 						if ( ths.data('for') != undefined && canChangeSlider ) {
 							let cloneId = ths.data('for'),
-									cloneRange = $(cloneId).find('.filter-range-slider')[0].noUiSlider;
-							canChangeSlider = false;
-							cloneRange.setHandle(0, parseFloat(values[0]));
-							cloneRange.setHandle(1, parseFloat(values[1]));
-							canChangeSlider = true;
+									cloneRangeItem = $(cloneId).find('.filter-range-slider')[0];
+							if ( cloneRangeItem != undefined ) {
+								let cloneRange = cloneRangeItem.noUiSlider;
+								canChangeSlider = false;
+								cloneRange.setHandle(0, parseFloat(values[0]));
+								cloneRange.setHandle(1, parseFloat(values[1]));
+								canChangeSlider = true;
+							}
 						}
 					});
 				}
@@ -1432,12 +1435,31 @@ $(function() {
 		}
 	});
 
+	tippy('[data-tippy-content]');
+
 	$('.cookies-alert-close').on('click', function() {
 		$('.cookies-alert').removeClass('opened')
 	});
 
 	$('.cookies-alert-right .btn').on('click', function() {
 		$('.cookies-alert').removeClass('opened')
+	});
+
+	$('.parking-nav-link').on('click', function(e) {
+		e.preventDefault();
+		let ths = $(this),
+				thsTab = $(`.parking-tab[data-tab="${ths.data('tab')}"]`);
+		if ( thsTab.is(':hidden') ) {
+			$('.parking-nav-link').removeClass('active');
+			ths.addClass('active');
+			$('.parking-tab').hide();
+			thsTab.fadeIn(400)
+		}
+	});
+
+	$('.confirm-parking-btn').on('click', function(e) {
+		e.preventDefault();
+		closePopup();
 	});
 
   $(window)
@@ -1452,7 +1474,7 @@ $(function() {
   	}
   	fixedMenuBtn();
   	$('.has-child').removeClass('active');
-  	scrollRescomMenu(top)
+  	scrollRescomMenu(top);
   })
   .on('load', function() {
   	cityMap = $('.s-projects-wrapper .s-city-map');

@@ -500,6 +500,12 @@
 		font-size: 16px
 	.s-text-content
 		padding-bottom: 50px
+	.parking-schem
+		width: 50%
+	.parking-info
+		width: 50%
+	.parking-schem-list
+		padding-left: rem(40px)
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -753,6 +759,22 @@
 		margin-bottom: 30px
 	.catalog-filter-mob-open-filter
 		display: block
+	.parking-nav-link
+		font-size: 18px
+		span
+			font-size: 14px
+			margin-right: 8px
+	.parking-statuses
+		margin-bottom: 30px
+	.parking-info .h2
+		font-size: 21px
+	.parking-adv-item
+		margin-right: 10px
+		img
+			height: 24px
+	.parking-popup-block
+		.popup-content
+			padding: 20px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1033,6 +1055,20 @@
 		text-align: center
 		img
 			margin: 0 auto 20px
+	.parking-tab-content
+		display: block
+	.parking-schem
+		width: 100%
+		margin-bottom: 30px
+	.parking-info
+		padding-left: 0
+		width: 100%
+	.parking-table
+		width: 100%
+		margin-bottom: 30px
+	.parking-schem-list
+		width: 100%
+		padding-left: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -2290,11 +2326,11 @@
 	.stocks-nav .slider-prev
 		margin-right: 4px
 	.similar-layouts-title
-		a
-			font-size: 0
-			&:before
-				content: attr(data-mob-text)
-				font-size: 18px
+		// a
+		// 	font-size: 0
+		// 	&:before
+		// 		content: attr(data-mob-text)
+		// 		font-size: 18px
 	.catalog-filter-title
 		font-size: 16px
 	.apartment-section-block
@@ -2522,6 +2558,37 @@
 		font-size: 14px
 	.text-content-updated
 		font-size: 14px
+	.parking-nav
+		margin-bottom: 25px
+	.parking-nav-link
+		font-size: 16px
+		span
+			font-size: 13px
+	.parking-statuses
+		.catalog-grid-statuses
+			position: static
+		.catalog-grid-statuses-item
+			margin-right: 8px
+		.catalog-grid-statuses-icon
+			width: 10px
+			height: 10px
+			margin-right: 5px
+		.catalog-grid-statuses-title
+			font-size: 10px
+	#parking
+		.popup-flex
+			padding-left: 0
+			padding-right: 0
+	.parking-popup-block
+		padding: 0
+		background-color: #fff
+		.popup-content
+			border-radius: 0
+		.popup-close
+			top: 0
+			right: 0
+			&:after
+				font-size: 16px
 
 /*==========  Mobile First  ==========*/
 

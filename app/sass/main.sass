@@ -5317,6 +5317,8 @@ form
 	align-items: center
 	position: relative
 	z-index: 1
+	text-decoration: none !important
+	color: $text !important
 	&.disabled
 		span
 			color: rgba(23, 23, 35, 0.15) !important
@@ -5330,6 +5332,30 @@ form
 				cursor: default !important
 				&:after
 					display: none !important
+	&.active
+		span
+			&:first-child
+				color: #fff
+				&:after
+					opacity: 1
+				& + span
+					color: #fff
+					&:after
+						opacity: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+			&:last-child
+				&:after
+					display: none
 	span
 		width: 50%
 		flex-shrink: 0
@@ -6324,12 +6350,14 @@ form
 			transform: translateY(1px)
 
 .tippy-box
-	background-color: #fff
+	background-color: transparent
 	max-width: 204px !important
+	color: #000
 	.tippy-content
 		border-radius: 7px
+		background-color: #fff
 		border: 1px solid rgba(149, 149, 161, 0.6)
-		padding: 20px 18px
+		padding: 10px
 	& > .tippy-arrow
 		z-index: 1
 		&:before
@@ -6353,6 +6381,7 @@ form
 .catalog-section-cell-dropdown
 	position: relative
 	z-index: 2
+	padding: 10px 8px
 	&.disabled
 		.in-sale-stick
 			border-color: #9595A1
@@ -6594,5 +6623,230 @@ form
 
 .s-text-content
 	padding-bottom: rem(100px)
+
+#parking
+	.popup-flex
+		padding-left: 20px
+		padding-right: 20px
+
+.parking-popup-block
+	width: 1530px
+	padding: rem(50px) 0
+	.popup-header
+		position: relative
+		margin: 0
+		padding: 0
+	.popup-close
+		width: rem(48px)
+		height: rem(48px)
+		background-color: #fff
+		border-radius: 50px
+		color: $text
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: scale(1) !important
+		position: absolute
+		top: rem(-25px)
+		right: rem(-24px)
+		+tr
+		z-index: 2
+		&:hover
+			transform: rotate(90deg) !important
+		&:after
+			font-size: rem(16px)
+			line-height: 1
+	.popup-content
+		padding: rem(52px)
+		background-color: #fff
+		border-radius: rem(10px)
+
+.parking-nav
+	margin-bottom: rem(54px)
+	display: flex
+	position: relative
+	align-items: center
+	max-width: rem(932px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: #f2f2f2
+
+
+.parking-nav-link
+	display: flex
+	align-items: center
+	text-decoration: none !important
+	+tr
+	color: #9595A1
+	flex-grow: 1
+	position: relative
+	font-size: rem(36px)
+	font-weight: 500
+	padding-bottom: rem(15px)
+	margin-right: rem(11px)
+	&:last-child
+		margin-right: 0
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: $red
+		z-index: 1
+		transform-origin: top left
+		transform: scaleX(0)
+		+tr
+	&:hover
+		color: #171723
+	span
+		font-size: rem(27px)
+		margin-right: rem(19px)
+	&.active
+		color: #171723
+		&:after
+			transform: scaleX(1)
+
+.parking-tab
+	display: none
+
+.parking-tab-content
+	display: flex
+
+.parking-schem
+	width: 68%
+	flex-shrink: 0
+	img
+		width: 100%
+
+.parking-info
+	width: 32%
+	flex-shrink: 0
+	padding-left: rem(40px)
+	.h2
+		margin-bottom: rem(20px)
+
+.parking-statuses
+	margin-bottom: rem(94px)
+	.catalog-grid-statuses-item
+		opacity: 1
+		visibility: visible
+		transform: none
+		white-space: nowrap
+		margin-right: rem(24px)
+		margin-left: 0
+		&:last-child
+			margin-right: 0
+	.catalog-grid-statuses-icon
+		width: rem(14px)
+		height: rem(14px)
+		margin-right: rem(10px)
+	.catalog-grid-statuses-title
+		font-size: rem(16px)
+
+.parking-info-list
+	list-style-type: none
+	padding: 0
+	margin: 0 0 rem(24px)
+	font-size: rem(18px)
+	li
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin-bottom: rem(12px)
+		&:last-child
+			margin-bottom: 0
+		span
+			&:first-child
+				flex-grow: 1
+				margin-right: rem(20px)
+				font-weight: 500
+
+.parking-adv
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: rem(22px)
+
+.parking-adv-item
+	display: flex
+	align-items: center
+	margin-right: rem(30px)
+	margin-bottom: rem(10px)
+	&:last-child
+		margin-right: 0
+	img
+		height: rem(42px)
+		width: auto
+		margin-right: rem(9px)
+	.h6
+		font-size: rem(14px)
+		margin-right: rem(8px)
+
+.help-hover
+	display: flex
+	span
+		font-size: rem(13px)
+
+[data-tippy-content]
+	cursor: pointer
+
+.parking-total
+	display: flex
+	align-items: center
+	font-size: rem(18px)
+	margin-bottom: rem(23px)
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(10px)
+			font-weight: 500
+		&:last-child
+			font-weight: 600
+			font-size: rem(26px)
+
+.parking-table
+	width: 49%
+	flex-shrink: 0
+	.more-btn
+		.btn
+			height: rem(56px)
+			line-height: rem(54px)
+	table
+		tbody
+			tr
+				+tr
+				cursor: pointer
+				td
+					font-weight: normal
+				&:hover
+					td
+						font-weight: 500
+
+.parking-schem-list
+	width: 51%
+	flex-shrink: 0
+	padding-left: rem(100px)
+	display: flex
+	flex-direction: column
+	.parking-statuses
+		display: flex
+		justify-content: flex-end
+		margin-bottom: rem(33px)
+
+.parking-schem-list-block
+	margin-bottom: rem(30px)
+	img
+		width: 100%
+
+.parking-submit
+	margin-top: auto
 
 @import "media" // Always at the end

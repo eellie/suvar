@@ -48,8 +48,8 @@ gulp.task('scripts', function() {
 		'app/libs/nouislider/nouislider.min.js',
 		'app/libs/inputmask/jquery.inputmask.min.js',
 		'app/libs/select2/select2.full.min.js',
-		// 'app/libs/tippy/popper.min.js',
-		// 'app/libs/tippy/tippy-bundle.umd.js',
+		'app/libs/tippy/popper.min.js',
+		'app/libs/tippy/tippy-bundle.umd.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
