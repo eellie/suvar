@@ -1548,6 +1548,8 @@ section
 	padding-right: 20px
 	.h3
 		max-width: rem(702px)
+		.mob-text
+			display: none
 
 .projects-header-right
 	width: 30%
@@ -6626,7 +6628,8 @@ form
 	color: #9595A2
 
 .s-text-content
-	padding-bottom: rem(100px)
+	padding-bottom: rem(40px)
+	overflow: visible
 
 #parking
 	.popup-flex
@@ -6852,5 +6855,499 @@ form
 
 .parking-submit
 	margin-top: auto
+
+.stock-content
+	font-size: rem(24px)
+	.stick
+		margin-bottom: rem(64px)
+	h1, .h1
+		font-size: rem(64px)
+		margin-bottom: rem(24px)
+	.mute-text
+		font-size: rem(20px)
+		color: #9595A1
+		margin-bottom: rem(64px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+	h3, .h3
+		margin-top: rem(54px)
+		margin-bottom: rem(42px)
+	p
+		margin-bottom: 2rem
+		&.big-text
+			margin-bottom: rem(30px)
+			font-size: rem(32px)
+			margin-top: rem(100px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(54px)
+		li
+			position: relative
+			padding-left: rem(15px)
+			margin-bottom: rem(16px)
+			&:last-child
+				margin-bottom: 0
+			&:after
+				content: ''
+				position: absolute
+				top: rem(14px)
+				left: 0
+				width: rem(6px)
+				height: rem(6px)
+				border-radius: 50%
+				background-color: #4298D4
+	.about-in-nmbrs
+		margin-left: 0
+		margin-top: rem(80px)
+		margin-bottom: rem(46px)
+		flex-wrap: wrap
+	.about-in-nmbrs-item
+		width: 25%
+		max-width: none
+		flex-shrink: 0
+		margin-right: 0
+		padding-right: rem(50px)
+		font-size: rem(16px)
+		margin-bottom: rem(54px)
+		span
+			font-size: rem(62px)
+			margin-bottom: rem(3px)
+			padding-top: 0
+			small
+				font-size: rem(30px)
+	ol
+		counter-reset: olCounter3
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(54px)
+		li
+			padding-left: rem(31px)
+			margin-bottom: rem(16px)
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: counter(olCounter3)'.'
+				counter-increment: olCounter3
+				position: absolute
+				top: 0
+				left: 0
+				color: #4298D4
+
+
+.stock-content-container
+	max-width: 966px
+	position: relative
+	> *:first-child
+		margin-top: 0
+
+.wide-img
+	margin-bottom: rem(64px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+
+.stock-steps
+	display: flex
+	margin-bottom: rem(100px)
+
+.stock-steps-item
+	flex-grow: 1
+	position: relative
+	margin-right: rem(35px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(24px)
+		left: rem(85px)
+		height: 1px
+		background-color: #ABABB4
+		right: 0
+	&:last-child
+		flex-grow: 0
+		margin-right: 0
+		&:after
+			display: none
+
+.stock-steps-item-icon
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	background-color: $red
+	text-align: center
+	line-height: rem(50px)
+	margin-bottom: rem(15px)
+	font-weight: 500
+	font-size: rem(22px)
+	color: #fff
+
+.stock-steps-item-text
+	font-size: rem(18px)
+	font-weight: 500
+	a
+		position: relative
+		color: $red
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $red
+			+tr
+		&:hover
+			&:after
+				transform: scaleX(0)
+
+.slide-text
+	position: relative
+	padding-bottom: rem(100px)
+	margin-bottom: rem(100px)
+	transition: padding .4s ease
+	ul
+		margin: 0
+	&.opened
+		padding-bottom: rem(50px)
+		.slide-text-open-link
+			background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#fff, 0) 100%)
+			a
+				span
+					display: none
+					&.hide-text
+						display: block
+
+.slide-text-content
+	max-height: rem(412px)
+	transition: max-height .4s ease
+	overflow: hidden
+
+.slide-text-open-link
+	height: rem(208px)
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+	background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#fff, .95) 30%, rgba(#fff, 1) 100%)
+	transition: background .4s ease
+	a
+		display: inline-block
+		position: relative
+		color: #171723
+		+tr
+		text-decoration: none !important
+		font-size: rem(18px)
+		.hide-text
+			display: none
+		&:hover
+			&:after
+				transform: scaleX(0)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #171723
+			+tr
+
+.custom-gallery
+	margin-bottom: rem(48px)
+	.slick-slide
+		margin-right: 5px
+	img
+		width: 100%
+		border-radius: rem(10px)
+	.slider-nav-arrow
+		position: absolute
+		z-index: 1
+		bottom: rem(35px)
+		span
+			color: #fff
+		&.slider-prev
+			right: rem(100px)
+		&.slider-next
+			right: rem(45px)
+			&:after
+				background-color: rgba(#fff, .3)
+			&.animated
+				svg
+					circle
+						animation-name: ringload
+			svg
+				circle
+					stroke: white
+					animation-duration: 3990ms
+
+.table-wrapper
+	margin-top: rem(40px)
+	margin-bottom: rem(100px)
+	position: relative
+	&.end
+		&:after
+			opacity: 0
+			visibility: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: rem(60px)
+		bottom: rem(24px)
+		background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, 1) 100%)
+		+tr
+
+.table-wrapper-scroll
+	overflow: auto hidden
+	&::-webkit-scrollbar
+		height: 3px
+		width: 3px
+		border-radius: 3px
+		background-color: #F2F2F2
+	&::-webkit-scrollbar-thumb
+		background-color: #9595A1
+
+.default-table-border
+	border-radius: rem(7px)
+	border: 1px solid #DADADA
+	margin-bottom: rem(24px)
+	display: inline-block
+
+.default-table
+	min-width: 100%
+	white-space: nowrap
+	font-size: rem(14px)
+	th
+		font-weight: 500
+	th, td
+		padding: rem(16px) rem(32px)
+		text-align: left
+		border-bottom: 1px solid #DADADA
+		border-right: 1px solid #DADADA
+		&:last-child
+			border-right: none
+	tbody
+		tr:last-child
+			td
+				border-bottom: none
+
+.default-slider
+	margin-bottom: rem(74px)
+
+.default-slider-header
+	display: flex
+	align-items: center
+	margin-bottom: rem(39px)
+	.h3
+		margin: 0 rem(20px) 0 0 !important
+		flex-grow: 1
+
+.default-slider-nav
+	display: flex
+	align-items: center
+	.slider-nav-arrow
+		position: relative
+		top: auto
+		right: auto
+		left: auto
+		bottom: auto
+	.slider-prev
+		margin-right: rem(15px)
+	.slider-next
+		&.animated
+			svg
+				circle
+					animation-name: ringload
+		svg
+			circle
+				animation-duration: 3990ms
+
+.default-slider-body
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 100px
+		height: 100%
+		background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, .75) 50%, rgba(#fff, 100%) 100%)
+	.slick-slide
+		margin-right: rem(30px)
+		> div
+			height: 100%
+
+.apart-item-card
+	width: 267px !important
+	height: 100%
+	display: flex
+	flex-direction: column
+	background-color: #F2F2F2
+	border-radius: rem(5.5px)
+	padding: rem(30px) rem(21px)
+
+.apart-item-card-img
+	margin: 0 rem(9px) rem(20px)
+	position: relative
+	padding-bottom: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: absolute
+		top: 0
+		left: 0
+
+.apart-item-card-title
+	font-size: rem(22px)
+	font-weight: 500
+	margin-bottom: rem(16px)
+	a
+		color: $text
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $red
+
+.apart-item-card-old-price
+	display: flex
+	flex-wrap: wrap
+	white-space: nowrap
+	margin-bottom: rem(11px)
+
+.apart-item-card-old-price-value
+	position: relative
+	margin-right: 12px
+	font-size: rem(18px)
+	color: #9595A1
+	text-decoration: line-throughS
+
+.price-economy
+	white-space: nowrap
+	height: rem(20px)
+	line-height: rem(20px)
+	padding: 0 rem(7px)
+	border-radius: rem(5px)
+	background-color: $red
+	color: #fff
+	font-weight: 600
+	text-transform: uppercase
+	font-size: rem(12px)
+
+.apart-item-card-current-price
+	font-size: rem(24px)
+	font-weight: 500
+	margin-bottom: rem(18px)
+	color: $red
+	white-space: nowrap
+
+.apart-item-card-btn
+	.btn
+		font-size: rem(16px)
+
+.share
+	margin-bottom: rem(32px)
+	display: flex
+	align-items: center
+
+.share-title
+	font-size: rem(16px)
+	color: #231F20
+	margin-right: rem(25px)	
+
+.share-nav
+	display: flex
+	align-items: center
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 30px
+		color: #9595A2
+		+tr
+		text-decoration: none !important
+		font-size: 18px
+		.icon-vk-2
+			font-size: 1.2222em
+		.icon-youtube
+			font-size: 1.44444em
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $red
+
+.attention-block
+	display: flex
+	padding: rem(22px) rem(46px) rem(22px) rem(22px)
+	border-radius: rem(7px)
+	background-color: #F6F6F6
+
+.attention-icon
+	font-size: rem(20px)
+	color: $red
+	margin-right: rem(19px)
+	font-weight: normal
+
+.attention-text
+	font-size: rem(14px)
+	line-height: 1.5
+	color: #9595A2
+
+.stock-content-main
+	position: relative
+
+.fixed-mailing-col
+	position: absolute
+	right: 100%
+
+.fixed-mailing-block
+	max-width: rem(272px)
+	position: sticky
+	top: rem(30px)
+	.mailing-form
+		background: transparent
+		padding: 0
+	.mailing-icon
+		margin-bottom: rem(40px)
+		width: rem(38px)
+		height: rem(38px)
+		&:after
+			width: rem(46px)
+			height: rem(46px)
+			border-radius: 50%
+			background-color: #F2F2F2
+			transform: rotateY(40deg) rotateX(-35deg)
+			right: rem(-20px)
+			bottom: rem(-14px)
+	.mailing-title
+		font-size: rem(20px)
+		color: #171723
+		margin-bottom: rem(20px)
+	.mailing-descr
+		margin-bottom: rem(20px)
+		font-size: rem(14px)
+		color: #171723
+	.form-group
+		margin-bottom: rem(16px)
+	.form-control
+		height: rem(60px)
+		font-size: rem(16px)
+		font-weight: normal
+		padding: 0 rem(11px)
+		border-radius: 7px
+		background-color: #F2F2F2
+		&::placeholder
+			color: #9595A2
+	.mailing-thanks
+		background-color: #fff
+		height: 110%
+
 
 @import "media" // Always at the end
