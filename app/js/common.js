@@ -154,7 +154,10 @@ $(function() {
   });
 
   $('.decimal').inputmask('decimal', {
-    rightAlign: false
+    rightAlign: false,
+    groupSeparator: ' ',
+    groupSize: 3,
+    allowMinus: false
   });
 
 	$('.select-style').each(function() {
@@ -465,7 +468,7 @@ $(function() {
   $('.filter-range-solo').each(function() {
 		let ths = $(this),
 				inp = ths.find('.form-control'),
-				val = inp.val(),
+				val = parseFloat(inp.val().toString().split(' ').join('')),
 				range = ths.find('.filter-range-slider')[0],
 				rangeStepData = ths.find('.filter-range-slider').data('step'),
 				min = ths.find('.filter-range-slider').data('min'),
@@ -484,7 +487,13 @@ $(function() {
 		noUiSlider.create(range, options);
 
 		range.noUiSlider.on('update', function (values, handle) {
+
+			let currVal = values[0].split(' ').join('');
+
 			parseFloat(values[0]) == parseInt(values[0]) ? values[0] = parseInt(values[0]) : values[0] = parseFloat(values[0]);
+
+			console.log(values[0])
+
 			inp.val(values[0]);
 			inp.parents('.calculator-form').length > 0 ? calculatorLoader() : '';
 			inp.parents('.full-filters-block').length > 0 ? fullFiltersLoader() : '';
@@ -492,7 +501,7 @@ $(function() {
 		});
 
 		inp.on('input', function() {
-			range.noUiSlider.setHandle(null, parseFloat($(this).val()))
+			range.noUiSlider.setHandle(null, parseFloat($(this).val().split(' ').join('')))
 		});
 
 	});
