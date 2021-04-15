@@ -506,6 +506,20 @@
 		width: 50%
 	.parking-schem-list
 		padding-left: rem(40px)
+	.page-not-found-img
+		padding-left: 0
+		margin-right: 60px
+		width: 50%
+		flex-shrink: 0
+		img
+			width: 100%
+	.page-not-found-text
+		.h1
+			font-size: 200px
+		.h2
+			font-size: 24px
+		p
+			font-size: 16px
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -779,6 +793,8 @@
 		top: 10px
 	.fixed-mailing-block
 		display: none
+	.page-not-found-text .h1
+		font-size: 140px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -2706,6 +2722,17 @@
 		line-height: 18px
 		font-size: 8px
 		overflow: hidden
+	.page-not-found
+		overflow: hidden
+	.page-not-found-row
+		flex-direction: column-reverse
+		position: relative
+	.page-not-found-img
+		position: absolute
+		margin: 0
+		bottom: 0
+		right: -30px
+		width: 180px
 
 
 /*==========  Mobile First  ==========*/
