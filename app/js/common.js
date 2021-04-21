@@ -152,14 +152,21 @@ $(function() {
   	showMaskOnHover: false
   });
 
-  $('.decimal').inputmask('decimal', {
-    rightAlign: false,
-    groupSeparator: ' ',
-    groupSize: 3,
-    allowMinus: false
-  });
+	$('.decimal').each(function() {
+		let ths = $(this),
+				suffix = ths.data('suffix');
+		ths.inputmask('decimal', {
+			rightAlign: false,
+			groupSeparator: ' ',
+			groupSize: 3,
+			allowMinus: false,
+			suffix: suffix != undefined ? ` ${suffix}` : ''
+		});
+	});
 
-	$('.select-style').each(function() {
+  let selectArr = $('.select-style');
+
+	selectArr.each(function() {
 		let ths = $(this),
 				options = {
 					minimumResultsForSearch: -1,
@@ -170,12 +177,23 @@ $(function() {
 			options.closeOnSelect = false;
 			options.shouldFocusInput = -1;
 		}
-		ths.select2(options)
+		ths.select2(options);
 	});
 
-	$('.select-style').on('select2:opening select2:closing', function( event ) {
+	selectArr.on('select2:opening select2:closing', function( event ) {
 		let $searchfield = $(this).parent().find('.select2-search__field');
 		$searchfield.prop('disabled', true);
+	});
+
+	selectArr.on('change', function() {
+		let ths = $(this),
+				selectCombine = ths.data('select-combine');
+		if ( selectCombine != undefined ) {
+			if ( $(selectCombine).length > 0 ) {
+				let combineVal = ths.find('option:selected').data('combine-val');
+				$(selectCombine).val(combineVal).trigger('change')
+			}
+		}
 	});
 
 	$('.popup-flex').on('scroll', function() {
@@ -483,23 +501,25 @@ $(function() {
 
 		rangeStepData !== undefined ? options.step = parseFloat(rangeStepData) : options = options;
 
-		noUiSlider.create(range, options);
+		if ( range != null ) {
+			noUiSlider.create(range, options);
 
-		range.noUiSlider.on('update', function (values, handle) {
+			range.noUiSlider.on('update', function (values, handle) {
 
-			let currVal = values[0].split(' ').join('');
+				let currVal = values[0].split(' ').join('');
 
-			parseFloat(values[0]) == parseInt(values[0]) ? values[0] = parseInt(values[0]) : values[0] = parseFloat(values[0]);
+				parseFloat(values[0]) == parseInt(values[0]) ? values[0] = parseInt(values[0]) : values[0] = parseFloat(values[0]);
 
-			inp.val(values[0]);
-			inp.parents('.calculator-form').length > 0 ? calculatorLoader() : '';
-			inp.parents('.full-filters-block').length > 0 ? fullFiltersLoader() : '';
-			inp.parents('.main-window-footer').length > 0 ? mainFiltersLoader() : '';
-		});
+				inp.val(values[0]);
+				inp.parents('.calculator-form').length > 0 ? calculatorLoader() : '';
+				inp.parents('.full-filters-block').length > 0 ? fullFiltersLoader() : '';
+				inp.parents('.main-window-footer').length > 0 ? mainFiltersLoader() : '';
+			});
 
-		inp.on('input', function() {
-			range.noUiSlider.setHandle(null, parseFloat($(this).val().split(' ').join('')))
-		});
+			inp.on('input', function() {
+				range.noUiSlider.setHandle(null, parseFloat($(this).val().split(' ').join('')))
+			});
+		}
 
 	});
 
@@ -842,6 +862,9 @@ $(function() {
 	$('.contacts-form').on('submit', function(e) {
 		e.preventDefault();
 		$('.contacts-form-success').addClass('visible');
+		setTimeout(() => {
+			$('.contacts-form-success').removeClass('visible');
+		}, 3000)
 		return false;
 	});
 
@@ -1662,6 +1685,28 @@ $(function() {
 	if ( $('.catalog-filter').length > 0 ) {
 		clearCatalogFilters()
 	}
+
+	$('.accredited-accordion-item-title').on('click', function() {
+		$(this).toggleClass('active');
+		$(this).parent().find('.accredited-accordion-item-body').slideToggle(400)
+	});
+
+	$('.accredited-table [data-tooltip]').each(function() {
+		let ths    			 = $(this),
+				date 			   = ths.data('date'),
+				contribution = ths.data('contribution');
+		tippy(ths[0], {
+			content: [
+				`<div class="accredited-dropdown ${ ths.hasClass('disabled') ? 'disabled' : '' } ${ ths.hasClass('lock') ? 'lock' : '' }">`,
+					'<div class="accredited-dropdown-content">',
+						date         != undefined ? `<div class="accredited-dropdown-item">Срок <span>${ date }</span></div>` : '',
+						contribution != undefined ? `<div class="accredited-dropdown-item">Первый взнос <span>${ contribution }</span></div>` : '',
+					'</div>',
+				'</div>'
+			].join(''),
+			allowHTML: true
+		})
+	});
 
   $(window)
   .on('scroll', function() {

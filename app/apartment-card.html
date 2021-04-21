@@ -1121,308 +1121,307 @@
 		</div>
 
 		<div class="popup-wrapper popup-full-window" id="select-apps-filter">
-			<div class="popup-flex">
-				<div class="popup-block">
-					<div class="popup-close"></div>
-					<div class="popup-content">
-						<div class="full-filters-block">
-							<div class="container">
-								<div class="section-title">
-									<div class="h2">Подбор квартиры</div>
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close"></div>
+				<div class="popup-content">
+					<div class="full-filters-block">
+						<div class="container">
+							<div class="section-title">
+								<div class="h2">Подбор квартиры</div>
+							</div>
+							<div class="full-filters-row">
+								<div class="row">
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Количество комнат</div>
+											<div class="filter-checkbox">
+												<label class="filter-checkbox-label">
+													<input type="checkbox" name="appart-filter" checked>
+													<span>cтудия</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="checkbox" name="appart-filter">
+													<span>1</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="checkbox" name="appart-filter">
+													<span>2</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="checkbox" name="appart-filter">
+													<span>3</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="checkbox" name="appart-filter">
+													<span>4</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Жилой комплекс</div>
+											<div class="filter-select">
+												<select class="select-style" data-for="#select-rescom-1" id="select-rescom-2" data-select-combine="#select-district-1">
+													<option data-combine-val="Лаишевский" value="Южный парк">Южный парк</option>
+													<option data-combine-val="Ново-Савиновский" value="Столичный">Столичный</option>
+													<option data-combine-val="Приволжский" value="Станция Спортивная">Станция Спортивная</option>
+													<option data-combine-val="Кировский" value="Залесный сити">Залесный сити</option>
+													<option data-combine-val="Приволжский" value="Времена года">Времена года</option>
+													<option data-combine-val="Приволжский" value="Манхэттен">Манхэттен</option>
+													<option data-combine-val="Приволжский" value="Сказочный лес">Сказочный лес</option>
+													<option data-combine-val="Вахитовский" value="Август Астры лес">Август Астры лес</option>
+													<option data-combine-val="Приволжский" value="Палитра">Палитра</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Район</div>
+											<div class="filter-select">
+												<select class="select-style" id="select-district-1">
+													<option value="Все">Все</option>
+													<option value="Авиастроительный">Авиастроительный</option>
+													<option value="Вахитовский">Вахитовский</option>
+													<option value="Кировский">Кировский</option>
+													<option value="Московский">Московский</option>
+													<option value="Ново-Савиновский">Ново-Савиновский</option>
+													<option value="Приволжский">Приволжский</option>
+													<option value="Советский">Советский</option>
+													<option value="Лаишевский">Лаишевский</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Номер дома</div>
+											<div class="filter-select">
+												<select class="select-style" multiple="multiple">
+													<option value="2.0" selected>2.0</option>
+													<option value="2.1">2.1</option>
+													<option value="2.2">2.2</option>
+													<option value="2.3">2.3</option>
+													<option value="2.4">2.4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Срок сдачи</div>
+											<div class="filter-select">
+												<select class="select-style" multiple="multiple">
+													<option value="2020">2020</option>
+													<option value="2021">2021</option>
+													<option value="2022">2022</option>
+													<option value="2023">2023</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Стоимость, ₽</div>
+											<div class="filter-range" data-for="#filter-range-3" id="filter-range-4">
+												<div class="filter-range-inputs">
+													<div class="filter-range-input-group">
+														<span>от</span>
+														<input type="text" class="filter-range-input decimal from" value="2" data-min="0">
+													</div>
+													<div class="filter-range-input-group">
+														<span>до</span>
+														<input type="text" class="filter-range-input decimal to" value="18" data-max="22">
+													</div>
+												</div>
+												<div class="filter-range-slider" data-step="1"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Площадь, м<sup>2</sup></div>
+											<div class="filter-range" data-for="#filter-range-1" id="filter-range-2">
+												<div class="filter-range-inputs">
+													<div class="filter-range-input-group">
+														<span>от</span>
+														<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
+													</div>
+													<div class="filter-range-input-group">
+														<span>до</span>
+														<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
+													</div>
+												</div>
+												<div class="filter-range-slider" data-step="1"></div>
+											</div>
+											<div class="filter-checkboxes">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox">
+														<span>Большая квартира</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Жилая площадь, м<sup>2</sup></div>
+											<div class="filter-range">
+												<div class="filter-range-inputs">
+													<div class="filter-range-input-group">
+														<span>от</span>
+														<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
+													</div>
+													<div class="filter-range-input-group">
+														<span>до</span>
+														<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
+													</div>
+												</div>
+												<div class="filter-range-slider" data-step="1"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Площадь кухни, м<sup>2</sup></div>
+											<div class="filter-range">
+												<div class="filter-range-inputs">
+													<div class="filter-range-input-group">
+														<span>от</span>
+														<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
+													</div>
+													<div class="filter-range-input-group">
+														<span>до</span>
+														<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
+													</div>
+												</div>
+												<div class="filter-range-slider" data-step="1"></div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Этаж</div>
+											<div class="filter-range">
+												<div class="filter-range-inputs">
+													<div class="filter-range-input-group">
+														<span>от</span>
+														<input type="text" class="filter-range-input decimal from" value="1">
+													</div>
+													<div class="filter-range-input-group">
+														<span>до</span>
+														<input type="text" class="filter-range-input decimal to" value="9">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Варианты отделки</div>
+											<div class="filter-checkbox">
+												<label class="filter-checkbox-label">
+													<input type="radio" name="appart-option" checked>
+													<span>Не важно</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="radio" name="appart-option">
+													<span>С отделкой</span>
+												</label>
+												<label class="filter-checkbox-label">
+													<input type="radio" name="appart-option">
+													<span>Без отделки</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-2 col-md-4">
+										<div class="filter-item">
+											<div class="filter-title">Для кого</div>
+											<div class="filter-select">
+												<select class="select-style">
+													<option value="Всем">Всем</option>
+													<option value="С детьми">С детьми</option>
+													<option value="Семье">Семье</option>
+												</select>
+											</div>
+											<div class="filter-checkboxes">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox">
+														<span>Терасса</span>
+													</label>
+												</div>
+												<div class="checkbox">
+													<label>
+														<input type="checkbox">
+														<span>С мебелью</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-								<div class="full-filters-row">
-									<div class="row">
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Количество комнат</div>
-												<div class="filter-checkbox">
-													<label class="filter-checkbox-label">
-														<input type="checkbox" name="appart-filter" checked>
-														<span>cтудия</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="checkbox" name="appart-filter">
-														<span>1</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="checkbox" name="appart-filter">
-														<span>2</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="checkbox" name="appart-filter">
-														<span>3</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="checkbox" name="appart-filter">
-														<span>4</span>
-													</label>
-												</div>
+							</div>
+							<div class="full-filter-footer">
+								<div class="full-filter-left">
+									<div class="mortgage-block">
+										<div class="mortgage-switch">
+											<div class="switch-checkbox">
+												<div class="switch-checkbox-title">В ипотеку</div>
+												<label class="switch-checkbox-label">
+													<input type="checkbox" class="switch-checkbox-input" checked>
+													<span></span>
+												</label>
 											</div>
 										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Жилой комплекс</div>
-												<div class="filter-select">
-													<select class="select-style">
-														<option value="Южный парк">Южный парк</option>
-														<option value="Столичный">Столичный</option>
-														<option value="Станция Спортивная">Станция Спортивная</option>
-														<option value="Залесный сити">Залесный сити</option>
-														<option value="Времена года">Времена года</option>
-														<option value="Манхэттен">Манхэттен</option>
-														<option value="Сказочный лес">Сказочный лес</option>
-														<option value="Август Астры лес">Август Астры лес</option>
-														<option value="Палитра">Палитра</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Район</div>
-												<div class="filter-select">
-													<select class="select-style">
-														<option value="Все">Все</option>
-														<option value="Авиастроительный">Авиастроительный</option>
-														<option value="Вахитовский">Вахитовский</option>
-														<option value="Кировский">Кировский</option>
-														<option value="Московский">Московский</option>
-														<option value="Ново-Савиновский">Ново-Савиновский</option>
-														<option value="Приволжский">Приволжский</option>
-														<option value="Советский">Советский</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Номер дома</div>
-												<div class="filter-select">
-													<select class="select-style" multiple="multiple">
-														<option value="2.0" selected>2.0</option>
-														<option value="2.1">2.1</option>
-														<option value="2.2">2.2</option>
-														<option value="2.3">2.3</option>
-														<option value="2.4">2.4</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Срок сдачи</div>
-												<div class="filter-select">
-													<select class="select-style">
-														<option value="Неважно">Неважно</option>
-														<option value="2020">2020</option>
-														<option value="2021">2021</option>
-														<option value="2022">2022</option>
-														<option value="2023">2023</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Стоимость, ₽</div>
-												<div class="filter-range">
-													<div class="filter-range-inputs">
-														<div class="filter-range-input-group">
-															<span>от</span>
-															<input type="text" class="filter-range-input decimal from" value="2" data-min="0">
-														</div>
-														<div class="filter-range-input-group">
-															<span>до</span>
-															<input type="text" class="filter-range-input decimal to" value="18" data-max="22">
-														</div>
-													</div>
-													<div class="filter-range-slider" data-step="1"></div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Площадь, м<sup>2</sup></div>
-												<div class="filter-range">
-													<div class="filter-range-inputs">
-														<div class="filter-range-input-group">
-															<span>от</span>
-															<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
-														</div>
-														<div class="filter-range-input-group">
-															<span>до</span>
-															<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
-														</div>
-													</div>
-													<div class="filter-range-slider" data-step="1"></div>
-												</div>
-												<div class="filter-checkboxes">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>Большая квартира</span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Жилая площадь, м<sup>2</sup></div>
-												<div class="filter-range">
-													<div class="filter-range-inputs">
-														<div class="filter-range-input-group">
-															<span>от</span>
-															<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
-														</div>
-														<div class="filter-range-input-group">
-															<span>до</span>
-															<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
-														</div>
-													</div>
-													<div class="filter-range-slider" data-step="1"></div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Площадь кухни, м<sup>2</sup></div>
-												<div class="filter-range">
-													<div class="filter-range-inputs">
-														<div class="filter-range-input-group">
-															<span>от</span>
-															<input type="text" class="filter-range-input decimal from" value="32" data-min="0">
-														</div>
-														<div class="filter-range-input-group">
-															<span>до</span>
-															<input type="text" class="filter-range-input decimal to" value="186" data-max="220">
-														</div>
-													</div>
-													<div class="filter-range-slider" data-step="1"></div>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Этаж</div>
-												<div class="filter-range">
-													<div class="filter-range-inputs">
-														<div class="filter-range-input-group">
-															<span>от</span>
-															<input type="text" class="filter-range-input decimal from" value="1">
-														</div>
-														<div class="filter-range-input-group">
-															<span>до</span>
-															<input type="text" class="filter-range-input decimal to" value="9">
+										<div class="mortgage-form" style="display: block;">
+											<div class="row">
+												<div class="col-lg-auto">
+													<div class="filter-item">
+														<div class="filter-title">Платеж по ипотеке, ₽</div>
+														<div class="filter-range-solo">
+															<div class="filter-range-solo-input with-label">
+																<input type="text" class="form-control decimal" value="40000">
+																<span>до</span>
+															</div>
+															<div class="filter-range-slider" data-min="0" data-max="60000" data-step="1"></div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Варианты отделки</div>
-												<div class="filter-checkbox">
-													<label class="filter-checkbox-label">
-														<input type="radio" name="appart-option" checked>
-														<span>Не важно</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="radio" name="appart-option">
-														<span>С отделкой</span>
-													</label>
-													<label class="filter-checkbox-label">
-														<input type="radio" name="appart-option">
-														<span>Без отделки</span>
-													</label>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-2 col-md-4">
-											<div class="filter-item">
-												<div class="filter-title">Для кого</div>
-												<div class="filter-select">
-													<select class="select-style">
-														<option value="Всем">Всем</option>
-														<option value="С детьми">С детьми</option>
-														<option value="Семье">Семье</option>
-													</select>
-												</div>
-												<div class="filter-checkboxes">
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>Терасса</span>
-														</label>
+												<div class="col-lg-auto">
+													<div class="filter-item">
+														<div class="filter-title">Первоначальный взнос, ₽</div>
+														<div class="filter-range-solo">
+															<div class="filter-range-solo-input">
+																<input type="text" class="form-control decimal" value="300000">
+															</div>
+															<div class="filter-range-slider" data-min="0" data-max="450000" data-step="1"></div>
+														</div>
 													</div>
-													<div class="checkbox">
-														<label>
-															<input type="checkbox">
-															<span>С мебелью</span>
-														</label>
+												</div>
+												<div class="col-lg-auto">
+													<div class="filter-item">
+														<div class="filter-title">Срок, лет</div>
+														<div class="filter-range-solo">
+															<div class="filter-range-solo-input">
+																<input type="text" class="form-control decimal" value="15">
+															</div>
+															<div class="filter-range-slider" data-min="0" data-max="40" data-step="1"></div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="full-filter-footer">
-									<div class="full-filter-left">
-										<div class="mortgage-block">
-											<div class="mortgage-switch">
-												<div class="switch-checkbox">
-													<div class="switch-checkbox-title">В ипотеку</div>
-													<label class="switch-checkbox-label">
-														<input type="checkbox" class="switch-checkbox-input">
-														<span></span>
-													</label>
-												</div>
-											</div>
-											<div class="mortgage-form">
-												<div class="row">
-													<div class="col-lg-auto">
-														<div class="filter-item">
-															<div class="filter-title">Платеж по ипотеке, ₽</div>
-															<div class="filter-range-solo">
-																<div class="filter-range-solo-input with-label">
-																	<input type="text" class="form-control decimal" value="40000">
-																	<span>до</span>
-																</div>
-																<div class="filter-range-slider" data-min="0" data-max="60000" data-step="1"></div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-auto">
-														<div class="filter-item">
-															<div class="filter-title">Первоначальный взнос, ₽</div>
-															<div class="filter-range-solo">
-																<div class="filter-range-solo-input">
-																	<input type="text" class="form-control decimal" value="300000">
-																</div>
-																<div class="filter-range-slider" data-min="0" data-max="450000" data-step="1"></div>
-															</div>
-														</div>
-													</div>
-													<div class="col-lg-auto">
-														<div class="filter-item">
-															<div class="filter-title">Срок, лет</div>
-															<div class="filter-range-solo">
-																<div class="filter-range-solo-input">
-																	<input type="text" class="form-control decimal" value="15">
-																</div>
-																<div class="filter-range-slider" data-min="0" data-max="40" data-step="1"></div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="full-filter-right">
-										<div class="full-filter-btns">
-											<a href="#" class="clear-filter">Очистить фильтр</a>
-											<a href="#" class="btn">Показать 120 квартир</a>
-										</div>
+								<div class="full-filter-right">
+									<div class="full-filter-btns">
+										<a href="#" class="clear-filter">Очистить фильтр</a>
+										<a href="#" class="btn">Показать 120 квартир</a>
 									</div>
 								</div>
 							</div>
@@ -1431,6 +1430,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
 		<div class="popup-wrapper" id="map-popup">
 			<div class="popup-flex">

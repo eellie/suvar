@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Suvar</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=fbbdc751-439c-4bb8-8182-0022fda8377b&lang=ru_RU" type="text/javascript"></script>
+
+	<style>
+		:root {
+			--global-accent-color: #D90002;
+			--global-hover-color: #FC3335;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="menu">
+
+		<div class="menu-header">
+
+			<div class="container">
+
+				<div class="menu-header-logo">
+					<a href="#" class="logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+				</div>
+
+				<div class="menu-header-close">
+					<a href="#" class="close-menu-btn">
+						<span class="icon-close-2"></span>
+					</a>
+				</div> 
+
+			</div>
+
+		</div>
+
+		<div class="menu-body">
+
+			<div class="menu-body-item">
+
+				<div class="menu-body-item-wrapper">
+					<nav class="menu-list-big">
+						<a href="#">Акции</a>
+						<a href="#">Выбор квартиры</a>
+						<a href="#">Для новоселов</a>
+						<a href="#">Коммерция</a>
+						<a href="#">Парковки</a>
+						<a href="#">Офисы продаж</a>
+					</nav>
+				</div>
+
+			</div>
+
+			<div class="menu-body-item">
+				<div class="menu-body-item-wrapper">
+					<div class="menu-body-item-title">О компании</div>
+					<nav class="menu-list">
+						<a href="#">Новости</a>
+						<a href="#">Агентствам недвижимости</a>
+						<a href="#">Вакансии</a>
+						<a href="#">Контакты</a>
+						<a href="#">Партнерам</a>
+						<a href="#">Страница для новосёлов</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="menu-body-item">
+				<div class="menu-body-item-wrapper">
+					<div class="menu-body-item-title">Жилые комплексы</div>
+					<nav class="menu-list">
+						<a href="#">Лаишевский узел</a>
+						<a href="#">Станция Спортивная</a>
+						<a href="#">Южный парк</a>
+						<a href="#">Времена года</a>
+						<a href="#">Манхэттен</a>
+						<a href="#">Столичный</a>
+						<a href="#">Залесный сити</a>
+						<a href="#">Сказочный лес</a>
+						<a href="#">Палитра</a>
+						<a href="#">Август Астры</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="menu-body-item">
+				<div class="menu-body-item-wrapper">
+					<div class="menu-body-item-title">Сервисы</div>
+					<nav class="menu-list">
+						<a href="#">Служба Заботы</a>
+						<a href="#">Чистовая отделка</a>
+						<a href="#">Арендный сервис</a>
+						<a href="#">Карта Лояльности</a>
+						<a href="#">Trade-In</a>
+					</nav>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<header class="header">
+		<div class="container">
+			
+			<div class="header-row">
+				
+				<div class="header-logo">
+					<div itemscope="" itemtype="http://schema.org/Organization">
+						<a itemprop="url" href="/" class="logo" rel="nofollow" title="Suvar">
+							<img src="img/logo.svg" itemprop="logo" alt="">
+						</a>
+					</div>
+				</div>
+
+				<div class="header-phone">
+					<a href="tel:8 800 222-37-90" class="phone-link">8 800 222-37-90</a>
+					<p>Работаем ежедневно с 10:00 до 20:00</p>
+				</div>
+
+				<div class="header-menu">
+					<div class="header-mob-close"></div>
+					<div class="header-mob-logo">
+						<div itemscope="" itemtype="http://schema.org/Organization">
+							<a itemprop="url" href="/" class="logo" rel="nofollow" title="Suvar">
+								<img src="img/logo.svg" itemprop="logo" alt="">
+							</a>
+						</div>
+					</div>
+					<nav class="main-menu">
+						<a href="#" class="menu-link" data-hover-text="Квартиры"><span>Квартиры</span></a>
+						<a href="#" class="menu-link" data-hover-text="Ипотека"><span>Ипотека</span></a>
+						<a href="#" class="menu-link" data-hover-text="Коммерция"><span>Коммерция</span></a>
+						<a href="#" class="menu-link" data-hover-text="Управляющая компания"><span>Управляющая компания</span></a>
+					</nav>
+					<div class="header-mob-phone">
+						<div class="header-phone">
+							<a href="tel:8 800 222-37-90" class="phone-link">8 800 222-37-90</a>
+							<p>Работаем ежедневно с 10:00 до 20:00</p>
+						</div>
+					</div>
+					<div class="header-mob-soc">
+						<nav class="soc-nav">
+							<a href="#" class="soc-nav-link"><span class="icon-facebook"></span></a>
+							<a href="#" class="soc-nav-link"><span class="icon-instagram"></span></a>
+							<a href="#" class="soc-nav-link"><span class="icon-twitter"></span></a>
+							<a href="#" class="soc-nav-link"><span class="icon-vk"></span></a>
+						</nav>
+					</div>
+				</div>
+
+				<div class="header-burger">
+					<a href="#" class="burger-icon">
+						<span></span>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+	</header>
+
+	<div class="main-window main-window--mortgage animate">
+
+		<div class="main-banner-video">
+			<div class="main-banner-img" style="background-image: url(img/mortgage-bg.jpg);"></div>
+		</div>
+
+		<div class="main-window-content">
+			<div class="container">
+
+				<div class="main-window-row">
+
+					<div class="mortgage-main-window-left">
+						<h1>Ипотека – это легко </h1>
+					</div>
+					<div class="mortgage-main-window-right">
+						<p>Уникальные ипотечные программы и специальные условия от ведущих банков. Просто заполните анкету и получите одобрение. Всего один шаг, и квартира будет ваша.</p>
+						<div class="mortgage-main-window-btns">
+							<a href="#" class="btn btn-border">Получить консультацию</a>
+							<a href="#" class="btn">Расчитать ипотеку</a>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	<section class="s-why-mortgage">
+		<div class="container">
+			
+			<div class="section-title">
+				<div class="h2">Почему ипотека – это легко?</div>
+			</div>
+
+			<div class="row">
+				
+				<div class="col-md-2">
+					<div class="why-mortgage-item">
+						<div class="why-mortgage-icon">
+							<img src="img/why-mortgage-icons/1.svg" alt="">
+						</div>
+						<p>Выгодные предложения и низкие ставки</p>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="why-mortgage-item">
+						<div class="why-mortgage-icon">
+							<img src="img/why-mortgage-icons/2.svg" alt="">
+						</div>
+						<p>Одобрение в короткие сроки</p>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="why-mortgage-item">
+						<div class="why-mortgage-icon">
+							<img src="img/why-mortgage-icons/3.svg" alt="">
+						</div>
+						<p>Онлайн анкета сразу для всех банков</p>
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="why-mortgage-item">
+						<div class="why-mortgage-icon">
+							<img src="img/why-mortgage-icons/4.svg" alt="">
+						</div>
+						<p>Персональный менеджер, сопровождающий всю сделку</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s-our-services animate">
+		<div class="container">
+
+			<div class="mortgage-calculator calculator">
+
+				<div class="calculator-header">
+					<div class="section-title">
+						<div class="h2">Расчет ипотеки</div>
+						<p>Рассчитайте свой предварительный ежемесячный платеж по ипотеке</p>
+					</div>
+					<div class="calculator-header-btn">
+						<a href="#" class="btn btn-border">График платежей</a>
+					</div>
+				</div>
+
+				<form class="calculator-form">
+					<div class="row">
+
+						<div class="col-lg-2 col-md-4">
+							<div class="filter-item">
+								<div class="filter-title">Тип ипотеки</div>
+								<div class="filter-select">
+									<select class="select-style">
+										<option value="Стандартный расчет">Стандартный расчет</option>
+										<option value="Стандартный расчет">Стандартный расчет</option>
+										<option value="Стандартный расчет">Стандартный расчет</option>
+										<option value="Стандартный расчет">Стандартный расчет</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4">
+							<div class="filter-item">
+								<div class="filter-title">Стоимость недвижимости</div>
+								<div class="filter-range-solo">
+									<div class="filter-range-solo-input">
+										<input type="text" class="form-control decimal" value="1 400 000" data-suffix="₽">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4">
+							<div class="filter-item">
+								<div class="filter-title">Первоначальный взнос, ₽</div>
+								<div class="filter-range-solo with-select">
+									<div class="filter-range-solo-input">
+										<input type="text" class="form-control decimal" value="0,01" data-suffix="%">
+									</div>
+									<div class="filter-range-select">
+										<select class="select-style">
+											<option value="0,01 %">0,01 %</option>
+											<option value="0,02 %">0,02 %</option>
+											<option value="0,03 %">0,03 %</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4">
+							<div class="filter-item">
+								<div class="filter-title">Срок ипотеки</div>
+								<div class="filter-range-solo with-select">
+									<div class="filter-range-solo-input">
+										<input type="text" class="form-control decimal" value="15" data-suffix="лет">
+									</div>
+									<div class="filter-range-select">
+										<select class="select-style">
+											<option value="15 лет">15 лет</option>
+											<option value="20 лет">20 лет</option>
+											<option value="25 лет">25 лет</option>
+										</select>
+									</div>
+								</div>
+								<div class="filter-checkboxes">
+									<label>
+										<input type="radio" name="mortgage-time">
+										<span>10 лет</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-time" checked>
+										<span>15 лет</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-time">
+										<span>20 лет</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-time">
+										<span>25 лет</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-time">
+										<span>30 лет</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 col-md-4">
+							<div class="filter-item">
+								<div class="filter-title">Первоначальный взнос</div>
+								<div class="filter-range-solo with-select">
+									<div class="filter-range-solo-input">
+										<input type="text" class="form-control decimal" value="1400000" data-suffix="₽">
+									</div>
+									<div class="filter-range-select">
+										<select class="select-style">
+											<option value="10 %">10 %</option>
+											<option value="15 %" selected>15 %</option>
+											<option value="20 %">20 %</option>
+											<option value="25 %">25 %</option>
+											<option value="30 %">30 %</option>
+											<option value="35 %">35 %</option>
+											<option value="40 %">40 %</option>
+											<option value="50 %">50 %</option>
+										</select>
+									</div>
+								</div>
+								<div class="filter-checkboxes">
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>10 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>20 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>25 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>30 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>35 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>40 %</span>
+									</label>
+									<label>
+										<input type="radio" name="mortgage-percent" checked>
+										<span>50 %</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+
+							<div class="calculator-results">
+								<div class="calcultator-total big">
+									Сумма кредита
+									<div class="calcultator-total-price">3 114 505 ₽ <div class="loader"></div></div>
+								</div>
+								<div class="calcultator-total">
+									Ежемесячный платеж
+									<div class="calcultator-total-price">14 505 ₽ <div class="loader"></div></div>
+								</div>
+								<a href="#" class="btn">Подать заявку</a>
+							</div>
+
+						</div>
+
+					</div>
+				</form>
+
+			</div>
+
+			<div class="accredited-houses">
+
+				<div class="section-title">
+					<div class="h2">Аккредитованные дома</div>
+				</div>
+
+				<div class="accredited-helper">
+					<div class="accredited-helper-item"><span style="background-color: #171723;"></span>Ипотека</div>
+					<div class="accredited-helper-item"><span style="border: 1px solid #D90002">В</span>Военная ипотека</div>
+					<div class="accredited-helper-item"><span style="background-color: #D90002;"></span>Ипотека + Спец. предложение</div>
+				</div>
+
+				<div class="accredited-thead">
+					<div class="accredited-thead-tr">
+						<div class="accredited-thead-th rescom">Жилой комплекс</div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/1.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/2.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/3.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/4.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/5.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/6.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/7.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/8.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/9.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/10.png" alt=""></div>
+						<div class="accredited-thead-th"><img src="img/banks-logos/11.png" alt=""></div>
+					</div>
+				</div>
+
+				<div class="accredited-accordion">
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title active">Станция Спортивная</div>
+						<div class="accredited-accordion-item-body" style="display: block;">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Залесный Сити</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Сказочный лес</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Август Астры</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Манхэттен</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Палитра</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="accredited-accordion-item">
+						<div class="accredited-accordion-item-title">Времена года</div>
+						<div class="accredited-accordion-item-body">
+							<div class="accredited-table-wrapper">
+								<table class="accredited-table">
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>1.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.4 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>3.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">3.4 %</span></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.6 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">4.2 %</span>
+										</td>
+									</tr>
+									<tr>
+										<td class="rescom">Дом 2.3</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">3.2 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">2.4 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>2.8 %</span>
+										</td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>4.3 %</span>
+										</td>
+										<td></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip><span class="red">2.4 %</span></td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span>5.4 %</span>
+										</td>
+										<td></td>
+										<td data-date="до 30 лет" data-contribution="от 10%" data-tooltip>
+											<span class="red">5.4 %</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
+	</section>
+
+	<div class="popup-wrapper" id="map-popup">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-header">
+					<div class="popup-title"><div class="h3">ЖК “Времена года”</div></div>
+					<div class="popup-close"></div>
+				</div>
+				<div class="popup-content">
+					<div class="popup-map">
+						<div id="map-popup-frame"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="contacts-map-popup">
+		<div class="popup-flex">
+			<div class="popup-block">
+				<div class="popup-close"></div>
+				<div class="popup-content">
+					<div class="popup-map">
+						<div id="map-contacts-popup-frame"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="callback-popup">
+		<div class="popup-flex">
+			<div class="popup-block popup-block--callback">
+				<div class="popup-header">
+					<div class="popup-close"></div>
+				</div>
+				<div class="popup-content">
+					<div class="callback-popup">
+						<div class="contacts-form-block">
+							<div class="contacts-form-left">
+								<div class="h2 callback-title">Напишите нам</div>
+								<form class="contacts-form">
+									<div class="contacts-form-success">
+										<div class="success-icon"></div>
+										<div class="h2">Спасибо<br>за обращение!</div>
+										<p>Ваш запрос уже обрабатывается! Наши специалисты свяжутся с вами в течение 20 минут</p>
+									</div>
+									<div class="row">
+										<div class="col-sm-8">
+											<div class="form-group white">
+												<select class="select-style callback-options">
+													<option value="Запись на экскурсию">Запись на экскурсию</option>
+													<option value="Консультация по телефону">Консультация по телефону</option>
+													<option value="Запись в офисы продаж">Запись в офисы продаж</option>
+													<option value="Консультация ипотечного брокера">Консультация ипотечного брокера</option>
+													<option value="Забронировать квартиру">Забронировать квартиру</option>
+													<option value="Экскурсии по жилым комплексам">Экскурсии по жилым комплексам</option>
+													<option value="Получить предложение">Получить предложение</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group white">
+												<input type="text" class="form-control" placeholder="Имя">
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="form-group white">
+												<input type="text" class="form-control phone-mask" placeholder="Телефон">
+											</div>
+										</div>
+										<div class="col-sm-8">
+											<div class="form-footer-row">
+												<p>Нажимая “Отправить”, вы соглашаетесь с политикой конфиденциальности</p>
+												<button type="submit" class="btn">Отправить запрос</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="contacts-form-right">
+								<img src="img/contacts-img-2.png" class="callback-popup-img" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

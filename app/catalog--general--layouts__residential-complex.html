@@ -1054,16 +1054,16 @@
 										<div class="filter-item">
 											<div class="filter-title">Жилой комплекс</div>
 											<div class="filter-select">
-												<select class="select-style">
-													<option value="Южный парк">Южный парк</option>
-													<option value="Столичный">Столичный</option>
-													<option value="Станция Спортивная">Станция Спортивная</option>
-													<option value="Залесный сити">Залесный сити</option>
-													<option value="Времена года">Времена года</option>
-													<option value="Манхэттен">Манхэттен</option>
-													<option value="Сказочный лес">Сказочный лес</option>
-													<option value="Август Астры лес">Август Астры лес</option>
-													<option value="Палитра">Палитра</option>
+												<select class="select-style" data-for="#select-rescom-1" id="select-rescom-2" data-select-combine="#select-district-1">
+													<option data-combine-val="Лаишевский" value="Южный парк">Южный парк</option>
+													<option data-combine-val="Ново-Савиновский" value="Столичный">Столичный</option>
+													<option data-combine-val="Приволжский" value="Станция Спортивная">Станция Спортивная</option>
+													<option data-combine-val="Кировский" value="Залесный сити">Залесный сити</option>
+													<option data-combine-val="Приволжский" value="Времена года">Времена года</option>
+													<option data-combine-val="Приволжский" value="Манхэттен">Манхэттен</option>
+													<option data-combine-val="Приволжский" value="Сказочный лес">Сказочный лес</option>
+													<option data-combine-val="Вахитовский" value="Август Астры лес">Август Астры лес</option>
+													<option data-combine-val="Приволжский" value="Палитра">Палитра</option>
 												</select>
 											</div>
 										</div>
@@ -1072,7 +1072,7 @@
 										<div class="filter-item">
 											<div class="filter-title">Район</div>
 											<div class="filter-select">
-												<select class="select-style">
+												<select class="select-style" id="select-district-1">
 													<option value="Все">Все</option>
 													<option value="Авиастроительный">Авиастроительный</option>
 													<option value="Вахитовский">Вахитовский</option>
@@ -1081,6 +1081,7 @@
 													<option value="Ново-Савиновский">Ново-Савиновский</option>
 													<option value="Приволжский">Приволжский</option>
 													<option value="Советский">Советский</option>
+													<option value="Лаишевский">Лаишевский</option>
 												</select>
 											</div>
 										</div>
@@ -1103,8 +1104,7 @@
 										<div class="filter-item">
 											<div class="filter-title">Срок сдачи</div>
 											<div class="filter-select">
-												<select class="select-style">
-													<option value="Неважно">Неважно</option>
+												<select class="select-style" multiple="multiple">
 													<option value="2020">2020</option>
 													<option value="2021">2021</option>
 													<option value="2022">2022</option>
@@ -1116,7 +1116,7 @@
 									<div class="col-lg-2 col-md-4">
 										<div class="filter-item">
 											<div class="filter-title">Стоимость, ₽</div>
-											<div class="filter-range">
+											<div class="filter-range" data-for="#filter-range-3" id="filter-range-4">
 												<div class="filter-range-inputs">
 													<div class="filter-range-input-group">
 														<span>от</span>
@@ -1134,7 +1134,7 @@
 									<div class="col-lg-2 col-md-4">
 										<div class="filter-item">
 											<div class="filter-title">Площадь, м<sup>2</sup></div>
-											<div class="filter-range">
+											<div class="filter-range" data-for="#filter-range-1" id="filter-range-2">
 												<div class="filter-range-inputs">
 													<div class="filter-range-input-group">
 														<span>от</span>
@@ -1264,12 +1264,12 @@
 											<div class="switch-checkbox">
 												<div class="switch-checkbox-title">В ипотеку</div>
 												<label class="switch-checkbox-label">
-													<input type="checkbox" class="switch-checkbox-input">
+													<input type="checkbox" class="switch-checkbox-input" checked>
 													<span></span>
 												</label>
 											</div>
 										</div>
-										<div class="mortgage-form">
+										<div class="mortgage-form" style="display: block;">
 											<div class="row">
 												<div class="col-lg-auto">
 													<div class="filter-item">

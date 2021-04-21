@@ -189,7 +189,7 @@
 
 		<div class="main-banner-video">
 			<div class="main-banner-video-item active" data-mob-bg="img/main-banner-mob.jpg" data-video-src="video/main-video-3.mp4" style="display: block;"></div>
-			<div class="main-banner-video-item" data-mob-bg="img/main-banner-mob.jpg" data-video-src="video/main-video-4.mp4"></div>
+			<div class="main-banner-video-item" data-mob-bg="img/mob-rescom-img-2.jpg" data-video-src="video/main-video-4.mp4"></div>
 		</div>
 
 		<nav class="soc-nav">
@@ -3083,16 +3083,16 @@
 										<div class="filter-item">
 											<div class="filter-title">Жилой комплекс</div>
 											<div class="filter-select">
-												<select class="select-style" data-for="#select-rescom-1" id="select-rescom-2">
-													<option value="Южный парк">Южный парк</option>
-													<option value="Столичный">Столичный</option>
-													<option value="Станция Спортивная">Станция Спортивная</option>
-													<option value="Залесный сити">Залесный сити</option>
-													<option value="Времена года">Времена года</option>
-													<option value="Манхэттен">Манхэттен</option>
-													<option value="Сказочный лес">Сказочный лес</option>
-													<option value="Август Астры лес">Август Астры лес</option>
-													<option value="Палитра">Палитра</option>
+												<select class="select-style" data-for="#select-rescom-1" id="select-rescom-2" data-select-combine="#select-district-1">
+													<option data-combine-val="Лаишевский" value="Южный парк">Южный парк</option>
+													<option data-combine-val="Ново-Савиновский" value="Столичный">Столичный</option>
+													<option data-combine-val="Приволжский" value="Станция Спортивная">Станция Спортивная</option>
+													<option data-combine-val="Кировский" value="Залесный сити">Залесный сити</option>
+													<option data-combine-val="Приволжский" value="Времена года">Времена года</option>
+													<option data-combine-val="Приволжский" value="Манхэттен">Манхэттен</option>
+													<option data-combine-val="Приволжский" value="Сказочный лес">Сказочный лес</option>
+													<option data-combine-val="Вахитовский" value="Август Астры лес">Август Астры лес</option>
+													<option data-combine-val="Приволжский" value="Палитра">Палитра</option>
 												</select>
 											</div>
 										</div>
@@ -3101,7 +3101,7 @@
 										<div class="filter-item">
 											<div class="filter-title">Район</div>
 											<div class="filter-select">
-												<select class="select-style">
+												<select class="select-style" id="select-district-1">
 													<option value="Все">Все</option>
 													<option value="Авиастроительный">Авиастроительный</option>
 													<option value="Вахитовский">Вахитовский</option>
@@ -3110,6 +3110,7 @@
 													<option value="Ново-Савиновский">Ново-Савиновский</option>
 													<option value="Приволжский">Приволжский</option>
 													<option value="Советский">Советский</option>
+													<option value="Лаишевский">Лаишевский</option>
 												</select>
 											</div>
 										</div>
@@ -3132,8 +3133,7 @@
 										<div class="filter-item">
 											<div class="filter-title">Срок сдачи</div>
 											<div class="filter-select">
-												<select class="select-style safasfasfasf">
-													<option value="Неважно">Неважно</option>
+												<select class="select-style" multiple="multiple" data-placeholder="Неважно">
 													<option value="2020">2020</option>
 													<option value="2021">2021</option>
 													<option value="2022">2022</option>

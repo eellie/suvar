@@ -762,7 +762,7 @@ section
 	transform: translateY(#{rem(-8px)})
 
 .select2-container--default .select2-results>.select2-results__options
-	padding: rem(17px) rem(25px)
+	padding: rem(17px) rem(20px)
 	max-height: rem(224px)
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
@@ -772,6 +772,7 @@ section
 	padding: 0
 	background-color: transparent !important
 	margin-bottom: rem(12px)
+	white-space: nowrap
 	&:last-child
 		margin-bottom: 0
 
@@ -953,6 +954,7 @@ section
 	min-height: rem(190px)
 	align-items: flex-start
 	padding: rem(32px) rem(32px) rem(23px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	&:after
 		content: ''
 		position: absolute
@@ -1075,6 +1077,7 @@ section
 	padding-bottom: 56.25%
 	border-radius: rem(6px)
 	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	&:hover
 		.video-poster
 			img
@@ -1434,9 +1437,10 @@ section
 	padding: 0 20px 20px
 	box-shadow: 0 0 21px 0 rgba(#000, .15)
 	img
-		width: calc(100% + 40px)
+		width: calc(100% + 42px)
 		margin-bottom: 20px
-		margin-left: -20px
+		margin-left: -21px
+		margin-right: -21px
 		border-radius: 7px 7px 0 0
 	.h5
 		margin-bottom: 13px
@@ -2333,6 +2337,10 @@ section
 	font-weight: normal
 	margin-right: rem(49px)
 	position: relative
+	&.big
+		margin-right: rem(95px)
+		.calcultator-total-price
+			font-size: rem(48px)
 
 .calcultator-total-price
 	display: block
@@ -2340,7 +2348,7 @@ section
 	line-height: 1
 	letter-spacing: -0.03em
 	font-size: rem(40px)
-	margin-top: rem(10px)
+	margin-top: rem(5px)
 	position: relative
 	+tr
 	color: $text
@@ -3268,6 +3276,13 @@ form
 .main-footer-btn
 	.btn
 		display: block
+		background-color: var(--global-accent-color) !important
+		border-color: var(--global-accent-color) !important
+		&:hover
+			background-color: var(--global-hover-color) !important
+			border-color: var(--global-hover-color) !important
+		&:after
+			display: none !important
 
 .main-window-footer-type-2
 	padding: rem(24px) 0
@@ -3990,7 +4005,7 @@ form
 	&:hover
 		.block-info-img
 			img
-				transform: scale(1.05)
+				// transform: scale(1.05)
 	&.big
 		grid-column: span 3
 		min-height: rem(614px)
@@ -4025,6 +4040,7 @@ form
 	height: 100%
 	border-radius: rem(10px)
 	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	&:after
 		content: ''
 		position: absolute
@@ -4126,7 +4142,7 @@ form
 	&:hover
 		.block-info-big-banner-img
 			img
-				transform: scale(1.05)
+				// transform: scale(1.05)
 
 .block-info-big-banner-img
 	position: absolute
@@ -4136,6 +4152,7 @@ form
 	height: 100%
 	border-radius: rem(10px)
 	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	img
 		width: 100%
 		height: 100%
@@ -4234,7 +4251,7 @@ form
 	&:hover
 		.block-info-img-with-list-img
 			img
-				transform: scale(1.05)
+				// transform: scale(1.05)
 
 .block-info-img-with-list-img
 	position: absolute
@@ -4244,6 +4261,7 @@ form
 	height: 100%
 	border-radius: rem(10px)
 	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	z-index: -1
 	img
 		display: block
@@ -4301,6 +4319,7 @@ form
 	border-radius: rem(10px)
 	overflow: hidden
 	margin-bottom: rem(40px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	img
 		width: 100%
 	.slider-nav-arrow
@@ -4565,6 +4584,7 @@ form
 		object-fit: cover
 		border-radius: rem(10px)
 		overflow: hidden
+		-webkit-mask-image: -webkit-radial-gradient(white, black)
 		img
 			width: 100%
 			height: 100%
@@ -7311,6 +7331,7 @@ form
 	max-width: rem(272px)
 	position: sticky
 	top: rem(30px)
+	display: block !important
 	.mailing-form
 		background: transparent
 		padding: 0
@@ -7321,11 +7342,13 @@ form
 		&:after
 			width: rem(46px)
 			height: rem(46px)
-			border-radius: 50%
-			background-color: #F2F2F2
-			transform: rotateY(40deg) rotateX(-35deg)
+			background-image: url("data:image/svg+xml,%3Csvg width='47' height='48' viewBox='0 0 47 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.355469 37.8175C0.355469 17.2084 17.0624 0.501465 37.6715 0.501465C42.8238 0.501465 47.0005 4.6782 47.0005 9.83047C47.0005 30.4395 30.2935 47.1465 9.68447 47.1465C4.53221 47.1465 0.355469 42.9698 0.355469 37.8175Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A")
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center
+			background-color: transparent !important
+			bottom: rem(-15px)
 			right: rem(-20px)
-			bottom: rem(-14px)
 	.mailing-title
 		font-size: rem(20px)
 		color: #171723
@@ -7398,5 +7421,252 @@ form
 	&:hover
 		color: $accent
 
+.main-banner-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.main-window--mortgage
+	padding-top: rem(275px)
+	&:after
+		background-color: rgba(0,0,0,.35)
+
+.mortgage-main-window-left
+	flex-grow: 1
+	margin-right: 30px
+	color: #fff
+	h1, .h1
+		font-size: rem(64px)
+		font-weight: normal
+
+.mortgage-main-window-right
+	max-width: rem(719px)
+	color: #fff
+	p
+		font-size: rem(26px)
+		font-weight: normal
+		margin-bottom: rem(30px)
+
+.mortgage-main-window-btns
+	display: flex
+	align-items: center
+	.btn
+		margin-right: 20px
+		border-color: #fff
+		color: #fff
+		&:last-child
+			margin-right: 0
+
+.s-why-mortgage
+	padding: rem(80px) 0 rem(97px)
+	.section-title
+		margin-bottom: rem(65px)
+
+.why-mortgage-item
+	margin-right: rem(30px)
+	p
+		margin: 0
+		font-size: rem(24px)
+		line-height: 1.5
+		font-weight: normal
+		max-width: rem(319px)
+
+.why-mortgage-icon
+	position: relative
+	width: rem(70px)
+	height: rem(70px)
+	margin-bottom: rem(48px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(2px)
+		right: rem(-43px)
+		width: rem(90px)
+		height: rem(90px)
+		background-color: rgba(217, 0, 2, 0.08)
+		z-index: 0
+		border-radius: 50%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: relative
+		z-index: 1
+
+.filter-checkboxes
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: rem(-7px)
+	label
+		position: relative
+		display: block
+		margin: 0 rem(7px) rem(7px) 0
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: #fff
+			border-color: $red
+			background-color: $red
+	span
+		display: block
+		height: rem(27px)
+		line-height: rem(25px)
+		text-align: center
+		border-radius: rem(14px)
+		padding: 0 rem(7px)
+		border: 1px solid #9595A2
+		+tr
+		font-size: 10px
+		font-weight: 500
+		color: #9595A1
+		cursor: pointer
+
+.mortgage-calculator
+	margin-bottom: rem(80px)
+	.filter-item
+		margin-bottom: rem(30px)
+	.calculator-results
+		align-items: flex-end
+		margin-top: rem(28px)
+	.calculator-header
+		margin-bottom: rem(120px)
+
+.accredited-houses
+	background-color: #fff
+	padding: rem(54px) rem(49px) rem(60px)
+	border-radius: rem(7px)
+
+.accredited-helper
+	display: flex
+	justify-content: flex-end
+	margin-bottom: rem(50px)
+
+
+.accredited-helper-item
+	margin-right: rem(32px)
+	display: flex
+	align-items: center
+	font-size: rem(14px)
+	font-weight: normal
+	&:last-child
+		margin-right: 0
+	span
+		flex-shrink: 0
+		width: rem(15px)
+		height: rem(15px)
+		border-radius: 50%
+		margin-right: rem(12px)
+		line-height: rem(13px)
+		text-align: center
+		color: $red
+		font-size: rem(11px)
+
+.accredited-thead
+	display: table
+	width: 100%
+	margin-bottom: rem(33px)
+	padding-bottom: rem(33px)
+
+.accredited-thead-tr
+	display: table-row
+
+.accredited-thead-th
+	display: table-cell
+	width: 7.2876%
+	text-align: center
+	&.rescom
+		width: 19.84%
+		text-align: left
+	img
+		max-width: rem(40px)
+		max-height: rem(40px)
+
+.accredited-accordion-item
+	&:nth-child(even)
+		.accredited-accordion-item-title
+			background-color: #F2F2F2
+
+.accredited-accordion-item-title
+	position: relative
+	cursor: pointer
+	padding: rem(12px) rem(49px)
+	border-radius: rem(7px)
+	font-weight: 500
+	font-size: rem(18px)
+	+tr
+	&.active
+		background-color: transparent
+		&:before
+			transform: rotate(180deg)
+	&:before
+		content: '\e911'
+		font-family: icon
+		position: absolute
+		font-size: rem(11px)
+		left: rem(18px)
+		top: 50%
+		margin-top: rem(-6px)
+		+tr
+
+.accredited-accordion-item-body
+	margin-top: rem(16px)
+	margin-bottom: rem(29px)
+	display: none
+
+.accredited-table
+	width: 100%
+	tr
+		&:hover
+			td
+				background-color: #F2F2F2
+				&:hover ~ td
+					background-color: transparent
+		&:last-child
+			td
+				border-bottom: none
+	td
+		width: 7.2876%
+		text-align: center
+		font-size: rem(14px)
+		padding: rem(13px) rem(5px)
+		border-bottom: 1px solid #DADADA
+		border-right: 1px solid #DADADA
+		cursor: pointer
+		+tr
+		&:last-child
+			border-right: none
+		&.rescom
+			width: 19.84%
+			text-align: left
+			padding-left: rem(43px)
+
+.accredited-table-wrapper
+	border: 1px solid #DADADA
+	border-radius: rem(7px)
+
+.accredited-dropdown-content
+	display: flex
+	white-space: nowrap
+	padding: 10px
+
+.accredited-dropdown-item
+	margin-right: 19px
+	font-size: 12px
+	color: #9595A2
+	span
+		display: block
+		color: #434242
+		margin-top: 5px
+	&:last-child
+		margin-right: 0
 
 @import "media" // Always at the end
