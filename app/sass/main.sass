@@ -7657,6 +7657,8 @@ form
 			width: 19.84%
 			text-align: left
 			padding-left: rem(43px)
+	.red
+		color: $red
 
 .accredited-table-wrapper
 	border: 1px solid #DADADA
@@ -7835,5 +7837,164 @@ form
 		position: relative
 		&.slider-prev
 			margin-right: rem(10px)
+
+.s-buy-apartments
+	padding: rem(105px) 0 rem(50px)
+	.section-title
+		margin-bottom: rem(54px)
+
+.buy-apartments
+	display: flex
+	border-radius: rem(10px)
+	background-color: #F2F2F2
+	padding: rem(82px) rem(67px) rem(72px)
+
+.buy-apartments-item
+	position: relative
+	flex-shrink: 0
+	width: 20%
+	padding: 0 rem(15px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(24px)
+		height: 1px
+		background-color: #9595A1
+		left: rem(95px)
+		right: rem(15px)
+
+
+.buy-apartments-item-nmb
+	color: #fff
+	background-color: $accent
+	text-align: center
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	line-height: rem(50px)
+	font-size: rem(22px)
+	margin-bottom: rem(24px)
+
+.buy-apartments-item-text
+	max-width: 260px
+	font-size: rem(18px)
+	a
+		display: inline-block
+		position: relative
+		color: $red !important
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $red
+			transform-origin: top left
+			+tr
+		&:hover
+			&:after
+				transform: scaleX(0)
+
+.s-answer-on-questions
+	padding: rem(50px) 0 rem(125px)
+	overflow: visible
+	.section-title
+		margin-bottom: rem(25px)
+
+.answer-on-questions-row
+	display: flex
+
+.answer-on-questions-left
+	flex-grow: 1
+	margin-right: rem(110px)
+
+.answer-on-questions-accordion-item
+	border-bottom: 1px solid #DADADA
+	&:last-child
+		border-bottom: none
+
+.answer-on-questions-accordion-item-title
+	position: relative
+	padding: rem(35px) 0
+	cursor: pointer
+	font-size: rem(20px)
+	font-weight: normal
+	padding-right: rem(50px)
+	&.active
+		.plus-icon
+			transform: rotate(135deg)
+	p
+		margin: 0
+	.plus-icon
+		position: absolute
+		top: 50%
+		right: 0
+		width: rem(32px)
+		height: rem(32px)
+		margin-top: rem(-16px)
+		+tr
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			background-color: #000
+		&:after
+			width: 22px
+			height: 2px
+			margin-top: -1px
+			margin-left: -11px
+		&:before
+			width: 2px
+			height: 22px
+			margin-top: -11px
+			margin-left: -1px
+
+
+.answer-on-questions-accordion-item-body
+	display: none
+	font-size: rem(18px)
+	font-weight: normal
+	padding-bottom: rem(36px)
+	p
+		&:first-child
+			padding-top: rem(7px)
+		&:last-child
+			margin-bottom: 0
+
+.mortage-consultation
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+	border-radius: rem(7px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	overflow: hidden
+	color: #fff
+	padding: rem(50px) rem(50px) rem(99px)
+	width: rem(481px)
+	position: sticky
+	top: rem(30px)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#171723, .45)
+
+.mortage-consultation-content
+	position: relative
+	z-index: 1
+	.h2
+		margin-bottom: rem(50px)
+	p
+		font-size: rem(24px)
+		font-weight: normal
+		margin-bottom: rem(40px)
 
 @import "media" // Always at the end
