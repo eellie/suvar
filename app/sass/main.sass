@@ -2411,16 +2411,20 @@ section
 	display: flex
 	overflow: hidden
 	position: relative
-	&:nth-child(1)
+	&:nth-child(1),
+	&:nth-child(1):before
 		border-radius: rem(7px) 0 0 0
-	&:nth-child(4)
+	&:nth-child(4),
+	&:nth-child(4):before
 		border-radius: 0 rem(7px) rem(7px) 0
-	&:nth-child(5)
+	&:nth-child(5),
+	&:nth-child(5):before
 		border-radius: 0 0 0 rem(7px)
-	&:nth-child(7)
+	&:nth-child(7),
+	&:nth-child(7):before
 		border-radius: 0 0 rem(7px) 0
 	&:hover
-		background-color: $accent
+		background-color: $accent !important
 		color: #fff
 		.our-services-item-icon
 			svg
@@ -2430,7 +2434,7 @@ section
 					stroke: white
 			&:after
 				transform: scale(3.64634)
-				background-color: rgba(#fff, .2)
+				background-color: rgba(#fff, .2) !important
 		&:after
 			opacity: 1
 			transform: translateX(0)
@@ -7583,12 +7587,17 @@ form
 	display: table-cell
 	width: 7.2876%
 	text-align: center
+	&.hovered
+		img
+			filter: grayscale(0)
 	&.rescom
 		width: 19.84%
 		text-align: left
 	img
 		max-width: rem(40px)
 		max-height: rem(40px)
+		+tr
+		filter: grayscale(1)
 
 .accredited-accordion-item
 	&:nth-child(even)
@@ -7668,5 +7677,163 @@ form
 		margin-top: 5px
 	&:last-child
 		margin-right: 0
+
+.s-we-cooperate
+	padding: rem(110px) 0 rem(50px)
+	.section-title
+		margin-bottom: rem(40px)
+
+.we-cooperate
+	.row
+		margin-left: rem(-15px)
+		margin-right: rem(-15px)
+	[class*=col-]
+		margin-bottom: rem(30px)
+		padding-left: rem(15px)
+		padding-right: rem(15px)
+
+.we-cooperate-item
+	height: 100%
+	border-radius: rem(7px)
+	background-color: rgba(#F2F2F2, .9)
+	padding: rem(34px) rem(30px) rem(16px)
+
+.we-cooperate-item-logo
+	margin-bottom: rem(25px)
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: rem(48px)
+	img
+		max-height: 100%
+		max-width: 100%
+		object-fit: contain
+		object-position: center left
+
+.we-cooperate-item-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 rem(-7px)
+	font-weight: normal
+	list-style-type: none
+	padding: 0
+	li
+		width: 33.3333%
+		flex-shrink: 0
+		margin-bottom: rem(20px)
+		padding: 0 rem(7px)
+		font-size: rem(14px)
+		color: #9595A2
+		span
+			display: block
+			font-size: rem(16px)
+			color: #171723
+			margin-top: rem(10px)
+
+.s-mortgage-types
+	padding-top: rem(20px)
+	padding-bottom: rem(95px)
+	.our-services
+		margin-top: 0
+	.our-services-grid
+		grid-gap: 0 
+	.our-services-item
+		background-color: #f2f2f2
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4)
+			&:before
+				border-top: none
+		&:nth-child(4n),
+		&:nth-last-child(2)
+			&:before
+				border-right: none
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			top: 0
+			border-style: solid
+			border-color: #DCDCDD
+			border-width: 1px 1px 0 0
+
+.s-brokers
+	padding: rem(59px) 0 rem(49px)
+	background-color: #F2F2F2
+
+.brokers-row
+	display: flex
+
+.brokers-left
+	width: 33.33333%
+	flex-shrink: 0
+	padding-right: rem(30px)
+	display: flex
+	flex-direction: column
+	.section-title
+		.h2
+			.red
+				color: $red
+
+.brokers-right
+	width: 66.66666%
+	flex-shrink: 0
+
+.brokers-slider
+	.slick-slide
+		margin: 0 -16px
+	.slick-slide
+		margin: 0 16px
+
+.broker
+	display: flex !important
+	border-radius: rem(7px)
+	background-color: #fff
+	padding: rem(30px) rem(29px) rem(27px) rem(33px)
+
+.broker-img
+	margin-right: rem(33px)
+	img
+		width: 145px
+		height: 145px
+		border-radius: 50%
+		object-fit: cover
+
+.broker-text
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	align-items: flex-start
+	.h4
+		max-width: 280px
+		font-size: rem(22px)
+		margin-bottom: rem(5px)
+	p
+		font-size: rem(16px)
+		color: #9595A2
+		font-weight: normal
+
+.broker-phone
+	margin-top: auto
+	font-size: rem(22px)
+	color: #171723
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $red
+
+.brokers-nav
+	margin-top: auto
+	display: flex
+	align-items: center
+	&.hide
+		display: none !important
+	.slider-nav-arrow
+		position: relative
+		&.slider-prev
+			margin-right: rem(10px)
 
 @import "media" // Always at the end
