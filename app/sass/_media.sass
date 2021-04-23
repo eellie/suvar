@@ -520,6 +520,49 @@
 			font-size: 24px
 		p
 			font-size: 16px
+	.why-mortgage-item p
+		font-size: 13px
+	.brokers-slider
+		.slick-slide
+			margin: 0 5px
+	.broker
+		padding: 20px
+	.broker-img
+		margin-right: 10px
+		img
+			width: 100px
+			height: 100px
+	.broker-text .h4
+		font-size: 14px
+	.broker-phone
+		font-size: 14px
+	.s-buy-apartments
+		padding-top: 42px
+		padding-bottom: 20px
+	.buy-apartments
+		padding: 30px 20px
+	.buy-apartments-item-text
+		font-size: 12px
+	.s-answer-on-questions
+		padding-top: 20px
+		padding-bottom: 30px
+	.answer-on-questions-left
+		margin-right: 40px
+	.answer-on-questions-accordion-item-title
+		.plus-icon
+			margin-top: -10px
+			width: 20px
+			height: 20px
+			&:before
+				height: 20px
+				top: 0
+				left: 9px
+				margin: 0
+			&:after
+				width: 20px
+				left: 0
+				top: 9px
+				margin: 0
 
 // ≥992px
 +media-breakpoint-down(md)
@@ -795,6 +838,21 @@
 		display: none
 	.page-not-found-text .h1
 		font-size: 140px
+	.main-window--mortgage
+		.main-window-row
+			display: block
+	.mortgage-main-window-left
+		margin: 0 0 20px
+	.why-mortgage-item
+		margin-right: 0
+	.calcultator-total.big
+		margin-right: 30px
+	.accredited-thead-th img
+		max-width: 18px
+		max-height: 18px
+	.accredited-thead
+		padding-bottom: 15px
+		margin-bottom: 15px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -1092,6 +1150,102 @@
 	.stock-content
 		.about-in-nmbrs-item
 			display: block
+	.calculator-results
+		flex-wrap: wrap
+		justify-content: space-between
+		.btn
+			margin: 0
+			width: calc(50% - 5px)
+	.calcultator-total
+		margin-right: 0
+		display: flex
+		align-items: center
+		margin-bottom: 17px
+		width: 100%
+	.calcultator-total-price
+		font-size: 30px
+		margin-top: 0
+		margin-left: auto
+		padding-left: 15px
+		white-space: nowrap
+	.calculator-results .btn
+		margin-right: 7px
+	.calcultator-total.big
+		margin-right: 0
+	.calcultator-total.big .calcultator-total-price
+		font-size: 36px
+	.mortgage-calculator
+		margin-bottom: 20px
+		.calculator-results
+			.btn
+				width: 100%
+	.accredited-table td.rescom
+		padding-left: 20px
+	.calculator
+		padding: 20px
+	.accredited-helper
+		justify-content: flex-start
+	.s-we-cooperate
+		padding-top: 40px
+	.we-cooperate
+		.row
+			margin-right: -20px
+			margin-left: -20px
+			padding: 0 20px
+			flex-wrap: nowrap
+			overflow: auto hidden
+			&::-webkit-scrollbar
+				display: none
+		[class*=col-]
+			padding-left: 0
+			padding-right: 10px
+			margin-bottom: 0
+			width: 60vw
+			max-width: none
+			flex-grow: 0
+			flex-basis: auto
+			flex-shrink: 0
+			&:last-child
+				padding-right: 20px
+	.we-cooperate-item-logo
+		height: 27px
+	.we-cooperate-item
+		padding: 15px
+	.brokers-row
+		display: block
+	.brokers-left
+		padding-right: 0
+		width: 100%
+	.brokers-right
+		width: 100%
+	.brokers-slider
+		.slick-list
+			overflow: visible
+	.brokers-nav
+		display: none
+	.buy-apartments
+		flex-wrap: wrap
+	.buy-apartments-item
+		width: 33.33333%
+		margin-bottom: 15px
+	.mortgage-calculator .calculator-header
+		margin-bottom: 30px
+	.answer-on-questions-row
+		display: block
+	.answer-on-questions-left
+		margin-right: 0
+		margin-bottom: 30px
+	.answer-on-questions-accordion-item-title
+		padding-top: 15px
+		padding-bottom: 15px
+	.mortage-consultation
+		width: 100%
+		padding: 30px
+	.mortage-consultation-content
+		.h2
+			margin-bottom: 20px
+		p
+			font-size: 16px
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -1506,26 +1660,6 @@
 			line-height: 31px
 		.select2-container--default .select2-selection--single .select2-selection__arrow
 			height: 31px
-	.calculator-results
-		flex-wrap: wrap
-		justify-content: space-between
-		.btn
-			margin: 0
-			width: calc(50% - 5px)
-	.calcultator-total
-		margin-right: 0
-		display: flex
-		align-items: center
-		margin-bottom: 17px
-		width: 100%
-	.calcultator-total-price
-		font-size: 30px
-		margin-top: 0
-		margin-left: auto
-		padding-left: 15px
-		white-space: nowrap
-	.calculator-results .btn
-		margin-right: 7px
 	.our-services
 		margin-top: 45px
 	.our-services-grid
@@ -2735,6 +2869,158 @@
 		bottom: 0
 		right: -30px
 		width: 180px
+	.mortgage-main-window-left
+		h1, .h1
+			font-size: 33px
+	.mortgage-main-window-right
+		p
+			font-size: 18px
+	.s-why-mortgage
+		padding: 50px 0 20px
+	.why-mortgage-item
+		margin-bottom: 30px
+	.calcultator-total.big .calcultator-total-price
+		font-size: 24px
+	.mortgage-calculator
+		.calcultator-total-price
+			font-size: 20px
+	.s-our-services + .s-we-cooperate
+		padding-top: 0
+	.we-cooperate [class*=col-]
+		width: 80vw
+	.s-we-cooperate
+		padding-bottom: 30px
+	.our-services-item
+		&:before
+			display: none !important
+	.s-mortgage-types
+		padding-bottom: 40px
+	.accredited-houses
+		padding: 21px 18px 29px
+	.accredited-helper
+		display: block
+	.accredited-helper-item
+		margin-bottom: 10px
+		span
+			width: 15px
+			height: 15px
+			line-height: 13px
+			font-size: 10px
+	.accredited-thead
+		display: none
+	.accredited-accordion
+		margin-left: -25px
+		margin-right: -25px
+	.accredited-accordion-item-title
+		border-radius: 0
+		padding-left: 41px
+		padding-top: 14px
+		padding-bottom: 9px
+		&:before
+			left: 27px
+	.accredited-houses
+		margin-left: -18px
+		margin-right: -18px
+		border-radius: 0
+	.accredited-table-wrapper
+		border: none
+	.accredited-table
+		display: block
+		thead,
+		tr,
+		th,
+		tbody,
+		td
+			display: block
+			width: 100%
+		td
+			background-color: transparent !important
+			position: relative
+			padding: 10px 18px
+			padding-left: 50%
+			text-align: right
+			min-height: 50px
+			border-bottom: 1px solid #DADADA !important
+			&:last-child
+				border-bottom: none !important
+				border-right: none
+			&.empty
+				display: none !important
+			> span
+				font-size: 16px
+				font-weight: bold
+				margin-bottom: 5px
+				display: block
+			&.rescom
+				width: 100%
+				text-align: center
+				padding: 10px
+				background-color: #f3f3f3 !important
+				border-bottom: 1px solid #DADADA
+				font-weight: bold
+				border-top: 1px solid #DADADA
+				font-size: 16px
+				min-height: 0
+	.accredited-table-td-img
+		display: block
+		position: absolute
+		top: 10px
+		left: 18px
+		width: 50%
+		text-align: left
+		img
+			max-width: 35px
+			max-height: 35px
+	.accredited-table-td-info
+		list-style-type: none
+		font-size: 12px
+		margin: 0
+		padding: 0
+		display: block
+		li
+			color: #a9a9a9
+			margin-bottom: 3px
+			font-weight: normal
+			&:last-child
+				margin-bottom: 0
+			span
+				color: #000
+				font-weight: 500
+	.buy-apartments-item
+		width: 100%
+		padding-left: 0
+		margin-bottom: 25px
+		padding-right: 0
+		&:after
+			display: none
+	.buy-apartments-item-nmb
+		margin-bottom: 10px
+	.answer-on-questions-accordion-item-title
+		.plus-icon
+			width: 15px
+			height: 15px
+			margin-top: -8px
+			&:before
+				width: 1px
+				left: 7px
+				height: 15px
+			&:after
+				top: 7px
+				height: 1px
+				width: 15px
+	.mortage-consultation
+		padding: 20px
+	.accredited-table-td-img,
+	.accredited-table-td-info
+		img
+			// width: 50px
+			// height: 50px
+			object-fit: contain
+	.accredited-accordion-item-body
+		margin-top: 0
+
+
+
 
 
 
@@ -2893,9 +3179,62 @@
 		display: inline-block
 		border-radius: 4px
 		margin-bottom: 20px
+	.our-services-item
+		&:nth-child(1):before
+			border-radius: rem(7px) 0 0 0
+		&:nth-child(4):before
+			border-radius: 0 rem(7px) rem(7px) 0
+		&:nth-child(5):before
+			border-radius: 0 0 0 rem(7px)
+		&:nth-child(7):before
+			border-radius: 0 0 rem(7px) 0
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				&:before
+					border-top: none
+			&:nth-child(4n),
+			&:nth-last-child(2)
+				&:before
+					border-right: none
 
 @media (min-width: 992px) and (max-width: 1199.98px)
 	.full-filters-row
 		[class*=col-]
 			flex: 0 0 33.33333%
 			max-width: 33.33333%
+	.our-services-item
+		&:nth-child(1):before
+			border-radius: rem(7px) 0 0 0
+		&:nth-child(3):before
+			border-radius: 0 rem(7px) rem(7px) 0
+		&:nth-child(6):before
+			border-radius: 0 0 0 rem(7px)
+		&:nth-child(7):before
+			border-radius: 0 0 rem(7px) rem(7px)
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				&:before
+					border-top: none
+			&:nth-child(3n),
+			&:nth-last-child(2)
+				&:before
+					border-right: none
+
+@media (min-width: 576px) and (max-width: 767.98px)
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2)
+				&:before
+					border-top: none
+			&:nth-child(2n),
+			&:nth-last-child(1)
+				&:before
+					border-right: none
