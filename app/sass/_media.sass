@@ -76,8 +76,8 @@
 		padding-left: 20px
 		padding-right: 20px
 	.header-menu
-		position: fixed
-		z-index: 101
+		position: fixed !important
+		z-index: 101 !important
 		right: 0
 		top: 0
 		height: 100%
@@ -606,6 +606,15 @@
 			font-weight: 500
 			&::after
 				display: none
+	.burger-icon
+		&.active
+			span
+				&:after
+					background-color: #fff !important
+					transform: skew(0, 40deg) translateY(3px) scaleY(1.5) scaleX(.5)
+				&:before
+					background-color: #fff !important
+					transform: skew(0, -40deg) translateY(-3px) scaleY(1.5) scaleX(.5)
 
 // ≥992px
 +media-breakpoint-down(md)
