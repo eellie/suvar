@@ -1,6 +1,5 @@
 @import "vars"
 
-
 /*==========  Desktop First  ==========*/
 
 @media (max-width: 1599.98px)
@@ -17,6 +16,19 @@
 		width: 158px
 	.about-in-nmbrs-item
 		margin-right: 40px
+	.services-block-offer-1
+		top: 30%
+		img
+			width: 300px
+	.services-block-item-wr-2
+		padding-left: 40px
+	.services-block-offer-3
+		top: 20%
+	.services-block-offer-5
+		img
+			width: 300px
+	.services-block-offer-3
+		right: -100px
 
 @media (max-width: 1365.98px)
 	.res-complex-descr-text
@@ -29,6 +41,10 @@
 		span
 			font-size: 18px
 
+@media (max-width: 1365.98px)
+	.services-block-offer-4 img
+		height: 105.2%
+
 @media (max-width: 1280px)
 	.h2, h2
 		font-size: 26px
@@ -40,9 +56,16 @@
 		font-size: 18px
 	.contacts-form-success
 		padding: 30px
+	.services-block-offer-4 img
+		height: 104.2%
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.services-block-offer-4 img
+		height: 100%
+		margin-top: 0
+	.services-block-fix
+		overflow: hidden !important
 	.row
 		margin-left: -10px
 		margin-right: -10px
@@ -563,9 +586,36 @@
 				left: 0
 				top: 9px
 				margin: 0
+	.services-inf-nav
+		flex-direction: row
+		margin-bottom: 30px
+		margin: 0 -20px 30px
+		padding: 0 20px
+		white-space: nowrap
+		overflow: auto hidden
+		.services-inf-nav-item
+			height: 36px
+			line-height: 36px
+			padding: 0 8px
+			border-radius: 4px
+			background-color: #f4f4f4
+			margin: 0 10px 0 0
+			font-size: 12px
+			display: inline-block
+			position: relative
+			font-weight: 500
+			&::after
+				display: none
 
 // ≥992px
 +media-breakpoint-down(md)
+	.custom-main-window
+	.services-block .services-block-left
+		padding-right: 45px
+	.services-slider
+		.services-block-title-text
+			font-size: 30px
+			padding-right: 70px
 	.main-window-footer
 		display: none
 	.main-window-search
@@ -856,6 +906,11 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+	.services-slider
+		.services-block-title-text
+			font-size: 20px
+	.answer-on-questions-accordion-text
+		font-size: 30px
 	.header-row
 		> .header-phone
 			padding-right: 25px
@@ -1248,9 +1303,27 @@
 			margin-bottom: 20px
 		p
 			font-size: 16px
+	.services-block-item .services-block-item-text
+		font-size: 14px
+		line-height: 22px
+	.services-block-title
+		font-size: 30px !important
 
 // ≥576px
 +media-breakpoint-down(xs)
+	.services-block-title
+		font-size: 25px
+	.main-window-slider-block-custom
+		min-width: 100%
+	.services-buy-apartments .buy-apartments-item
+		width: 100%
+	.services-block-title-text
+		font-size: 25px
+		line-height: 30px
+		margin-top: 50px
+	.services-block-btn
+		.btn:nth-child(2)
+			margin-top: 20px
 	.h3, h3
 		font-size: 20px
 	.h5, h5
@@ -3039,8 +3112,7 @@
 		margin-bottom: auto
 		font-size: 16px
 	body.is-iphone
-			padding-top: 5px
-
+		padding-top: 5px
 
 /*==========  Mobile First  ==========*/
 
