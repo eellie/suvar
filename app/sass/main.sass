@@ -20,6 +20,9 @@ html, body
 	font-size: .8333vw
 	// font-size: 1.07143vw
 
+img
+	height: auto
+
 body
 	min-width: 320px
 	position: relative
@@ -590,6 +593,7 @@ section
 	background-size: 0
 	img
 		width: 100%
+		height: 100%
 	.fade-out
 		z-index: 0
 	&.active
@@ -7992,7 +7996,7 @@ form
 
 .s-services-inf
 	padding-top: 70px
-	padding-bottom: 200px
+	padding-bottom: 150px
 
 .services-inf-nav
 	padding: 0
@@ -8086,12 +8090,13 @@ form
 .services-block-offer-1
 	position: absolute
 	top: 20%
-	right: 20px
+	right: 45px
 
 .services-block-offer-2
 	position: absolute
 	bottom: 0
-	right: 0
+	right: 45px
+	height: 100%
 
 .services-block-offer-3
 	position: absolute
@@ -8099,10 +8104,12 @@ form
 	top: 40px
 
 .services-block-offer-4
-	width: 100%
+	display: flex
+	align-items: flex-end
 	height: 100%
+	justify-content: flex-end
 	img
-		width: 100%
+		width: 740px
 		height: 106.2%
 		margin-top: -37px
 
@@ -8138,26 +8145,105 @@ form
 	color: $red
 
 .answer-on-questions-accordion-services
+
 	.answer-on-questions-accordion-item-title
 		p
 			font-weight: 500
 	.answer-on-questions-accordion-item-body
 		p
+			padding-right: 250px
 			line-height: 30px
+		ul.circle-red
+			padding: 0
+			margin-left: 15px
+			li
+				line-height: 30px
+				list-style-type: none
+				padding: 0
+				margin: 0
+				padding-bottom: 10px
+				position: relative
+				&::after
+					content: ""
+					position: absolute
+					left: -15px
+					border-radius: 50%
+					width: 6px
+					height: 6px
+					top: 8px
+					background-color: #D90002
+				a
+					color: red
+					text-decoration: underline
+		ul.ul-number
+			padding: 0
+			margin-left: 15px
+			>li
+				list-style-type: none
+				padding: 0
+				margin: 0
+				padding-bottom: 10px
+				position: relative
+				padding-left: 5px
+				&::after
+					content: ""
+					position: absolute
+					left: -15px
+					top: 1px
+					color: #D90002
+					font-size: 15px
+			>li:nth-child(1)
+				&::after
+					content: "1."
+			>li:nth-child(2)
+				&::after
+					content: "2."
+			>li:nth-child(3)
+				&::after
+					content: "3."
+		table.answer-on-questions-accordion-item-table
+			width: 100%
+			tr td
+				font-size: 14px
+			thead
+				tr
+					border-bottom: 1px solid #9595a147
+					td
+						padding: 20px 0px
+						color: #9595A1
+			tbody
+				border-bottom: 1px solid #9595a147
+				tr
+					td
+						padding-top: 40px
+						vertical-align: top
+				tr:nth-last-child(1)
+					td
+						padding-bottom: 40px
+			tbody:nth-last-child(1)
+				border-bottom: none
+
+	.active
+		.plus-icon
+			&::before, &::after
+				background-color: #D90002
+	.answer-on-questions-accordion-item:last-child
+		border-bottom: 1px solid rgb(218, 218, 218)
 
 .services-table
+	width: 100%
 	thead
 		border-bottom: 1px solid #dadada
 		td
 			color: #171723
 			font-size: 20px
 			font-weight: 500
-			padding: 30px 20px
+			padding: 30px 20px 30px 20px
 	tbody
 		td
 			border-radius: 7px
 			font-size: 14px
-			padding: 30px 20px
+			padding: 30px 40px 30px 20px
 		tr:nth-child(even) td
 			background-color: #F2F2F2
 
