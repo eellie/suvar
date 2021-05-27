@@ -51,6 +51,7 @@ gulp.task('scripts', function () {
 		'app/libs/tippy/popper.min.js',
 		'app/libs/owlcarousel/owl.carousel.js',
 		'app/libs/tippy/tippy-bundle.umd.js',
+		'app/libs/loading-attribute-polyfill/loading-attribute-polyfill.umd.js',
 		'app/js/common.js', // Always at the end
 	])
 		.pipe(concat('scripts.min.js'))
