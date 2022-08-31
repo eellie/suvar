@@ -1,0 +1,8290 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/mixins"
+
+::placeholder
+	color: #9595A1
+	+tr
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*:focus
+	&::placeholder
+		opacity: 0
+		transform: translateY(-5px)
+
+html, body
+	font-size: .8333vw
+	// font-size: 1.07143vw
+
+img
+	height: auto
+
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.375
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	font-weight: 500
+	&.no-scroll
+		overflow: hidden
+		touch-action: none
+
+b, strong
+	font-weight: bold
+
+h1, .h1
+	font-weight: 500
+	font-size: rem(80px)
+	line-height: 1.175
+
+h2, .h2
+	font-weight: normal
+	font-size: rem(40px)
+	line-height: 1.175
+
+h3, .h3
+	font-size: rem(32px)
+	font-weight: normal
+	line-height: 1.1875
+	font-weight: 500
+
+h4, .h4
+	font-size: rem(24px)
+	font-weight: 500
+	line-height: 1.2
+
+h5, .h5
+	font-weight: 500
+	font-size: rem(20px)
+	line-height: 1.2
+
+*
+	outline: none !important
+
+section
+	position: relative
+	overflow: hidden
+
+.btn
+	display: inline-block
+	cursor: pointer
+	position: relative
+	text-align: center
+	outline: none !important
+	border: none
+	box-shadow: none
+	appearance: none
+	padding: 0 rem(23px)
+	height: rem(56px)
+	line-height: rem(56px)
+	color: #fff
+	+tr
+	border-radius: rem(7px)
+	background-color: $accent
+	text-decoration: none !important
+	font-weight: 500
+	white-space: nowrap
+	&:hover
+		color: #fff
+		background-color: var(--global-hover-color)
+	&.btn-icon
+		display: inline-flex
+		align-items: center
+		span
+			margin-right: rem(12px)
+			font-size: rem(16px)
+			&.icon-plus
+				font-size: rem(11px)
+	&.btn-white-border
+		background-color: transparent !important
+		border: 1px solid #fff
+		line-height: rem(54px)
+		position: relative
+		z-index: 1
+		overflow: hidden
+		&:hover
+			border-color: $accent
+			&:after
+				transform: scaleX(1)
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $accent
+			z-index: -1
+			transform: scaleX(0)
+			+tr
+			transform-origin: center left
+	&.btn-gray
+		background-color: #F2F2F2
+		color: $text
+		&:hover
+			background-color: #dcdcdc
+	&.btn-block
+		display: block
+		width: 100%
+	&.btn-border
+		background-color: transparent
+		border: 1px solid #9595A1
+		line-height: rem(54px)
+		color: $text
+		overflow: hidden
+		position: relative
+		z-index: 1
+		&:hover
+			border-color: $accent
+			color: #fff
+			&:after
+				transform: scaleX(1)
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $accent
+			z-index: -1
+			transform: scaleX(0)
+			+tr
+			transform-origin: center left
+	.loader
+		width: rem(30px)
+		height: rem(30px)
+		top: 50%
+		left: 50%
+		margin-top: -#{rem(15px)}
+		margin-left: -#{rem(15px)}
+	&.btn-loading
+		color: transparent !important
+		.loader-ellipsis
+			visibility: visible
+			opacity: 1
+
+.container
+	padding: 0 rem(40px)
+	width: rem(1920px)
+	max-width: 100%
+	margin-left: auto
+	margin-right: auto
+
+.header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	// z-index: 5
+	padding: rem(38px) 0
+	&.dark
+		.menu-link
+			color: $text !important
+		.burger-icon
+			span
+				&:after,
+				&:before
+					background-color: $text
+		.header-phone
+			.phone-link
+				color: $text
+				&:hover
+					color: $accent
+			p
+				color: rgba($text, .5)
+
+.header-row
+	display: flex
+	align-items: center
+	> div:not(.header-burger)
+		position: relative
+		z-index: 5
+
+.header-logo
+	padding-right: rem(30px)
+	width: 25%
+	flex-shrink: 0
+
+.logo
+	display: block
+	img
+		display: block
+		width: rem(198px)
+
+.header-mob-logo
+	display: none
+
+.header-mob-close
+	display: none
+
+.header-mob-phone
+	display: none
+
+.header-phone
+	flex-grow: 1
+	padding-right: rem(30px)
+	a
+		display: inline-block
+		color: #fff
+		+tr
+		font-weight: 500
+		font-size: rem(20px)
+		text-decoration: none !important
+		margin-bottom: 5px
+		&:hover
+			color: $accent
+	p
+		margin: 0
+		color: rgba(#fff, .5)
+		font-weight: normal
+
+.header-mob-soc
+	display: none
+
+.main-menu
+	margin-left: auto
+	display: flex
+	align-items: center
+	margin-right: rem(91px)
+	position: relative
+
+.menu-link
+	+tr
+	color: #fff !important
+	text-decoration: none !important
+	margin-right: rem(22px)
+	font-weight: 500
+	position: relative
+	&:last-child
+		margin-right: 0
+	&:hover
+		color: $accent
+		span
+			transform: translateY(-15px)
+			opacity: 0
+		&:after
+			transform: translateY(0)
+			opacity: 1
+	span
+		display: inline-block
+		+tr
+	&:after
+		content: attr(data-hover-text)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		transform: translateY(15px)
+		+tr
+
+.header-burger
+	display: flex
+	position: fixed
+	// z-index: 10
+	z-index: 501
+	right: rem(40px)
+	top: rem(60px)
+
+.burger-icon
+	display: inline-block
+	width: rem(48px)
+	height: rem(10px)
+	position: relative
+	flex-shrink: 0
+	&.active
+		span
+			&:after
+				background-color: #fff !important
+				transform: skew(0, 40deg) translateY(4px) scaleY(2) scaleX(.5)
+			&:before
+				background-color: #fff !important
+				transform: skew(0, -40deg) translateY(-4px) scaleY(2) scaleX(.5)
+	&.dark
+		span
+			&:after,
+			&:before
+				background-color: #000
+	span
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: #fff
+			+tr
+		&:after
+			top: 0
+		&:before
+			bottom: 0
+	&:hover:not(.active)
+		span
+			&:after
+				transform: translateX(2px)
+			&:before
+				transform: translateX(-2px)
+
+.main-window
+	height: 100vh
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+	padding-top: rem(203px)
+	min-height: rem(600px)
+	display: flex
+	flex-direction: column
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.5)
+		transition: all .4s ease
+	&.overlay-darkness
+		&:after
+			background-color: rgba(0, 0, 0, 0.85)
+
+.main-window--rescom
+	.main-window-slider-item .h2
+		margin-bottom: rem(25px)
+
+.finance-partner-stick
+	position: absolute
+	left: -#{rem(6px)}
+	top: rem(203px)
+	z-index: 4
+	img
+		// width: rem(205px)
+		height: rem(55px)
+		+tr
+		position: relative
+		z-index: 1
+		&:hover
+			transform: translateX(#{rem(10px)})
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: rem(50px)
+		background-color: #fff
+		z-index: 0
+		height: 100%
+
+.soc-nav
+	position: absolute
+	left: rem(39px)
+	top: 0
+	bottom: 0
+	z-index: 3
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+
+.soc-nav-link
+	font-size: rem(20px)
+	width: rem(20px)
+	height: rem(20px)
+	line-height: rem(20px)
+	color: #fff
+	+tr
+	text-decoration: none !important
+	margin-bottom: rem(30px)
+	&:last-child
+		margin-bottom: 0
+	&:hover
+		color: $accent
+
+.main-window-row
+	display: flex
+	position: relative
+	z-index: 1
+	height: 100%
+
+.main-window-projects
+	margin-left: 25%
+	flex-grow: 1
+	padding-right: rem(40px)
+	display: flex
+	flex-direction: column
+	overflow: hidden
+	margin-bottom: rem(10px)
+
+.main-window-projects-nav
+	ul
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -#{rem(16px)}
+		+ls
+		line-height: 1.1875
+		padding: 0
+		max-width: rem(440px)
+		li
+			width: 50%
+			padding: 0 rem(16px)
+			margin-bottom: rem(13px)
+	a
+		display: inline-block
+		position: relative
+		font-weight: 500
+		color: #fff
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $accent
+			color: rgba(#fff, .75)
+			&:after
+				transform: scaleX(.7)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #fff
+			transform-origin: left center
+			+tr
+
+.main-window-slider-block
+	max-width: rem(595px)
+	position: relative
+	.slick-slide
+		transform: translateX(30px)
+		transition: all .4s ease !important
+		&.slick-current
+			transform: translateX(0)
+	.slider-prev
+		top: 0
+		left: -105px
+		color: #fff
+	.slider-next
+		top: 0
+		left: -70px
+		color: #fff
+		&:after
+			border-color: rgba(#fff, .3)
+		svg
+			circle
+				stroke: #fff
+
+.main-window-slider-item
+	color: #fff
+	padding-bottom: rem(30px)
+	.h2
+		margin-bottom: rem(50px)
+
+.main-window-slider-btns
+	display: flex
+	align-items: center
+	.btn
+		margin-right: rem(30px)
+
+.link-angle
+	display: inline-flex
+	align-items: center
+	text-decoration: none !important
+	+tr
+	font-weight: 500
+	text-decoration: none !important
+	color: $text !important
+	&:hover
+		span
+			transform: translateX(#{rem(5px)})
+	span
+		font-size: rem(11px)
+		margin-left: rem(6px)
+		margin-top: rem(1px)
+		+tr
+	&.white
+		color: #fff !important
+
+.slider-prev
+	width: 25px
+	height: 39px
+	line-height: 39px
+	font-size: 12px
+	color: $text
+	text-align: center
+	position: absolute
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+
+.slider-next
+	position: absolute
+	width: 39px
+	height: 39px
+	line-height: 39px
+	text-align: center
+	color: $text
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: 12px
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 50%
+		border: 1px solid #B0B0B4
+		z-index: 0
+	span
+		transform: translate(1px, 0)
+	&.ring-animate
+		svg
+			circle
+				animation-name: ringload
+	svg
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		transform: rotate(-90deg)
+		circle
+			stroke-dasharray: 119.38 119.38
+			stroke-dashoffset: 119.38
+			animation-timing-function: linear
+
+@keyframes ringload
+	0%
+		stroke-dashoffset: 119.38
+	100%
+		stroke-dashoffset: 0
+
+.main-banner-video
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -1
+	overflow: hidden
+
+.main-banner-video-item
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	display: none
+	transform: translateX(100%)
+	transition: transform .8s ease-out
+	overflow: hidden
+	z-index: 1
+	// background-size: 0
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	img
+		width: 100%
+		height: 100%
+	.fade-out
+		z-index: 0
+	&.active
+		transform: translateX(0)
+		video
+			transform: translateX(0)
+	&.current-slide
+		z-index: 2
+	video
+		height: 100%
+		width: 100vw
+		object-fit: cover
+		transform: translateX(-50%)
+		transition: all .8s ease-out
+		display: block
+
+.main-window-content
+	flex-grow: 1
+	max-height: 100%
+	// overflow: hidden
+	display: flex
+
+.main-window-footer
+	position: relative
+	z-index: 2
+	color: #fff
+	border-top: 1px solid rgba(#fff, .15)
+	padding: rem(35px) 0 rem(42px)
+	.filter-item
+		margin-bottom: 0
+
+.filter-item
+	margin-right: rem(20px)
+	margin-bottom: rem(45px)
+
+.filter-title
+	margin-bottom: rem(15px)
+	font-weight: 500
+
+.filter-checkbox
+	display: flex
+
+.filter-checkbox-label
+	display: inline-block
+	position: relative
+	margin: 0
+	&:last-child
+		span
+			border-right: none !important
+			border-top-right-radius: rem(7px)
+			border-bottom-right-radius: rem(7px)
+	&:first-child
+		span
+			border-top-left-radius: rem(7px)
+			border-bottom-left-radius: rem(7px)
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			background-color: $text
+			border-right-color: rgba(#fff, .3)
+			color: #fff
+	span
+		display: block
+		height: rem(56px)
+		line-height: rem(56px)
+		text-align: center
+		font-weight: 500
+		padding: 0 rem(17px)
+		+tr
+		min-width: rem(56px)
+		background-color: #F2F2F2
+		border-right: 1px solid rgba(#9595A1, .3)
+		color: $text
+		cursor: pointer
+
+.filter-range
+	position: relative
+
+.filter-range-inputs
+	display: flex
+	align-items: center
+
+.filter-range-input-group
+	position: relative
+	width: 50%
+	&:first-child
+		border-right: 1px solid rgba(#9595A2, .3)
+		.filter-range-input
+			border-radius: rem(7px) 0 0 rem(7px)
+	&:last-child
+		.filter-range-input
+			border-radius: 0 rem(7px) rem(7px) 0
+	span
+		position: absolute
+		left: rem(16px)
+		z-index: 1
+		width: rem(20px)
+		top: rem(18px)
+		font-weight: 500
+		color: rgba($text, .4)
+
+.filter-range-input
+	min-width: 0
+	width: 100%
+	padding: 0 rem(10px) 0 rem(41px)
+	font-weight: 500
+	border: none
+	box-shadow: none
+	background-color: #F2F2F2
+	height: rem(56px)
+
+.filter-range-slider
+	position: absolute
+	bottom: -1.5px
+	left: 0
+	width: 100%
+	height: 3px
+	background-color: transparent
+	border: none
+	border-radius: 0
+	box-shadow: none
+
+.noUi-horizontal .noUi-handle
+	width: rem(21px)
+	height: rem(21px)
+	border-radius: 50%
+	background-color: $accent
+	border: none
+	cursor: pointer
+	box-shadow: 0px 0px 8px $accent
+	top: -#{rem(9px)}
+	right: -#{rem(10px)}
+	*,
+	&:after,
+	&:before
+		display: none !important
+
+.noUi-connect
+	background-color: $accent
+
+.select2-container--default .select2-selection--single
+	background-color: #F2F2F2
+	border: none
+	border-radius: rem(7px) !important
+	height: rem(56px)
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	color: $text
+	line-height: rem(56px)
+	padding: 0 rem(44px) 0 rem(20px)
+	font-weight: 500
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+	height: rem(54px)
+	display: flex
+	align-items: center
+	justify-content: center
+	right: rem(19px)
+	b
+		display: none
+	&:after
+		content: '\e911'
+		font-family: icon
+		color: $text
+		font-size: rem(12px)
+		+tr
+		display: inline-block
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow:after
+	transform: rotate(180deg)
+
+.select2-dropdown
+	border-radius: rem(7px) !important
+	border: none
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+	overflow: hidden
+	font-size: rem(16px)
+	transform: translateY(#{rem(8px)})
+
+.select2-container--open .select2-dropdown--above
+	transform: translateY(#{rem(-8px)})
+
+.select2-container--default .select2-results>.select2-results__options
+	padding: rem(17px) rem(20px)
+	max-height: rem(224px)
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+	color: $accent
+
+.select2-results__option
+	padding: 0
+	background-color: transparent !important
+	margin-bottom: rem(12px)
+	white-space: nowrap
+	&:last-child
+		margin-bottom: 0
+
+.select2-container--default .select2-results__option--selected
+	color: $accent !important
+
+.filter-more-item
+	margin-left: rem(25px)
+
+.filter-more-btn
+	display: inline-flex
+	align-items: center
+	height: rem(56px)
+	padding: 0 rem(10px) 0 rem(19px)
+	border: 1px solid rgba(#fff, .3)
+	color: #fff
+	text-decoration: none !important
+	max-width: rem(127px)
+	width: 100%
+	+tr
+	border-radius: rem(7px)
+	font-size: rem(13px)
+	span
+		font-size: rem(18px)
+		margin-right: rem(14px)
+	&:hover
+		border-color: #fff
+		background-color: #fff
+		color: $text
+
+.main-window-footer-row
+	display: flex
+	align-items: flex-end
+	.filter-title
+		font-size: rem(13px)
+		margin-bottom: rem(14px)
+	.filter-checkbox-label
+		span
+			background-color: rgba(255, 255, 255, 0.16)
+			color: #fff
+			border-right: 1px solid rgba(#fff, .3)
+		input
+			&:checked
+				& + span
+					background-color: #fff
+					border-color: rgba(#9595A2, .3)
+					color: $text
+	.filter-range-input
+		background-color: rgba(255, 255, 255, 0.16)
+		color: #fff
+	.filter-range-input-group
+		span
+			color: rgba(#fff, .4)
+		&:first-child
+			border-right-color: rgba(#fff, .3)
+	.select2-container--default .select2-selection--single
+		background-color: rgba(255, 255, 255, 0.16)
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		color: #fff
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+	.select2-container--default .select2-selection--single .select2-selection__arrow:after
+		color: #fff
+	.filter-select
+		min-width: rem(270px)
+		width: rem(270px)
+
+.main-window-projects-list
+	margin-top: rem(15px)
+	flex-grow: 1
+	overflow: hidden
+	max-width: rem(415px)
+	position: relative
+
+.main-window-projects-item
+	transition: all .4s ease
+	opacity: 0
+	transform: translateY(#{rem(25px)})
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	visibility: hidden
+	overflow: hidden
+	&.active
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+
+.main-window-projects-img
+	margin-bottom: rem(24px)
+	width: rem(400px)
+	img
+		display: block
+		width: 100%
+		border-radius: rem(7px)
+
+.main-window-projects-text
+	.h5
+		margin-bottom: rem(8px)
+		color: #fff
+	p
+		color: rgba(#fff, .7)
+		margin: 0
+
+.s-stocks
+	padding: rem(70px) 0
+	background-color: #F2F2F2
+	&.no-bg
+		background-color: transparent
+
+.stocks-left
+	display: flex
+	flex-direction: column
+	position: relative
+	z-index: 1
+	height: 100%
+
+.stocks-title
+	margin-bottom: rem(40px)
+	flex-grow: 1
+	max-width: 299px
+	p
+		font-size: rem(20px)
+		margin: rem(25px) 0 0
+
+.stocks-nav
+	display: flex
+	align-items: center
+	margin-top: auto
+	.slider-nav-arrow
+		position: relative
+		top: auto !important
+		left: auto !important
+		bottom: auto !important
+		right: auto !important
+	.slider-prev
+		margin-right: rem(12px)
+	svg
+		display: none !important
+
+.slick-track
+	display: flex
+	.slick-slide
+		flex-shrink: 0
+		height: auto
+		> div
+			height: 100%
+
+.news-slider
+	.slick-list
+		overflow: visible
+		margin-left: -#{rem(15px)}
+		margin-right: -#{rem(15px)}
+	.slick-slide
+		opacity: 0
+		transition: all .5s ease
+		padding: 0 rem(15px)
+		&.slick-active
+			opacity: 1
+			& + .slick-slide
+				opacity: 1
+			& ~ .prev-slide
+				transform: none
+				opacity: 1
+		&.prev-slide
+			transform: translateX(100%)
+
+.news-item
+	display: flex !important
+	flex-direction: column
+	height: 100%
+	position: relative
+	z-index: 1
+	overflow: hidden
+	border-radius: rem(6px)
+	min-height: rem(190px)
+	align-items: flex-start
+	padding: rem(32px) rem(32px) rem(23px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .3)
+		opacity: 1
+	.h5
+		position: relative
+		z-index: 2
+		color: #fff
+	&:hover
+		.news-img
+			img
+				transform: scale(1.05)
+	&.no-img
+		background-color: #fff
+		&:after
+			display: none
+		&:hover
+			.h5
+				color: $accent
+		.h5
+			color: $text
+			margin-bottom: auto
+			+tr
+
+.news-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+
+.news-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+
+.stick
+	height: rem(30px)
+	position: relative
+	z-index: 2
+	margin-bottom: auto
+	border-radius: rem(4px)
+	background-color: #fff
+	padding: 0 rem(9px)
+	white-space: nowrap
+	font-size: rem(13px)
+	font-weight: 500
+	line-height: rem(30px)
+	color: $text
+	display: inline-flex
+	align-items: center
+	flex-shrink: 0
+	&.black
+		background-color: #171723
+		color: #fff
+	&.red
+		background-color: #D90002
+		color: #fff
+	&.border
+		background-color: transparent
+		border: 1px solid #fff
+		color: #fff
+		line-height: rem(28px)
+	&.accent
+		background-color: $accent
+		color: #fff
+	&.gray
+		color: #fff
+		background-color: #B9B9BD
+		span
+			color: #fff
+	span
+		font-size: rem(16.5px)
+		color: #9595A1
+		margin-left: rem(7px)
+
+.news-date
+	color: #9595A2
+
+.s-about
+	padding: rem(85px) 0 rem(72px)
+
+.about-title
+	font-size: rem(32px)
+	font-weight: normal
+	> span
+		font-weight: bold
+		display: block
+	.color
+		color: $accent
+	a
+		display: inline-block
+		span
+			display: inline-block
+			color: $accent
+			font-size: rem(18px)
+			display: inline-block
+			transform: rotate(-45deg)
+			+tr
+		&:hover
+			span
+				transform: rotate(-405deg)
+
+.video-block
+	position: relative
+	padding-bottom: 56.25%
+	border-radius: rem(6px)
+	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	&:hover
+		.video-poster
+			img
+				transform: scale(1.1)
+
+.video-poster
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(6px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .28)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(6px)
+		+tr
+
+.video-play
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	height: rem(69px)
+	width: rem(69px)
+	background-color: #fff
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	z-index: 1
+	+tr
+	&:after
+		content: '\e906'
+		font-family: icon
+		font-size: rem(27px)
+		color: $accent
+		display: inline-block
+		transform: translateX(3px)
+	span
+		position: absolute
+		color: #fff
+		top: 100%
+		margin-top: rem(15px)
+		left: 50%
+		transform: translateX(-50%)
+		min-width: rem(240px)
+		text-align: center
+
+.about-blockquote
+	margin-left: rem(38px)
+
+.blockquote-content
+	margin-bottom: rem(30px)
+	font-size: rem(24px)
+	font-weight: normal
+
+.blockquote-author
+	display: flex
+	align-items: center
+
+.blockquote-author-img
+	position: relative
+	margin-right: rem(25px)
+	img
+		width: rem(139px)
+		height: rem(139px)
+	&:after
+		content: '\e908'
+		position: absolute
+		top: 0
+		left: 0
+		width: rem(44px)
+		height: rem(44px)
+		border-radius: 50%
+		background-color: $text
+		color: #fff
+		font-family: icon
+		font-size: rem(13px)
+		line-height: rem(44px)
+		text-align: center
+
+.blockquote-author-text
+	.h5
+		margin-bottom: rem(4px)
+	p
+		color: #9595A1
+		font-weight: normal
+		margin: 0
+
+.about-in-nmbrs
+	display: flex
+	margin-left: calc(25% + 5px)
+	margin-top: rem(77px)
+
+.about-in-nmbrs-item
+	margin-right: rem(85px)
+	font-weight: normal
+	max-width: rem(124px)
+	img
+		width: rem(124px)
+	span
+		font-weight: 500
+		display: block
+		margin-bottom: rem(3px)
+		font-size: rem(38px)
+		letter-spacing: -.03rem
+		line-height: 1
+		padding-top: rem(16px)
+		white-space: nowrap
+		sub
+			bottom: 0
+			margin-left: rem(15px)
+			font-size: 50%
+
+.about-in-nmbrs-link
+	margin-top: rem(38px)
+	margin-left: auto
+
+.popup-wrapper
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	display: none
+	&.opened
+		.popup-flex
+			background-color: rgba(#171723, .8)
+		.popup-block
+			transform: none
+			opacity: 1
+
+.popup-flex
+	display: flex
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#171723, 0)
+	transition: background-color .4s ease
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+
+.popup-close
+	width: 21px
+	height: 21px
+	margin-left: auto
+	text-align: center
+	color: #fff
+	cursor: pointer
+	margin-bottom: 34px
+	+tr
+	&:hover
+		transform: scale(1.2)
+	&:after
+		content: '\e918'
+		font-family: icon
+		font-size: 21px
+		font-weight: normal
+		line-height: 21px
+
+.popup-block
+	margin: auto
+	width: 625px
+	max-width: 100%
+	transition: all .4s ease
+	transform: translateY(-50px)
+	opacity: 0
+
+#video-popup
+	.popup-block
+		width: calc(80vw)
+
+.video-popup-block
+	position: relative
+	padding-bottom: 56.25%
+	border-radius: 10px
+	overflow: hidden
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 10px
+
+.s-text-slider
+	margin: rem(60px) 0
+	position: relative
+	height: rem(80px)
+	overflow: hidden
+	display: flex
+	align-items: center
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+
+.text-slider-wrapper
+	transition: transform 2.5s ease
+
+.text-slider
+	display: flex
+	align-items: center
+
+.text-slider-item
+	white-space: nowrap
+	line-height: 1
+	font-size: rem(80px)
+	font-weight: normal
+	display: inline-flex !important
+	align-items: center
+	text-transform: uppercase
+	&:after
+		content: ''
+		display: block
+		height: 1px
+		background-color: $text
+		width: rem(243px)
+		flex-shrink: 0
+		margin: 0 rem(45px)
+		transform: translateY(#{rem(7px)})
+
+.text-slider
+	.slick-list
+		overflow: visible
+
+.s-city-map
+	margin-bottom: rem(75px)
+	overflow: visible
+
+.city-map-wrapper
+	position: relative
+
+.city-map-img
+	position: relative
+	border-radius: rem(6px)
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .3)
+		border-radius: rem(6px)
+	img
+		width: 100%
+		display: block
+		border-radius: rem(6px)
+
+.city-map-title
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	z-index: 1
+	color: #fff
+	.row
+		align-items: flex-end
+	.section-nmb
+		padding-left: rem(57px)
+		padding: rem(45px)
+	.map-title
+		padding-bottom: rem(45px)
+
+.section-nmb
+	font-size: rem(80px)
+	line-height: 1
+	font-weight: 300
+	transition: opacity .4s ease
+	&.fade-out
+		opacity: 0
+	&.big
+		font-size: rem(190px)
+		line-height: 0.75
+
+.map-title
+	font-size: rem(52px)
+
+.city-map-dots-item
+	position: absolute
+	z-index: 2
+	&:hover
+		.city-map-dots-icon
+			color: rgba(#fff, 0)
+			span
+				transform: rotate(-45deg)
+		.city-map-dots-content
+			opacity: 1
+			visibility: visible
+			transform: none
+
+.city-map-dots-icon
+	display: flex
+	align-items: center
+	color: #fff
+	transition: color .3s ease
+	cursor: pointer
+	span
+		width: 50px
+		height: 50px
+		background-color: #fff
+		position: relative
+		z-index: 3
+		flex-shrink: 0
+		border-radius: 50%
+		margin-right: (17px)
+		+tr
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			background-color: $text
+		&:after
+			width: 2px
+			height: 22px
+		&:before
+			height: 2px
+			width: 22px
+
+.city-map-dots-content
+	position: absolute
+	top: -20px
+	left: -20px
+	width: 300px
+	background-color: #fff
+	visibility: hidden
+	transition: all .3s ease
+	opacity: 0
+	transform-origin: top left
+	transform: scale(0.75)
+	border-radius: 7px
+	overflow: hidden
+	padding: 0 20px 20px
+	box-shadow: 0 0 21px 0 rgba(#000, .15)
+	img
+		width: calc(100% + 42px)
+		margin-bottom: 20px
+		margin-left: -21px
+		margin-right: -21px
+		border-radius: 7px 7px 0 0
+	.h5
+		margin-bottom: 13px
+		font-size: 14px
+	p
+		margin-bottom: 8px
+		font-size: 12px
+		font-weight: normal
+	.link-angle
+		margin-top: 15px
+		font-size: 14px
+
+.city-map-dots-item-small
+	padding-left: rem(39px)
+	position: relative
+	color: #fff
+	&:after
+		content: ''
+		width: rem(22px)
+		height: rem(22px)
+		border-radius: 50%
+		background-color: #fff
+		flex-shrink: 0
+		position: absolute
+		top: 0
+		left: 0
+
+.city-map-open-full
+	position: absolute
+	z-index: 4
+	top: rem(40px)
+	right: rem(40px)
+
+.s-projects
+	overflow: visible
+	padding-bottom: rem(48px)
+
+.projects-nav-wrapper
+	position: absolute
+	top: 0
+	left: rem(40px)
+	height: 100%
+	z-index: 5
+	width: 24%
+	padding-bottom: rem(83px)
+
+.location-nav
+	padding-left: rem(68px)
+	position: sticky
+	top: rem(30px)
+	.white
+		color: #fff !important
+		a
+			color: #fff !important
+	.h6
+		text-transform: uppercase
+		font-size: rem(10px)
+		color: #9595A2
+		margin-bottom: rem(18px)
+		margin-top: rem(30px)
+		+tr
+		&:first-child
+			margin-top: 0
+	&.fixed
+		position: fixed
+		z-index: 10
+	&.light
+		.location-nav-link
+			a
+				color: #fff
+		.h6
+			color: #fff
+
+.location-nav-link
+	margin-bottom: rem(6px)
+	a
+		display: inline-block
+		+tr
+		color: $text
+		position: relative
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			left: -#{rem(17px)}
+			border-radius: 50%
+			width: rem(7px)
+			height: rem(7px)
+			background-color: $accent
+			top: rem(7px)
+			+tr
+			transform: translate3d(#{rem(17px)}, 0, 0)
+			opacity: 0
+			+tr
+		&:hover,
+		&.active
+			color: $accent
+			&:after
+				opacity: 1
+				transform: none
+
+.projects-header
+	margin-bottom: rem(75px)
+	display: flex
+
+.projects-header-left
+	width: 70%
+	flex-shrink: 0
+	padding-right: 20px
+	.h3
+		max-width: rem(702px)
+		.mob-text
+			display: none
+
+.projects-header-right
+	width: 30%
+	flex-shrink: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(35px)
+		font-size: rem(20px)
+		li
+			margin-bottom: rem(15px)
+			span
+				font-weight: bold
+			&:last-child
+				margin-bottom: 0
+
+.projects-header-right-btns
+	display: flex
+	.btn
+		margin-right: rem(20px)
+		&:last-child
+			margin-right: 0
+
+.project
+	margin-bottom: rem(35px)
+	&:hover
+		.project-header
+			img
+				transform: scale(1.1)
+
+.project-header
+	position: relative
+	margin-bottom: rem(12px)
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	overflow: hidden
+	padding: rem(20px) rem(24px)
+	height: rem(360px)
+	border-radius: rem(7px)
+	color: #fff
+	z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(7px)
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%)
+		z-index: 1
+	img
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(7px)
+		+tr
+		z-index: 0
+	.stick
+		position: absolute
+		top: rem(24px)
+		left: rem(24px)
+		z-index: 2
+
+.project-map-link
+	position: absolute
+	top: rem(24px)
+	right: rem(24px)
+	white-space: nowrap
+	height: rem(30px)
+	z-index: 2
+	+tr
+	display: inline-flex
+	align-items: center
+	padding: 0 rem(10px) 0 rem(12px)
+	font-size: rem(13px)
+	color: #fff !important
+	text-decoration: none !important
+	border: 1px solid #fff
+	border-radius: rem(7px)
+	overflow: hidden
+	span
+		font-size: rem(16px)
+		margin-right: rem(6px)
+	&:hover
+		border-color: $accent
+		&:after
+			transform: scaleX(1)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $accent
+		z-index: -1
+		transform: scaleX(0)
+		+tr
+		transform-origin: center left
+
+.project-title
+	max-width: rem(400px)
+	position: relative
+	z-index: 2
+	.h3
+		margin-bottom: rem(10px)
+	p
+		margin: 0
+
+.project-descr
+	display: flex
+	margin-bottom: rem(19px)
+
+.project-descr-left
+	padding-right: rem(20px)
+	flex-grow: 1
+	p
+		color: #9595A2
+		font-weight: normal
+		margin-bottom: rem(10px)
+
+.project-distance
+	display: flex
+	color: $gray
+	font-size: rem(12px)
+	span
+		font-size: rem(16px)
+		margin-right: rem(6px)
+
+.project-descr-right
+	text-align: right
+
+.project-price
+	display: inline-flex
+	align-items: center
+	margin-bottom: rem(5px)
+
+.project-price-val
+	font-size: rem(20px)
+	white-space: nowrap
+
+.project-price-info
+	position: relative
+
+.project-price-info-icon
+	cursor: pointer
+	color: $gray
+	margin-left: rem(10px)
+	display: flex
+	margin-top: -1px
+	&:hover
+		& ~ .project-price-info-dropdown
+			opacity: 1
+			visibility: visible
+
+.project-price-info-dropdown
+	position: absolute
+	min-width: rem(327px)
+	bottom: rem(27px)
+	left: -#{rem(8px)}
+	z-index: 5
+	background-color: #fff
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+	border-radius: rem(7px)
+	padding: rem(23px) rem(18px) rem(18px) rem(20px)
+	text-align: left
+	transition: all .4s ease
+	visibility: hidden
+	opacity: 0
+	color: $text
+	&.right-position
+		left: auto
+		right: -#{rem(8px)}
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: flex
+			justify-content: space-between
+			margin-bottom: rem(10px)
+			&:last-child
+				margin-bottom: 0
+			span
+				&:first-child
+					margin-right: rem(15px)
+				&:last-child
+					font-weight: 600
+
+.project-size
+	color: $gray
+	font-weight: normal
+	white-space: nowrap
+
+.project-labels
+	display: flex
+	flex-wrap: wrap
+
+.label
+	margin: 0 rem(10px) rem(10px) 0
+	white-space: nowrap
+	height: rem(30px)
+	line-height: rem(30px)
+	padding: 0 rem(9px)
+	border-radius: rem(4px)
+	background-color: #F2F2F2
+	color: $gray
+	font-weight: normal
+	font-size: rem(14px)
+	&.red
+		background-color: #FDE3E3 !important
+		color: #D90002
+
+.project--big
+	display: flex
+	margin-top: rem(48px)
+	.project-header
+		width: 56%
+		flex-shrink: 0
+		height: auto
+		padding: 0
+		margin: 0
+		img
+			position: static
+	.project-body
+		flex-shrink: 0
+		width: 44%
+		padding-left: rem(49px)
+		display: flex
+		flex-direction: column
+	.project-title
+		margin-bottom: rem(25px)
+		.h3
+			margin-bottom: rem(25px)
+	.project-descr-left
+		padding-right: 0
+		flex-grow: 0
+		margin-bottom: rem(35px)
+	.project-labels
+		margin-bottom: rem(20px)
+		margin-top: 0
+	.project-descr-right
+		margin-top: auto
+		text-align: left
+
+.bg-gray
+	padding-top: rem(54px)
+	background-color: #F2F2F2
+	.label
+		background-color: #fff
+
+.bg-linear-gray
+	background: linear-gradient(180deg, #FFFFFF 64.15%, #F2F2F2 118.43%)
+	padding-top: rem(54px)
+
+.s-layouts
+	padding: rem(80px) 0 rem(53px)
+
+.layouts-header
+	position: relative
+	margin-bottom: rem(60px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 3px
+		background-color: #F2F2F2
+		width: 100%
+	.h2
+		padding-bottom: rem(34px)
+
+.layouts-filter
+	.h2
+		margin-bottom: rem(43px)
+
+.layouts-filter-nav
+	display: flex
+
+.layouts-filter-nav-link
+	color: $text
+	+tr
+	text-decoration: none !important
+	display: inline-block
+	position: relative
+	padding-bottom: 26px
+	z-index: 1
+	margin-right: 30px
+	&:last-child
+		margin-right: 0
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 3px
+		background-color: $accent
+		width: 100%
+		transform: scaleX(0)
+		+tr
+	&:hover
+		color: $accent
+	&.active
+		color: $accent
+		&:after
+			transform: scaleX(1)
+	span
+		top: -.5em
+		text-transform: uppercase
+		color: $accent
+		position: relative
+		font-size: 75%
+		line-height: 0
+		vertical-align: baseline
+		margin-left: rem(3px)
+
+.select-layout-wrapper
+	text-align: center
+
+.select-layout-grid
+	display: inline-grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(50px) rem(17px)
+	margin-left: auto
+	margin-right: auto
+	text-align: left
+	position: relative
+	grid-auto-rows: 1fr
+
+.select-layout-border
+	position: absolute
+	top: 0
+	left: 0
+	border-radius: rem(7px)
+	border: 1px solid $accent
+	z-index: 1
+	width: rem(80px)
+	height: rem(80px)
+	transition: transform .4s ease
+
+.select-layout-item
+	text-align: center
+	cursor: pointer
+	&.active
+		.select-layout-item-img
+			&:after
+				opacity: 1
+				transform: scale(1)
+	&:hover
+		.select-layout-item-img
+			img
+				transform: scale(1.1)
+
+.select-layout-item-img
+	display: flex
+	width: rem(80px)
+	height: rem(80px)
+	margin-left: auto
+	margin-right: auto
+	margin-bottom: rem(14px)
+	border-radius: rem(7px)
+	position: relative
+	flex-shrink: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	img
+		flex-shrink: 0
+		max-width: 80%
+		max-height: 80%
+		+tr
+
+.select-layout-item-title
+	font-size: rem(12px)
+
+.select-layout-more
+	grid-column: span 2
+
+.select-layout-more-link
+	display: block
+	+tr
+	text-decoration: none !important
+	color: $text
+	text-align: center
+	font-size: rem(12px)
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	height: 100%
+	border: 1px solid $gray
+	border-radius: rem(7px)
+	span
+		display: block
+		font-size: rem(32px)
+		line-height: 1
+		margin-top: rem(5px)
+	&:hover
+		border-color: $accent
+		color: $accent
+
+.layout-info-wrapper
+	display: flex
+
+.layout-image
+	width: 55%
+	flex-shrink: 0
+	background-color: #f6f6f6
+	border-radius: rem(7px)
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: rem(15px) 0
+	.slick-current
+		img
+			transform: none
+	img
+		max-width: 95%
+		object-fit: contain
+		flex-shrink: 0
+		display: inline-block
+		max-height: rem(530px)
+		+tr
+		transform: translateX(-#{rem(30px)})
+	.slick-slide
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: rem(587px)
+		> div
+			display: flex
+			align-items: center
+			justify-content: center
+
+.layout-info-block
+	padding-left: rem(40px)
+	width: 45%
+	flex-shrink: 0
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+.layout-breadcrumbs
+	margin-bottom: rem(25px)
+	font-weight: normal
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		font-size: rem(14px)
+	li
+		margin-right: rem(46px)
+		margin-bottom: rem(5px)
+		position: relative
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+		&:after
+			content: '\e915'
+			font-family: icon
+			position: absolute
+			left: 100%
+			margin-left: rem(15px)
+			font-size: rem(13px)
+			color: $gray
+			top: rem(1px)
+	a
+		color: $gray
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.layout-info-slider
+	flex-grow: 1
+	max-width: 404px
+	.slick-current
+		.layout-info
+			transform: translateX(0)
+	.slick-list
+		overflow: visible !important
+		height: 100% !important
+	.slick-track
+		height: 100%
+	.slick-slide
+		display: inline-flex !important
+		> div
+			height: auto
+			flex-grow: 1
+			display: flex
+
+.layout-info
+	font-weight: normal
+	+tr
+	transform: translateX(-#{rem(30px)})
+	display: flex !important
+	align-items: flex-start
+	flex-direction: column
+	flex-grow: 1
+	.h3
+		margin-bottom: rem(10px)
+	ul
+		list-style-type: none
+		margin: 0 0 rem(40px)
+		padding: 0
+		li
+			position: relative
+			padding-left: rem(12px)
+			margin-bottom: rem(8px)
+			&:last-child
+				margin-bottom: 0
+			&:after
+				content: ''
+				position: absolute
+				top: rem(9px)
+				left: 0
+				width: rem(4px)
+				height: rem(4px)
+				background-color: $accent
+				border-radius: 50%
+	.btn
+		width: 100%
+		margin-bottom: rem(20px)
+
+.layout-price
+	font-size: rem(20px)
+	color: $accent
+	margin-bottom: rem(36px)
+	font-weight: 500
+
+.layout-btns
+	margin-top: auto
+	max-width: rem(403px)
+
+.layout-btn-main
+	margin-bottom: rem(12px)
+	.btn-gray
+		display: none
+
+.layout-btn-items-mob
+	display: none
+
+.layout-btn-items
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+
+.layout-btn-items-left
+	.btn
+		margin-bottom: rem(12px)
+		&:last-child
+			margin-bottom: 0
+
+.layout-btn-items-right
+	padding-bottom: rem(17px)
+	padding-right: rem(18px)
+
+.s-advantages
+	padding: rem(11px) 0 rem(80px)
+	[class*=col-]
+		display: flex
+		flex-direction: column
+
+.advantages-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(29px)
+	// grid-auto-rows: 1fr
+	margin-right: rem(30px)
+	flex-grow: 1
+
+.advantages-item
+	overflow: hidden
+	position: relative
+	&.type-2
+		min-height: rem(500px)
+		.advantages-img
+			height: 100%
+			img
+				height: 100%
+				position: absolute
+				left: 0
+				top: 0
+		&:hover
+			.advantages-body
+				transform: translateY(-20px) !important
+				p
+					transform: translateY(0)
+			.advantages-img
+				&:after
+					opacity: 0
+				&:before
+					opacity: 1
+		.advantages-body
+			position: absolute
+			z-index: 2
+			color: #fff
+			bottom: 0
+			left: rem(33px)
+			right: rem(33px)
+			transition: transform .4s ease
+			margin-top: 0
+			max-width: rem(547px)
+			.h4
+				font-size: rem(32px)
+				margin-bottom: rem(27px)
+			p
+				transform: translateY(30px)
+				+tr
+	&.wide
+		grid-column: span 2
+
+.advantages-img
+	position: relative
+	overflow: hidden
+	border-radius: rem(7px)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%)
+		+tr
+		border-radius: rem(7px)
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		+tr
+		background-color: rgba(#000, .5)
+		opacity: 0
+		border-radius: rem(7px)
+	img
+		width: 100%
+		border-radius: rem(7px)
+		height: rem(264px)
+		object-fit: cover
+	.stick
+		position: absolute
+		top: rem(30px)
+		left: rem(32px)
+
+.advantages-body
+	margin-top: rem(27px)
+	font-weight: normal
+	.h4
+		margin-bottom: rem(19px)
+	p
+		&:last-child
+			margin-bottom: 0
+
+.check-more-btn
+	text-align: right
+	margin-top: rem(43px)
+	margin-right: rem(30px)
+
+.video-item
+	margin-bottom: rem(34px)
+	.video-block
+		min-height: rem(264px)
+	.stick
+		position: absolute
+		top: rem(30px)
+		left: rem(32px)
+
+.video-content
+	margin-top: rem(25px)
+
+.video-list
+	flex-grow: 1
+
+.s-our-services
+	padding: rem(45px) 0
+	background-color: #F2F2F2
+
+.calculator
+	border-radius: rem(7px)
+	background-color: #fff
+	padding: rem(50px) rem(53px) rem(45px)
+	.form-control
+		font-size: rem(24px)
+
+.section-title
+	margin-bottom: rem(40px)
+	.h2
+		margin: 0
+	p
+		margin: rem(13px) 0 0
+		font-size: rem(21px)
+		color: $gray
+
+.calculator-header
+	display: flex
+	margin-bottom: rem(50px)
+	.section-title
+		margin: 0 rem(20px) 0 0
+		flex-grow: 1
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+	color: #9595A2
+
+.form-control
+	border: none
+	outline: none !important
+	background-color: #F2F2F2
+	border-radius: rem(7px)
+	height: rem(60px)
+	padding: 0 rem(24px)
+	width: 100%
+	font-weight: 500
+
+.filter-range-solo
+	position: relative
+	.filter-range-slider
+		left: rem(8px)
+		width: auto
+		right: rem(8px)
+
+.filter-minmax
+	display: flex
+	justify-content: space-between
+	white-space: nowrap
+	margin-top: 17px
+	font-size: rem(12px)
+	color: $gray
+	span, a
+		color: $gray !important
+		text-decoration: none !important
+
+.filter-range-select
+	position: absolute
+	top: rem(7px)
+	right: rem(7px)
+	.select2-container--default .select2-selection--single
+		background-color: #fff
+		height: rem(46px)
+		font-size: rem(14px)
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		line-height: rem(46px)
+		padding: 0 rem(36px) 0 rem(13px)
+	.select2-container--default .select2-selection--single .select2-selection__arrow
+		height: rem(46px)
+		right: rem(10px)
+
+.calculator-form
+	.row
+		margin: 0 -10px
+		[class*=col-]
+			padding-left: 10px
+			padding-right: 10px
+	.filter-item
+		margin-right: 0
+
+.calculator-results
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	.btn
+		margin-right: rem(24px)
+		&:last-child
+			margin-right: 0
+
+.calcultator-total
+	font-weight: normal
+	margin-right: rem(49px)
+	position: relative
+	white-space: nowrap
+	&.big
+		margin-right: rem(95px)
+		.calcultator-total-price
+			font-size: rem(48px)
+
+.calcultator-total-price
+	display: block
+	font-weight: 600
+	line-height: 1
+	letter-spacing: -0.03em
+	font-size: rem(40px)
+	margin-top: rem(5px)
+	position: relative
+	white-space: nowrap
+	+tr
+	color: $text
+	.loader
+		bottom: 0
+		top: 50%
+		margin-top: -#{rem(25px)}
+	&.loading
+		color: rgba($text, 0)
+		.loader
+			opacity: 1
+			visibility: visible
+
+.loader
+	position: absolute
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	top: 0
+	left: 0
+	background-color: #f2f2f2
+	z-index: 1
+	animation-name: rotate
+	animation-duration: 1.5s
+	animation-timing-function: ease-in-out
+	animation-iteration-count: infinite
+	opacity: 0
+	visibility: hidden
+	+tr
+	&:after
+		content: ''
+		position: absolute
+		height: rem(8px)
+		width: rem(8px)
+		top: rem(6px)
+		border-radius: 50%
+		background-color: $accent
+		left: 50%
+		margin-left: -#{rem(4px)}
+
+@keyframes rotate
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(360deg)
+
+.our-services
+	margin-top: rem(58px)
+
+.our-services-grid
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-auto-rows: 1fr
+	grid-gap: 1px
+
+.our-services-item
+	background-color: #fff
+	transition: all .4s ease
+	padding: rem(32px)
+	display: flex
+	overflow: hidden
+	position: relative
+	&:hover
+		background-color: $accent !important
+		color: #fff
+		.our-services-item-icon
+			svg
+				[fill]
+					fill: white
+				[stroke]
+					stroke: white
+			&:after
+				transform: scale(3.64634)
+				background-color: rgba(#fff, .2) !important
+		&:after
+			opacity: 1
+			transform: translateX(0)
+	&:after
+		content: '\e915'
+		font-family: icon
+		font-size: 18px
+		transition: all .4s ease
+		position: absolute
+		bottom: rem(27px)
+		right: rem(30px)
+		z-index: 2
+		line-height: 1
+		color: #fff
+		opacity: 0
+		transform: translateX(20px)
+
+.our-services-item-left
+	flex-grow: 1
+	padding-right: rem(25px)
+	position: relative
+	z-index: 1
+	.h4
+		margin-bottom: rem(19px)
+
+.our-services-item-icon
+	width: rem(83px)
+	height: rem(83px)
+	flex-shrink: 0
+	position: relative
+	svg
+		max-width: 100%
+		max-height: 100%
+		position: relative
+		z-index: 1
+		*
+			transition: all .4s ease
+		.replace-stroke
+			stroke: $accent
+		.replace-fill
+			fill: $accent
+	img
+		position: relative
+		z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		height: rem(82px)
+		width: rem(82px)
+		z-index: 0
+		border-radius: 50%
+		background-color: #f2f2f2
+		top: rem(7px)
+		left: rem(7px)
+		transition: all .4s ease
+
+.our-services-item-left
+	position: relative
+	z-index: 0
+
+.our-services-item-link
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.s-contacts
+	padding-bottom: rem(50px)
+	overflow: visible
+
+.contacts-form-block
+	border-radius: rem(10px)
+	background-color: #f2f2f2
+	display: flex
+	margin-right: rem(38px)
+
+.contacts-form-left
+	flex-grow: 1
+	padding: rem(36px) 0 rem(57px) rem(49px)
+	position: relative
+	z-index: 1
+	// .h2
+	// 	margin-bottom: rem(65px)
+
+.form-group
+	margin-bottom: rem(22px)
+	&.white
+		.form-control
+			background-color: #fff
+		.select2-container--default .select2-selection--single
+			background-color: #fff
+
+form
+	.row
+		margin: 0 -#{rem(8px)}
+		[class*=col-]
+			padding: 0 rem(8px)
+
+.form-footer-row
+	margin-top: 6px
+	display: flex
+	align-items: center
+	p
+		flex-grow: 1
+		margin: 0 rem(30px) 0 0
+		font-size: rem(12px)
+		color: $gray
+		max-width: 220px
+	.btn
+		margin-left: auto
+	a
+		position: relative
+		color: inherit
+		+tr
+		text-decoration: underline
+		&:hover
+			color: $accent
+
+.contacts-form
+	margin-top: rem(65px)
+	.select2-container--default
+		font-size: rem(18px)
+
+.contacts-form-left
+	position: relative
+
+.contacts-form-success
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+	background-color: #F2F2F2
+	padding: rem(68px) rem(74px)
+	opacity: 0
+	visibility: hidden
+	border-radius: rem(10px)
+	+tr
+	.h2
+		margin-bottom: rem(40px)
+	p
+		margin: 0
+		font-size: rem(14px)
+		max-width: rem(300px)
+	&.visible
+		opacity: 1
+		visibility: visible
+
+.success-icon
+	width: rem(45px)
+	height: rem(45px)
+	margin-bottom: rem(25px)
+	background-color: $accent
+	background-image: url(../img/icons/checkmark.svg)
+	background-size: 25px
+	background-repeat: no-repeat
+	background-position: center
+	border-radius: 50%
+
+.contacts-form-right
+	display: flex
+	align-items: flex-end
+	justify-content: flex-end
+	margin-top: rem(-15px)
+	img
+		width: rem(289px)
+		position: relative
+		z-index: 0
+		&.type-2
+			transform: scale(1.6) translateX(#{rem(20px)})
+			transform-origin: right bottom
+		&.type-3
+			margin-right: rem(-25px)
+
+.contacts-list
+	padding-top: rem(45px)
+	.h2
+		margin-bottom: rem(30px)
+
+.contacts-links
+	margin-bottom: rem(44px)
+
+.contacts-phone
+	a
+		font-size: rem(32px)
+		color: $text
+		font-weight: 500
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.contacts-mail
+	a
+		font-weight: normal
+		color: $accent
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $text
+
+.contacts-nav
+	display: inline-block
+
+.contacts-nav-link
+	margin-bottom: 2px
+	+tr
+	display: flex
+	align-items: center
+	padding: 0 rem(18px) 0 rem(13px)
+	white-space: nowrap
+	color: $gray !important
+	text-decoration: none !important
+	font-weight: normal
+	height: rem(48px)
+	border-radius: rem(10px)
+	&:hover
+		background-color: #F2F2F2
+		span
+			color: #4592EB
+	span
+		color: $text
+		font-size: rem(26px)
+		text-align: center
+		margin-right: rem(17px)
+		+tr
+
+#contacts-map
+	height: rem(211px)
+	border-radius: rem(10px)
+	overflow: hidden
+	[class*='-ground-pane']
+		filter: grayscale(1)
+
+.contacts-map-wrapper
+	margin-bottom: rem(37px)
+	position: relative
+
+.open-full-contacts-map
+	position: absolute
+	z-index: 1
+	width: rem(39px)
+	height: rem(39px)
+	border-radius: rem(6px)
+	background-image: url(../img/icons/full-size.svg)
+	background-size: rem(29px)
+	background-repeat: no-repeat
+	background-position: center
+	bottom: rem(12px)
+	right: rem(12px)
+	background-color: #fff
+
+.contacts-map-objects-list-item
+	display: flex
+	margin-bottom: rem(15px)
+	line-height: 1.1
+	span
+		width: 50%
+		flex-shrink: 0
+		&:first-child
+			padding-right: rem(10px)
+		&:last-child
+			font-size: rem(12px)
+			color: $gray
+
+.contacts-map-objects-all
+	a
+		color: $accent
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $gray
+		&:before
+			content: attr(data-text)
+		&.active
+			&:before
+				content: attr(data-close-text)
+
+.footer
+	padding: rem(55px) 0 rem(45px)
+	border-top: 1px solid #f2f2f2
+
+.footer-nav
+	.h6
+		font-size: rem(11px)
+		color: #5D5D65
+		text-transform: uppercase
+		font-weight: normal
+		margin-bottom: rem(35px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		margin-bottom: rem(11px)
+		font-weight: normal
+		&:last-child
+			margin-bottom: 0
+	a
+		color: $text
+		+tr
+		text-decoration: none !important
+		&:hover
+			color: $accent
+
+.footer-copyright
+	p
+		color: rgba($text, .2)
+		margin-bottom: rem(25px)
+		font-size: rem(12px)
+
+.footer-copyright-row
+	display: flex
+
+.footer-copyright-left
+	flex-grow: 1
+	padding-right: rem(20px)
+
+.copyright
+	font-size: rem(14px)
+	margin-bottom: rem(9px)
+	a
+		color: $text
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $accent
+
+.footer-dev
+	margin-top: 31px
+	a
+		display: flex
+		align-items: center
+		white-space: nowrap
+		font-size: rem(12px)
+		color: #D1D1D3 !important
+		text-decoration: none !important
+		img
+			width: rem(85px)
+			margin-left: rem(12px)
+			flex-shrink: 0
+
+.footer-apps
+	display: flex
+	a
+		margin-right: rem(9px)
+		img
+			width: rem(122px)
+
+.popup-full-window
+	.popup-block
+		background-color: #fff
+		width: 100%
+		border-radius: 0
+		min-height: 100%
+		padding: rem(53px) 0 rem(85px)
+		display: flex
+		flex-direction: column
+	.popup-close
+		position: absolute
+		color: $text
+		top: rem(52px)
+		right: rem(59px)
+	.popup-content
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+.full-filters-block
+	display: flex
+	flex-direction: column
+	height: 100%
+	flex-grow: 1
+	.section-title
+		padding-right: rem(60px)
+	.filter-checkbox-label
+		flex-grow: 1
+	.filter-item
+		margin-right: 0
+	.container
+		height: 100%
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+.filter-checkboxes
+	margin-top: 25px
+	display: flex
+	flex-wrap: wrap
+	.checkbox
+		margin-right: rem(37px)
+		&:last-child
+			margin-right: 0
+
+.checkbox
+	label
+		display: inline-block
+		margin: 0
+		position: relative
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: $text
+
+			&:before
+				opacity: 1
+				transform: none
+	span
+		color: #9595A1
+		display: block
+		position: relative
+		padding-left: rem(36px)
+		+tr
+		&:after
+			content: ''
+			position: absolute
+			width: rem(24px)
+			height: rem(24px)
+			border-radius: 0
+			left: 0
+			top: -#{rem(2px)}
+			border: 1px solid #9595A1
+			border-radius: rem(7px)
+			cursor: pointer
+			+tr
+		&:before
+			content: ''
+			position: absolute
+			width: rem(12px)
+			height: rem(12px)
+			border-radius: rem(4px)
+			background-color: $accent
+			top: rem(4px)
+			left: rem(6px)
+			+tr
+			transform: scale(0)
+
+.full-filter-footer
+	display: flex
+	margin-top: rem(38px)
+	flex-grow: 1
+
+.full-filter-left
+	flex-grow: 1
+	padding-right: rem(30px)
+
+.mortgage-block
+	display: inline-block
+	position: relative
+	z-index: 1
+	padding: rem(21px) rem(30px)
+	&:after
+		content: ''
+		position: absolute
+		+tr
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		border-radius: rem(10px)
+		background-color: #f2f2f2
+		z-index: -1
+
+.mortgage-switch
+	.switch-checkbox-label
+		margin-top: rem(2px)
+
+.switch-checkbox
+	display: flex
+	align-items: center
+
+.switch-checkbox-title
+	font-size: rem(32px)
+	line-height: 1
+	margin-right: rem(15px)
+
+.switch-checkbox-label
+	display: inline-block
+	position: relative
+	margin: 0
+	input
+		position: absolute
+		opacity: 0
+		z-index: -1
+		visibility: hidden
+		&:checked + span
+			background-color: #219653
+			&:after
+				transform: translateX(#{rem(21px)})
+	span
+		display: block
+		width: rem(48px)
+		height: rem(27px)
+		border-radius: rem(14px)
+		+tr
+		cursor: pointer
+		background-color: #9595A2
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			width: rem(21px)
+			height: rem(21px)
+			border-radius: 50%
+			background-color: #fff
+			top: rem(3px)
+			left: rem(3px)
+			+tr
+
+.mortgage-form
+	display: none
+	.row
+		padding-top: rem(29px)
+	.form-control
+		background-color: #fff
+	.filter-item
+		margin-bottom: rem(10px)
+
+.filter-range-solo-input.with-label
+	position: relative
+	.form-control
+		padding-left: rem(41px)
+	span
+		position: absolute
+		left: rem(16px)
+		z-index: 1
+		width: rem(20px)
+		top: rem(18px)
+		font-weight: 500
+		color: rgba($text, .4)
+
+.full-filter-right
+	margin-top: auto
+
+.full-filter-btns
+	display: flex
+	align-items: center
+
+.clear-filter
+	color: $text
+	text-decoration: none !important
+	+tr
+	display: inline-block
+	margin-right: rem(32px)
+	white-space: nowrap
+	&:hover
+		color: $accent
+
+#map-popup,
+#contacts-map-popup
+	.popup-block
+		width: 1597px
+		max-width: calc(100vw - 80px)
+
+.popup-map
+	position: relative
+	padding-bottom: 46%
+	border-radius: rem(10px)
+	overflow: hidden
+	> div
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		overflow: hidden
+
+.popup-header
+	display: flex
+	align-items: center
+	margin-bottom: rem(30px)
+	.popup-close
+		margin-bottom: 0
+
+.popup-title
+	margin-right: 20px
+	color: #fff
+	.h3
+		font-weight: normal
+
+.project-mark
+	display: inline-block
+	background-color: #fff
+	height: rem(31px)
+	margin-left: rem(34px)
+	white-space: nowrap
+	border-radius: 0 2px 2px 0
+	line-height: rem(31px)
+	font-size: rem(16px)
+	font-family: $default-font
+	padding-left: rem(28px)
+	padding-right: rem(8px)
+	z-index: -1
+	position: relative
+	cursor: pointer
+	box-shadow: 0px 0px 10px 0px rgba(90, 90, 90, 0.05)
+	margin-top: rem(10px)
+	a
+		color: #2E2E43 !important
+		text-decoration: none !important
+
+.main-window-search
+	display: none
+
+.projects-header-right-icon
+	display: none
+
+.blockquote-author-text-mob
+	display: none
+
+.our-services-link
+	text-align: right
+	display: none
+
+.s-projects-wrapper
+	position: relative
+	overflow: visible !important
+
+.layouts-body-tab
+	display: none
+	&.visible
+		display: block
+
+.select-with-checkboxes
+	.select2-results__option
+		position: relative
+		padding-left: rem(28px)
+		&:after
+			content: ''
+			position: absolute
+			width: rem(18px)
+			height: rem(18px)
+			border-radius: rem(4px)
+			border: 1px solid #9595A2
+			left: 0
+			top: rem(1px)
+			+tr
+		&:before
+			content: ''
+			position: absolute
+			width: rem(18px)
+			height: rem(18px)
+			border-radius: rem(4px)
+			left: 0
+			top: rem(1px)
+			background-image: url(../img/icons/checkmark-red.svg)
+			background-repeat: no-repeat
+			background-position: center
+			opacity: 0
+			+tr
+			transform: scale(0)
+			background-size: rem(12px)
+		&.select2-results__option--selected
+			&:after
+				border-color: $accent
+			&:before
+				opacity: 1
+				transform: scale(1)
+
+.select2-container--default .select2-search--inline .select2-search__field
+	resize: none
+	appearance: none
+
+.select2-container--default
+	.select2-selection--multiple
+		border: none !important
+		border-radius: rem(7px) !important
+		background-color: #F2F2F2
+		padding-bottom: 0
+		height: rem(56px)
+		padding: rem(12px) rem(44px) rem(12px) rem(20px)
+		cursor: pointer !important
+		display: flex
+		align-items: center
+		position: relative
+		&:after
+			content: '\e911'
+			font-family: icon
+			color: $text
+			font-size: rem(12px)
+			+tr
+			display: inline-block
+			position: absolute
+			top: rem(20px)
+			right: rem(20px)
+			+tr
+	&.select2-container--open
+		.select2-selection--multiple
+			&:after
+				transform: rotate(180deg)
+
+.select2-container .select2-selection--multiple .select2-selection__rendered
+	margin-bottom: 0
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+	display: inline !important
+	background-color: transparent !important
+	border: none !important
+	padding: 0 !important
+	margin: 0 !important
+	&:last-child:after
+		content: ''
+	&:after
+		content: ', '
+	button
+		display: none !important
+	span
+		background-color: transparent !important
+		border: none !important
+		border-radius: 0 !important
+		padding: 0 !important
+
+.select2-container .select2-search--inline .select2-search__field
+	padding-top: rem(21px)
+	font-weight: 500
+
+.select2-results__options
+  -webkit-overflow-scrolling: touch
+
+.main-window-global-info
+	flex-grow: 1
+	color: #fff
+	padding-right: rem(170px)
+	padding-left: rem(20px)
+
+.main-window-global-info-title
+	margin-bottom: rem(20px)
+	h1, .h1
+		margin: 0 rem(15px) 0 0
+		line-height: 1.06
+		display: inline
+	.stick
+		transform: translateY(#{rem(-36px)})
+
+.main-window-global-info-address
+	font-weight: normal
+	margin-top: rem(5px)
+	font-size: rem(20px)
+
+.main-window-global-info-list
+	display: flex
+	margin-top: rem(41px)
+	.project-descr-right
+		text-align: left
+		margin-right: rem(39px)
+	.project-price-val
+		font-size: rem(32px)
+	.project-price-info-icon
+		color: rgba(#fff, .6)
+	.project-size
+		color: #fff
+	.project-price
+		margin-bottom: 0
+
+.main-footer-nav
+	flex-grow: 1
+	margin-top: auto
+	margin-bottom: auto
+	white-space: nowrap
+	> ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		display: flex
+		align-items: center
+		> li
+			margin-right: 25px
+	a
+		color: #fff
+		text-decoration: none !important
+		transition: color .3s ease
+		font-size: 16px
+		&:hover,
+		&.active
+			color: rgba(#fff, .6)
+
+.has-child
+	position: relative
+	&.active
+		span
+			&:after
+				transform: rotate(180deg)
+		ul
+			opacity: 1
+			visibility: visible
+			transform: translateY(0)
+	span
+		color: #fff
+		display: inline-flex
+		align-items: center
+		cursor: pointer
+		font-size: 16px
+		&:after
+			content: '\e911'
+			font-family: icon
+			font-size: 10px
+			margin-left: 6px
+			+tr
+			transform: translateY(1px)
+	ul
+		position: absolute
+		bottom: calc(100% + 15px)
+		right: 0
+		border-radius: 7px !important
+		border: none
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+		overflow: hidden
+		font-size: 16px
+		transform: translateY(8px)
+		z-index: 5
+		background-color: #fff
+		list-style-type: none
+		margin: 0
+		padding: 0
+		white-space: nowrap
+		padding: 21px 23px
+		// +tr
+		opacity: 0
+		transform: translateY(5px)
+		visibility: hidden
+		min-width: 251px
+		&.down-view
+			bottom: auto
+			top: calc(100% + 15px)
+		li
+			margin-bottom: 9px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: #000
+			&:hover
+				color: $accent
+
+.main-footer-btn
+	.btn
+		display: block
+		background-color: var(--global-accent-color) !important
+		border-color: var(--global-accent-color) !important
+		&:hover
+			background-color: var(--global-hover-color) !important
+			border-color: var(--global-hover-color) !important
+		&:after
+			display: none !important
+
+.main-window-footer-type-2
+	padding: rem(24px) 0
+
+.s-small-stocks
+	background-color: #F2F2F2
+	padding: rem(30px) 0
+	overflow: hidden
+
+.small-stocks-row
+	display: flex
+	align-items: center
+
+.small-stocks-main-title
+	font-size: rem(25px)
+	font-weight: normal
+
+.small-stocks-slider
+	position: relative
+	.slick-list
+		overflow: visible
+	.slider-next
+		right: calc(100% + 42px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		&.animate-ring
+			svg
+				circle
+					animation-name: ringload
+		svg
+			circle
+				animation-duration: var(--stocks-duration)
+				stroke-dasharray: 119.38 119.38
+				stroke-dashoffset: 119.38
+				animation-timing-function: linear
+	.slider-prev
+		position: absolute
+		right: calc(100% + 95px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+	.slick-slide
+		transition: all 0 ease !important
+	.fade-up
+		.small-stocks-item
+			transform: translateY(-40px)
+	.slick-current
+		.small-stocks-item
+			transform: translateY(0)
+			opacity: 1
+
+.small-stocks-item
+	transform: translateY(40px)
+	opacity: 0
+	transition: all .7s ease
+	display: flex !important
+	align-items: center
+	position: relative
+	&-link
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+
+.small-stocks-img
+	margin-right: rem(23px)
+	img
+		max-width: rem(45px)
+		max-height: rem(45px)
+		object-fit: contain
+
+.small-stocks-title
+	font-size: rem(24px)
+	font-weight: 400
+
+.small-stocks-slider
+	.small-stocks-title
+		color: $accent
+
+.s-res-complex-descr
+	padding: rem(87px) 0 rem(60px)
+
+.res-complex-logo
+	img
+		width: 100%
+		max-width: rem(317px)
+
+.res-complex-descr-videos
+	margin-bottom: rem(74px)
+	.video-block
+		margin-bottom: 0
+
+.res-complex-descr-text
+	font-weight: normal
+	max-width: 579px
+	p
+		font-size: 20px
+		&:last-child
+			margin-bottom: 0
+		&.big-text
+			font-size: 26px
+			margin-bottom: 25px
+	.about-in-nmbrs
+		display: flex
+		flex-wrap: wrap
+		margin: 0 rem(-18px) rem(50px) !important
+	.about-in-nmbrs-item
+		margin-right: 0
+		padding: 0 rem(18px)
+		width: 33.33333%
+		flex-shrink: 0
+		margin-bottom: rem(50px)
+		max-width: none
+		span
+			font-size: rem(62px)
+
+.select-layout-filter
+	margin-bottom: rem(52px)
+	.filter-checkbox
+		justify-content: center
+	.filter-checkbox-label
+		&.big
+			span
+				padding: 0 rem(29px)
+
+.s-apartment-types
+	padding: rem(63px) 0 rem(45px)
+
+.with-view-types
+	img
+		display: none
+
+.layout-image-item-view
+	display: flex
+	align-items: center
+	top: rem(24px)
+	left: rem(30px)
+	position: absolute
+	z-index: 1
+	a
+		color: $text
+		+tr
+		text-decoration: none !important
+		white-space: nowrap
+		height: rem(32px)
+		line-height: rem(32px)
+		border-radius: rem(7px)
+		padding: 0 rem(11px)
+		&:hover
+			color: $accent
+		&.active
+			color: $accent
+			background-color: #fff
+
+.layout-info-list
+	margin-bottom: rem(25px)
+	margin-right: rem(58px)
+	max-width: 360px
+	width: 100%
+
+.layout-info-list-item
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: rem(20px)
+	span
+		&:last-child
+			font-weight: bold
+			text-align: right
+
+.layout-big-price
+	font-weight: bold
+	font-size: rem(32px)
+	margin-bottom: rem(30px)
+	white-space: nowrap
+
+.s-master-plan
+	position: relative
+	padding-top: 52px
+
+.master-plan-img
+	position: relative
+	img
+		width: 100%
+		display: block
+	.btn
+		position: absolute
+		top: rem(40px)
+		right: rem(40px)
+		z-index: 1
+
+.master-plan-header
+	margin-bottom: 34px
+	.h2
+		font-weight: normal
+		margin: 0
+
+.cardinal-points
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	right: rem(62px)
+	bottom: rem(62px)
+	img
+		width: 77px
+		flex-shrink: 0
+
+.s-photos
+	position: relative
+	.section-title
+		position: absolute
+		z-index: 1
+		left: 0
+		top: rem(55px)
+		width: 100%
+		color: #fff
+
+.photos-gallery
+	width: 100%
+	height: 56.25vw
+	object-fit: cover
+	.slick-dots
+		align-items: center
+		position: absolute
+		bottom: 10px
+		left: 0
+		width: 100%
+		list-style-type: none
+		padding: 0
+		margin: 0
+		justify-content: center
+		display: none !important
+		li
+			button
+				font-size: 0
+				width: 4px
+				height: 4px
+				flex-shrink: 0
+				padding: 0
+				border: none
+				outline: none !important
+				background-color: #ccc
+				margin: 0 3px
+				border-radius: 50%
+				+tr
+			&.slick-active
+				button
+					background-color: #000
+
+.photos-gallery-thumbs-wrapper
+	position: absolute
+	bottom: rem(55px)
+	z-index: 2
+
+.photos-gallery-thumbs
+	margin-left: calc(25% + #{rem(30px)})
+	position: relative
+	.slick-list
+		overflow: visible
+	img
+		height: rem(82px)
+		width: rem(82px) !important
+		border-radius: rem(7px)
+		object-fit: cover
+		+tr
+		opacity: 0
+		cursor: pointer
+	.slick-slide
+		position: relative
+		padding: 0 rem(7px)
+		&:after
+			content: '\e91d'
+			font-size: rem(38px)
+			font-family: icon
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			+tr
+			opacity: 0
+			color: #fff
+			width: rem(82px)
+			height: rem(82px)
+			border-radius: rem(7px)
+			background-color: rgba(0, 0, 0, 0.4)
+			z-index: 1
+			text-align: center
+			line-height: rem(82px)
+			cursor: pointer
+		&.slick-current
+			&:after
+				opacity: 1
+			img
+				opacity: 1
+			& ~ .slick-slide
+				img
+					opacity: 1
+	.slider-next
+		right: calc(100% + 42px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 2
+		color: #fff
+		// &.animate-ring
+		// 	svg
+		// 		circle
+		// 			animation-name: ringload
+		// svg
+		// 	circle
+		// 		animation-duration: var(--stocks-duration)
+		// 		stroke-dasharray: 119.38 119.38
+		// 		stroke-dashoffset: 119.38
+		// 		animation-timing-function: linear
+		svg
+			circle
+				fill: rgba(#fff, .3)
+	.slider-prev
+		position: absolute
+		right: calc(100% + 95px)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 2
+		color: #fff
+
+.live-in-rescom-img
+	position: relative
+	padding-bottom: 100%
+	margin-bottom: rem(27px)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+		border-radius: rem(10px)
+
+.slider-live-in-rescom
+	.slick-list
+		margin: 0 -#{rem(15px)}
+		overflow: visible
+	.slick-slide
+		padding: 0 rem(15px)
+		opacity: 0
+		transition: all .5s ease
+		&.slick-active
+			opacity: 1
+			& + .slick-slide
+				opacity: 1
+		&.prev-slide
+			transform: translateX(100%)
+
+.loader-ellipsis
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	display: flex
+	align-items: center
+	justify-content: center
+	+tr
+	visibility: hidden
+	opacity: 0
+	span
+		position: relative
+		width: 6px
+		height: 6px
+		display: block
+		border-radius: 50%
+		flex-shrink: 0
+		animation: blinking 1.2s linear 0s infinite
+		animation-delay: .2s
+		background-color: rgba(#fff, .2)
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			animation: blinking 1.2s linear 0s infinite
+			background-color: rgba(#fff, .2)
+		&:before
+			left: -10px
+			animation-delay: 0s
+		&:after
+			right: -10px
+			animation-delay: .4s
+
+@keyframes blinking
+	0%
+		background-color: rgba(#fff, .2)
+	50%
+		background-color: rgba(#fff, 1)
+	100%
+		background-color: rgba(#fff, .2)
+
+.videos-slider-item-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+
+.videos-item-big
+	grid-column: 2 span
+	grid-row: 3 span
+	min-height: 100%
+	.video-block
+		min-height: 100%
+		.video-play
+			white-space: nowrap
+
+.videos-item
+	position: relative
+	border-radius: rem(7px)
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding: rem(30px) rem(30px) rem(25px)
+	height: 100%
+	min-height: rem(157px)
+	&:hover
+		.videos-item-bg
+			img
+				transform: scale(1.05)
+	&:after
+		content: ''
+		border-radius: rem(7px)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#000, .5)
+		z-index: 1
+	.stick
+		position: relative
+		z-index: 2
+		margin-bottom: auto
+
+.videos-item-bg
+	img
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		border-radius: rem(7px)
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+
+.videos-item-text
+	position: relative
+	z-index: 2
+	margin-top: 20px
+	color: #fff
+
+.videos-slider
+	.slick-slide
+		padding: 0 rem(15px)
+	.slick-list
+		margin: 0 -#{rem(15px)}
+
+.contacts-form-descr
+	margin-bottom: rem(39px)
+	font-size: rem(18px)
+	margin-top: rem(15px)
+	margin-bottom: rem(-30px)
+	img
+		max-width: rem(28px)
+		max-height: rem(28px)
+		object-fit: contain
+		margin-left: rem(4px)
+
+.videos-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 3
+
+.s-rescom-advantages
+	padding: rem(82px) 0 rem(77px)
+	position: relative
+	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $accent
+		opacity: .05
+		z-index: -1
+
+.rescom-advantages-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(55px) rem(85px)
+
+.rescom-advantages-icon
+	display: inline-block
+	position: relative
+	width: rem(65px)
+	height: rem(65px)
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: rem(23px)
+	// &:after
+	// 	content: ''
+	// 	position: absolute
+	// 	bottom: rem(-20px)
+	// 	right: rem(-30px)
+	// 	background-color: var(--advantage-icon-bg-color)
+	// 	width: rem(77px)
+	// 	height: rem(77px)
+	// 	border-radius: 50% rem(15px) 50% rem(15px)
+	// 	+tr
+	svg
+		max-width: rem(65px)
+		max-height: rem(65px)
+		flex-shrink: 0
+		position: relative
+		z-index: 1
+		.replace-stroke
+			stroke: $accent
+		.replace-fill
+			fill: $accent
+	// &.square
+	// 	&:after
+	// 		width: (50px)
+	// 		height: rem(57px)
+	// 		border-radius: rem(5px)
+	// 		bottom: rem(-10px)
+	// 		right: rem(-10px)
+	// &.triangle
+	// 	&:after
+	// 		width: rem(62px)
+	// 		height: rem(104px)
+	// 		background-color: transparent !important
+	// 		border-width: rem(52px) rem(31px) rem(52px) rem(31px)
+	// 		border-style: solid
+	// 		border-color: transparent
+	// 		border-bottom-color: var(--advantage-icon-bg-color)
+	// 		border-radius: 0 !important
+	// 		bottom: rem(10px)
+	// 		right: rem(-10px)
+	// &.circle
+	// 	&:after
+	// 		width: rem(52px)
+	// 		height: rem(52px)
+	// 		border-radius: 50% !important
+	// 		bottom: rem(10px)
+	// 		right: rem(-10px)
+
+.rescom-advantages-icon-bg
+	position: absolute
+	bottom: rem(-20px)
+	right: rem(-40px)
+	width: rem(77px)
+	height: rem(77px)
+	img
+		max-width: 100%
+		max-height: 100%
+		object-fit: contain
+	&.type-2
+		bottom: rem(-10px)
+		right: rem(-30px)
+
+.rescom-advantages-title
+	font-size: rem(26px)
+	font-weight: normal
+	line-height: 1.461
+	max-width: rem(350px)
+
+.s-position
+	padding: rem(70px) 0 rem(88px)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top 0 right 0
+	.section-title
+		.h2
+			margin-bottom: rem(40px)
+
+.position-info
+	margin-bottom: rem(120px)
+
+.position-info-content
+	max-width: rem(746px)
+	p
+		margin-bottom: rem(32px)
+		font-size: rem(26px)
+		line-height: 1.461
+		font-weight: normal
+		a
+			color: $accent !important
+			text-decoration: none !important
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 100%
+				height: 1px
+				background-color: $accent
+				+tr
+			&:hover
+				&:after
+					width: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		font-size: rem(20px)
+		li
+			font-weight: normal
+			margin-bottom: rem(15px)
+			&:last-child
+				margin-bottom: 0
+			span
+				font-weight: 600
+
+.slick-track
+	margin-left: 0
+	margin-right: 0
+
+.position-slider
+	.news-item
+		min-height: rem(254px)
+
+.s-global-info
+	padding-top: rem(110px)
+	overflow: visible
+	.text-slider-wrapper
+		margin-bottom: rem(78px)
+		overflow: hidden
+		width: 100vw
+
+.global-info-nav
+	display: flex
+	align-items: flex-start
+	flex-direction: column
+	position: sticky
+	top: rem(134px)
+	padding-left: rem(28px)
+	&.fixed
+		position: fixed
+		max-width: 20%
+
+.global-info-nav-link
+	+tr
+	font-size: 16px
+	color: #9595A1
+	text-decoration: none !important
+	margin: 0 0 rem(8px)
+	position: relative
+	display: inline-block
+	&:after
+		content: ''
+		position: absolute
+		left: -#{rem(17px)}
+		border-radius: 50%
+		width: 7px
+		height: 7px
+		background-color: $accent
+		top: 50%
+		+tr
+		transform: translate3d(#{rem(17px)}, 0, 0)
+		margin-top: -4px
+		opacity: 0
+		+tr
+	&:hover,
+	&.active
+		color: $accent
+		&:after
+			opacity: 1
+			transform: none
+	&.skip
+		margin-top: rem(37px)
+		display: flex
+		align-items: center
+		span
+			font-size: rem(9px)
+			margin-left: rem(6px)
+
+.block-info-grid-wrapper
+	margin-bottom: rem(100px)
+
+.block-info-grid
+	display: grid
+	grid-gap: 33px 30px
+	grid-template-columns: repeat(3, 1fr)
+	.block-info-title
+		grid-column: span 3
+	&.type-2
+		margin-bottom: rem(100px)
+
+.block-info
+	width: 100%
+	position: relative
+	min-height: rem(275px)
+	display: flex
+	flex-direction: column
+	.stick
+		margin-bottom: rem(20px)
+		margin-right: auto
+	&:hover
+		.block-info-img
+			img
+				// transform: scale(1.05)
+	&.big
+		grid-column: span 3
+		min-height: rem(614px)
+		margin-bottom: rem(33px)
+		.block-info-text
+			.h3
+				margin-top: 0
+				margin-bottom: auto
+				font-size: rem(80px)
+				font-weight: normal
+				flex-grow: 1
+				line-height: 1
+			p
+				font-size: rem(26px)
+				line-height: 1.461
+				max-width: rem(821px)
+				font-weight: normal
+	&.medium
+		grid-column: span 2
+	&.type-2
+		min-height: rem(502px)
+		.block-info-text
+			.h3
+				font-size: rem(28px)
+				max-width: rem(493px)
+
+.block-info-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(59.86deg, rgba(0, 0, 0, 0.51) 40.04%, rgba(0, 0, 0, 0) 100.61%)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+		border-radius: rem(10px)
+
+.block-info-text
+	position: relative
+	display: flex
+	flex-direction: column
+	z-index: 2
+	color: #fff
+	padding: rem(32px) rem(34px)
+	justify-content: flex-end
+	flex-grow: 1
+	.h3
+		font-size: rem(32px)
+		max-width: rem(280px)
+		margin-top: auto
+
+.block-info-chess
+	margin-bottom: rem(6px)
+	&.reverse
+		.block-info-chess-item
+			flex-direction: row-reverse
+			.block-info-chess-item-text
+				padding: 0 rem(15px) 0 rem(59px)
+			&:nth-child(even)
+				flex-direction: row
+				.block-info-chess-item-text
+					padding: 0 rem(26px) 0 rem(15px)
+
+.block-info-chess-item
+	display: flex
+	margin: 0 rem(-15px) rem(94px)
+	&:nth-child(even)
+		flex-direction: row-reverse
+		.block-info-chess-item-text
+			padding: 0 rem(15px) 0 rem(59px)
+
+.block-info-chess-item-text
+	padding: 0 rem(26px) 0 rem(15px)
+	width: 50%
+	flex-shrink: 0
+	font-weight: normal
+	margin-top: auto
+	margin-bottom: auto
+	.h2
+		margin-bottom: rem(40px)
+	p
+		margin-bottom: rem(50px)
+		font-size: rem(20px)
+		&.big-text
+			font-size: rem(26px)
+			margin-bottom: rem(32px)
+	.btn
+		margin-top: rem(5px)
+	.red
+		color: $red
+	ul
+		list-style-type: none
+		padding: 0
+		margin: rem(42px) 0
+		font-size: rem(20px)
+		li
+			position: relative
+			margin-bottom: rem(18px)
+			padding-left: rem(16px)
+			&:after
+				content: ''
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				position: absolute
+				left: 0
+				top: rem(10px)
+				background-color: $accent
+
+.block-info-chess-item-img
+	flex-shrink: 0
+	width: 50%
+	padding: 0 rem(15px)
+	img
+		width: 100%
+		border-radius: 10px
+
+.block-info-big-banner
+	position: relative
+	margin-bottom: rem(50px)
+	&:hover
+		.block-info-big-banner-img
+			img
+				// transform: scale(1.05)
+
+.block-info-big-banner-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(61.61deg, #000000 -49.72%, rgba(0, 0, 0, 0) 65.99%)
+
+.block-info-big-banner-text
+	position: relative
+	z-index: 1
+	color: #fff
+	padding: rem(70px) rem(74px) rem(62px)
+	> *
+		max-width: rem(559px)
+	.h1
+		font-weight: normal
+		margin-bottom: rem(38px)
+		line-height: .9
+	p
+		margin: 0
+		font-size: rem(26px)
+		font-weight: normal
+		line-height: 1.45
+
+.block-info-leftright-text
+	margin-bottom: rem(47px)
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: rem(30px)
+	font-size: rem(20px)
+	font-weight: normal
+	p
+		margin: 0
+		max-width: rem(553px)
+	.block-info-title
+		grid-column: span 2
+		margin: 0 !important
+
+.block-info-icontext
+	display: flex
+	margin-left: rem(75px)
+	.rescom-advantages-icon
+		margin-right: rem(60px)
+		margin-top: rem(-5px)
+	p
+		max-width: rem(321px)
+
+.block-info-title
+	margin-bottom: rem(15px)
+	.h2
+		font-weight: normal
+		margin: 0
+	& + .block-info-grid.type-2
+		margin-top: rem(50px)
+	& + .block-info-img-with-list-grid
+		margin-top: rem(50px)
+
+.big-text
+	font-size: rem(26px)
+	.red
+		color: $red
+
+.block-info-img-with-list-grid
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: rem(30px)
+	grid-auto-rows: 1fr
+	margin-bottom: rem(100px)
+	// width: 100%
+	min-width: 0
+	.block-info-title
+		grid-column: span 2
+	&.no-auto-row
+		grid-auto-rows: auto
+	&.type-3
+		display: flex
+		grid-gap: 0
+		margin-left: rem(-15px)
+		margin-right: rem(-15px)
+		.block-info-type-3
+			width: 50%
+			padding: 0 rem(15px)
+
+.block-info-img-with-list
+	position: relative
+	z-index: 1
+	color: #fff
+	&:hover
+		.block-info-img-with-list-img
+			img
+				// transform: scale(1.05)
+
+.block-info-img-with-list-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	z-index: -1
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+		+tr
+		border-radius: rem(10px)
+	&:after
+		content: ''
+		position: absolute
+		z-index: 1
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(47.36deg, rgba(0, 0, 0, 0.35) 85.4%, rgba(0, 0, 0, 0) 104.78%)
+
+.block-info-img-with-list-text
+	padding: rem(34px) rem(34px) rem(78px) rem(43px)
+	color: #fff
+	font-weight: normal
+	font-size: rem(20px)
+	line-height: 1.35
+	min-height: rem(321px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		max-width: rem(441px)
+	li
+		position: relative
+		margin-bottom: rem(10px)
+		padding-left: rem(17px)
+		&:after
+			content: ''
+			position: absolute
+			width: rem(6px)
+			height: rem(6px)
+			border-radius: 50%
+			background-color: #fff
+			left: 0
+			top: rem(11px)
+		&:last-child
+			margin-bottom: 0
+
+.block-info-type-3
+	flex-shrink: 0
+	min-width: 0
+	.h2
+		margin-bottom: rem(40px)
+
+.block-info-type-3-img
+	width: 100%
+	border-radius: rem(10px)
+	overflow: hidden
+	margin-bottom: rem(40px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	img
+		width: 100%
+	.slider-nav-arrow
+		position: absolute
+		bottom: rem(32px)
+		z-index: 1
+	.slider-next
+		right: 13px
+		span
+			color: #fff
+		svg
+			circle
+				stroke: #fff
+		&:after
+			border-color: #fff
+			background-color: rgba(#fff, .3)
+	.slider-prev
+		right: 62px
+		span
+			color: #fff
+
+.block-info-type-3-text
+	font-weight: normal
+	.mute-text
+		margin-bottom: rem(21px)
+		font-size: rem(20px)
+		color: #9595A1
+		text-transform: uppercase
+	p
+		margin-bottom: rem(18px)
+		font-size: rem(26px)
+		line-height: 1.451
+	.btn
+		margin-top: rem(12px)
+	.red
+		color: #D90002
+	> *:last-child
+		margin-bottom: 0 !important
+
+.block-info-big
+	margin-bottom: rem(93px)
+	.h2
+		margin-bottom: rem(43px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+		display: block
+		margin-bottom: rem(49px)
+
+.block-info-big-text
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: 30px
+	.block-info-type-3-text
+		p
+			max-width: rem(495px)
+
+.block-info-nmbrs
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+	margin-top: rem(27px)
+
+.block-info-nmbrs-item-qnt
+	font-size: rem(62px)
+	line-height: 1
+	font-weight: 500
+	margin-bottom: rem(5px)
+	&.accent
+		color: $accent
+
+.block-info-nmbrs-item-title
+	max-width: rem(160px)
+	.red
+		color: $red
+	.accent
+		color: $accent
+
+.block-info-text-imgleft
+	display: flex
+	align-items: center
+	margin: 0 rem(-15px) rem(100px)
+
+.block-info-text-imgleft-img
+	width: 50%
+	padding: 0 rem(15px)
+	flex-shrink: 0
+	img
+		width: 100%
+		border-radius: rem(10px)
+
+.block-info-text-imgleft-text
+	width: 50%
+	padding: 0 rem(15px) 0 rem(65px)
+	flex-shrink: 0
+	line-height: 1.451
+	font-weight: normal
+	.h2
+		margin-bottom: rem(42px)
+	.red
+		color: $red
+	p
+		max-width: rem(520px)
+		font-size: rem(26px)
+	.btn
+		margin-top: rem(30px)
+
+.block-info-card
+	border-radius: rem(10px)
+	background-color: #fff
+	overflow: hidden
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+
+.block-info-card-header
+	position: relative
+	display: flex
+	flex-direction: column
+	height: rem(353px)
+	z-index: 1
+	align-items: flex-start
+	padding: rem(28px) rem(36px) rem(32px)
+	color: #fff
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(15.64deg, rgba(0, 0, 0, 0.35) 1.21%, rgba(196, 196, 196, 0) 55.55%, rgba(0, 0, 0, 0) 55.55%)
+		z-index: -1
+	img
+		position: absolute
+		z-index: -2
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		object-fit: cover
+		border-radius: rem(10px) rem(10px) 0 0
+	.h3
+		max-width: rem(468px)
+
+.block-info-card-body
+	font-size: rem(20px)
+	font-weight: normal
+	padding: rem(40px) rem(81px) rem(64px) rem(37px)
+	> *:last-child
+		margin-bottom: 0
+
+.layout-investments
+	margin-top: auto
+	border-radius: rem(7px)
+	border: 1px solid #D6D6DA
+	padding: rem(22px) rem(25px) rem(25px)
+	width: calc(100% - 1px)
+	background-image: url(../img/diagram-bg.svg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: right 0 bottom 0
+	&.orange
+		background-image: url(../img/diagram-bg--orange.svg)
+	&.dark
+		background-image: url(../img/diagram-bg--dark.svg)
+	&.blue
+		background-image: url(../img/diagram-bg--blue.svg)
+	&.lightgreen
+		background-image: url(../img/diagram-bg--lightgreen.svg)
+	&.darkblue
+		background-image: url(../img/diagram-bg--darkblue.svg)
+	.h6
+		font-size: rem(18px)
+		margin-bottom: rem(17px)
+		font-weight: 500
+	p
+		font-size: rem(14px)
+		line-height: 1.3
+		max-width: rem(280px)
+
+.layout-investments-footer
+	display: flex
+	align-items: flex-end
+
+.layout-investments-price
+	display: flex
+	align-items: center
+	flex-grow: 1
+	padding-right: rem(20px)
+	white-space: nowrap
+
+.layout-investments-price-res
+	font-weight: 600
+	margin-right: rem(10px)
+	letter-spacing: -.02em
+	font-size: rem(24px)
+
+.layout-investments-price-percent
+	height: rem(25px)
+	line-height: rem(25px)
+	border-radius: rem(7px)
+	padding: 0 rem(6px)
+	font-size: rem(16px)
+	letter-spacing: -.02em
+	font-weight: bold
+	background-color: $accent
+	color: #fff
+
+.layout-investments-footer
+	padding-right: rem(45px)
+
+.layout-investments-link
+	position: absolute
+	z-index: 1
+	background-color: #fff
+	width: rem(35px)
+	height: rem(35px)
+	right: rem(20px)
+	bottom: rem(20px)
+	border-radius: 50%
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-color: $text
+	&:after
+		width: 2px
+		height: rem(16px)
+	&:before
+		height: 2px
+		width: rem(16px)
+
+.other-projects-item
+	position: relative
+	&:hover
+		.other-projects-item-img
+			img
+				transform: scale(1.05)
+
+.other-other-projects-item-link
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.other-projects-item-img
+	position: relative
+	padding-bottom: 63.66%
+	border-radius: rem(10px)
+	margin-bottom: rem(22px)
+	.other-projects-item-img-block
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		object-fit: cover
+		border-radius: rem(10px)
+		overflow: hidden
+		-webkit-mask-image: -webkit-radial-gradient(white, black)
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border-radius: rem(10px)
+			+tr
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 44.03%, rgba(0, 0, 0, 0.5) 100%)
+		border-radius: rem(10px)
+	.stick
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+		top: rem(13px)
+		left: rem(16px)
+	.project-price
+		position: absolute
+		right: rem(20px)
+		bottom: rem(17px)
+		z-index: 1
+		margin: 0
+	.project-price-val
+		color: #fff
+	.project-price-info-icon
+		color: rgba(#fff, .5)
+
+.menu
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 500
+	// background: linear-gradient(94.28deg, rgba(255, 255, 255, 0.4) -592.16%, rgba(255, 255, 255, 0) 101.05%)
+	background-color: rgba(#000, .2)
+	backdrop-filter: blur(60px)
+	transition: all .5s ease
+	transform: translateY(-120%)
+	.container
+		position: relative
+	&.opened
+		transform: translateY(0)
+		.menu-list-big,
+		.menu-body-item-title,
+		.menu-list
+			transform: translateX(0)
+		.menu-body-item
+			&:after
+				transform: scaleY(1)
+
+.menu-header
+	position: fixed
+	top: rem(36px)
+	left: 0
+	width: 100%
+	z-index: 1
+	.container
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+.close-menu-btn
+	font-size: rem(24px)
+	color: #fff !important
+	text-decoration: none !important
+	+tr
+	display: flex
+	span
+		display: flex
+	&:hover
+		transform: rotate(180deg)
+
+.menu-body
+	display: flex
+
+.menu-body-item
+	width: 25%
+	flex-shrink: 0
+	padding: rem(123px) rem(57px) rem(82px)
+	font-weight: normal
+	color: #fff
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 1px
+		height: 100%
+		background-color: rgba(255, 255, 255, 0.15)
+		transition: all .85s ease
+		transform-origin: left bottom
+		transform: scaleY(0)
+	&:nth-child(1)
+		padding-left: rem(64px)
+	&:nth-child(2)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .6s
+		&:after
+			transition-delay: .15s
+	&:nth-child(3)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .7s
+		&:after
+			transition-delay: .3s
+	&:nth-child(4)
+		border: none
+		padding-right: rem(64px)
+		.menu-body-item-title,
+		.menu-list
+			transition-delay: .8s
+		&:after
+			transition-delay: .45s
+
+.menu-list-big
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	transform: translateX(-100%)
+	transition: all .85s ease
+	transition-delay: .40s
+	a
+		font-size: rem(28px)
+		color: #fff !important
+		text-decoration: none !important
+		margin-bottom: rem(23px)
+		+tr
+		&:hover
+			opacity: 0.7
+			transform: translateX(5px)
+		&:last-child
+			margin-bottom: 0
+
+.menu-body-item-title
+	font-size: rem(28px)
+	margin-bottom: rem(31px)
+	transition: all .85s ease
+	transform: translateX(-100%)
+
+.menu-list
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	transition: all .85s ease
+	transform: translateX(-100%)
+	&.hovered
+		a
+			opacity: 0.3
+	a
+		font-size: rem(20px)
+		color: #fff	!important
+		text-decoration: none !important
+		+tr
+		padding-bottom: rem(15px)
+		opacity: 0.7
+		&:last-child
+			padding-bottom: 0
+		&:hover
+			opacity: 1
+
+.menu-body-item-wrapper
+	overflow: hidden
+
+.page-content
+	padding-top: rem(209px)
+	font-weight: normal
+
+.page-title
+	margin-bottom: rem(100px)
+	h1, .h1
+		font-size: rem(64px)
+		font-weight: normal
+		line-height: 1.1
+		margin: 0
+	p
+		color: #9595A1
+		font-size: rem(25px)
+		margin-top: rem(10px)
+
+.s-sales-offices
+	padding-bottom: rem(44px)
+
+.sales-offices-contacts
+	margin-bottom: rem(42px)
+	.page-title
+		margin-bottom: 0
+
+.contacts-data
+	padding-top: rem(12px)
+	display: flex
+
+.contacts-data-left
+	flex-grow: 1
+	margin-right: rem(30px)
+
+.contacts-links
+	.contacts-phone
+		margin-bottom: rem(7px)
+
+.contacts-phone
+	margin-bottom: rem(24px)
+	p
+		margin: 0
+		font-size: rem(12px)
+		color: rgba($text, .5)
+
+.contacts-worktime
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(3px)
+		color: rgba($text, .9)
+	p
+		max-width: rem(251px)
+		color: rgba($text, .5)
+
+.contacts-data-right
+	white-space: nowrap
+	margin-right: rem(114px)
+	.h6
+		color: rgba($text, .5)
+		margin-bottom: rem(10px)
+
+.contacts-soc
+	display: flex
+	align-items: center
+	a
+		font-size: 20px
+		+tr
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		margin-right: rem(26px)
+		color: #9595A2
+		text-decoration: none !important
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $accent
+
+.sales-offices
+	display: flex
+
+.sales-offices-nav
+	width: 25%
+	padding-right: rem(15px)
+	max-height: 795px
+	overflow: hidden auto
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+		border-radius: 3px
+		background-color: #eee
+	&::-webkit-scrollbar-thumb
+		background-color: #a9a9a9
+		border-radius: 3px
+
+.sales-offices-nav-item
+	cursor: pointer
+	padding: rem(16px) rem(28px)
+	border-radius: rem(7px)
+	+tr
+	&.active,
+	&:hover
+		background-color: #F3F3F3
+	.h6
+		margin-bottom: rem(9px)
+		font-size: rem(20px)
+		font-weight: 500
+		line-height: 1.1
+	p
+		line-height: 1.1
+		margin: 0
+		color: rgba($text, .5)
+
+.sales-offices-map-wrapper
+	margin-left: rem(15px)
+	height: rem(795px)
+	position: relative
+	flex-grow: 1
+	overflow: hidden
+
+.sales-offices-map
+	position: absolute
+	left: 0
+	width: 100%
+	height: 100%
+	top: 0
+	border-radius: rem(12px)
+	overflow: hidden
+
+.sales-offices-map-balloon
+	position: relative
+	z-index: 1
+	background-color: #fff
+	border-radius: rem(7px)
+	overflow: hidden
+	box-shadow: 1px 4px 19px rgba(0, 0, 0, 0.03)
+	margin: rem(55px) 0 rem(54px) rem(52px)
+	width: rem(401px)
+	max-height: calc(100% - #{rem(109px)})
+	overflow: hidden
+	display: flex
+	flex-direction: column
+	transition: all .4s ease
+	opacity: 0
+	transform: translateX(-50px)
+	visibility: hidden
+	&.opened
+		opacity: 1
+		transform: translateX(0)
+		visibility: visible
+
+.sales-offices-map-balloon-close
+	position: absolute
+	top: 15px
+	right: 15px
+	color: #000
+	cursor: pointer
+	z-index: 1
+	font-size: 20px
+
+.sales-offices-map-balloon-body
+	display: flex
+	flex-grow: 1
+	flex-direction: column
+	overflow-y: auto
+
+.sales-offices-map-balloon-img
+	img
+		height: rem(280px)
+		width: 100%
+		object-fit: cover
+
+.sales-offices-map-balloon-content
+	flex-grow: 1
+	overflow: hidden auto
+	padding: rem(27px) rem(32px) rem(32px)
+	.h5
+		font-weight: 500
+		font-size: rem(24px)
+		margin-bottom: rem(13px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(20px)
+		font-weight: normal
+		li
+			margin-bottom: rem(8px)
+			display: flex
+			span
+				&:first-child
+					width: rem(106px)
+					padding-right: rem(10px)
+					color: rgba($text, .5)
+					white-space: nowrap
+					flex-shrink: 0
+				&:last-child
+					b
+						font-weight: 600
+					a
+						color: $text
+						+tr
+						text-decoration: none !important
+						&:hover
+							color: $accent
+	.btn
+		margin-top: rem(30px)
+
+.map-marker-logo
+	position: absolute
+	top: 16px
+	left: 14px
+	width: 60px
+	height: 60px
+	object-fit: contain
+
+.s-contacts-type-2
+	.contacts-form-block
+		margin-right: 0
+	.form-footer-row p
+		max-width: 330px
+	.contacts-list
+		padding-left: rem(100px)
+
+.hide-on-desktop
+	visibility: hidden
+	opacity: 0
+
+.global-info-blocks
+	overflow: hidden
+	max-width: calc(100% + 30px)
+	margin-left: -15px
+	margin-right: -15px
+	padding-left: 15px
+	padding-right: 15px
+
+.ul-2-col
+	column-count: 2
+	li
+		overflow: hidden
+		break-inside: avoid-column
+
+.block-info-big-img-with-text
+	margin-bottom: rem(100px)
+	.h2
+		margin-bottom: rem(50px)
+	img
+		width: 100%
+		display: block
+		border-radius: rem(10px)
+		margin-bottom: rem(29px)
+
+.block-info-big-img-with-text-row
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: rem(30px)
+
+.popup-block--callback
+	width: rem(750px)
+	background-color: #F2F2F2
+	border-radius: 10px
+	max-width: calc(100% - 20px)
+	.popup-header
+		position: relative
+		margin: 0
+		padding: 0
+	.popup-close
+		width: rem(48px)
+		height: rem(48px)
+		background-color: #fff
+		border-radius: 50px
+		color: $text
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: scale(1) !important
+		position: absolute
+		top: rem(-25px)
+		right: rem(-24px)
+		+tr
+		z-index: 2
+		&:hover
+			transform: rotate(90deg) !important
+		&:after
+			font-size: rem(16px)
+			line-height: 1
+	.contacts-form-block
+		margin: 0
+		background-color: transparent
+	.contacts-form-left
+		min-width: 64%
+
+.s-stocks-grid
+	overflow: visible
+	padding-bottom: rem(40px)
+
+.nav-links
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: sticky
+	top: rem(40px)
+
+.nav-link
+	+tr
+	font-size: 16px
+	color: #171723
+	text-decoration: none !important
+	margin: 0 0 rem(8px)
+	position: relative
+	display: inline-block
+	font-weight: 500
+	&:after
+		content: ''
+		position: absolute
+		left: -#{rem(17px)}
+		border-radius: 50%
+		width: 7px
+		height: 7px
+		background-color: $accent
+		top: 50%
+		+tr
+		transform: translate3d(#{rem(17px)}, 0, 0)
+		margin-top: -4px
+		opacity: 0
+		+tr
+	&:hover,
+	&.active
+		color: $accent
+		&:after
+			opacity: 1
+			transform: none
+
+.stocks-grid
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: rem(30px)
+	grid-auto-rows: 1fr
+	margin-bottom: rem(30px)
+
+.stocks-item
+	border-radius: rem(10px)
+	overflow: hidden
+	position: relative
+	min-height: rem(288px)
+	&:hover
+		.stocks-item-img
+			img
+				transform: scale(1.05)
+	&.no-gradient
+		.stocks-item-img
+			&:after
+				display: none
+		.stocks-item-content
+			color: $text
+	&.dark
+		background-color: #171723
+
+.stocks-item-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.stocks-item-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 0
+	overflow: hidden
+	border-radius: rem(10px)
+	img
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		+tr
+		display: block
+		object-fit: cover
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: rem(10px)
+		background: linear-gradient(301.11deg, rgba(0, 0, 0, 0.2) 36.01%, rgba(0, 0, 0, 0.5) 84.11%)
+
+.stocks-item-content
+	padding: rem(24px) rem(21px)
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: relative
+	z-index: 1
+	color: #fff
+	height: 100%
+	.stick
+		margin-bottom: rem(16px)
+	.h4
+		max-width: rem(347px)
+	.btn
+		margin-left: auto
+		margin-top: auto
+
+.mailing-block
+	// grid-row: span 2
+	grid-column-start: 3
+	grid-column-end: 4
+	grid-row-start: 1
+	grid-row-end: 3
+
+.mailing-form
+	background-color: #171723
+	border-radius: rem(10px)
+	padding: rem(40px) rem(18px)
+	color: #fff
+	position: relative
+	height: 100%
+	.form-control
+		border-radius: rem(7px)
+		background-color: #fff
+	.form-footer-row
+		p
+			a
+				text-decoration: none !important
+
+.mailing-icon
+	display: inline-block
+	position: relative
+	margin-bottom: rem(59px)
+	width: rem(68px)
+	height: rem(68px)
+	flex-shrink: 0
+	img
+		max-width: 100%
+		position: relative
+		z-index: 1
+		display: block
+	&:after
+		content: ''
+		position: absolute
+		right: rem(-36px)
+		bottom: rem(-21px)
+		z-index: 0
+		width: rem(77px)
+		height: rem(77px)
+		border-radius: 50% rem(10px) 50% rem(10px)
+		background-color: #222231
+
+.mailing-title
+	font-size: rem(24px)
+	font-weight: 600
+	line-height: 1.33333
+	margin-bottom: rem(45px)
+
+.mailing-thanks
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: rem(10px)
+	padding: rem(40px) rem(18px)
+	background-color: #171723
+	z-index: 2
+	transition: all .5s ease
+	opacity: 0
+	transform: scale(.95)
+	visibility: hidden
+	&.opened
+		visibility: visible
+		opacity: 1
+		transform: scale(1)
+	.mailing-icon
+		margin-bottom: rem(78px)
+	.mailing-title
+		margin-bottom: rem(24px)
+
+.mailing-descr
+	font-size: rem(18px)
+	font-weight: normal
+	color: #9595A1
+	max-width: rem(290px)
+
+.more-btn
+	.btn
+		height: rem(70px)
+		line-height: rem(68px)
+		&:after
+			display: none
+		&:hover
+			color: $red
+
+.page-back-link
+	margin-bottom: rem(72px)
+
+.s-apartment-card
+	padding-bottom: rem(112px)
+	overflow: visible
+
+.apartment-card-row
+	display: flex
+	align-items: flex-start
+
+.apartment-card-left
+	width: rem(246px)
+	flex-shrink: 0
+	margin-right: rem(74px)
+
+.apartment-section-block
+	margin-bottom: rem(45px)
+	.h4
+		font-weight: 500
+		font-size: rem(16px)
+		margin-bottom: rem(20px)
+
+.apartment-section
+	padding: rem(20px)
+	background-color: #fff
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	position: relative
+	transform-origin: top left
+	transition: transform .2s ease
+	&:hover
+		transform: scale(1.4)
+		z-index: 2
+	p
+		margin: 0
+		font-size: rem(10px)
+		color: #9595A2
+		letter-spacing: 0.08em
+		text-transform: uppercase
+
+.apartment-section-img
+	height: rem(157px)
+	margin-bottom: rem(20px)
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.apartment-section-title
+	margin-bottom: rem(15px)
+	font-size: rem(16px)
+	span
+		color: #9595A2
+
+.apartment-section-only-img
+	transform-origin: top left
+	transition: transform .2s ease
+	&:hover
+		transform: scale(1.4)
+		z-index: 2
+	img
+		width: 100%
+
+.apartment-card-floors
+	flex-shrink: 0
+	margin-right: rem(40px)
+
+.floors-header
+	display: flex
+	width: rem(83px)
+	margin-bottom: rem(5px)
+	span
+		width: 50%
+		flex-shrink: 0
+		white-space: nowrap
+		font-size: rem(14px)
+		color: #9595A1
+
+.floors
+	width: rem(83px)
+
+.floors-item
+	display: flex
+	align-items: center
+	position: relative
+	z-index: 1
+	text-decoration: none !important
+	color: $text !important
+	&.disabled
+		span
+			color: rgba(23, 23, 35, 0.15) !important
+			&:first-child
+				color: rgba(23, 23, 35, 0.15) !important
+				cursor: default !important
+				&:after
+					display: none !important
+			&:last-child
+				color: rgba(23, 23, 35, 0.15) !important
+				cursor: default !important
+				&:after
+					display: none !important
+	&.active
+		span
+			&:first-child
+				color: #fff
+				&:after
+					opacity: 1
+				& + span
+					color: #fff
+					&:after
+						opacity: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+			&:last-child
+				&:after
+					display: none
+	span
+		width: 50%
+		flex-shrink: 0
+		white-space: nowrap
+		height: 33px
+		line-height: 33px
+		&:first-child
+			text-align: right
+			font-size: rem(18px)
+			font-weight: 500
+			padding-right: rem(10px)
+			cursor: pointer
+			&:hover
+				color: #fff
+				&:after
+					opacity: 1
+				& + span
+					color: #fff
+					&:after
+						opacity: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+		&:last-child
+			font-size: rem(16px)
+			color: rgba(23, 23, 35, 0.5)
+			position: relative
+			&:after
+				content: attr(data-hover-text)
+				position: absolute
+				left: rem(20px)
+				top: 0
+				height: 100%
+				color: #fff
+				background-color: $accent
+				border-radius: rem(7px)
+				z-index: -1
+				opacity: 0
+				padding-right: rem(12px)
+
+.back-link
+	display: inline-flex
+	align-items: center
+	white-space: nowrap
+	font-size: rem(20px)
+	color: #9595A1
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $accent
+	span
+		font-size: rem(12px)
+		margin-right: rem(12px)
+
+.apartment-main
+	flex-grow: 1
+	border-radius: rem(7px)
+	background-color: #F7F7F7
+	display: flex
+
+.apartment-img-block
+	flex-grow: 1
+	position: relative
+
+.apartment-img-header
+	display: flex
+	align-items: center
+	position: absolute
+	top: rem(32px)
+	left: 0
+	width: 100%
+	padding: 0 rem(42px)
+	z-index: 1
+
+.apartment-img-types-links
+	display: flex
+	align-items: center
+	flex-grow: 1
+	margin-right: rem(20px)
+
+.apartment-img-types-link
+	height: rem(32px)
+	line-height: rem(32px)
+	padding: 0 rem(13px)
+	margin-right: rem(10px)
+	font-size: rem(16px)
+	color: #212133
+	font-weight: 500
+	text-decoration: none !important
+	+tr
+	border-radius: rem(7px)
+	&.active,
+	&:hover
+		background-color: #fff
+		color: $accent
+	&:last-child
+		margin-right: 0
+
+.liked-link
+	display: inline-block
+	width: rem(30px)
+	height: rem(27px)
+	position: relative
+	font-size: rem(29px)
+	text-decoration: none !important
+	&.active
+		&:after
+			opacity: 0
+		&:before
+			opacity: 1
+			transform: scale(1)
+	&:after
+		content: '\e920'
+		font-family: icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: #171723
+		line-height: 1
+		+tr
+	&:before
+		content: '\e921'
+		font-family: icon
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		color: $accent
+		transform: scale(0)
+		opacity: 0
+		line-height: 1
+		+tr
+
+.apartment-img-list
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: rem(75px) 0 rem(30px)
+	img
+		width: 100%
+		max-width: 870px
+		flex-shrink: 0
+		display: none
+		max-height: 700px
+		object-fit: contain
+		cursor: zoom-in
+
+.apartment-kompas
+	position: absolute
+	left: rem(42px)
+	bottom: rem(32px)
+	img
+		width: rem(100px)
+
+.apartment-content
+	width: rem(407px)
+	position: relative
+	z-index: 1
+	padding-bottom: rem(10px)
+
+.apartment-description
+	border-radius: rem(7px) rem(7px) 0 0
+	box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.1)
+	background-color: #fff
+	padding: rem(24px) rem(24px) rem(32px)
+
+.apartment-views
+	text-align: center
+	padding: rem(13px) rem(5px)
+	background-color: #F2F2F2
+	border-radius: rem(7px)
+	margin-bottom: rem(20px)
+	font-weight: 500
+	font-size: rem(14px)
+
+.apartment-description-list
+	margin: 0 rem(-24px) rem(30px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: flex
+		align-items: center
+		line-height: rem(29px)
+		padding: 0 rem(24px)
+		font-size: rem(16px)
+		&:nth-child(even)
+			background-color: #F5F5F5
+		span
+			&:first-child
+				font-weight: 500
+				padding-right: rem(15px)
+				flex-grow: 1
+
+.apartment-mortgage
+	display: flex
+	align-items: center
+	margin-bottom: rem(16px)
+
+.apartment-mortgage-title
+	flex-grow: 1
+	margin-right: rem(15px)
+	font-size: rem(18px)
+	font-weight: 500
+
+.apartment-mortgage-open-btn
+	padding-right: rem(22px)
+	position: relative
+	font-size: rem(18px)
+	font-weight: 500
+	color: $accent
+	letter-spacing: -.02em
+	white-space: nowrap
+	cursor: pointer
+	&:after
+		content: '\e911'
+		font-family: icon
+		position: absolute
+		top: rem(5px)
+		right: 0
+		font-size: rem(12px)
+		color: #9595A2
+		+tr
+	&.active
+		&:after
+			transform: rotate(180deg)
+
+.apartment-mortgage-form-block
+	display: none
+
+.apartment-mortgage-form
+	display: flex
+	justify-content: space-between
+	margin-bottom: rem(32px)
+
+.apartment-mortgage-col
+	width: calc(50% - #{rem(12px)})
+	.filter-title
+		font-size: rem(12px)
+		white-space: nowrap
+	.filter-item
+		margin: 0
+	.form-control
+		height: rem(44px)
+	.noUi-horizontal .noUi-handle
+		width: rem(18px)
+		height: rem(18px)
+
+.apartment-add-btn
+	background-color: #fff
+	white-space: nowrap
+	height: 56px
+	border: 1px solid #9595A1
+	display: flex
+	margin-bottom: rem(16px)
+	padding: 0 rem(23px)
+	justify-content: space-between
+	align-items: center
+	border-radius: rem(7px)
+	font-size: rem(16px)
+	font-weight: 500
+	color: #171723
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $accent
+		border-color: $accent
+
+.apartment-add-btn-name
+	flex-grow: 1
+	overflow: hidden
+	text-overflow: ellipsis
+
+.apartment-total
+	padding: rem(32px) rem(24px)
+	background-color: #171723
+	border-radius: 0 0 rem(7px) rem(7px)
+	color: #fff
+	margin-bottom: rem(24px)
+
+.apartment-total-item
+	display: flex
+	font-size: rem(18px)
+	margin-bottom: rem(7px)
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(20px)
+		&:last-child
+			font-weight: normal
+
+.apartment-total-price
+	margin-top: rem(32px)
+	margin-bottom: rem(23px)
+	display: flex
+	font-size: rem(18px)
+	align-items: center
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(15px)
+		&:last-child
+			white-space: nowrap
+			font-size: rem(26px)
+			font-weight: bold
+
+.apartment-links
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.apartment-link
+	display: flex
+	align-items: center
+	color: #171723 !important
+	font-size: rem(16px)
+	margin-bottom: rem(15px)
+	text-decoration: none !important
+	font-weight: 500
+	span
+		font-size: rem(25px)
+		margin-right: rem(10px)
+		color: #9595A1
+		+tr
+	&:hover,
+	&.active
+		span
+			color: $accent
+
+.apartment-link-item
+	position: relative
+
+.share-dropdown
+	position: absolute
+	white-space: nowrap
+	width: rem(270px)
+	border-radius: rem(7px)
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	z-index: 5
+	background-color: #fff
+	padding: rem(22px) rem(24px)
+	transform: translateY(-10px)
+	opacity: 0
+	visibility: hidden
+	transition: all .4s ease
+	&.opened
+		opacity: 1
+		transform: translateY(0)
+		visibility: visible
+	.apartment-link
+		&:last-child
+			margin-bottom: 0
+		span
+			color: #171723
+		&:hover
+			span
+				color: #4592EB
+
+.s-similar-layouts
+	padding: rem(55px) 0 rem(40px)
+
+.similar-layouts-item-img
+	padding-bottom: 100%
+	position: relative
+	border-radius: rem(7px)
+	background-color: #F2F2F2
+	margin-bottom: rem(20px)
+	&:hover
+		a
+			img
+				transform: scale(1.04)
+	a
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			align-items: center
+			justify-content: center
+			flex-shrink: 0
+			width: 80%
+			height: 80%
+			object-fit: contain
+			+tr
+
+.similar-layouts-title
+	font-weight: 500
+	font-size: rem(24px)
+	a
+		color: $text
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $accent
+
+.back-mob-link
+	display: none
+	font-size: 14px
+	margin-right: 12px
+	color: #9595A2 !important
+	margin-top: 8px
+
+.apartment-liked
+	display: flex
+
+.copy-link
+	&.success
+		font-size: 0
+		&:after
+			content: attr(data-copied-txt)
+			font-size: rem(16px)
+
+#image-popup
+	.popup-block
+		width: 1597px
+	.popup-flex
+		padding-left: 18px
+		padding-right: 18px
+
+.popup-image
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: #F7F7F7
+	border-radius: rem(10px)
+	padding: rem(40px) 0
+	img
+		max-height: 80vh
+		width: 100%
+		object-fit: contain
+
+.catalog-filter
+	max-width: 267px
+
+.catalog-filter-title
+	margin-bottom: rem(30px)
+	font-size: rem(20px)
+	font-weight: 500
+
+.catalog-filter-item
+	.filter-item
+		margin: 0 0 rem(32px)
+	.filter-title
+		font-size: rem(14px)
+		margin-bottom: rem(10px)
+	.select2-container--default .select2-selection--single
+		height: rem(44px)
+	.select2-container--default .select2-selection--single .select2-selection__rendered
+		line-height: rem(44px)
+		font-size: rem(14px)
+		padding-left: rem(15px)
+	.select2-container--default .select2-selection--single .select2-selection__arrow
+		height: rem(44px)
+		right: rem(12px)
+	.filter-checkbox-label
+		flex-grow: 1
+		span
+			height: rem(44px)
+			line-height: rem(44px)
+			font-size: rem(14px)
+			min-width: rem(48px)
+			padding: 0 rem(12px)
+	.filter-range-input
+		height: rem(44px)
+		padding-left: rem(38px)
+		font-size: rem(14px)
+	.filter-range-input-group
+		span
+			top: rem(13px)
+			left: rem(16px)
+			font-size: rem(14px)
+	.noUi-horizontal .noUi-handle
+		width: rem(18px)
+		height: rem(18px)
+		top: rem(-7px)
+	.apartment-section-block
+		width: 100%
+
+.catalog-filter-mortgage
+	margin-bottom: rem(30px)
+	border-radius: rem(10px)
+	border: 1px solid #171723
+	padding: rem(20px) rem(24px)
+	margin-top: rem(38px)
+
+.catalog-filter-mortgage-switch
+	.switch-checkbox-title
+		font-size: rem(20px)
+		font-weight: 500
+		margin-right: rem(9px)
+	.switch-checkbox-label
+		input:checked + span:after
+			transform: translateX(#{rem(16px)})
+		span
+			width: rem(37px)
+			height: rem(21px)
+			border-radius: rem(11px)
+			&:after
+				width: rem(15px)
+				height: rem(15px)
+				top: rem(3px)
+				left: rem(3px)
+
+.catalog-filter-mortgage-body
+	display: none
+	.form-control
+		height: rem(44px)
+		font-size: rem(14px)
+		padding: 0 rem(20px)
+	.filter-item
+		&:first-child
+			padding-top: rem(30px)
+		&:last-child
+			margin-bottom: rem(7px)
+	.filter-range-solo-input.with-label
+		span
+			font-size: rem(14px)
+			top: rem(13px)
+
+.finishing-options
+	.filter-checkbox-label
+		white-space: nowrap
+		span
+			font-size: rem(12px)
+			padding: 0 rem(5px)
+
+.catalog-tabs
+	display: flex
+	align-items: center
+	white-space: nowrap
+	position: relative
+	margin-bottom: rem(53px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: #F2F2F2
+
+.catalog-tabs-link
+	flex-grow: 1
+	display: flex
+	align-items: center
+	color: #9595A2
+	+tr
+	text-decoration: none !important
+	position: relative
+	font-weight: 500
+	font-size: rem(36px)
+	padding-bottom: rem(17px)
+	z-index: 1
+	span
+		font-size: rem(30px)
+		margin-right: rem(19px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 3px
+		right: rem(66px)
+		background-color: $red
+		transform-origin: top left
+		+tr
+		transform: scaleX(0)
+	&:last-child
+		&:after
+			right: 0
+	&:hover
+		color: #171723
+	&.active
+		color: #171723
+		&:after
+			transform: scaleX(1)
+
+.catalog-info
+	display: flex
+	align-items: center
+	justify-content: center
+	margin-bottom: rem(115px)
+	.stick
+		margin-right: rem(10px)
+		border-radius: rem(7px)
+		padding: 0 8px
+		height: rem(28px)
+		line-height: rem(28px)
+		font-size: rem(12px)
+		span
+			font-size: 16px
+		&:last-child
+			margin-right: 0
+
+.apartments-list-table
+	width: 100%
+	margin-bottom: rem(32px)
+	thead
+		tr
+			th
+				padding-bottom: 20px
+				position: relative
+				font-size: rem(14px)
+				color: #9595A2
+				font-weight: normal
+				text-align: center
+				&:last-child
+					width: 10%
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					background-color: #E5E5E5
+					height: 1px
+				&.apartments-list-house-header
+					text-align: left
+					padding-bottom: rem(16px)
+					vertical-align: top
+					& ~ th
+						vertical-align: top
+						&:after
+							bottom: rem(16px)
+					&:after
+						display: none
+	tbody
+		tr
+			position: relative
+			&[data-href]
+				cursor: pointer
+			&:nth-child(even)
+				td
+					background-color: rgba(#F2F2F2, .8)
+			td
+				font-size: rem(14px)
+				text-align: center
+				padding: rem(16px) rem(20px)
+				&:last-child
+					text-align: right
+				&.apartments-list-house-plane-td
+					padding-bottom: rem(16px)
+					text-align: left
+					padding-left: rem(46px)
+
+.apartments-list-house-title
+	color: #171723
+	.h6
+		font-size: rem(20px)
+		line-height: 1
+		white-space: nowrap
+		margin-bottom: rem(7px)
+		font-weight: 500
+		span
+			color: $red
+	p
+		margin: 0
+		font-size: rem(12px)
+
+.apartments-list-house-plane
+	img
+		width: 22px
+
+.apartments-list-total
+	text-align: right
+	white-space: nowrap
+	*:last-child
+		margin: 0
+
+.apartments-list-total-price
+	line-height: 1
+	color: $red
+	font-weight: 500
+	font-size: rem(16px)
+
+.apartments-list-total-fullprice
+	font-size: rem(12px)
+	font-weight: 500
+	color: #9595A2
+	line-height: 1
+	margin-top: rem(8px)
+	&:first-child
+		margin-top: 0	
+
+.apartments-list-house
+	margin-bottom: rem(54px)
+	&:last-child
+		margin-bottom: 0
+	.more-btn
+		.btn
+			height: rem(58px)
+			line-height: rem(56px)
+
+.promo-block
+	padding: rem(53px) 0 rem(55px)
+	border-radius: rem(7px)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+	overflow: hidden
+	margin: rem(72px) 0 rem(64px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23))
+
+.promo-content
+	position: relative
+	z-index: 1
+
+.promo-title
+	text-align: center
+	font-weight: 600
+	font-size: rem(38px)
+	line-height: 1.1
+	margin-bottom: rem(16px)
+	color: #fff
+
+.promo-sticks
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	justify-content: center
+	.stick
+		margin-right: rem(10px)
+		height: rem(28px)
+		color: #fff
+		padding: 0 rem(8px)
+		border-radius: rem(7px)
+		background: rgba(23, 23, 35, 0.3)
+		backdrop-filter: blur(20px)
+		font-weight: normal
+		&:last-child
+			margin-right: 0
+		span
+			color: #fff
+			font-weight: normal
+
+.promo-link
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 2
+
+.s-like-it
+	background-color: #F2F2F2
+	padding: rem(64px) 0
+	.similar-layouts-item-img
+		background-color: #FFFFFF
+
+.catalog-layouts
+	padding-top: 0
+
+.catalog-layouts-block
+	border-radius: rem(8px)
+	border: 1px solid #9595A2
+	padding-left: rem(40px)
+	padding-right: rem(40px)
+	margin-top: rem(73px)
+	padding-bottom: rem(72px)
+	margin-bottom: rem(24px)
+	&:first-child
+		margin-top: 0
+	.catalog-info
+		padding-top: rem(107px)
+	.promo-block
+		margin-top: 0
+		margin-left: rem(-40px)
+		margin-right: rem(-40px)
+		border-bottom-left-radius: 0
+		border-bottom-right-radius: 0
+
+.catalog-layouts-item
+	display: flex
+	margin-bottom: rem(70px)
+	&:last-child
+		margin-bottom: 0
+
+.catalog-layouts-item-img
+	text-align: center
+	margin-right: rem(51px)
+	img
+		width: rem(303px)
+		height: rem(303px)
+		object-fit: contain
+		display: block
+		margin-bottom: rem(30px)
+
+.catalog-layouts-square
+	color: $red
+	font-size: rem(24px)
+	margin-bottom: rem(5px)
+	font-weight: 500
+
+.catalog-layouts-title
+	font-weight: 500
+	font-size: rem(18px)
+
+.catalog-layouts-item-table
+	flex-grow: 1
+	.apartments-list-table
+		margin-bottom: rem(24px)
+	.more-btn .btn
+		height: rem(56px)
+		line-height: rem(54px)
+
+.s-catalog
+	padding-bottom: rem(100px)
+
+.catalog-grid-block
+	margin-bottom: rem(24px)
+
+.catalog-grid-block-header
+	display: flex
+	align-items: center
+
+.catalog-grid-title
+	margin-right: auto
+	position: relative
+	cursor: pointer
+	font-weight: 500
+	font-size: rem(20px)
+	padding-right: 22px
+	&.active
+		&:after
+			transform: rotate(180deg)
+		& + .catalog-grid-statuses
+			.catalog-grid-statuses-item
+				opacity: 1
+				transform: translateX(0)
+				visibility: visible
+	&:after
+		content: '\e911'
+		position: absolute
+		right: 0
+		top: rem(7px)
+		font-size: rem(11px)
+		font-family: icon
+		+tr
+	span
+		color: $red
+
+.catalog-grid-statuses
+	display: flex
+	align-items: center
+
+.catalog-grid-statuses-item
+	display: flex
+	margin-left: rem(30px)
+	align-items: center
+	transition: all .4s ease
+	opacity: 0
+	transform: translateX(20px)
+	visibility: hidden
+	&:nth-child(2)
+		transition-delay: .15s
+	&:nth-child(3)
+		transition-delay: .3s
+
+.catalog-grid-statuses-icon
+	display: flex
+	align-items: center
+	justify-content: center
+	width: rem(22px)
+	height: rem(22px)
+	flex-shrink: 0
+	border-radius: 50%
+	border: 1px solid transparent
+	margin-right: rem(11px)
+
+.catalog-grid-statuses-title
+	font-size: rem(14px)
+
+.catalog-grid-block-body
+	display: none
+
+.catalog-section-row
+	padding: rem(54px) 0 rem(51px)
+	display: flex
+	overflow: auto hidden
+	margin-right: -2.5rem
+	&:after
+		content: ''
+		width: 2.5rem
+		height: 2.5rem
+		flex-shrink: 0
+
+.catalog-section
+	margin-right: rem(50px)
+	flex-shrink: 0
+	&:last-child
+		margin-right: 0
+
+.catalog-section-title
+	text-align: center
+	margin-bottom: rem(24px)
+	font-size: rem(16px)
+	font-weight: 500
+
+.catalog-section-table-title
+	padding-left: rem(51px)
+	margin-bottom: rem(10px)
+	font-size: rem(12px)
+	color: #9595A2
+
+.catalog-section-table
+	border-collapse: collapse
+	th
+		white-space: nowrap
+		vertical-align: top
+		padding: 0 0 rem(19px)
+		text-align: center
+		font-size: rem(12px)
+		color: #9595A2
+		&:first-child
+			width: rem(35px)
+	td
+		&:first-child
+			width: rem(45px)
+			color: #9595A2
+			font-size: rem(12px)
+			text-align: center
+
+.catalog-section-table-th
+	width: rem(30px)
+
+.catalog-section-table-td
+	width: rem(30px)
+	height: rem(30px)
+	border: 1px solid #E2E2E2
+	position: relative
+	z-index: 1
+
+.catalog-section-cell
+	line-height: rem(29px)
+	text-align: center
+	font-size: rem(14px)
+	cursor: pointer
+	+tr
+	display: block
+	color: $text
+	text-decoration: none !important
+	cursor: pointer
+	margin-left: -1px
+	margin-right: -1px
+	&:after
+		content: ''
+		position: absolute
+		top: -1px
+		bottom: -1px
+		left: 0
+		width: 100%
+		z-index: -1
+		background-color: $red
+		opacity: 0
+		+tr
+	&:hover
+		&:after
+			opacity: 1
+			color: #fff
+	&.disabled
+		cursor: default
+		&:after
+			background-color: #E5E5E5
+			opacity: 1
+			color: #fff !important
+	&.lock
+		color: #8B8B91 !important
+		cursor: default
+		font-size: rem(13px)
+		&:after
+			display: none
+		.icon-lock
+			display: inline-block
+			transform: translateY(1px)
+
+.tippy-box
+	background-color: transparent
+	max-width: 204px !important
+	color: #000
+	.tippy-content
+		border-radius: 7px
+		background-color: #fff
+		border: 1px solid rgba(149, 149, 161, 0.6)
+		padding: 10px
+	& > .tippy-arrow
+		z-index: 1
+		&:before
+			bottom: -9px !important
+			width: 14px
+			height: 14px
+			border-width: 0 1px 1px 0 !important
+			border-style: solid !important
+			border-color: #E2E2E2 !important
+			transform: rotate(45deg)
+			background-color: #fff
+			left: 6px !important
+
+	&[data-placement^=bottom] > .tippy-arrow
+		&:before
+			bottom: auto !important
+			left: -4px !important
+			top: -8px !important
+			border-width: 1px 0 0 1px !important
+
+.catalog-section-cell-dropdown
+	position: relative
+	z-index: 2
+	padding: 10px 8px
+	&.disabled
+		.in-sale-stick
+			border-color: #9595A1
+			color: #9595A1
+		.catalog-section-cell-img
+			img
+				opacity: 0.3
+	&.lock
+		.in-sale-stick
+			border-color: #171723
+			color: #171723
+		.catalog-section-cell-img
+			position: relative
+			img
+				opacity: 0.3
+			&:after
+				content: '\e923'
+				font-family: icon
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				color: rgba(#171723, .5)
+				font-size: rem(29px)
+
+.catalog-section-cell-dropdown-content
+	.h6
+		font-size: 18px
+		font-weight: 500
+		color: #171723
+		line-height: 1.3333
+		margin-bottom: 10px
+	.cell-price
+		font-size: 18px
+		line-height: 1
+		white-space: nowrap
+		color: $red
+		font-weight: 500
+	*:last-child
+		margin-bottom: 0
+
+.catalog-section-cell-img
+	text-align: center
+	margin-bottom: 20px
+	img
+		margin-left: auto
+		margin-right: auto
+		width: 123px
+		height: 123px
+		object-fit: contain
+
+.in-sale-stick
+	padding: 0 8px
+	font-size: 13px
+	color: $red
+	border: 1px solid $red
+	font-weight: 500
+	height: 30px
+	line-height: 28px
+	display: inline-block
+	border-radius: 4px
+	margin-bottom: 20px
+
+.parking-list
+	padding-top: 0
+	.promo-block
+		&:first-child
+			margin-top: 0
+
+.catalog-filter-mob-close
+	display: none
+
+.catalog-filter-mob-open-filter
+	display: none
+	.btn
+		display: flex
+		align-items: center
+		justify-content: center
+		&:hover
+			span
+				color: #fff
+		span
+			margin-right: 8px
+			color: $red
+
+.apartments-list-table-mob-header
+	display: none
+
+.catalog-mob-tabs
+	display: none
+
+.cell-link
+	display: none
+	margin-top: 15px
+	a
+		display: inline-block
+		border: 1px solid $red
+		font-size: 12px
+		text-decoration: none !important
+		padding: 0 10px
+		border-radius: 4px
+		height: 38px
+		line-height: 36px
+		color: $red !important
+		width: 100%
+		text-align: center
+
+.cookies-alert
+	right: rem(54px)
+	bottom: rem(30px)
+	padding: rem(20px)
+	border-radius: rem(10px)
+	background-color: #f2f2f2
+	width: rem(623px)
+	position: fixed
+	z-index: 10
+	transition: all .4s ease
+	opacity: 0
+	visibility: hidden
+	transform: translateX(30px)
+	&.opened
+		opacity: 1
+		visibility: visible
+		transform: translateX(0)
+
+.cookies-alert-row
+	display: flex
+	align-items: center
+
+.cookies-alert-close
+	position: absolute
+	width: rem(30px)
+	height: rem(30px)
+	border-radius: 50%
+	top: rem(-15px)
+	right: rem(-15px)
+	background-color: #fff
+	cursor: pointer
+	font-size: rem(10px)
+	display: flex
+	align-items: center
+	justify-content: center
+	span
+		display: flex
+
+.cookies-alert-left
+	padding-right: rem(20px)
+	flex-grow: 1
+	font-weight: normal
+	font-size: rem(16px)
+	line-height: 1.5
+	a
+		color: $red !important
+		text-decoration: none !important
+		+tr
+
+.cookies-alert-right
+	.btn
+		display: block
+		padding: 0 rem(43px)
+		height: rem(46px)
+		line-height: rem(46px)
+		font-size: rem(16px)
+
+.text-content
+	max-width: rem(921px)
+	font-size: rem(24px)
+	line-height: 1.5
+	h1
+		font-size: rem(64px)
+		margin-bottom: rem(30px)
+		line-height: 1.1875
+	h2
+		font-size: rem(32px)
+		font-weight: 500
+		margin-bottom: rem(30px)
+	h3
+		font-size: rem(26px)
+		font-weight: 500
+		margin-bottom: rem(30px)
+	p
+		margin-bottom: rem(40px)
+	ol
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(40px)
+		li
+			display: flex
+			align-items: flex-start
+			flex-wrap: wrap
+			position: relative
+			padding-left: rem(75px)
+			span
+				position: absolute
+				left: 0
+				top: 0
+			h3
+				flex-grow: 1
+				&:first-child
+					margin-top: rem(30px)
+			ol, ul
+				&:last-child
+					margin-bottom: 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(40px)
+		li
+			position: relative
+			padding-left: rem(22px)
+			&:after
+				content: ''
+				position: absolute
+				top: rem(14px)
+				width: rem(6px)
+				height: rem(6px)
+				border-radius: 50%
+				background-color: #171723
+				left: 0
+
+.text-content-date
+	display: flex
+	font-size: rem(20px)
+	color: #9595A2
+	margin-bottom: rem(74px)
+	span
+		&:first-child
+			flex-grow: 1
+			padding-right: rem(20px)
+
+.text-content-updated
+	margin-top: rem(74px)
+	font-size: rem(20px)
+	color: #9595A2
+
+.s-text-content
+	padding-bottom: rem(40px)
+	overflow: visible
+
+#parking
+	.popup-flex
+		padding-left: 20px
+		padding-right: 20px
+
+.parking-popup-block
+	width: 1530px
+	padding: rem(50px) 0
+	.popup-header
+		position: relative
+		margin: 0
+		padding: 0
+	.popup-close
+		width: rem(48px)
+		height: rem(48px)
+		background-color: #fff
+		border-radius: 50px
+		color: $text
+		display: flex
+		align-items: center
+		justify-content: center
+		transform: scale(1) !important
+		position: absolute
+		top: rem(-25px)
+		right: rem(-24px)
+		+tr
+		z-index: 2
+		&:hover
+			transform: rotate(90deg) !important
+		&:after
+			font-size: rem(16px)
+			line-height: 1
+	.popup-content
+		padding: rem(52px)
+		background-color: #fff
+		border-radius: rem(10px)
+
+.parking-nav
+	margin-bottom: rem(54px)
+	display: flex
+	position: relative
+	align-items: center
+	max-width: rem(932px)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: #f2f2f2
+
+.parking-nav-link
+	display: flex
+	align-items: center
+	text-decoration: none !important
+	+tr
+	color: #9595A1
+	flex-grow: 1
+	position: relative
+	font-size: rem(36px)
+	font-weight: 500
+	padding-bottom: rem(15px)
+	margin-right: rem(11px)
+	&:last-child
+		margin-right: 0
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 3px
+		background-color: $red
+		z-index: 1
+		transform-origin: top left
+		transform: scaleX(0)
+		+tr
+	&:hover
+		color: #171723
+	span
+		font-size: rem(27px)
+		margin-right: rem(19px)
+	&.active
+		color: #171723
+		&:after
+			transform: scaleX(1)
+
+.parking-tab
+	display: none
+
+.parking-tab-content
+	display: flex
+
+.parking-schem
+	width: 68%
+	flex-shrink: 0
+	img
+		width: 100%
+
+.parking-info
+	width: 32%
+	flex-shrink: 0
+	padding-left: rem(40px)
+	.h2
+		margin-bottom: rem(20px)
+
+.parking-statuses
+	margin-bottom: rem(94px)
+	.catalog-grid-statuses-item
+		opacity: 1
+		visibility: visible
+		transform: none
+		white-space: nowrap
+		margin-right: rem(24px)
+		margin-left: 0
+		&:last-child
+			margin-right: 0
+	.catalog-grid-statuses-icon
+		width: rem(14px)
+		height: rem(14px)
+		margin-right: rem(10px)
+	.catalog-grid-statuses-title
+		font-size: rem(16px)
+
+.parking-info-list
+	list-style-type: none
+	padding: 0
+	margin: 0 0 rem(24px)
+	font-size: rem(18px)
+	li
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin-bottom: rem(12px)
+		&:last-child
+			margin-bottom: 0
+		span
+			&:first-child
+				flex-grow: 1
+				margin-right: rem(20px)
+				font-weight: 500
+
+.parking-adv
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: rem(22px)
+
+.parking-adv-item
+	display: flex
+	align-items: center
+	margin-right: rem(30px)
+	margin-bottom: rem(10px)
+	&:last-child
+		margin-right: 0
+	img
+		height: rem(42px)
+		width: auto
+		margin-right: rem(9px)
+	.h6
+		font-size: rem(14px)
+		margin-right: rem(8px)
+
+.help-hover
+	display: flex
+	span
+		font-size: rem(13px)
+
+[data-tippy-content]
+	cursor: pointer
+
+.parking-total
+	display: flex
+	align-items: center
+	font-size: rem(18px)
+	margin-bottom: rem(23px)
+	span
+		&:first-child
+			flex-grow: 1
+			margin-right: rem(10px)
+			font-weight: 500
+		&:last-child
+			font-weight: 600
+			font-size: rem(26px)
+
+.parking-table
+	width: 49%
+	flex-shrink: 0
+	.more-btn
+		.btn
+			height: rem(56px)
+			line-height: rem(54px)
+	table
+		tbody
+			tr
+				+tr
+				cursor: pointer
+				td
+					font-weight: normal
+				&:hover
+					td
+						font-weight: 500
+
+.parking-schem-list
+	width: 51%
+	flex-shrink: 0
+	padding-left: rem(100px)
+	display: flex
+	flex-direction: column
+	.parking-statuses
+		display: flex
+		justify-content: flex-end
+		margin-bottom: rem(33px)
+
+.parking-schem-list-block
+	margin-bottom: rem(30px)
+	img
+		width: 100%
+
+.parking-submit
+	margin-top: auto
+
+.stock-content
+	font-size: rem(24px)
+	.stick
+		margin-bottom: rem(64px)
+	h1, .h1
+		font-size: rem(64px)
+		margin-bottom: rem(24px)
+	.mute-text
+		font-size: rem(20px)
+		color: #9595A1
+		margin-bottom: rem(64px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+	h3, .h3
+		margin-top: rem(54px)
+		margin-bottom: rem(42px)
+	p
+		margin-bottom: 2rem
+		&.big-text
+			margin-bottom: rem(30px)
+			font-size: rem(32px)
+			margin-top: rem(100px)
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(54px)
+		li
+			position: relative
+			padding-left: rem(15px)
+			margin-bottom: rem(16px)
+			&:last-child
+				margin-bottom: 0
+			&:after
+				content: ''
+				position: absolute
+				top: rem(14px)
+				left: 0
+				width: rem(6px)
+				height: rem(6px)
+				border-radius: 50%
+				background-color: #4298D4
+	.about-in-nmbrs
+		margin-left: 0
+		margin-top: rem(80px)
+		margin-bottom: rem(46px)
+		flex-wrap: wrap
+	.about-in-nmbrs-item
+		width: 25%
+		max-width: none
+		flex-shrink: 0
+		margin-right: 0
+		padding-right: rem(50px)
+		font-size: rem(16px)
+		margin-bottom: rem(54px)
+		span
+			font-size: rem(62px)
+			margin-bottom: rem(3px)
+			padding-top: 0
+			small
+				font-size: rem(30px)
+	ol
+		counter-reset: olCounter3
+		list-style-type: none
+		padding: 0
+		margin: 0 0 rem(54px)
+		li
+			padding-left: rem(31px)
+			margin-bottom: rem(16px)
+			position: relative
+			&:last-child
+				margin-bottom: 0
+			&:before
+				content: counter(olCounter3)'.'
+				counter-increment: olCounter3
+				position: absolute
+				top: 0
+				left: 0
+				color: #4298D4
+
+.stock-content-container
+	max-width: 966px
+	position: relative
+	> *:first-child
+		margin-top: 0
+
+.wide-img
+	margin-bottom: rem(64px)
+	img
+		width: 100%
+		border-radius: rem(10px)
+
+.stock-steps
+	display: flex
+	margin-bottom: rem(100px)
+
+.stock-steps-item
+	flex-grow: 1
+	position: relative
+	margin-right: rem(35px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(24px)
+		left: rem(85px)
+		height: 1px
+		background-color: #ABABB4
+		right: 0
+	&:last-child
+		flex-grow: 0
+		margin-right: 0
+		&:after
+			display: none
+
+.stock-steps-item-icon
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	background-color: $red
+	text-align: center
+	line-height: rem(50px)
+	margin-bottom: rem(15px)
+	font-weight: 500
+	font-size: rem(22px)
+	color: #fff
+
+.stock-steps-item-text
+	font-size: rem(18px)
+	font-weight: 500
+	a
+		position: relative
+		color: $red
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			bottom: -1px
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $red
+			+tr
+		&:hover
+			&:after
+				transform: scaleX(0)
+
+.slide-text
+	position: relative
+	padding-bottom: rem(100px)
+	margin-bottom: rem(100px)
+	transition: padding .4s ease
+	ul
+		margin: 0
+	&.opened
+		padding-bottom: rem(50px)
+		.slide-text-open-link
+			background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#fff, 0) 100%)
+			a
+				span
+					display: none
+					&.hide-text
+						display: block
+
+.slide-text-content
+	max-height: rem(412px)
+	transition: max-height .4s ease
+	overflow: hidden
+
+.slide-text-open-link
+	height: rem(208px)
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+	display: flex
+	align-items: flex-end
+	justify-content: flex-start
+	background: linear-gradient(180deg, rgba(#fff, 0) 0%, rgba(#fff, .95) 30%, rgba(#fff, 1) 100%)
+	transition: background .4s ease
+	a
+		display: inline-block
+		position: relative
+		color: #171723
+		+tr
+		text-decoration: none !important
+		font-size: rem(18px)
+		.hide-text
+			display: none
+		&:hover
+			&:after
+				transform: scaleX(0)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #171723
+			+tr
+
+.custom-gallery
+	margin-bottom: rem(48px)
+	.slick-slide
+		margin-right: 5px
+	img
+		width: 100%
+		border-radius: rem(10px)
+	.slider-nav-arrow
+		position: absolute
+		z-index: 1
+		bottom: rem(35px)
+		span
+			color: #fff
+		&.slider-prev
+			right: rem(100px)
+		&.slider-next
+			right: rem(45px)
+			&:after
+				background-color: rgba(#fff, .3)
+			&.animated
+				svg
+					circle
+						animation-name: ringload
+			svg
+				circle
+					stroke: white
+					animation-duration: 3990ms
+
+.table-wrapper
+	margin-top: rem(40px)
+	margin-bottom: rem(100px)
+	position: relative
+	&.end
+		&:after
+			opacity: 0
+			visibility: hidden
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: rem(60px)
+		bottom: rem(24px)
+		background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, 1) 100%)
+		+tr
+
+.table-wrapper-scroll
+	overflow: auto hidden
+	&::-webkit-scrollbar
+		height: 3px
+		width: 3px
+		border-radius: 3px
+		background-color: #F2F2F2
+	&::-webkit-scrollbar-thumb
+		background-color: #9595A1
+
+.default-table-border
+	border-radius: rem(7px)
+	border: 1px solid #DADADA
+	margin-bottom: rem(24px)
+	display: inline-block
+
+.default-table
+	min-width: 100%
+	white-space: nowrap
+	font-size: rem(14px)
+	th
+		font-weight: 500
+	th, td
+		padding: rem(16px) rem(32px)
+		text-align: left
+		border-bottom: 1px solid #DADADA
+		border-right: 1px solid #DADADA
+		&:last-child
+			border-right: none
+	tbody
+		tr:last-child
+			td
+				border-bottom: none
+
+.default-slider
+	margin-bottom: rem(74px)
+
+.default-slider-header
+	display: flex
+	align-items: center
+	margin-bottom: rem(39px)
+	.h3
+		margin: 0 rem(20px) 0 0 !important
+		flex-grow: 1
+
+.default-slider-nav
+	display: flex
+	align-items: center
+	.slider-nav-arrow
+		position: relative
+		top: auto
+		right: auto
+		left: auto
+		bottom: auto
+	.slider-prev
+		margin-right: rem(15px)
+	.slider-next
+		&.animated
+			svg
+				circle
+					animation-name: ringload
+		svg
+			circle
+				animation-duration: 3990ms
+
+.default-slider-body
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 100px
+		height: 100%
+		background: linear-gradient(90deg, rgba(#fff, 0) 0%, rgba(#fff, .75) 50%, rgba(#fff, 100%) 100%)
+	.slick-slide
+		margin-right: rem(30px)
+		> div
+			height: 100%
+
+.apart-item-card
+	width: 267px !important
+	height: 100%
+	display: flex
+	flex-direction: column
+	background-color: #F2F2F2
+	border-radius: rem(5.5px)
+	padding: rem(30px) rem(21px)
+
+.apart-item-card-img
+	margin: 0 rem(9px) rem(20px)
+	position: relative
+	padding-bottom: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: absolute
+		top: 0
+		left: 0
+
+.apart-item-card-title
+	font-size: rem(22px)
+	font-weight: 500
+	margin-bottom: rem(16px)
+	a
+		color: $text
+		text-decoration: none !important
+		+tr
+		&:hover
+			color: $red
+
+.apart-item-card-old-price
+	display: flex
+	flex-wrap: wrap
+	white-space: nowrap
+	margin-bottom: rem(11px)
+
+.apart-item-card-old-price-value
+	position: relative
+	margin-right: 12px
+	font-size: rem(18px)
+	color: #9595A1
+	text-decoration: line-throughS
+
+.price-economy
+	white-space: nowrap
+	height: rem(20px)
+	line-height: rem(20px)
+	padding: 0 rem(7px)
+	border-radius: rem(5px)
+	background-color: $red
+	color: #fff
+	font-weight: 600
+	text-transform: uppercase
+	font-size: rem(12px)
+
+.apart-item-card-current-price
+	font-size: rem(24px)
+	font-weight: 500
+	margin-bottom: rem(18px)
+	color: $red
+	white-space: nowrap
+
+.apart-item-card-btn
+	.btn
+		font-size: rem(16px)
+
+.share
+	margin-bottom: rem(32px)
+	display: flex
+	align-items: center
+
+.share-title
+	font-size: rem(16px)
+	color: #231F20
+	margin-right: rem(25px)
+
+.share-nav
+	display: flex
+	align-items: center
+	a
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 30px
+		color: #9595A2
+		+tr
+		text-decoration: none !important
+		font-size: 18px
+		.icon-vk-2
+			font-size: 1.2222em
+		.icon-youtube
+			font-size: 1.44444em
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $red
+
+.attention-block
+	display: flex
+	padding: rem(22px) rem(46px) rem(22px) rem(22px)
+	border-radius: rem(7px)
+	background-color: #F6F6F6
+
+.attention-icon
+	font-size: rem(20px)
+	color: $red
+	margin-right: rem(19px)
+	font-weight: normal
+
+.attention-text
+	font-size: rem(14px)
+	line-height: 1.5
+	color: #9595A2
+
+.stock-content-main
+	position: relative
+
+.fixed-mailing-col
+	position: absolute
+	right: 100%
+
+.fixed-mailing-block
+	max-width: rem(272px)
+	position: sticky
+	top: rem(30px)
+	display: block !important
+	.mailing-form
+		background: transparent
+		padding: 0
+	.mailing-icon
+		margin-bottom: rem(40px)
+		width: rem(38px)
+		height: rem(38px)
+		&:after
+			width: rem(46px)
+			height: rem(46px)
+			background-image: url("data:image/svg+xml,%3Csvg width='47' height='48' viewBox='0 0 47 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.355469 37.8175C0.355469 17.2084 17.0624 0.501465 37.6715 0.501465C42.8238 0.501465 47.0005 4.6782 47.0005 9.83047C47.0005 30.4395 30.2935 47.1465 9.68447 47.1465C4.53221 47.1465 0.355469 42.9698 0.355469 37.8175Z' fill='%23F2F2F2'/%3E%3C/svg%3E%0A")
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center
+			background-color: transparent !important
+			bottom: rem(-15px)
+			right: rem(-20px)
+	.mailing-title
+		font-size: rem(20px)
+		color: #171723
+		margin-bottom: rem(20px)
+	.mailing-descr
+		margin-bottom: rem(20px)
+		font-size: rem(14px)
+		color: #171723
+	.form-group
+		margin-bottom: rem(16px)
+	.form-control
+		height: rem(60px)
+		font-size: rem(16px)
+		font-weight: normal
+		padding: 0 rem(11px)
+		border-radius: 7px
+		background-color: #F2F2F2
+		&::placeholder
+			color: #9595A2
+	.mailing-thanks
+		background-color: #fff
+		height: 110%
+
+.page-not-found
+	padding-top: rem(130px)
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: center
+	.container
+		flex-grow: 1
+		display: flex
+		flex-direction: column
+
+.page-not-found-row
+	display: flex
+	align-items: center
+	flex-grow: 1
+
+.page-not-found-img
+	margin-top: auto
+	padding-left: rem(85px)
+	margin-right: rem(109px)
+	img
+		width: rem(595px)
+
+.page-not-found-text
+	flex-grow: 1
+	margin: rem(40px) 0
+	.h1
+		font-size: rem(380px)
+		line-height: 1
+		font-weight: normal
+	.h2
+		font-size: rem(44px)
+		font-weight: bold
+		margin-bottom: rem(20px)
+	p
+		max-width: rem(428px)
+		font-size: rem(24px)
+		margin-bottom: rem(40px)
+		font-weight: normal
+
+.catalog-filter-clear-btn
+	font-size: 500px
+	font-size: 13px
+	color: #9595A1
+	text-decoration: none !important
+	+tr
+	&:hover
+		color: $accent
+
+.main-banner-img
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.main-window--mortgage
+	padding-top: rem(275px)
+	&:after
+		background-color: rgba(0,0,0,.35)
+
+.mortgage-main-window-left
+	flex-grow: 1
+	margin-right: 30px
+	color: #fff
+	h1, .h1
+		font-size: rem(64px)
+		font-weight: normal
+
+.mortgage-main-window-right
+	max-width: rem(719px)
+	color: #fff
+	p
+		font-size: rem(26px)
+		font-weight: normal
+		margin-bottom: rem(30px)
+
+.mortgage-main-window-btns
+	display: flex
+	align-items: center
+	.btn
+		margin-right: 20px
+		border-color: #fff
+		color: #fff
+		&:last-child
+			margin-right: 0
+
+.s-why-mortgage
+	padding: rem(80px) 0 rem(97px)
+	.section-title
+		margin-bottom: rem(65px)
+
+.why-mortgage-item
+	margin-right: rem(30px)
+	p
+		margin: 0
+		font-size: rem(24px)
+		line-height: 1.5
+		font-weight: normal
+		max-width: rem(319px)
+
+.why-mortgage-icon
+	position: relative
+	width: rem(70px)
+	height: rem(70px)
+	margin-bottom: rem(48px)
+	&:after
+		content: ''
+		position: absolute
+		top: rem(2px)
+		right: rem(-43px)
+		width: rem(90px)
+		height: rem(90px)
+		background-color: rgba(217, 0, 2, 0.08)
+		z-index: 0
+		border-radius: 50%
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+		position: relative
+		z-index: 1
+
+.filter-checkboxes
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin-bottom: rem(-7px)
+	label
+		position: relative
+		display: block
+		margin: 0 rem(7px) rem(7px) 0
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		visibility: hidden
+		&:checked + span
+			color: #fff
+			border-color: $red
+			background-color: $red
+	span
+		display: block
+		height: rem(27px)
+		line-height: rem(25px)
+		text-align: center
+		border-radius: rem(14px)
+		padding: 0 rem(7px)
+		border: 1px solid #9595A2
+		+tr
+		font-size: 10px
+		font-weight: 500
+		color: #9595A1
+		cursor: pointer
+
+.mortgage-calculator
+	margin-bottom: rem(80px)
+	.filter-item
+		margin-bottom: rem(30px)
+	.calculator-results
+		align-items: flex-end
+		margin-top: rem(28px)
+	.calculator-header
+		margin-bottom: rem(120px)
+
+.accredited-houses
+	background-color: #fff
+	padding: rem(54px) rem(49px) rem(60px)
+	border-radius: rem(7px)
+
+.accredited-helper
+	display: flex
+	justify-content: flex-end
+	margin-bottom: rem(50px)
+
+.accredited-helper-item
+	margin-right: rem(32px)
+	display: flex
+	align-items: center
+	font-size: rem(14px)
+	font-weight: normal
+	&:last-child
+		margin-right: 0
+	span
+		flex-shrink: 0
+		width: rem(15px)
+		height: rem(15px)
+		border-radius: 50%
+		margin-right: rem(12px)
+		line-height: rem(13px)
+		text-align: center
+		color: $red
+		font-size: rem(11px)
+
+.accredited-thead
+	display: table
+	width: 100%
+	margin-bottom: rem(33px)
+	padding-bottom: rem(33px)
+
+.accredited-thead-tr
+	display: table-row
+
+.accredited-thead-th
+	display: table-cell
+	width: 7.2876%
+	text-align: center
+	&.hovered
+		img
+			filter: grayscale(0)
+	&.rescom
+		width: 19.84%
+		text-align: left
+	img
+		max-width: rem(30px)
+		max-height: rem(30px)
+		+tr
+		filter: grayscale(1)
+
+.accredited-accordion-item
+	&:nth-child(even)
+		.accredited-accordion-item-title
+			background-color: #F2F2F2
+
+.accredited-accordion-item-title
+	position: relative
+	cursor: pointer
+	padding: rem(12px) rem(49px)
+	border-radius: rem(7px)
+	font-weight: 500
+	font-size: rem(18px)
+	+tr
+	&.active
+		background-color: transparent
+		&:before
+			transform: rotate(180deg)
+	&:before
+		content: '\e911'
+		font-family: icon
+		position: absolute
+		font-size: rem(11px)
+		left: rem(18px)
+		top: 50%
+		margin-top: rem(-6px)
+		+tr
+
+.accredited-accordion-item-body
+	margin-top: rem(16px)
+	margin-bottom: rem(29px)
+	display: none
+
+.accredited-table
+	width: 100%
+	tr
+		&:hover
+			td
+				background-color: #F2F2F2
+				&:hover ~ td
+					background-color: transparent
+		&:last-child
+			td
+				border-bottom: none
+	td
+		width: 7.2876%
+		text-align: center
+		font-size: rem(14px)
+		padding: rem(13px) rem(5px)
+		border-bottom: 1px solid #DADADA
+		border-right: 1px solid #DADADA
+		cursor: pointer
+		+tr
+		&:last-child
+			border-right: none
+		&.rescom
+			width: 19.84%
+			text-align: left
+			padding-left: rem(43px)
+	.red
+		color: $red
+
+.accredited-table-wrapper
+	border: 1px solid #DADADA
+	border-radius: rem(7px)
+
+.accredited-dropdown-content
+	display: flex
+	white-space: nowrap
+	padding: 10px
+
+.accredited-dropdown-item
+	margin-right: 19px
+	font-size: 12px
+	color: #9595A2
+	span
+		display: block
+		color: #434242
+		margin-top: 5px
+	&:last-child
+		margin-right: 0
+
+.s-we-cooperate
+	padding: rem(110px) 0 rem(50px)
+	.section-title
+		margin-bottom: rem(40px)
+
+.we-cooperate
+	.row
+		margin-left: rem(-15px)
+		margin-right: rem(-15px)
+	[class*=col-]
+		margin-bottom: rem(30px)
+		padding-left: rem(15px)
+		padding-right: rem(15px)
+
+.we-cooperate-item
+	height: 100%
+	border-radius: rem(7px)
+	background-color: rgba(#F2F2F2, .9)
+	padding: rem(34px) rem(30px) rem(16px)
+
+.we-cooperate-item-logo
+	margin-bottom: rem(25px)
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: rem(48px)
+	img
+		max-height: 100%
+		max-width: 100%
+		object-fit: contain
+		object-position: center left
+
+.we-cooperate-item-list
+	display: flex
+	flex-wrap: wrap
+	margin: 0 rem(-7px)
+	font-weight: normal
+	list-style-type: none
+	padding: 0
+	li
+		width: 33.3333%
+		flex-shrink: 0
+		margin-bottom: rem(20px)
+		padding: 0 rem(7px)
+		font-size: rem(14px)
+		color: #9595A2
+		span
+			display: block
+			font-size: rem(16px)
+			color: #171723
+			margin-top: rem(10px)
+
+.s-mortgage-types
+	padding-top: rem(20px)
+	padding-bottom: rem(95px)
+	.our-services
+		margin-top: 0
+	.our-services-grid
+		grid-gap: 0
+	.our-services-item
+		background-color: #f2f2f2
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			bottom: 0
+			left: 0
+			top: 0
+			border-style: solid
+			border-color: #DCDCDD
+			border-width: 1px 1px 0 0
+
+.s-brokers
+	padding: rem(59px) 0 rem(49px)
+	background-color: #F2F2F2
+
+.brokers-row
+	display: flex
+
+.brokers-left
+	width: 33.33333%
+	flex-shrink: 0
+	padding-right: rem(30px)
+	display: flex
+	flex-direction: column
+	.section-title
+		.h2
+			.red
+				color: $red
+
+.brokers-right
+	width: 66.66666%
+	flex-shrink: 0
+
+.brokers-slider
+	.slick-slide
+		margin: 0 -16px
+	.slick-slide
+		margin: 0 16px
+
+.broker
+	display: flex !important
+	border-radius: rem(7px)
+	background-color: #fff
+	padding: rem(30px) rem(29px) rem(27px) rem(33px)
+
+.broker-img
+	margin-right: rem(33px)
+	img
+		width: rem(145px)
+		height: rem(145px)
+		border-radius: 50%
+		object-fit: cover
+
+.broker-text
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	align-items: flex-start
+	.h4
+		max-width: rem(280px)
+		font-size: rem(22px)
+		margin-bottom: rem(5px)
+	p
+		font-size: rem(16px)
+		color: #9595A2
+		font-weight: normal
+
+.broker-phone
+	margin-top: auto
+	font-size: rem(22px)
+	color: #171723
+	text-decoration: none !important
+	white-space: nowrap
+	+tr
+	&:hover
+		color: $red
+
+.brokers-nav
+	margin-top: auto
+	display: flex
+	align-items: center
+	&.hide
+		display: none !important
+	.slider-nav-arrow
+		position: relative
+		&.slider-prev
+			margin-right: rem(10px)
+
+.s-buy-apartments
+	padding: rem(105px) 0 rem(50px)
+	.section-title
+		margin-bottom: rem(54px)
+
+.buy-apartments
+	display: flex
+	border-radius: rem(10px)
+	background-color: #F2F2F2
+	padding: rem(82px) rem(67px) rem(72px)
+
+.buy-apartments-item
+	position: relative
+	flex-shrink: 0
+	width: 20%
+	padding: 0 rem(15px)
+	&:last-child
+		&:after
+			display: none
+	&:after
+		content: ''
+		position: absolute
+		top: rem(24px)
+		height: 1px
+		background-color: #9595A1
+		left: rem(95px)
+		right: rem(15px)
+
+.buy-apartments-item-nmb
+	color: #fff
+	background-color: $accent
+	text-align: center
+	width: rem(50px)
+	height: rem(50px)
+	border-radius: 50%
+	line-height: rem(50px)
+	font-size: rem(22px)
+	margin-bottom: rem(24px)
+
+.buy-apartments-item-text
+	max-width: 260px
+	font-size: rem(18px)
+	a
+		display: inline-block
+		position: relative
+		color: $red !important
+		text-decoration: none !important
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: $red
+			transform-origin: top left
+			+tr
+		&:hover
+			&:after
+				transform: scaleX(0)
+
+.s-answer-on-questions
+	padding: rem(50px) 0 rem(125px)
+	overflow: visible
+	.section-title
+		margin-bottom: rem(25px)
+
+.answer-on-questions-row
+	display: flex
+
+.answer-on-questions-left
+	flex-grow: 1
+	margin-right: rem(110px)
+
+.answer-on-questions-accordion-item
+	border-bottom: 1px solid #DADADA
+	&:last-child
+		border-bottom: none
+
+.answer-on-questions-accordion-item-title
+	position: relative
+	padding: rem(35px) 0
+	cursor: pointer
+	font-size: rem(20px)
+	font-weight: normal
+	padding-right: rem(50px)
+	&.active
+		.plus-icon
+			transform: rotate(135deg)
+	p
+		margin: 0
+	.plus-icon
+		position: absolute
+		top: 50%
+		right: 0
+		width: rem(32px)
+		height: rem(32px)
+		margin-top: rem(-16px)
+		+tr
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			background-color: #000
+		&:after
+			width: 22px
+			height: 2px
+			margin-top: -1px
+			margin-left: -11px
+		&:before
+			width: 2px
+			height: 22px
+			margin-top: -11px
+			margin-left: -1px
+
+.answer-on-questions-accordion-item-body
+	display: none
+	font-size: rem(18px)
+	font-weight: normal
+	padding-bottom: rem(36px)
+	p
+		&:first-child
+			padding-top: rem(7px)
+		&:last-child
+			margin-bottom: 0
+
+.mortage-consultation
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	position: relative
+	border-radius: rem(7px)
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
+	overflow: hidden
+	color: #fff
+	padding: rem(50px) rem(50px) rem(99px)
+	width: rem(481px)
+	position: sticky
+	top: rem(30px)
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(#171723, .45)
+
+.mortage-consultation-content
+	position: relative
+	z-index: 1
+	.h2
+		margin-bottom: rem(50px)
+	p
+		font-size: rem(24px)
+		font-weight: normal
+		margin-bottom: rem(40px)
+
+.accredited-table-td-img,
+.accredited-table-td-info
+	display: none
+
+// My work
+
+.s-services-inf
+	padding-top: 70px
+	padding-bottom: 150px
+
+.services-inf-nav
+	padding: 0
+	.services-inf-nav-item
+		line-height: 15px
+		position: relative
+		margin-bottom: 15px
+		font-size: 16px
+		list-style-type: none
+		cursor: pointer
+		display: block
+		user-select: none
+		transition: all .3s ease
+		&::after
+			content: ''
+			position: absolute
+			left: -15px
+			border-radius: 50%
+			width: 7px
+			height: 7px
+			background-color: #d90002
+			top: 4px
+			-o-transition: all .3s ease
+			transition: all .3s ease
+			transform: translate3d(1.0625rem,0,0)
+			opacity: 0
+			transition: all .3s ease
+		&:hover
+			color: $red
+			&::after
+				opacity: 1
+				-webkit-transform: none
+				-ms-transform: none
+				transform: none
+	.active
+		color: $red
+		&::after
+			transform: none
+			opacity: 1
+
+.services-block
+	background-color: #F2F2F2
+	border-radius: 10px
+	position: relative
+	overflow: hidden
+	.services-block-title
+		font-size: 40px
+		font-weight: 400
+	.services-block-left
+		padding-left: 45px
+		padding-top: 45px
+		padding-bottom: 45px
+
+.services-block-fix
+	overflow: inherit !important
+
+.services-block-item
+	position: relative
+	margin-top: 70px
+	display: flex
+	.services-block-item-wr-2
+		vertical-align: middle
+		padding-left: 50px
+		position: relative
+	.services-block-item-img
+		width: 54px
+		height: auto
+		position: relative
+		z-index: 2
+		top: 12px
+	.services-block-item-circle
+		position: absolute
+		left: 10px
+		top: 0
+		z-index: 1
+		width: 79px
+		height: 79px
+		background-color: #D90002
+		opacity: .05
+		border-radius: 100px
+	.services-block-item-text
+		font-size: 16px
+		line-height: 26px
+		padding-right: 20px
+
+.services-block-btn
+	margin-top: 80px
+	.btn
+		margin-right: 30px
+
+.services-block-offer-1
+	position: absolute
+	top: 20%
+	right: 45px
+
+.services-block-offer-2
+	position: absolute
+	bottom: 0
+	right: 45px
+	height: 100%
+
+.services-block-offer-3
+	position: absolute
+	right: 0
+	top: 40px
+
+.services-block-offer-4
+	display: flex
+	align-items: flex-end
+	height: 100%
+	justify-content: flex-end
+	img
+		width: 740px
+		height: 106.2%
+		margin-top: -37px
+
+.services-block-offer-5
+	position: absolute
+	right: 20px
+	top: 170px
+
+.services-block-title-text
+	font-size: 40px
+	line-height: 48px
+	font-weight: 400
+	padding-bottom: 60px
+	margin-top: 100px
+
+.services-block-title-text-child
+	font-size: 24px
+	font-weight: normal
+	margin-bottom: 30px
+
+.services-block-title-text-border
+	border-bottom: 1px solid #DADADA
+
+.services-buy-apartments
+	margin: 40px 0
+	.buy-apartments-item
+		width: 25%
+	.buy-apartments-item-nmb
+		color: #000
+		border: 1px solid #000
+		background-color: inherit
+.red
+	color: $red
+
+.answer-on-questions-accordion-services
+
+	.answer-on-questions-accordion-item-title
+		p
+			font-weight: 500
+	.answer-on-questions-accordion-item-body
+		p
+			padding-right: 250px
+			line-height: 30px
+		ul.circle-red
+			padding: 0
+			margin-left: 15px
+			li
+				line-height: 30px
+				list-style-type: none
+				padding: 0
+				margin: 0
+				padding-bottom: 10px
+				position: relative
+				&::after
+					content: ""
+					position: absolute
+					left: -15px
+					border-radius: 50%
+					width: 6px
+					height: 6px
+					top: 8px
+					background-color: #D90002
+				a
+					color: red
+					text-decoration: underline
+		ul.ul-number
+			padding: 0
+			margin-left: 15px
+			>li
+				list-style-type: none
+				padding: 0
+				margin: 0
+				padding-bottom: 10px
+				position: relative
+				padding-left: 5px
+				&::after
+					content: ""
+					position: absolute
+					left: -15px
+					top: 1px
+					color: #D90002
+					font-size: 15px
+			>li:nth-child(1)
+				&::after
+					content: "1."
+			>li:nth-child(2)
+				&::after
+					content: "2."
+			>li:nth-child(3)
+				&::after
+					content: "3."
+		table.answer-on-questions-accordion-item-table
+			width: 100%
+			tr td
+				font-size: 14px
+			thead
+				tr
+					border-bottom: 1px solid #9595a147
+					td
+						padding: 20px 0px
+						color: #9595A1
+			tbody
+				border-bottom: 1px solid #9595a147
+				tr
+					td
+						padding-top: 40px
+						vertical-align: top
+				tr:nth-last-child(1)
+					td
+						padding-bottom: 40px
+			tbody:nth-last-child(1)
+				border-bottom: none
+
+	.active
+		.plus-icon
+			&::before, &::after
+				background-color: #D90002
+	.answer-on-questions-accordion-item:last-child
+		border-bottom: 1px solid rgb(218, 218, 218)
+
+.services-table
+	width: 100%
+	thead
+		border-bottom: 1px solid #dadada
+		td
+			color: #171723
+			font-size: 20px
+			font-weight: 500
+			padding: 30px 20px 30px 20px
+	tbody
+		td
+			border-radius: 7px
+			font-size: 14px
+			padding: 30px 40px 30px 20px
+		tr:nth-child(even) td
+			background-color: #F2F2F2
+
+.services-slider
+	position: relative
+	.services-slider-carousel
+		.item
+			img
+				width: 100px
+				height: auto
+		.owl-nav
+			position: absolute
+			right: 0
+			top: -100px
+			.owl-prev, .owl-next
+				&::before
+					font-family: icon
+				span
+					display: none
+			.owl-prev
+				margin-right: 20px
+				&::before
+					content: "\e912"
+			.owl-next
+				width: 39px
+				height: 39px
+				border-radius: 100px
+				border: 1px solid #bababd
+				position: relative
+				&::before
+					content: "\e913"
+
+.main-window-slider-block-custom
+	min-width: 47.1875rem
+
+.menu-header-close
+	display: none
+
+@import "media" // Always at the end

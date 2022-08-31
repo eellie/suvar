@@ -1,0 +1,3381 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width: 1599.98px)
+	.global-info-nav-link
+		&:after
+			width: 5px
+			height: 5px
+			margin-top: -3px
+
+@media (max-width: 1500px)
+	.services-block-item
+		.services-block-item-text
+			font-size: 14px
+			line-height: 24px
+	.services-block-item
+		.services-block-item-img
+			width: 40px
+		.services-block-item-circle
+			width: 60px
+			height: 60px
+	.services-block-item .services-block-item-wr-2
+		padding-left: 40px
+	.services-block-offer-4 img
+		width: 640px
+	.services-block-item
+		margin-top: 40px
+
+@media (max-width: 1300px)
+	.services-block-offer-4 img
+		width: 580px
+
+@media (max-width: 1440px)
+	html, body
+		font-size: 12px
+	.logo img
+		width: 158px
+	.about-in-nmbrs-item
+		margin-right: 40px
+	.services-block-offer-1
+		top: 30%
+		img
+			width: 300px
+	.services-block-item-wr-2
+		padding-left: 40px
+	.services-block-offer-3
+		top: 20%
+	.services-block-offer-5
+		img
+			width: 300px
+	.services-block-offer-3
+		right: -100px
+
+@media (max-width: 1365.98px)
+	.res-complex-descr-text
+		p
+			font-size: 16px
+			&.big-text
+				font-size: 20px
+	.catalog-tabs-link
+		font-size: 18px
+		span
+			font-size: 18px
+
+@media (max-width: 1365.98px)
+	.services-block-offer-4 img
+		height: 105.2%
+
+@media (max-width: 1280px)
+	.h2, h2
+		font-size: 26px
+	.h3, h3
+		font-size: 21px
+	.h4, h4
+		font-size: 18px
+	.advantages-item.type-2 .advantages-body .h4
+		font-size: 18px
+	.contacts-form-success
+		padding: 30px
+	.services-block-offer-4 img
+		height: 104.2%
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.services-block-offer-4 img
+		height: 100%
+		margin-top: 0
+	.services-block-fix
+		overflow: hidden !important
+	.row
+		margin-left: -10px
+		margin-right: -10px
+		[class*=col-]
+			padding-left: 10px
+			padding-right: 10px
+	.container
+		padding-left: 20px
+		padding-right: 20px
+	.header-menu
+		position: fixed !important
+		z-index: 101 !important
+		right: 0
+		top: 0
+		height: 100%
+		width: 320px
+		background-color: $text
+		padding: 30px 20px
+		display: flex
+		flex-direction: column
+		transform: translateX(120%)
+		transition: transform .4s ease
+		&.opened
+			transform: translateX(0)
+	.header-mob-close
+		display: block
+		width: 30px
+		height: 30px
+		margin-left: auto
+		margin-bottom: 30px
+		&:after
+			content: '\e918'
+			font-family: icon
+			color: #fff
+			font-size: 21px
+	.main-menu
+		display: block
+		margin-left: 0
+		margin-right: 0
+		width: 100%
+		flex-grow: 1
+		margin-bottom: 20px
+	.menu-link
+		display: block
+		font-size: 18px
+		margin-bottom: 15px
+	.header-mob-phone
+		display: block
+		position: relative
+		padding-top: 30px
+		&:after
+			content: ''
+			position: absolute
+			left: -20px
+			right: -20px
+			height: 1px
+			top: 0
+			background-color: rgba(#fff, .1)
+		.header-phone
+			text-align: left
+	.header-phone
+		flex-grow: 0
+		text-align: right
+		margin-left: auto
+		margin-right: 50px
+	.main-window-projects
+		display: none
+	.main-window-slider-block
+		margin-left: 100px
+		max-width: 550px
+	.finance-partner-stick
+		left: auto
+		top: auto
+		right: -113px
+		bottom: 200px
+		&:after
+			display: none
+	.soc-nav
+		left: auto
+		right: 20px
+		height: auto
+		top: 100px
+		bottom: 100px
+	.main-window
+		overflow: hidden
+	.filter-item
+		margin-right: 10px
+	.filter-more-item
+		margin-left: 0
+	.main-window-footer-row .filter-select
+		min-width: 150px
+		width: 150px
+	.filter-range-input-group span
+		left: 5px
+	.filter-range-input
+		padding-left: 23px
+	.news-slider
+		.slick-slide
+			width: 300px !important
+	.about-title
+		font-size: 18px
+	.blockquote-content
+		font-size: 16px
+	.blockquote-author-img img
+		width: 90px
+		height: 90px
+	.about-in-nmbrs
+		margin-left: 0
+	.projects-header-left
+		width: 60%
+	.projects-header-right
+		width: 40%
+	.s-city-map
+		margin-bottom: 40px
+	.map-title
+		font-size: 21px
+	.section-nmb
+		font-size: 40px
+	.location-nav
+		display: none
+	.projects-header
+		margin-bottom: 35px
+	.s-projects
+		.section-nmb
+			margin-bottom: 20px
+	.section-nmb.big
+		font-size: 40px
+		margin-bottom: 20px
+	.layout-info-block
+		padding-left: 20px
+	.advantages-grid
+		margin-right: 0
+		grid-gap: 20px
+	.check-more-btn
+		margin-right: 0
+	.video-list
+		margin-top: 35px
+	.video-list
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 20px
+	.calculator .form-control
+		font-size: 14px
+	.our-services-grid
+		grid-template-columns: repeat(3, 1fr)
+	.our-services-item
+		background-color: #fff
+		transition: all .4s ease
+		padding: rem(32px)
+		display: flex
+		overflow: hidden
+		position: relative
+		border-radius: 0 !important
+	.contacts-form-block
+		display: block
+		padding-bottom: 57px
+		position: relative
+		overflow: hidden
+		padding: 25px 25px 57px
+		margin-right: 0
+		.form-footer-row
+			flex-direction: column-reverse
+			width: 50%
+			margin-left: auto
+			padding-left: 8px
+			min-width: 140px
+			align-items: flex-start
+			.btn
+				width: 100%
+				margin-left: 0
+				margin-bottom: 15px
+				padding-left: 0
+				padding-right: 0
+			p
+				margin-right: 0
+	.contacts-form-left
+		padding-bottom: 0
+		padding: 0
+	.contacts-form-right
+		img
+			position: absolute
+			bottom: -40px
+			left: 0
+			width: 119px
+	.projects-nav-wrapper
+		display: none !important
+	.contacts-form-success
+		padding: 0
+		// .h2
+		// 	margin-bottom: 15px
+	.contacts-form
+		margin-top: 15px
+	.contacts-form-descr
+		margin-bottom: 15px
+	.main-window--rescom
+		.main-window-row
+			display: block
+		.main-window-slider-block
+			margin-top: 85px
+			margin-left: 0
+		.slider-next
+			left: 40px
+			top: -55px
+		.slider-prev
+			left: 0
+			top: -55px
+	.main-window-global-info-list
+		margin-top: 15px
+	.main-window-global-info
+		padding-left: 0
+	.res-complex-descr-text
+		.about-in-nmbrs
+			margin-left: -10px
+			margin-right: -10px
+		.about-in-nmbrs-item
+			padding-left: 10px
+			padding-right: 10px
+			font-size: 10px
+			span
+				font-size: 40px
+				padding-top: 0
+	.rescom-advantages-title
+		font-size: 16px
+	.rescom-advantages-grid
+		grid-gap: 30px 40px
+	.s-global-info
+		padding-top: 60px
+	.block-info-text .h3
+		font-size: 18px
+	.block-info.big .block-info-text .h3
+		font-size: 33px
+	.block-info-grid
+		grid-gap: 20px
+		&.type-2
+			margin-bottom: rem(50px)
+	.block-info-grid-wrapper
+		margin-bottom: 50px
+	.block-info.big
+		margin-bottom: 20px
+	.block-info-chess-item-text
+		.h2
+			margin-bottom: 20px
+		.btn
+			margin-top: 10px
+		p
+			font-size: 12px
+			&.big-text
+				font-size: 18px
+		ul
+			font-size: 12px
+			li
+				&:after
+					top: 6px
+					width: 4px
+					height: 4px
+	.block-info-chess-item
+		margin-bottom: 50px
+	.block-info-big-banner-text
+		padding: 40px
+		.h1
+			font-size: 36px
+		p
+			font-size: 16px
+	.block-info-icontext
+		margin-left: 10px
+	.block-info-leftright-text
+		margin-bottom: 30px
+	.block-info-img-with-list-text
+		padding: 20px 20px 40px
+	.block-info-img-with-list-grid
+		margin-bottom: 50px
+		grid-gap: 20px
+	.block-info-text
+		padding: 15px
+	.block-info.type-2
+		min-height: 270px
+		.block-info-text
+			.h3
+				font-size: 18px
+	.block-info-type-3-img
+		margin-bottom: 20px
+	.block-info-type-3-text .mute-text
+		font-size: 14px
+	.block-info-type-3-text p
+		font-size: 14px
+	.block-info-big
+		margin-bottom: 50px
+	.block-info-text-imgleft
+		margin-left: -10px
+		margin-right: -10px
+		margin-bottom: 50px
+	.block-info-text-imgleft-img
+		padding-left: 10px
+		padding-right: 10px
+	.block-info-text-imgleft-text
+		padding-right: 10px
+		padding-left: 30px
+		p
+			font-size: 16px
+	.videos-slider-item-grid
+		grid-gap: 20px
+	.menu-body-item
+		padding-left: 25px
+		padding-right: 25px
+		&:first-child
+			padding-left: 20px
+	.menu-list-big a
+		font-size: 16px
+	.menu-body-item-title
+		font-size: 16px
+	.menu-list a
+		font-size: 12px
+	.sales-offices
+		display: block
+	.sales-offices-nav
+		padding-right: 0
+		display: flex
+		flex-direction: row
+		width: auto
+		overflow: auto hidden
+		margin-left: -20px
+		margin-right: -20px
+		padding-left: 20px
+		padding-right: 20px
+		margin-bottom: 15px
+		&::-webkit-scrollbar
+			display: none
+		&:after
+			content: ''
+			width: 20px
+			height: 20px
+			flex-shrink: 0
+	.sales-offices-nav-item
+		flex-shrink: 0
+	.sales-offices-map
+		overflow: visible
+	.sales-offices-map-balloon
+		position: fixed
+		border-radius: 0
+		top: 0
+		left: 0
+		width: 300px
+		height: 100%
+		max-height: none
+		z-index: 50
+		margin: 0
+		box-shadow: 1px 4px 19px rgba(0, 0, 0, .09)
+		opacity: 1
+		visibility: visible
+		transform: translateX(-110%)
+	.sales-offices-map-balloon-content
+		display: flex
+		flex-direction: column
+		.btn
+			margin-top: auto
+	.sales-offices-map-wrapper
+		margin-left: 0
+		height: 350px
+	.sales-offices-map
+		border-radius: 10px
+		overflow: hidden
+	.page-title
+		margin-bottom: 30px
+	.nav-links
+		flex-direction: row
+		margin-bottom: 30px
+		margin: 0 -20px 30px
+		padding: 0 20px
+		white-space: nowrap
+		overflow: auto hidden
+		&::-webkit-scrollbar
+			display: none
+		&:after
+			content: ''
+			width: 5px
+			height: 5px
+			flex-shrink: 0
+	.nav-link
+		height: 36px
+		line-height: 36px
+		padding: 0 8px
+		border-radius: 4px
+		background-color: #f4f4f4
+		margin: 0 10px 0 0
+		font-size: 12px
+		&:last-child
+			margin-right: 5px
+		&:after
+			display: none
+	.apartment-card-row
+		flex-direction: column-reverse
+	.apartment-card-floors
+		display: none
+	.apartment-card-left
+		display: flex
+		width: 100%
+		margin: 50px 0 0
+	.apartment-section-block
+		width: calc(33.33333% - 30px)
+		flex-shrink: 0
+		margin-right: 30px
+	.apartment-section,
+	.apartment-section-only-img
+		transform: none !important
+	.catalog-layouts-item-img
+		margin-right: 20px
+		img
+			width: 180px
+			height: 180px
+	.catalog-layouts-block
+		padding: 0 20px 30px
+	.catalog-layouts-block
+		.promo-block
+			margin-left: -20px
+			margin-right: -20px
+	.catalog-section-table-td
+		z-index: auto
+	.cell-link
+		display: block
+	[data-tippy-root]
+		pointer-events: auto !important
+	.text-content
+		max-width: none
+		font-size: 16px
+		h1
+			font-size: 44px
+			margin-bottom: 20px
+		h2
+			font-size: 24px
+			font-weight: 500
+			margin-bottom: 20px
+		h3
+			font-size: 21px
+			font-weight: 500
+			margin-bottom: 20px
+		p
+			margin-bottom: 15px
+		ol
+			margin: 0 0 20px
+			li
+				padding-left: 55px
+		ul
+			margin: 0 0 20px
+			li
+				padding-left: 15px
+				&:after
+					width: 4px
+					height: 4px
+					top: 10px
+	.text-content-date
+		font-size: 16px
+		margin-bottom: 30px
+	.text-content-updated
+		margin-top: 40px
+		font-size: 16px
+	.s-text-content
+		padding-bottom: 50px
+	.parking-schem
+		width: 50%
+	.parking-info
+		width: 50%
+	.parking-schem-list
+		padding-left: rem(40px)
+	.page-not-found-img
+		padding-left: 0
+		margin-right: 60px
+		width: 50%
+		flex-shrink: 0
+		img
+			width: 100%
+	.page-not-found-text
+		.h1
+			font-size: 200px
+		.h2
+			font-size: 24px
+		p
+			font-size: 16px
+	.why-mortgage-item p
+		font-size: 13px
+	.brokers-slider
+		.slick-slide
+			margin: 0 5px
+	.broker
+		padding: 20px
+	.broker-img
+		margin-right: 10px
+		img
+			width: 100px
+			height: 100px
+	.broker-text .h4
+		font-size: 14px
+	.broker-phone
+		font-size: 14px
+	.s-buy-apartments
+		padding-top: 42px
+		padding-bottom: 20px
+	.buy-apartments
+		padding: 30px 20px
+	.buy-apartments-item-text
+		font-size: 12px
+	.s-answer-on-questions
+		padding-top: 20px
+		padding-bottom: 30px
+	.answer-on-questions-left
+		margin-right: 40px
+	.answer-on-questions-accordion-item-title
+		.plus-icon
+			margin-top: -10px
+			width: 20px
+			height: 20px
+			&:before
+				height: 20px
+				top: 0
+				left: 9px
+				margin: 0
+			&:after
+				width: 20px
+				left: 0
+				top: 9px
+				margin: 0
+	.services-inf-nav
+		flex-direction: row
+		margin-bottom: 30px
+		margin: 0 -20px 30px
+		padding: 0 20px
+		white-space: nowrap
+		overflow: auto hidden
+		.services-inf-nav-item
+			height: 36px
+			line-height: 36px
+			padding: 0 8px
+			border-radius: 4px
+			background-color: #f4f4f4
+			margin: 0 10px 0 0
+			font-size: 12px
+			display: inline-block
+			position: relative
+			font-weight: 500
+			&::after
+				display: none
+	.burger-icon
+		&.active
+			span
+				&:after
+					background-color: #fff !important
+					transform: skew(0, 40deg) translateY(3px) scaleY(1.5) scaleX(.5)
+				&:before
+					background-color: #fff !important
+					transform: skew(0, -40deg) translateY(-3px) scaleY(1.5) scaleX(.5)
+
+// ≥992px
++media-breakpoint-down(md)
+	.custom-main-window
+	.services-block .services-block-left
+		padding-right: 45px
+	.services-slider
+		.services-block-title-text
+			font-size: 30px
+			padding-right: 70px
+	.main-window-footer
+		display: none
+	.main-window-search
+		display: block
+		padding: 25px 18px
+		border-top: 1px solid rgba(#fff, .15)
+		position: relative
+		z-index: 3
+		.form-control
+			color: #fff
+			background-color: rgba(#fff, .3)
+			padding: 0 50px 0 20px
+			height: 50px
+			border-radius: 7px
+			font-size: 14px
+	.main-window-search-group
+		position: relative
+		span
+			position: absolute
+			height: 50px
+			top: 0
+			right: 0
+			width: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #fff
+			font-size: 16px
+	.stocks-left
+		flex-direction: row
+		margin-bottom: 25px
+	.stocks-title
+		margin-bottom: 0
+		margin-right: 20px
+		flex-grow: 1
+	.about-blockquote
+		margin-left: 0
+	.about-title
+		margin-bottom: 25px
+	.s-about
+		padding: 40px 0
+	.about-in-nmbrs-item
+		margin-right: 20px
+	.about-in-nmbrs
+		margin-top: 25px
+	.s-text-slider
+		margin: 30px 0
+		height: 50px
+	.text-slider-item
+		font-size: 44px
+		&:after
+			width: 100px
+			margin: 0 15px
+	.city-map-open-full
+		top: 10px
+		right: 10px
+		.btn
+			width: 30px
+			height: 30px
+			border-radius: 7px
+			font-size: 0
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-shrink: 0
+			padding: 0
+			span
+				font-size: 16px
+				margin: 0
+	.s-city-map
+		display: none
+	.s-projects
+		padding: 30px 0
+	.project--big
+		.project-body
+			padding-left: 20px
+	.layouts-filter-nav
+		white-space: nowrap
+		overflow: auto hidden
+		margin-left: -20px
+		margin-right: -20px
+		padding: 0 20px
+		&:after
+			content: ''
+			width: 20px
+			height: 1px
+			flex-shrink: 0
+	.layouts-filter-nav-link
+		&:before
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 3px
+			background-color: #f2f2f2
+	.select-layout-grid
+		width: 100%
+		display: flex
+	.select-layout-border
+		display: none
+	.select-layout-item
+		margin-right: 10px
+	.select-layout-more-link
+		padding: 0 20px
+	.select-layout-wrapper
+		margin-bottom: 35px
+	.select-layout-item-img
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border-radius: 5px
+			border: 1px solid $red
+			transform: scale(.8)
+			opacity: 0
+			+tr
+	.select-layout-item.active
+		.select-layout-item-img
+			&:after
+				transform: scale(1)
+				opacity: 1
+	.contacts-form-block
+		margin-bottom: 25px
+	.contacts-list
+		padding-top: 0
+	.footer-copyright
+		margin-top: 25px
+	.mortgage-form .filter-item
+		margin-bottom: 20px
+	.filter-item
+		margin-bottom: 20px
+	.switch-checkbox-title
+		font-size: 16px
+	.news-slider .slick-slide.prev-slide
+		transform: none !important
+	.noUi-horizontal .noUi-handle
+		&:before
+			content: ''
+			width: 40px
+			height: 40px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			position: absolute
+			display: block !important
+			opacity: 0 !important
+	.main-window--rescom
+		.main-window-footer
+			display: block !important
+	.res-complex-logo
+		margin-bottom: 30px
+		img
+			max-width: 150px
+	.res-complex-descr-item .video-block
+		margin-bottom: 25px
+	.position-info
+		margin-bottom: 50px
+		.section-title
+			display: flex
+			align-items: center
+			.h2
+				flex-grow: 1
+				margin: 0 20px 0 0
+	.s-position
+		background-position: center
+	.position-slider-wrapper
+		.stocks-left
+			align-items: flex-start
+			.section-title
+				flex-grow: 1
+				margin: 0 20px 0 0
+				.h2
+					margin: 0
+			.stocks-nav
+				margin-top: 0
+	.global-info-nav
+		display: none
+	.block-info-big-banner-text
+		padding: 30px
+		.h1
+			font-size: 30px
+			margin-bottom: 15px
+	.select-layout-filter
+		.filter-checkbox
+			justify-content: flex-start
+	.photos-gallery-thumbs
+		margin-left: 110px
+	.s-stocks
+		.stocks-left
+			align-items: flex-start
+			.stocks-title
+				max-width: none
+			.stocks-nav
+				margin-top: 0
+	.sales-offices-contacts
+		.page-title
+			margin-bottom: 30px
+			.h1
+				margin-bottom: 0
+	.s-contacts-type-2 .contacts-list
+		padding-left: 0
+	.page-content
+		padding-top: 120px
+	.sales-offices-contacts
+		margin-bottom: 30px
+	.stocks-grid
+		grid-gap: 10px
+	.apartment-main
+		display: block
+		width: 100%
+	.apartment-content
+		width: 100%
+	.apartment-links
+		padding: 15px
+	.s-apartment-card
+		padding-bottom: 30px
+	.catalog-filter-mob-container
+		position: fixed
+		z-index: 10
+		left: 0
+		top: 0
+		height: 100%
+		width: 280px
+		background-color: #fff
+		padding: 50px 20px 30px
+		overflow-y: auto
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+		transition: all .4s ease
+		transform: translateX(-120%)
+		&.opened
+			transform: translateX(0)
+	.catalog-filter-mob-close
+		position: absolute
+		display: flex
+		font-size: 18px
+		right: 15px
+		top: 15px
+		&:after
+			content: '\e918'
+			font-family: icon
+			font-weight: normal !important
+	.catalog-filter
+		margin-bottom: 30px
+	.catalog-filter-mob-open-filter
+		display: block
+	.parking-nav-link
+		font-size: 18px
+		span
+			font-size: 14px
+			margin-right: 8px
+	.parking-statuses
+		margin-bottom: 30px
+	.parking-info .h2
+		font-size: 21px
+	.parking-adv-item
+		margin-right: 10px
+		img
+			height: 24px
+	.parking-popup-block
+		.popup-content
+			padding: 20px
+	.catalog-filter-item .filter-range-input-group span
+		top: 10px
+	.fixed-mailing-block
+		display: none
+	.page-not-found-text .h1
+		font-size: 140px
+	.main-window--mortgage
+		.main-window-row
+			display: block
+	.mortgage-main-window-left
+		margin: 0 0 20px
+	.why-mortgage-item
+		margin-right: 0
+	.calcultator-total.big
+		margin-right: 30px
+	.accredited-thead-th img
+		max-width: 18px
+		max-height: 18px
+	.accredited-thead
+		padding-bottom: 15px
+		margin-bottom: 15px
+
+// ≥768px
++media-breakpoint-down(sm)
+	.services-slider
+		.services-block-title-text
+			font-size: 20px
+	.answer-on-questions-accordion-text
+		font-size: 30px
+	.header-row
+		> .header-phone
+			padding-right: 25px
+			p
+				display: none
+			a
+				font-size: 0
+				width: 36px
+				height: 36px
+				border: 1px solid #fff
+				border-radius: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				margin: 0
+				&:after
+					content: '\e91b'
+					font-family: icon
+					font-size: 19px
+					color: #fff
+					transform: translate(1px, 0)
+	.header
+		padding: 14px 0
+	.main-window-slider-block
+		margin-left: 0
+		.slider-nav-arrow
+			display: none
+	.header-mob-soc
+		display: block
+		margin-top: 25px
+		.soc-nav
+			position: static
+			flex-direction: row
+			justify-content: flex-start
+			a
+				margin: 0 20px 0 0
+	.about-blockquote
+		margin-top: 25px
+	.about-in-nmbrs-item
+		display: none
+	.projects-header-right
+		position: relative
+		height: 100%
+		width: auto
+		margin-left: auto
+	.projects-header-right-icon
+		font-size: 19px
+		color: $gray
+		display: block
+		&:hover
+			& + .projects-header-right-content
+				opacity: 1
+				transform: translateY(0)
+				visibility: visible
+	.projects-header-right-content
+		position: absolute
+		z-index: 5
+		background-color: #fff
+		padding: 20px
+		border-radius: 10px
+		box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1)
+		top: 100%
+		right: 0
+		max-width: 280px
+		transition: all .4s ease
+		opacity: 0
+		visibility: hidden
+		transform: translateY(-10px)
+	.projects-header-left
+		width: calc(100% - 20px)
+	.project-price-info-dropdown
+		left: auto
+		right: 0
+	.select-layout-grid
+		overflow: auto hidden
+		margin: 0 -20px
+		padding: 0 20px
+		width: auto
+		&:after
+			content: ''
+			display: block
+			width: 5px
+			height: 5px
+			flex-shrink: 0
+	.layout-info-wrapper
+		display: block
+	.layout-image
+		width: 100%
+		margin-bottom: 25px
+	.layout-info-block
+		padding-left: 0
+		width: 100%
+	.advantages-grid
+		grid-template-columns: 1fr 1fr
+	.our-services-grid
+		grid-template-columns: 1fr 1fr
+	.contacts-nav
+		margin-bottom: 29px
+		display: grid
+		grid-template-columns: 1fr 1fr
+	.main-window--rescom .main-window-slider-block
+		margin-top: 40px
+	.main-window-global-info-title
+		h1, .h1
+			font-size: 40px
+	.s-res-complex-descr
+		padding-top: 40px
+	.res-complex-descr-item
+		margin-bottom: 40px
+	.block-info-grid
+		grid-gap: 10px
+	.block-info.big
+		margin-bottom: 10px
+	.block-info-chess-item
+		flex-direction: column-reverse !important
+	.block-info-chess-item-img
+		width: 100%
+		img
+			height: 250px
+			object-fit: cover
+	.block-info-chess-item-text
+		width: 100%
+	.block-info-big-banner-img
+		&:after
+			background-color: rgba(#000, .5)
+	.block-info-big-banner-text
+		padding: 20px
+		.h1
+			font-size: 27px
+		p
+			font-size: 14px
+	.block-info-leftright-text
+		display: block
+		margin-bottom: 35px
+	.block-info-leftright-text p
+		max-width: none
+	.block-info-leftright-text-col
+		margin-bottom: 15px
+	.block-info-leftright-text p
+		font-size: 14px
+	.block-info-img-with-list-grid
+		grid-gap: 10px
+	.block-info-type-3
+		grid-column: span 2
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+	.block-info-text-imgleft-text
+		padding-left: 10px
+		.h2
+			margin-bottom: 15px
+	.block-info-card-header
+		height: 210px
+		padding: 20px
+		.h3
+			font-size: 16px
+	.block-info-card-body
+		padding: 20px 20px 30px
+	.layout-info-slider
+		max-width: 100%
+	.s-master-plan
+		padding-top: 20px
+	.master-plan-img .btn
+		top: 15px
+		right: 15px
+	.cardinal-points
+		bottom: 15px
+		right: 15px
+		img
+			width: 60px
+	.photos-gallery-thumbs
+		margin-left: 0
+		.slick-arrow
+			display: none !important
+	.photos-gallery-thumbs-wrapper
+		bottom: 20px
+	.s-photos .section-title
+		top: 20px
+	.videos-slider-item-grid
+		grid-gap: 10px
+	.menu
+		transform: translate(100%, 0)
+		left: auto
+		right: 0
+		height: 100%
+		// background: #000
+		// backdrop-filter: none
+		width: 300px
+		display: flex
+		flex-direction: column
+		&.opened
+			transform: translate(0, 0)
+	.menu-header-close
+		margin-top: -4px
+	.menu-body
+		display: block
+		flex-grow: 1
+		overflow-y: auto
+		padding-bottom: 30px
+	.menu-body-item
+		width: 100%
+		padding: 20px !important
+		&:first-child
+			padding-top: 0 !important
+		&:last-child
+			&:before
+				display: none
+		&:after
+			display: none
+		&:before
+			content: ''
+			position: absolute
+			background-color: rgba(#fff, .15)
+			left: 0
+			right: 0
+			bottom: 0
+			height: 1px
+	.menu-header
+		position: static
+		padding: 30px 0
+	.header-burger
+		top: 28px
+		right: 20px
+	.header-phone
+		margin-right: 30px
+	.block-info-img-with-list-grid
+		&.type-3
+			margin-left: -5px
+			margin-right: 0
+			.block-info-type-3
+				padding-left: 0
+				padding-right: 0
+	.block-info-img-with-list-grid
+		&.type-3
+			margin-left: 0
+			margin-right: 0
+			display: block
+			.block-info-type-3
+				padding-left: 0
+				padding-right: 0
+				width: 100%
+				margin-bottom: 30px
+	.block-info-chess-item
+		margin-left: 0 !important
+		margin-right: 0 !important
+	.block-info-chess-item-text,
+	.block-info-chess-item-img
+		padding-left: 0 !important
+		padding-right: 0 !important
+	.block-info-chess-item-img
+		margin-bottom: 25px
+	.rescom-advantages-icon-bg
+		width: 50px
+		height: 50px
+		bottom: -15px
+		right: -15px
+	.main-window-global-info-title .stick
+		transform: translateY(-18px)
+	.res-complex-descr-text .about-in-nmbrs-item
+		display: block
+		span
+			sub
+				margin-left: 5px
+	.popup-block--callback
+		width: 500px
+	.stocks-grid
+		grid-template-columns: repeat(2, 1fr)
+	.mailing-block
+		grid-column-start: 2
+		grid-column-end: 3
+	.catalog-layouts-item
+		display: block
+	.catalog-layouts-item-img
+		margin: 0 0 30px
+		text-align: center
+		img
+			margin: 0 auto 20px
+	.parking-tab-content
+		display: block
+	.parking-schem
+		width: 100%
+		margin-bottom: 30px
+	.parking-info
+		padding-left: 0
+		width: 100%
+	.parking-table
+		width: 100%
+		margin-bottom: 30px
+	.parking-schem-list
+		width: 100%
+		padding-left: 0
+	.stock-content
+		.about-in-nmbrs-item
+			display: block
+	.calculator-results
+		flex-wrap: wrap
+		justify-content: space-between
+		.btn
+			margin: 0
+			width: calc(50% - 5px)
+	.calcultator-total
+		margin-right: 0
+		display: flex
+		align-items: center
+		margin-bottom: 17px
+		width: 100%
+	.calcultator-total-price
+		font-size: 30px
+		margin-top: 0
+		margin-left: auto
+		padding-left: 15px
+		white-space: nowrap
+	.calculator-results .btn
+		margin-right: 7px
+	.calcultator-total.big
+		margin-right: 0
+	.calcultator-total.big .calcultator-total-price
+		font-size: 36px
+	.mortgage-calculator
+		margin-bottom: 20px
+		.calculator-results
+			.btn
+				width: 100%
+	.accredited-table td.rescom
+		padding-left: 20px
+	.calculator
+		padding: 20px
+	.accredited-helper
+		justify-content: flex-start
+	.s-we-cooperate
+		padding-top: 40px
+	.we-cooperate
+		.row
+			margin-right: -20px
+			margin-left: -20px
+			padding: 0 20px
+			flex-wrap: nowrap
+			overflow: auto hidden
+			&::-webkit-scrollbar
+				display: none
+		[class*=col-]
+			padding-left: 0
+			padding-right: 10px
+			margin-bottom: 0
+			width: 60vw
+			max-width: none
+			flex-grow: 0
+			flex-basis: auto
+			flex-shrink: 0
+			&:last-child
+				padding-right: 20px
+			&:first-child
+				padding-left: 0
+	.we-cooperate-item-logo
+		height: 27px
+	.we-cooperate-item
+		padding: 15px
+	.brokers-row
+		display: block
+	.brokers-left
+		padding-right: 0
+		width: 100%
+	.brokers-right
+		width: 100%
+	.brokers-slider
+		.slick-list
+			overflow: visible
+	.brokers-nav
+		display: none
+	.buy-apartments
+		flex-wrap: wrap
+	.buy-apartments-item
+		width: 33.33333%
+		margin-bottom: 15px
+	.mortgage-calculator .calculator-header
+		margin-bottom: 30px
+	.answer-on-questions-row
+		display: block
+	.answer-on-questions-left
+		margin-right: 0
+		margin-bottom: 30px
+	.answer-on-questions-accordion-item-title
+		padding-top: 15px
+		padding-bottom: 15px
+	.mortage-consultation
+		width: 100%
+		padding: 30px
+	.mortage-consultation-content
+		.h2
+			margin-bottom: 20px
+		p
+			font-size: 16px
+	.services-block-item .services-block-item-text
+		font-size: 14px
+		line-height: 22px
+	.services-block-title
+		font-size: 30px !important
+
+// ≥576px
++media-breakpoint-down(xs)
+	.services-block-title
+		font-size: 25px
+	.main-window-slider-block-custom
+		min-width: 100%
+	.services-buy-apartments .buy-apartments-item
+		width: 100%
+	.services-block-title-text
+		font-size: 25px
+		line-height: 30px
+		margin-top: 50px
+	.services-block-btn
+		.btn:nth-child(2)
+			margin-top: 20px
+	.h3, h3
+		font-size: 20px
+	.h5, h5
+		font-size: 14px
+	.container
+		padding: 0 18px
+	.main-banner-video-item
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		transition: all .3s ease !important
+		display: block !important
+		video
+			display: none
+	.main-window
+		padding-top: 97px
+		&:after
+			background-color: rgba(#000, .38)
+		> .soc-nav
+			display: none
+	.main-window-row
+		display: block
+	.main-window-slider-item .h2
+		margin-bottom: 27px
+		font-size: 17px
+	.main-window-slider-btns
+		flex-direction: column
+		align-items: flex-start
+		.btn
+			margin-bottom: 30px
+	.s-stocks
+		padding: 27px 0 22px
+	.news-item
+		padding: 9px 29px 11px 15px
+	.news-slider .slick-slide
+		width: 252px !important
+		padding: 0 8px
+	.news-item
+		min-height: 120px
+	.s-about
+		padding-top: 30px
+	.about-title
+		margin-bottom: 19px
+	.video-block
+		padding-bottom: 45.5%
+	.video-play
+		width: 40px
+		height: 40px
+		&:after
+			font-size: 18px
+	.blockquote-content
+		display: none
+	.blockquote-author-text-mob
+		display: block
+		font-size: 14px
+		margin-bottom: 9px
+	.blockquote-author-img
+		margin-right: 19px
+		img
+			width: 84px
+			height: 84px
+	.blockquote-author-text
+		.h5
+			margin-bottom: 1px
+			font-size: 10px
+		p
+			font-size: 10px
+	.about-in-nmbrs
+		margin-top: 23px
+	.about-in-nmbrs-link
+		margin-top: 0
+		font-size: 14px
+	.text-slider-item
+		font-size: 30px
+	.text-slider-item:after
+		width: 51px
+		margin: 0 13px
+		transform: translateY(2px)
+	.s-text-slider
+		margin: 15px 0
+	.s-projects
+		padding-top: 20px
+	.row
+		margin: 0 -6px
+		[class*=col-]
+			padding: 0 6px
+	.project-header
+		padding: 15px
+		margin-bottom: 16px
+	.project-header .stick
+		top: 15px
+		left: 15px
+	.stick
+		height: 18px
+		border-radius: 4px
+		padding: 0 5px
+		font-size: 10px
+		line-height: 17px
+	.project-map-link
+		width: 30px
+		height: 30px
+		font-size: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		top: 15px
+		right: 15px
+		span
+			margin: 0
+			font-size: 16px
+	.project-title
+		p
+			display: none
+		.h3
+			margin-bottom: 0
+	.project-header
+		height: 218px
+		overflow: hidden
+		margin-bottom: 15px
+	.project-descr
+		flex-direction: column-reverse
+	.project-descr-right
+		text-align: left
+		margin-bottom: 7px
+	.project-price-info
+		display: none
+	.project-size
+		display: none
+	.project-distance
+		font-size: 12px
+		align-items: center
+		span
+			font-size: 13px
+			display: flex
+	.label
+		height: 19px
+		line-height: 19px
+		padding: 0 5px
+		font-size: 10px
+		border-radius: 4px
+	.project
+		margin-bottom: 25px
+	.project--big
+		margin-top: 0
+		display: block
+		margin-bottom: 0
+		.project-header
+			width: 100%
+			height: 218px
+		.project-body
+			padding-left: 0
+			width: 100%
+			position: relative
+			padding-top: 15px
+		.project-title
+			position: absolute
+			bottom: 100%
+			z-index: 1
+			color: #fff
+			left: 15px
+			right: 15px
+			p
+				display: block
+			.h3
+				margin-bottom: 9px
+		.project-descr-left
+			width: 50%
+			margin-bottom: 12px
+		.project-price
+			padding-left: 10px
+			position: absolute
+			right: 0
+			top: 13px
+			width: 50%
+			text-align: right
+			display: block
+		.project-size
+			display: block
+			position: absolute
+			width: 50%
+			padding-left: 10px
+			text-align: right
+			top: 35px
+			right: 0
+		.project-descr-right
+			margin: 0
+		.project-labels
+			margin-bottom: 0
+	.s-projects
+		padding-bottom: 20px
+		.section-nmb
+			display: none
+	.s-projects.bg-gray
+		background-color: transparent
+		.label
+			background-color: #F2F2F2
+	.projects-main-title
+		margin-bottom: 20px
+		.h2
+			font-size: 20px
+			font-weight: 500
+	.bg-linear-gray
+		background: none
+	.s-layouts
+		padding-top: 33px
+	.layouts-header
+		position: relative
+		margin-bottom: 25px
+		[class*=col-]
+			position: static
+		.section-nmb
+			position: absolute
+			font-size: 64px
+			top: 4px
+			left: 0
+			margin-bottom: 0
+	.layouts-filter .h2
+		font-size: 21px
+		padding-left: 86px
+	.layouts-filter-nav-link
+		&:before
+			width: 130%
+		&:last-child
+			&:before
+				width: 100%
+	.layouts-filter-nav-link
+		padding-bottom: 14px
+		margin-right: 17px
+	.select-layout-wrapper
+		display: none
+	.layout-image
+		overflow: visible
+		background-color: transparent
+		padding: 0
+	.layout-image-item
+		border-radius: 7px
+		background-color: #F7F7F7
+		border: 1px solid #E1E1E1
+		height: 186px
+		display: inline-flex !important
+		align-items: center
+		justify-content: center
+		img
+			max-width: 90%
+			max-height: 90%
+			flex-shrink: 0
+			transform: none !important
+			opacity: 1 !important
+	.layout-image
+		display: block
+		padding-right: 57px
+		.slick-slide
+			display: block
+			padding-right: 16px
+			> div
+				display: block
+		.slick-list
+			overflow: visible !important
+	.s-layouts
+		overflow: hidden
+	.layout-breadcrumbs
+		margin-bottom: 15px
+	.layout-price
+		font-size: 16px
+		margin-bottom: 18px
+	.layout-info
+		.h3
+			margin-bottom: 4px
+		ul
+			margin-bottom: 25px
+	.layout-btns
+		width: 100%
+		max-width: 100%
+	.btn
+		height: 40px
+		line-height: 40px
+		padding: 0 15px
+		font-size: 12px
+		border-radius: 7px
+	.layout-btn-main
+		display: flex
+		justify-content: space-between
+		.btn
+			display: block
+			width: calc(50% - 4px)
+			padding: 0
+	.layout-btn-items-left
+		display: none
+	.layout-btn-items-right
+		display: none
+	.layout-btn-items-mob
+		display: block
+		width: 100%
+	.advantages-grid
+		display: flex
+		overflow: auto hidden
+		margin-left: -18px
+		margin-right: -18px
+		padding: 0 18px
+		grid-gap: 0
+		&:after
+			content: ''
+			width: 1px
+			height: 1px
+			flex-shrink: 0
+			display: block
+	.advantages-item
+		width: 120px
+		flex-shrink: 0
+		height: 129px
+		min-height: 0 !important
+		position: relative
+		margin-right: 13px
+	.advantages-body
+		position: absolute
+		bottom: 0 !important
+		left: 0 !important
+		right: 0 !important
+		width: 100%
+		z-index: 1
+		color: #fff
+		transform: none !important
+		padding: 15px !important
+		p
+			display: none
+		.h4
+			margin: 0 !important
+			font-size: 12px !important
+			overflow: hidden
+			max-height: 71px
+	.advantages-img
+		height: 129px
+		img
+			height: 100%
+		.stick
+			left: 15px
+			top: 15px
+	.advantages-item.type-2:hover .advantages-body
+		transform: none !important
+	.stick
+		overflow: hidden
+		max-width: calc(100% - 30px)
+		text-overflow: ellipsis
+	.check-more-btn
+		margin-top: 20px
+	.video-list
+		margin-top: 20px
+	.video-list
+		display: flex
+		overflow: auto hidden
+		margin-left: -18px
+		margin-right: -18px
+		padding: 0 18px
+		grid-gap: 0
+		&:after
+			content: ''
+			width: 1px
+			height: 1px
+			flex-shrink: 0
+			display: block
+	.video-item
+		width: 228px
+		flex-shrink: 0
+		margin-right: 17px
+		margin-bottom: 0
+		.video-block
+			padding-bottom: 0
+			min-height: 0
+			height: 159px
+		.video-poster
+			padding-bottom: 0
+		.stick
+			top: 15px
+			left: 15px
+	.video-play:after
+		transform: translateX(2px)
+	.video-content
+		margin-top: 13px
+		.h4
+			font-size: 14px
+	.s-advantages
+		padding-bottom: 35px
+	.s-our-services
+		padding-top: 22px
+	.calculator
+		padding: 21px 25px 29px
+		border-radius: 7px
+	.calculator-header-btn
+		display: none
+	.section-title
+		margin-bottom: 26px
+		p
+			font-size: 12px
+	.calculator-header
+		margin-bottom: 26px
+	.filter-title
+		margin-bottom: 8px
+	.filter-minmax
+		font-size: 10px
+	.form-control
+		height: 37px
+		padding: 0 14px
+	.filter-range-select
+		top: 3px
+		right: 3px
+		.select2-container--default .select2-selection--single
+			height: 31px
+		.select2-container--default .select2-selection--single .select2-selection__rendered
+			line-height: 31px
+		.select2-container--default .select2-selection--single .select2-selection__arrow
+			height: 31px
+	.our-services
+		margin-top: 45px
+	.our-services-grid
+		display: block
+	.our-services-item
+		margin-bottom: 10px
+		border-radius: 7px !important
+	.our-services-item
+		padding: 15px
+		&:after
+			display: none
+	.our-services-link
+		display: block
+		margin-top: 15px
+		.link-angle
+			font-size: 16px
+			span
+				font-size: 11px
+	.our-services-item
+		display: none
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3)
+			display: flex
+	.form-group
+		.select2-container--default .select2-selection--single
+			height: 37px
+		.select2-container--default .select2-selection--single .select2-selection__rendered
+			line-height: 37px
+		.select2-container--default .select2-selection--single .select2-selection__arrow
+			height: 37px
+	.form-group
+		margin-bottom: 18px
+	.contacts-phone a
+		font-size: 21px
+	.contacts-mail a
+		font-size: 13px
+	.contacts-links
+		margin-bottom: 19px
+	.contacts-nav-link
+		padding-left: 0
+		padding-right: 0
+		background-color: transparent !important
+		font-size: 10px
+		margin-bottom: 0
+		height: 27px
+	.contacts-map-wrapper
+		margin-bottom: 20px
+	#contacts-map
+		height: 161px
+		border-radius: 10px
+	.open-full-contacts-map
+		width: 38px
+		height: 38px
+		background-size: 28px
+	.footer
+		border-top: none
+		padding-top: 10px
+	.footer-nav
+		display: none
+	.footer-copyright
+		margin-top: 0
+		p
+			font-size: 10px
+			margin-bottom: 20px
+	.footer-copyright-row
+		flex-direction: column-reverse
+	.footer-apps
+		margin-bottom: 25px
+		img
+			width: 111px
+	.footer-copyright p
+		color: $gray
+		font-weight: normal
+	.footer-copyright-left
+		padding-right: 0
+		color: $gray
+		font-weight: normal
+		a
+			color: $gray
+	.footer-dev
+		margin-top: 20px
+		a
+			justify-content: flex-end
+			font-size: 10px
+			img
+				margin-top: 2px
+	#contacts-map-popup .popup-block, #map-popup .popup-block
+		max-width: calc(100vw - 20px)
+	.popup-map
+		padding-bottom: 70%
+	.popup-full-window .popup-block
+		padding-top: 20px
+		padding-bottom: 20px
+	.popup-full-window .popup-close
+		top: 15px
+		right: 15px
+	.full-filter-footer
+		display: block
+	.full-filter-left
+		padding-right: 0
+		margin-bottom: 20px
+	.mortgage-block
+		width: 100%
+	.full-filter-btns
+		padding-bottom: 20px
+		.clear-filter
+			margin-right: auto
+	#video-popup .popup-block
+		width: calc(100vw - 20px)
+	.page-loader
+		display: none !important
+	.projects-header-left
+		.h3
+			.mob-text
+				display: block
+				& + span
+					display: none
+	.projects-header
+		margin-bottom: 25px
+		.h2
+			font-weight: 500
+			font-size: 20px
+	.advantages-img
+		border-radius: 7px
+		&:after
+			border-radius: 7px
+		&:before
+			border-radius: 7px
+		img
+			border-radius: 7px
+	.video-block
+		border-radius: 7px
+	.video-poster
+		border-radius: 7px
+		img
+			border-radius: 7px
+	.s-our-services
+		margin-bottom: 33px
+	.s-contacts
+		padding-top: 20px
+	.contacts-form-left .h2
+		margin-bottom: 25px
+	.project-title
+		.h3
+			margin: 0
+		p
+			display: none
+	.project--big .project-title
+		.h3
+			margin: 0
+		p
+			display: none
+	.main-window-global-info
+		padding-right: 0
+	.main-window-global-info-title
+		h1, .h1
+			font-size: 27px
+	.main-window-global-info-address
+		font-size: 14px
+	.main-window-global-info-list
+		.project-descr-right
+			margin-right: 10px
+		.project-price-val
+			font-size: 14px
+	.main-window--rescom .main-window-slider-block
+		margin-top: 25px
+	.main-footer-nav
+		display: none
+	.main-footer-btn
+		width: 100%
+		.btn
+			width: 100%
+			height: 37px
+			line-height: 34px
+	.small-stocks-title
+		margin-bottom: 25px
+	.small-stocks-slider
+		.small-stocks-title
+			margin-bottom: 0
+		.slider-next
+			right: 0
+			bottom: calc(100% - 4px)
+			top: auto
+		.slider-prev
+			bottom: calc(100% - 4px)
+			top: auto
+			right: 50px
+	.video-play span
+		display: none
+	.rescom-advantages-grid
+		grid-gap: 20px
+		grid-template-columns: repeat(2, 1fr)
+	.s-position
+		.section-title
+			display: block
+			.h2
+				margin-bottom: 20px
+	.main-window--rescom
+		.main-window-slider-btns
+			display: flex
+			flex-direction: row
+			.btn
+				margin-right: 10px
+	.s-global-info
+		overflow: hidden
+		padding-top: 45px
+		.text-slider-wrapper
+			margin-bottom: 30px
+	.block-info-grid
+		display: flex
+		margin-right: -18px
+		margin-left: -18px
+		padding: 0 18px
+		overflow: auto hidden
+		margin-bottom: 30px
+		&:after
+			content: ''
+			width: 18px
+			flex-shrink: 0
+			height: 18px
+	.block-info
+		&:last-child
+			margin-right: 0
+		&:not(.big)
+			width: 80%
+			flex-shrink: 0
+			min-height: 0 !important
+			height: 154px
+			padding: 12px 16px
+			.block-info-text
+				padding: 0
+		.h3
+			font-size: 20px
+		&.big
+			height: 450px
+			padding: 22px 28px
+			.block-info-text
+				padding: 0
+				.h3
+					font-size: 26px
+					margin-bottom: 30px
+				p
+					font-size: 14px
+					margin: 0
+	.block-info-chess-item-text p.big-text
+		font-size: 16px
+	.block-info-chess-item
+		margin-bottom: 30px
+	.block-info-img-with-list-grid
+		display: flex
+		margin-right: -18px
+		margin-left: -18px
+		padding: 0 18px
+		overflow: auto hidden
+		margin-bottom: 30px
+		width: auto
+		&:after
+			content: ''
+			width: 18px
+			flex-shrink: 0
+			height: 18px
+		&.type-3
+			margin-left: 0 !important
+			margin-right: 0 !important
+			padding-left: 0 !important
+			padding-right: 0 !important
+			display: block
+			.block-info-type-3
+				width: 100%
+				flex-shrink: 0
+	.block-info-img-with-list
+		width: 80%
+		flex-shrink: 0
+		min-height: 0
+	.block-info-title+.block-info-grid.type-2
+		margin-top: 25px
+	.block-info-title+.block-info-img-with-list-grid
+		margin-top: 25px
+	.block-info-type-3
+		width: 80%
+		flex-shrink: 0
+	.block-info-big-text
+		display: block
+	.block-info-text-imgleft
+		display: block
+	.block-info-text-imgleft-img
+		margin-bottom: 20px
+		width: 100%
+		img
+			width: 100%
+			object-fit: cover
+	.block-info-text-imgleft-text
+		width: 100%
+	.block-info-card
+		width: 80%
+		flex-shrink: 0
+	.block-info-img-with-list-grid
+		&.type-4
+			padding-bottom: 30px
+	.global-info-navigation-block
+		[class*=col-]
+			& > div:last-child
+				margin-bottom: 0
+	.layout-image
+		.slick-slide
+			min-height: 0
+	.menu
+		width: 100%
+	.photos-gallery
+		.slick-dots
+			display: flex !important
+	.photos-gallery-thumbs
+		display: none
+	.s-photos .section-title
+		position: static
+		color: $text
+		margin-bottom: 15px
+	.videos-item-big
+		grid-row: auto
+		grid-column: auto
+		min-height: 0
+	.videos-slider
+		display: flex
+		margin-left: -20px
+		margin-right: -20px
+		padding-left: 20px
+		padding-right: 20px
+		overflow: auto visible
+	.videos-slider-item-grid
+		display: flex
+		grid-gap: 0
+	.videos-item-big
+		flex-shrink: 0
+		width: 60vw
+		margin-right: 10px
+	.videos-item
+		flex-shrink: 0
+		width: 60vw
+		margin-right: 10px
+	.slider-live-in-rescom
+		padding-right: 80px
+		.slick-list
+			overflow: visible
+		.slick-slide.prev-slide
+			opacity: 1 !important
+			transform: none !important
+	.s-stocks .stocks-left .stocks-nav
+		margin-top: -7px
+	.block-info-grid
+		grid-gap: 0
+	.block-info
+		margin-right: 10px
+	.block-info-img-with-list-grid
+		grid-gap: 0
+	.block-info-img-with-list
+		margin-right: 10px
+	.block-info-type-3
+		margin-right: 10px
+	.block-info-card
+		margin-right: 10px
+	.page-title
+		h1, .h1
+			// font-size: 30px
+			font-size: 26px
+		p
+			margin: 8px 0 0
+			font-size: 12px
+	.contacts-data
+		display: block
+	.contacts-data-left
+		margin-right: 0
+		margin-bottom: 30px
+	.hide-on-desktop
+		opacity: 1
+		visibility: visible
+	.header.dark
+		.header-row>.header-phone a
+			border-color: rgba($text, .5)
+			&:after
+				color: $text
+	.small-stocks-title
+		display: none
+	.small-stocks-slider
+		padding-right: 90px
+		.small-stocks-title
+			display: block
+	.small-stocks-slider
+		.slider-prev
+			bottom: auto
+			top: 16px
+		.slider-next
+			bottom: auto
+			top: 16px
+			right: 0
+	.res-complex-descr-videos
+		margin-bottom: 30px
+		.row
+			flex-wrap: nowrap
+			overflow: auto hidden
+			margin-left: -20px
+			margin-right: -20px
+			padding-left: 20px
+			padding-right: 20px
+			[class*=col-]
+				max-width: 80%
+				flex: 0 0 80%
+				padding: 0
+				margin-right: 10px
+				&:last-child
+					margin-right: 0
+			&:after
+				content: ''
+				width: 20px
+				height: 20px
+				flex-shrink: 0
+	.rescom-advantages-icon
+		width: 50px
+		height: 50px
+		margin-bottom: 20px
+		// &:after
+		// 	width: 50px
+		// 	height: 50px
+		// 	bottom: -15px
+		// 	right: -20px
+		svg
+			max-width: 50px
+			max-height: 50px
+	.rescom-advantages-title
+		font-size: 12px
+	.position-info
+		.section-title
+			display: flex
+			align-items: center
+			.h2
+				margin-bottom: 0
+				flex-grow: 1
+			.btn
+				width: 40px
+				height: 40px
+				font-size: 0
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: center
+				span
+					font-size: 16px
+					margin: 0
+	.slider-live-in-rescom
+		padding-right: 20vw
+		.slick-slide
+			opacity: 1 !important
+			padding: 0 5px
+	.live-in-rescom
+		.h4
+			font-size: 12px
+	.block-info-type-3-img
+		&.slick-slider
+			margin-left: -5px
+			margin-right: -5px
+			width: auto
+			border-radius: 7px !important
+			overflow: hidden
+			.slick-slide
+				border-radius: 7px !important
+				overflow: hidden
+				padding: 0 5px
+				img
+					border-radius: 7px
+	.global-info-blocks
+		overflow: visible
+	.block-info-img-with-list-grid.type-3
+		overflow: visible !important
+	.main-banner-video-item
+		transition: opacity .3s ease !important
+		transform: none !important
+		opacity: 0
+		&.active
+			opacity: 1
+	.main-window-global-info-title
+		h1, .h1
+			margin-right: 5px
+			font-weight: normal
+			font-size: 26px
+		.stick
+			transform: translateY(-13px)
+			height: 19px
+			line-height: 17px
+			background-color: transparent
+			border: 1px solid #fff
+			color: #fff
+			padding: 0 7px
+			font-size: 9px
+			&.black
+				background-color: $text
+				color: #fff
+				border-color: $text
+	.main-window-global-info-title
+		margin-bottom: 8px
+	.main-window-global-info-address
+		margin-top: 0
+		font-size: 12px
+	.main-window-global-info-list
+		.project-descr-right
+			margin-right: 30px
+			margin-bottom: 0
+	.main-window-global-info-list .project-price-val
+		font-size: 12px
+		font-weight: normal
+	.main-window--rescom .main-window-slider-block
+		margin-top: 35px
+	.main-window--rescom .main-window-slider-item .h2
+		font-size: 12px
+		font-weight: normal
+		max-width: 270px
+		margin-bottom: 12px
+	.main-window--rescom .main-window-slider-btns .btn
+		margin-right: 8px
+	.main-footer-btn .btn
+		height: 50px
+		line-height: 47px
+		font-size: 14px
+	.main-window-footer-type-2
+		padding: 24px 0
+	.main-window-global-info-title .stick
+		transform: translateY(-5px)
+	.block-info-big-img-with-text-row
+		grid-template-columns: 1fr
+	.global-info-blocks
+		.btn
+			width: 100%
+			height: 50px
+			line-height: 50px
+			font-size: 12px
+			display: block
+			margin-top: 35px
+	.block-info-chess-item-img
+		margin-bottom: 22px
+	.block-info-chess-item-text .h2
+		font-size: 21px
+		margin-bottom: 18px
+	.block-info-chess-item-text p.big-text
+		font-size: 14px
+		margin-bottom: 13px
+	.block-info-chess-item-text p
+		font-size: 12px
+		margin-bottom: 13px
+	.block-info-chess-item-text ul
+		margin: 24px 0
+	.block-info-big-banner
+		min-height: 450px
+	.block-info-big-banner-text
+		min-height: 450px
+		display: flex
+		flex-direction: column
+		font-size: 14px
+		.h1
+			flex-grow: 1
+			font-size: 26px
+			max-width: 203px
+			line-height: 1.2
+		p
+			font-size: 14px
+	.block-info-icontext
+		margin-left: 0
+		.rescom-advantages-icon
+			margin-right: 35px
+			margin-top: -11px
+	.block-info-leftright-text-col
+		margin-bottom: 34px
+	.block-info-title
+		margin-bottom: 18px
+		.h2
+			font-size: 21px
+	.block-info-leftright-text-col
+		margin-bottom: 15px
+	.block-info-img-with-list
+		min-height: 219px
+		margin-right: 8px
+		width: 92.5%
+	.block-info-img-with-list-text
+		padding: 17px
+	.block-info-img-with-list-text
+		li
+			font-size: 14px
+			margin-bottom: 17px
+	.popup-block--callback .popup-close
+		top: 10px
+		right: 10px
+		background-color: transparent
+		&:after
+			font-size: 20px
+	.small-stocks-slider
+		.slider-prev,
+		.slider-next
+			top: 50%
+	.small-stocks-slider
+		.slick-slide
+			> div
+				height: 100%
+				.small-stocks-item
+					height: 100%
+	.s-res-complex-descr
+		padding-bottom: 0
+	.res-complex-descr-text .about-in-nmbrs-item
+		margin-bottom: 20px
+	::-webkit-scrollbar
+		display: none
+	.s-global-info .text-slider-wrapper
+		margin-bottom: 45px
+	.s-stocks + .s-text-slider
+		padding-top: 20px
+	.s-photos
+		.section-title
+			.h2
+				font-size: 20px
+				font-weight: 500
+	.s-stocks
+		padding: 37px 0 32px
+	.videos-item-big
+		border-radius: 10px
+		.video-block
+			height: 117px
+			padding: 0
+			border-radius: 10px
+	.videos-item
+		border-radius: 10px
+	.stocks-title p
+		margin-top: 10px
+	.contacts-list
+		padding-top: 15px
+	.stocks-grid
+		grid-template-columns: 1fr
+		grid-auto-rows: auto
+	.nav-links
+		margin-left: -18px
+		margin-right: -18px
+		padding-left: 18px
+		padding-right: 18px
+		&:after
+			width: 13px
+			height: 13px
+	.mailing-block
+		grid-column-start: auto
+		grid-column-end: auto
+		grid-row-start: auto
+		grid-row-end: auto
+	.back-mob-link
+		display: block
+	.apartment-card-title
+		.h1, h1
+			display: flex
+			align-items: flex-start
+			font-size: 26px
+	.page-back-link
+		display: none
+	.apartment-card-title
+		margin-top: -57px
+		margin-bottom: 16px
+	.apartment-main
+		background-color: transparent
+		border-radius: 0
+	.apartment-img-block
+		background-color: #f7f7f7
+		margin-left: -18px
+		margin-right: -18px
+	.apartment-img-header
+		padding-left: 8px
+		padding-right: 18px
+		top: 14px
+	.apartment-img-types-link
+		height: 32px
+		line-height: 32px
+		border-radius: 7px
+		padding: 0 10px
+		font-size: 12px
+		margin-right: 6px
+		white-space: nowrap
+	.liked-link
+		font-size: 22px
+	.apartment-img-list img
+		max-width: 221px
+		max-height: 221px
+		object-fit: contain
+	.apartment-kompas
+		img
+			width: 47px
+	.apartment-kompas
+		left: 8px
+		bottom: 14px
+	.apartment-content
+		width: auto
+		margin-left: -18px
+		margin-right: -18px
+		z-index: auto
+	.apartment-views
+		display: none
+	.apartment-description
+		padding-top: 12px
+		border-radius: 0
+		padding-bottom: 8px
+	.apartment-description-list
+		margin-bottom: 20px
+		li
+			font-size: 14px
+			line-height: 29px
+	.apartment-mortgage-title
+		font-size: 16px
+	.apartment-mortgage-open-btn
+		font-size: 16px
+		&:after
+			top: 7px
+	.apartment-mortgage-col .filter-title
+		font-size: 12px
+		margin-bottom: 10px
+	.apartment-mortgage-col .form-control
+		height: 44px
+		overflow: 0 10px 0 20px
+		font-size: 14px
+	.apartment-mortgage-col .noUi-horizontal .noUi-handle
+		width: 16px
+		height: 16px
+	.apartment-add-btn
+		padding: 0 16px
+		font-size: 14px
+		margin-bottom: 16px
+	.apartment-total
+		background-color: #D90002
+		border-radius: 0
+		display: flex
+		flex-direction: row-reverse
+		align-items: center
+		height: 56px
+		padding: 0 18px
+		margin: 0
+		position: fixed
+		z-index: 15
+		bottom: 0
+		left: 0
+		width: 100%
+	.apartment-total-item
+		display: none
+	.apartment-total-btn
+		flex-grow: 1
+		margin: 0
+		.btn
+			padding: 0
+			padding: 0
+			background: transparent !important
+			font-size: 16px
+			width: 100%
+			text-align: left
+			height: 56px
+			line-height: 56px
+	.apartment-total-price
+		flex-direction: column
+		margin: 0
+		align-items: flex-start
+		white-space: nowrap
+		span
+			&:first-child
+				font-size: 0
+				color: rgba(#fff, .6)
+				&:before
+					content: attr(data-mob-text)
+					font-size: 10px
+			&:last-child
+				font-size: 16px
+	.apartment-links
+		position: absolute
+		bottom: 100%
+		right: 0
+		padding: 0 18px 14px 0
+		display: flex
+		flex-direction: column-reverse
+		.print
+			display: none
+	.apartment-link-item
+		margin-top: 16px
+		&	> .apartment-link
+			font-size: 0
+			margin: 0
+			span
+				font-size: 20px
+				margin: 0
+	.share-dropdown
+		left: auto
+		right: 0
+		margin-top: 10px
+	.apartment-card-left
+		margin: 0
+		flex-wrap: wrap
+		justify-content: space-between
+		flex-direction: row-reverse
+		padding-top: 32px
+	.apartment-section-block
+		margin: 0 0 30px
+		width: calc(50% - 10px)
+		&.on-the-floor
+			width: 100%
+			order: -1
+		.h4
+			margin-bottom: 14px
+			font-size: 16px
+	.apartment-section-title
+		margin: 0
+		font-size: 16px
+	.apartment-section p
+		display: none
+	.apartment-section
+		padding-bottom: 24px
+		padding-left: 20px
+		padding-right: 20px
+	.s-apartment-card
+		padding-bottom: 18px
+	.news-slider .slick-slide
+		opacity: 1
+	.h2, h2
+		font-size: 20px
+	.stocks-nav .slider-nav-arrow
+		width: 23px
+		height: 23px
+		font-size: 7px
+	.stocks-nav .slider-prev
+		margin-right: 4px
+	.similar-layouts-title
+		// a
+		// 	font-size: 0
+		// 	&:before
+		// 		content: attr(data-mob-text)
+		// 		font-size: 18px
+	.catalog-filter-title
+		font-size: 16px
+	.apartment-section-block
+		.h4
+			font-size: 14px
+			margin-bottom: 11px
+	.catalog-filter
+		max-width: none
+	.catalog-filter-item
+		.apartment-section
+			p
+				display: block
+				font-size: 10px
+				text-transform: uppercase
+				margin-top: 8px
+	.catalog-filter-mob-open-filter .btn
+		height: 48px
+		line-height: 46px
+		font-size: 14px
+		span
+			font-size: 14px
+			margin-right: 8px
+	.catalog-tabs-link
+		font-size: 12px
+		span
+			font-size: 10px
+			margin-right: 5px
+		&:after
+			right: 20px
+	.catalog-tabs
+		margin-bottom: 20px
+	.catalog-layouts-block
+		padding: 0
+		border-radius: 0
+		border: none
+	.catalog-layouts-block
+		.promo-block
+			margcccccccccccccin-left: -18px
+			margin-right: -18px
+			border-radius: 0
+		.more-btn
+			margin-left: 18px
+			margin-right: 18px
+	.catalog-layouts-item-img img
+		width: 100%
+		max-height: 303px
+	.apartments-list-table
+		margin-left: -18px
+		margin-right: -18px
+		thead
+			tr
+				th
+					text-align: center
+					position: relative
+					height: 80px
+					padding: 0
+					&:first-child
+						span
+							margin-left: 0
+					> span
+						display: inline-block
+						transform-origin: top left
+						transform: rotate(-90deg)
+						position: absolute
+						bottom: 0
+						left: 50%
+						margin-left: -7px
+		tbody
+			td
+				white-space: nowrap
+				&:last-child
+					padding-right: 18px
+	.catalog-layouts-item
+		margin-bottom: 30px
+	.s-catalog
+		padding-bottom: 24px
+	.catalog-layouts-block
+		margin-bottom: 32px
+	.catalog-list
+		.more-btn .btn
+			height: 48px
+			line-height: 46px
+		> .more-btn
+			margin-left: -18px
+			margin-right: -18px
+			padding: 24px 18px 0
+			border-top: 3px solid #F2F2F2
+			.btn
+				color: $red
+	.promo-sticks
+		flex-wrap: nowrap
+		justify-content: flex-start
+		padding-left: 18px
+		padding-right: 18px
+		overflow: scroll hidden
+		&::-webkit-scrollbar
+			display: none
+		&:after
+			content: ''
+			width: 18px
+			height: 18px
+			flex-shrink: 0
+		.stick
+			&:first-child
+				margin-left: auto
+			&:last-child
+				margin-right: auto
+	.catalog-filter-mob-open-filter
+		.btn
+			border-color: #9595a1 !important
+			color: $text !important
+			span
+				color: $red !important
+			&:after
+				display: none !important
+	.promo-block
+		margin-left: -20px
+		margin-right: -20px
+		border-radius: 0
+		margin-bottom: 30px
+		margin-top: 30px
+	.catalog-list
+		& > .promo-block
+			&:first-child
+				margin-top: 0
+	.apartments-list-table
+		width: calc(100% + 36px)
+		tbody
+			tr
+				td
+					padding-left: 5px
+					padding-right: 5px
+					&:first-child
+						padding-left: 18px
+					&.apartments-list-house-plane-td
+						padding-right: 10px
+						padding-left: 10px
+						display: none !important
+						& + td
+							padding-left: 18px
+		thead
+			tr
+				th
+					white-space: nowrap
+					&.apartments-list-house-header
+						padding: 0
+						display: none !important
+						&:after
+							display: block
+						.apartments-list-house-title
+							display: none !important
+						& ~ th
+							padding-bottom: 20px
+							&:after
+								bottom: 0
+						& + th
+							span
+								margin-left: 1px
+	.apartments-list-table-mob-header
+		display: block
+		margin-bottom: 15px
+	.promo-title
+		font-size: 21px
+	.catalog-mob-tabs
+		display: block
+		.catalog-tabs
+			display: flex
+	.catalog-tabs
+		display: none
+	.catalog-grid-block-header
+		display: block
+		position: relative
+	.catalog-grid-statuses-item
+		margin-left: 15px
+		transition-delay: 0s !important
+		&:first-child
+			margin-left: 0
+	.catalog-grid-statuses
+		position: absolute
+		top: 100%
+		margin-top: 20px
+		left: 0
+		width: 100%
+	.catalog-section-row
+		padding-top: 60px
+	.promo-content
+		.promo-sticks
+			display: none
+		.promo-title
+			margin: 0
+	.catalog-layouts-item-table
+		.more-btn
+			margin-left: 0
+			margin-right: 0
+	.cookies-alert
+		z-index: 20
+		bottom: 0
+		left: 0
+		width: 100%
+		right: auto
+		border-radius: 0
+	.cookies-alert-close
+		right: 0
+	.text-content
+		max-width: none
+		font-size: 14px
+		h1
+			font-size: 30px
+		h2
+			font-size: 18px
+		h3
+			font-size: 16px
+		ol
+			li
+				padding-left: 45px
+		ul
+			margin: 0 0 20px
+			li
+				padding-left: 10px
+				&:after
+					width: 4px
+					height: 4px
+					top: 8px
+	.text-content-date
+		font-size: 14px
+	.text-content-updated
+		font-size: 14px
+	.parking-nav
+		margin-bottom: 25px
+	.parking-nav-link
+		font-size: 16px
+		span
+			font-size: 13px
+	.parking-statuses
+		.catalog-grid-statuses
+			position: static
+		.catalog-grid-statuses-item
+			margin-right: 8px
+		.catalog-grid-statuses-icon
+			width: 10px
+			height: 10px
+			margin-right: 5px
+		.catalog-grid-statuses-title
+			font-size: 10px
+	#parking
+		.popup-flex
+			padding-left: 0
+			padding-right: 0
+	.parking-popup-block
+		padding: 0
+		background-color: #fff
+		.popup-content
+			border-radius: 0
+		.popup-close
+			top: 0
+			right: 0
+			&:after
+				font-size: 16px
+	.stock-content
+		font-size: 14px
+		.stick
+			margin-bottom: 25px
+		h1, .h1
+			font-size: 36px
+			margin-bottom: 15px
+		.mute-text
+			font-size: 14px
+			margin-bottom: 35px
+		img
+			width: 100%
+			border-radius: 5px
+		h3, .h3
+			margin-top: 35px
+			margin-bottom: 25px
+		p
+			&.big-text
+				margin-bottom: 20px
+				font-size: 18px
+				margin-top: 40px
+		ul
+			margin: 0 0 25px
+			li
+				padding-left: 10px
+				margin-bottom: 6px
+				&:last-child
+					margin-bottom: 0
+				&:after
+					top: 7px
+					width: 4px
+					height: 4px
+		.about-in-nmbrs
+			margin-top: 40px
+			margin-bottom: 25px
+		.about-in-nmbrs-item
+			width: 33.33333%
+			padding-right: 20px
+			font-size: 12px
+			margin-bottom: 20px
+			span
+				font-size: 24px
+				small
+					font-size: 18px
+		ol
+			margin: 0 0 30px
+			li
+				padding-left: 18px
+				margin-bottom: 7px
+	.wide-img
+		margin-left: -18px
+		margin-right: -18px
+		margin-bottom: 25px
+		img
+			border-radius: 0
+	.stock-steps
+		margin-bottom: 30px
+	.stock-steps-item
+		margin-right: 10px
+		&:after
+			top: 13px
+			left: 37px
+			right: 0
+	.stock-steps-item-icon
+		width: 27px
+		height: 27px
+		line-height: 27px
+		font-size: 12px
+	.stock-steps-item-text
+		font-size: 10px
+	.slide-text
+		padding-bottom: 50px
+		margin-bottom: 40px
+	.slide-text-open-link
+		height: 140px
+	.s-text-content
+		overflow: hidden
+	.custom-gallery
+		margin-left: -18px
+		margin-right: -18px
+		padding-left: 18px
+		padding-right: 18px
+		margin-bottom: 30px
+		.slick-list
+			overflow: visible
+		.slider-nav-arrow
+			display: none
+	.table-wrapper
+		margin-bottom: 40px
+	.default-slider-body
+		margin-left: -18px
+		margin-right: -18px
+		padding-left: 18px
+		padding-right: 18px
+		.slick-slide
+			margin-right: 10px
+		&:after
+			display: none
+		.slick-list
+			overflow: visible
+	.default-slider
+		margin-bottom: 35px
+	.s-text-content
+		padding-bottom: 20px
+	.price-economy
+		height: 16px
+		line-height: 18px
+		font-size: 8px
+		overflow: hidden
+	.page-not-found
+		overflow: hidden
+	.page-not-found-row
+		flex-direction: column-reverse
+		position: relative
+	.page-not-found-img
+		position: absolute
+		margin: 0
+		bottom: 0
+		right: -30px
+		width: 180px
+	.mortgage-main-window-left
+		h1, .h1
+			font-size: 33px
+	.mortgage-main-window-right
+		p
+			font-size: 18px
+	.s-why-mortgage
+		padding: 50px 0 20px
+	.why-mortgage-item
+		margin-bottom: 30px
+	.calcultator-total.big .calcultator-total-price
+		font-size: 24px
+	.mortgage-calculator
+		.calcultator-total-price
+			font-size: 20px
+	.s-our-services + .s-we-cooperate
+		padding-top: 0
+	.we-cooperate [class*=col-]
+		width: 80vw
+	.s-we-cooperate
+		padding-bottom: 30px
+	.our-services-item
+		&:before
+			display: none !important
+	.s-mortgage-types
+		padding-bottom: 40px
+	.accredited-houses
+		padding: 21px 18px 29px
+	.accredited-helper
+		display: block
+	.accredited-helper-item
+		margin-bottom: 10px
+		span
+			width: 15px
+			height: 15px
+			line-height: 13px
+			font-size: 10px
+	.accredited-thead
+		display: none
+	.accredited-accordion
+		margin-left: -25px
+		margin-right: -25px
+	.accredited-accordion-item-title
+		border-radius: 0
+		padding-left: 41px
+		padding-top: 14px
+		padding-bottom: 9px
+		&:before
+			left: 27px
+	.accredited-houses
+		margin-left: -18px
+		margin-right: -18px
+		border-radius: 0
+	.accredited-table-wrapper
+		border: none
+	.accredited-table
+		display: block
+		thead,
+		tr,
+		th,
+		tbody,
+		td
+			display: block
+			width: 100%
+		td
+			background-color: transparent !important
+			position: relative
+			padding: 10px 18px
+			padding-left: 50%
+			text-align: right
+			min-height: 50px
+			border-bottom: 1px solid #DADADA !important
+			&:last-child
+				border-bottom: none !important
+				border-right: none
+			&.empty
+				display: none !important
+			> span
+				font-size: 16px
+				font-weight: bold
+				margin-bottom: 5px
+				display: block
+			&.rescom
+				width: 100%
+				text-align: center
+				padding: 10px
+				background-color: #f3f3f3 !important
+				border-bottom: 1px solid #DADADA
+				font-weight: bold
+				border-top: 1px solid #DADADA
+				font-size: 16px
+				min-height: 0
+	.accredited-table-td-img
+		display: block
+		position: absolute
+		top: 10px
+		left: 18px
+		width: 50%
+		text-align: left
+		img
+			max-width: 35px
+			max-height: 35px
+	.accredited-table-td-info
+		list-style-type: none
+		font-size: 12px
+		margin: 0
+		padding: 0
+		display: block
+		li
+			color: #a9a9a9
+			margin-bottom: 3px
+			font-weight: normal
+			&:last-child
+				margin-bottom: 0
+			span
+				color: #000
+				font-weight: 500
+	.buy-apartments-item
+		width: 100%
+		padding-left: 0
+		margin-bottom: 25px
+		padding-right: 0
+		&:after
+			display: none
+	.buy-apartments-item-nmb
+		margin-bottom: 10px
+	.answer-on-questions-accordion-item-title
+		.plus-icon
+			width: 15px
+			height: 15px
+			margin-top: -8px
+			&:before
+				width: 1px
+				left: 7px
+				height: 15px
+			&:after
+				top: 7px
+				height: 1px
+				width: 15px
+	.mortage-consultation
+		padding: 20px
+	.accredited-table-td-img,
+	.accredited-table-td-info
+		img
+			// width: 50px
+			// height: 50px
+			object-fit: contain
+	.accredited-accordion-item-body
+		margin-top: 0
+	.filter-checkboxes span
+		line-height: 20px
+		line-height: 19px
+	.buy-apartments-item
+		display: flex
+		align-items: flex-start
+		margin-bottom: 20px
+		&:last-child
+			margin-bottom: 0
+	.buy-apartments-item-nmb
+		flex-shrink: 0
+		margin-top: 2px
+		margin-bottom: 0
+	.buy-apartments-item-text
+		margin-left: 10px
+		margin-top: auto
+		margin-bottom: auto
+		font-size: 16px
+	body.is-iphone
+		padding-top: 5px
+	.apartments-list-total
+		padding-right: 44px
+		position: relative
+	.table-seo-link
+		position: absolute
+		width: 24px
+		height: 24px
+		line-height: 22px
+		text-align: center
+		right: 0
+		border: 1px solid rgba(#D90002, .3)
+		border-radius: 50%
+		top: 50%	
+		margin-top: -12px	!important
+		&:after
+			content: '\e913'
+			font-family: icon
+			text-align: center
+			font-size: 7.38px
+			color: #D90002
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+	.animate
+		transition: transform .8s ease, opacity .8s ease
+		opacity: 0
+		// transform: translateY(80px)
+		&.fade-in
+			opacity: 1
+			transform: none
+	.main-window
+		&.animate
+			transform: none !important
+			opacity: 1 !important
+			.main-window-projects
+				transition: all .7s ease
+				opacity: 0
+				transform: translateY(40px)
+				transition-delay: .4s
+			.main-window-slider-block
+				transition: all .7s ease
+				opacity: 0
+				transform: translateY(40px)
+				transition-delay: .7s
+			.main-window-footer
+				transition: opacity .7s ease, transform .7s ease
+				opacity: 0
+				transform: translateY(40px)
+				transition-delay: 1.3s
+		&.fade-in
+			.main-window-projects,
+			.main-window-slider-block,
+			.main-window-footer
+				opacity: 1
+				transform: translateY(0)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+	.main-window-footer-type-2
+		padding: rem(24px) 0
+		+tr
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 100%
+			backdrop-filter: blur(34px)
+			background-color: rgba(255, 255, 255, 0.8)
+			transition: all .4s ease
+			z-index: -1
+			border-bottom: 1px solid rgba(0, 0, 0, 0.09)
+			+tr
+			opacity: 0
+		.main-footer-nav
+			> ul > li > a
+				height: 20px
+		&.fixed
+			position: fixed
+			top: 0
+			left: 0
+			width: 100%
+			z-index: 10
+			border-top: none
+			padding: 0
+			&:after
+				opacity: 1
+			.has-child
+				ul
+					top: calc(100% + 15px) !important
+					bottom: auto !important
+				span
+					color: rgba(#171723, .6)
+			.main-window-footer
+				border-top: none
+			.main-footer-nav
+				> ul > li > a
+					color: rgba(#171723, .6)
+					height: 77px
+					line-height: 77px
+					position: relative
+					display: block
+					&:after
+						content: ''
+						position: absolute
+						bottom: 0
+						left: 0
+						width: 100%
+						height: rem(5px)
+						background-color: #171723
+						+tr
+						transform: scaleX(0)
+					&:hover
+						color: #171723
+					&.active
+						color: #171723
+						&:after
+							transform: scale(1)
+				.has-child
+					a
+						&.active
+							color: $accent
+		.main-window-footer-row
+			align-items: center
+		// .main-footer-btn
+		// 	.btn
+		// 		background-color: #D90002 !important
+		// 		border-color: #D90002 !important
+		// 		&:hover
+		// 			border-color: $accent !important
+	.catalog-section-cell-dropdown-content
+		.h6
+			font-size: 18px
+			font-weight: 500
+			color: #171723
+			line-height: 1.3333
+			margin-bottom: 10px
+		.cell-price
+			font-size: 18px
+			line-height: 1
+			white-space: nowrap
+			color: $red
+			font-weight: 500
+		*:last-child
+			margin-bottom: 0
+
+	.catalog-section-cell-img
+		text-align: center
+		margin-bottom: 20px
+		img
+			margin-left: auto
+			margin-right: auto
+			width: 123px
+			height: 123px
+			object-fit: contain
+
+	.in-sale-stick
+		padding: 0 8px
+		font-size: 13px
+		color: $red
+		border: 1px solid $red
+		font-weight: 500
+		height: 30px
+		line-height: 28px
+		display: inline-block
+		border-radius: 4px
+		margin-bottom: 20px
+	.our-services-item
+		&:nth-child(1):before
+			border-radius: rem(7px) 0 0 0
+		&:nth-child(4):before
+			border-radius: 0 rem(7px) rem(7px) 0
+		&:nth-child(5):before
+			border-radius: 0 0 0 rem(7px)
+		&:nth-child(7):before
+			border-radius: 0 0 rem(7px) 0
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(4)
+				&:before
+					border-top: none
+			&:nth-child(4n),
+			&:nth-last-child(2)
+				&:before
+					border-right: none
+
+@media (min-width: 992px) and (max-width: 1199.98px)
+	.full-filters-row
+		[class*=col-]
+			flex: 0 0 33.33333%
+			max-width: 33.33333%
+	.our-services-item
+		&:nth-child(1):before
+			border-radius: rem(7px) 0 0 0
+		&:nth-child(3):before
+			border-radius: 0 rem(7px) rem(7px) 0
+		&:nth-child(6):before
+			border-radius: 0 0 0 rem(7px)
+		&:nth-child(7):before
+			border-radius: 0 0 rem(7px) rem(7px)
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2),
+			&:nth-child(3)
+				&:before
+					border-top: none
+			&:nth-child(3n),
+			&:nth-last-child(2)
+				&:before
+					border-right: none
+
+@media (min-width: 576px) and (max-width: 767.98px)
+	.s-mortgage-types
+		.our-services-item
+			&:nth-child(1),
+			&:nth-child(2)
+				&:before
+					border-top: none
+			&:nth-child(2n),
+			&:nth-last-child(1)
+				&:before
+					border-right: none
